@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh">
+<html lang="en-uk">
 
 
 <head>
@@ -41,9 +41,9 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 7.1.1"><link rel="alternate" href="/atom.xml" title="月落星桥" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="月落星桥" type="application/atom+xml">
 </head>
 
 
@@ -478,7 +478,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    262
+                    261
                 </div>
                 
 
@@ -507,7 +507,38 @@
 <p>其实就是一个大根堆和一个小根堆啦</p>
 <h3 id="Part-2-例题"><a href="#Part-2-例题" class="headerlink" title="Part 2 例题"></a>Part 2 例题</h3><p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/P1168">Luogu P1168 中位数</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/P3871">Luogu P3871 [TJOI2010]中位数</a></p>
-<h3 id="Part-3-代码实现"><a href="#Part-3-代码实现" class="headerlink" title="Part 3 代码实现"></a>Part 3 代码实现</h3><figure class="highlight cpp"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * @Author: thyzzs</span></span><br><span class="line"><span class="comment"> * @Date: 2019-09-08 16:52:21</span></span><br><span class="line"><span class="comment"> * @LastEditTime: 2019-11-13 18:11:57</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Double_Heap</span> {</span><br><span class="line">    priority_queue&lt;<span class="type">int</span>&gt; minq;  <span class="comment">//存放最小的若干个数的大根堆</span></span><br><span class="line">    priority_queue&lt;<span class="type">int</span>, vector&lt;<span class="type">int</span>&gt;, greater&lt;<span class="type">int</span>&gt;&gt; maxq;  <span class="comment">//存放最大的若干个数的小根堆</span></span><br><span class="line">    <span class="comment">//对顶堆动态维护一段只能添加的序列，寻找其中的第k大值</span></span><br><span class="line">    <span class="comment">//需要的元素维持在minq的堆顶</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">void</span> <span class="title">insert</span><span class="params">(<span class="type">int</span> n)</span> </span>{</span><br><span class="line">        <span class="keyword">if</span> (!minq.<span class="built_in">empty</span>() &amp;&amp; n &gt; maxq.<span class="built_in">top</span>()) {  <span class="comment">//若n比maxq最小的要大，则交换n与maxq.top()</span></span><br><span class="line">            maxq.<span class="built_in">push</span>(n);</span><br><span class="line">            n = maxq.<span class="built_in">top</span>();</span><br><span class="line">            maxq.<span class="built_in">pop</span>();</span><br><span class="line">        }</span><br><span class="line">        minq.<span class="built_in">push</span>(n);  <span class="comment">//n插入小根堆</span></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="type">int</span> <span class="title">find_kth</span><span class="params">(<span class="type">int</span> k)</span> </span>{  <span class="comment">//寻找第k大数</span></span><br><span class="line">        <span class="keyword">while</span> (minq.<span class="built_in">size</span>() &gt; k) {  <span class="comment">//minq元素过多，插进maxq</span></span><br><span class="line">            maxq.<span class="built_in">push</span>(minq.<span class="built_in">top</span>());</span><br><span class="line">            minq.<span class="built_in">pop</span>();</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">while</span> (minq.<span class="built_in">size</span>() &lt; k) {  <span class="comment">//minq元素过少，从maxq插回来</span></span><br><span class="line">            minq.<span class="built_in">push</span>(maxq.<span class="built_in">top</span>());</span><br><span class="line">            maxq.<span class="built_in">pop</span>();</span><br><span class="line">        }</span><br><span class="line">        <span class="keyword">return</span> minq.<span class="built_in">top</span>();</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
+<h3 id="Part-3-代码实现"><a href="#Part-3-代码实现" class="headerlink" title="Part 3 代码实现"></a>Part 3 代码实现</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
+ * @Author: thyzzs
+ * @Date: 2019-09-08 16:52:21
+ * @LastEditTime: 2019-11-13 18:11:57
+ */</span>
+<span class="token keyword">struct</span> <span class="token class-name">Double_Heap</span> <span class="token punctuation">{</span>
+    priority_queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span> minq<span class="token punctuation">;</span>  <span class="token comment">//存放最小的若干个数的大根堆</span>
+    priority_queue<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token punctuation">,</span> vector<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;</span><span class="token punctuation">,</span> greater<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">&gt;&gt;</span> maxq<span class="token punctuation">;</span>  <span class="token comment">//存放最大的若干个数的小根堆</span>
+    <span class="token comment">//对顶堆动态维护一段只能添加的序列，寻找其中的第k大值</span>
+    <span class="token comment">//需要的元素维持在minq的堆顶</span>
+
+    <span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>minq<span class="token punctuation">.</span><span class="token function">empty</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> n <span class="token operator">&gt;</span> maxq<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//若n比maxq最小的要大，则交换n与maxq.top()</span>
+            maxq<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            n <span class="token operator">=</span> maxq<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            maxq<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        minq<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//n插入小根堆</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">int</span> <span class="token function">find_kth</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//寻找第k大数</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>minq<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&gt;</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//minq元素过多，插进maxq</span>
+            maxq<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>minq<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            minq<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">while</span> <span class="token punctuation">(</span>minq<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&lt;</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>  <span class="token comment">//minq元素过少，从maxq插回来</span>
+            minq<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>maxq<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            maxq<span class="token punctuation">.</span><span class="token function">pop</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">return</span> minq<span class="token punctuation">.</span><span class="token function">top</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1271,7 +1302,7 @@
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
 
                         // 区分是否有年份.
-                        var language = 'zh';
+                        var language = 'en-uk';
                         if (startYear === String(todayYear)) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
