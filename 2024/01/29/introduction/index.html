@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【笔记】扫描线, 月落星桥">
-    <meta name="description" content="扫描线一般运用在图形上面，它和它的字面意思十分相似，就是一条线在整个图上扫来扫去，它一般被用来解决图形面积，周长等问题。">
+    <meta name="keywords" content="Who Am I, 月落星桥">
+    <meta name="description" content="认清“我是什么”，比执著于“做了什么”，更真切，也更幸福">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -28,7 +28,7 @@
 </script>
 
 
-    <title>【笔记】扫描线 | 月落星桥</title>
+    <title>Who Am I | 月落星桥</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -346,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【笔记】扫描线</h1>
+                    <h1 class="description center-align post-title">Who Am I</h1>
                 </div>
             </div>
         </div>
@@ -375,8 +375,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">
-                                <span class="chip bg-color">计算几何</span>
+                            <a href="/tags/Stack/">
+                                <span class="chip bg-color">Stack</span>
                             </a>
                         
                     </div>
@@ -387,8 +387,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Life-in-OI/" class="post-category">
-                                Life in OI
+                            <a href="/categories/Stack/" class="post-category">
+                                Stack
                             </a>
                         
                     </div>
@@ -400,7 +400,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2019-11-12
+                    2024-01-29
                 </div>
                 
 
@@ -409,14 +409,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    649
+                    118
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    3 Min
+                    1 Min
                 </div>
                 
 
@@ -434,122 +434,44 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Part-1-简介"><a href="#Part-1-简介" class="headerlink" title="Part 1 简介"></a>Part 1 简介</h3><p><strong>扫描线</strong>一般运用在图形上面，它和它的字面意思十分相似，就是一条线在整个图上扫来扫去，它一般被用来解决图形面积，周长等问题。 </p>
-<h3 id="Part-2-应用"><a href="#Part-2-应用" class="headerlink" title="Part 2 应用"></a>Part 2 应用</h3><h4 id="Atlantis-问题"><a href="#Atlantis-问题" class="headerlink" title="Atlantis 问题"></a>Atlantis 问题</h4><p>在二维坐标系上，给出多个矩形的左下以及右上坐标，求出所有矩形构成的图形的面积。</p>
-<h3 id="Part-3-代码实现"><a href="#Part-3-代码实现" class="headerlink" title="Part 3 代码实现"></a>Part 3 代码实现</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstring&gt;</span></span>
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
-
-<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">MAX_N</span> <span class="token expression"><span class="token number">1000005</span></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-
-<span class="token keyword">long</span> <span class="token keyword">long</span> lazy<span class="token punctuation">[</span>MAX_N <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">//标记这条线段出现的次数</span>
-<span class="token keyword">long</span> <span class="token keyword">long</span> s<span class="token punctuation">[</span>MAX_N <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">long</span> <span class="token keyword">long</span> n<span class="token punctuation">;</span>
-<span class="token keyword">long</span> <span class="token keyword">long</span> ans<span class="token punctuation">;</span>
-
-<span class="token keyword">struct</span> <span class="token class-name">Segment_tree</span> <span class="token punctuation">{</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> l<span class="token punctuation">,</span> r<span class="token punctuation">;</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> sum<span class="token punctuation">;</span>
-<span class="token punctuation">}</span> tree<span class="token punctuation">[</span>MAX_N <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>  <span class="token comment">//线段树</span>
-
-<span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token punctuation">{</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> x<span class="token punctuation">,</span> y_1<span class="token punctuation">,</span> y_2<span class="token punctuation">;</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> flag<span class="token punctuation">;</span>  <span class="token comment">//flag表示该边是矩形的左边界或右边界</span>
-<span class="token punctuation">}</span> p<span class="token punctuation">[</span>MAX_N <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">;</span>     <span class="token comment">//坐标</span>
-
-<span class="token keyword">inline</span> <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> f <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-    <span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>ch <span class="token operator">&lt;</span> <span class="token char">'0'</span> <span class="token operator">||</span> ch <span class="token operator">&gt;</span> <span class="token char">'9'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>ch <span class="token operator">==</span> <span class="token char">'-'</span><span class="token punctuation">)</span> f <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">while</span> <span class="token punctuation">(</span>ch <span class="token operator">&gt;=</span> <span class="token char">'0'</span> <span class="token operator">&amp;&amp;</span> ch <span class="token operator">&lt;=</span> <span class="token char">'9'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        x <span class="token operator">=</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>x <span class="token operator">&lt;&lt;</span> <span class="token number">3</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token punctuation">(</span>ch <span class="token operator">^</span> <span class="token number">48</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span> x <span class="token operator">*</span> f<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//定义sort比较</span>
-<span class="token keyword">bool</span> <span class="token function">cmp</span><span class="token punctuation">(</span>node a<span class="token punctuation">,</span> node b<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> a<span class="token punctuation">.</span>x <span class="token operator">&lt;</span> b<span class="token punctuation">.</span>x<span class="token punctuation">;</span> <span class="token punctuation">}</span>
-
-<span class="token comment">//上传</span>
-<span class="token keyword">void</span> <span class="token function">pushup</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>lazy<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>sum <span class="token operator">=</span> tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>r <span class="token operator">-</span> tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>l<span class="token punctuation">;</span>
-    <span class="token keyword">else</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>sum <span class="token operator">=</span> tree<span class="token punctuation">[</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sum <span class="token operator">+</span> tree<span class="token punctuation">[</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sum<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//建树</span>
-<span class="token keyword">void</span> <span class="token function">build</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> k<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> l<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> r<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>r <span class="token operator">-</span> l <span class="token operator">&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>l <span class="token operator">=</span> s<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>r <span class="token operator">=</span> s<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token function">build</span><span class="token punctuation">(</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">,</span> l<span class="token punctuation">,</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">build</span><span class="token punctuation">(</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>l <span class="token operator">+</span> r<span class="token punctuation">)</span> <span class="token operator">&gt;&gt;</span> <span class="token number">1</span><span class="token punctuation">,</span> r<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">pushup</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>l <span class="token operator">=</span> s<span class="token punctuation">[</span>l<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>r <span class="token operator">=</span> s<span class="token punctuation">[</span>r<span class="token punctuation">]</span><span class="token punctuation">;</span>
-        tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>sum <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token keyword">return</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token comment">//更新</span>
-<span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token keyword">long</span> <span class="token keyword">long</span> k<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> y_1<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> y_2<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">if</span> <span class="token punctuation">(</span>tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>l <span class="token operator">==</span> y_1 <span class="token operator">&amp;&amp;</span> tree<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>r <span class="token operator">==</span> y_2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        lazy<span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">+=</span> flag<span class="token punctuation">;</span>
-        <span class="token function">pushup</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">return</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>tree<span class="token punctuation">[</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>r <span class="token operator">&gt;</span> y_1<span class="token punctuation">)</span> <span class="token function">update</span><span class="token punctuation">(</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">,</span> y_1<span class="token punctuation">,</span> <span class="token function">min</span><span class="token punctuation">(</span>tree<span class="token punctuation">[</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>r<span class="token punctuation">,</span> y_2<span class="token punctuation">)</span><span class="token punctuation">,</span> flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>tree<span class="token punctuation">[</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>l <span class="token operator">&lt;</span> y_2<span class="token punctuation">)</span> <span class="token function">update</span><span class="token punctuation">(</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token function">max</span><span class="token punctuation">(</span>tree<span class="token punctuation">[</span>k <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>l<span class="token punctuation">,</span> y_1<span class="token punctuation">)</span><span class="token punctuation">,</span> y_2<span class="token punctuation">,</span> flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token function">pushup</span><span class="token punctuation">(</span>k<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-    <span class="token keyword">long</span> <span class="token keyword">long</span> x_1<span class="token punctuation">,</span> y_1<span class="token punctuation">,</span> x_2<span class="token punctuation">,</span> y_2<span class="token punctuation">;</span>
-    n <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        x_1 <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        y_1 <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        x_2 <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        y_2 <span class="token operator">=</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>x <span class="token operator">=</span> x_1<span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>y_1 <span class="token operator">=</span> y_1<span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>y_2 <span class="token operator">=</span> y_2<span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>flag <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i <span class="token operator">+</span> n<span class="token punctuation">]</span><span class="token punctuation">.</span>x <span class="token operator">=</span> x_2<span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i <span class="token operator">+</span> n<span class="token punctuation">]</span><span class="token punctuation">.</span>y_1 <span class="token operator">=</span> y_1<span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i <span class="token operator">+</span> n<span class="token punctuation">]</span><span class="token punctuation">.</span>y_2 <span class="token operator">=</span> y_2<span class="token punctuation">;</span>
-        p<span class="token punctuation">[</span>i <span class="token operator">+</span> n<span class="token punctuation">]</span><span class="token punctuation">.</span>flag <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
-        s<span class="token punctuation">[</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> y_1<span class="token punctuation">;</span>
-        s<span class="token punctuation">[</span>i <span class="token operator">+</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> y_2<span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">sort</span><span class="token punctuation">(</span>s <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> s <span class="token operator">+</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;&lt;</span> <span class="token number">1</span> <span class="token operator">|</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  <span class="token comment">//离散化</span>
-    <span class="token function">sort</span><span class="token punctuation">(</span>p<span class="token punctuation">,</span> p <span class="token operator">+</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> cmp<span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token comment">//把矩形的边的纵坐标从小到大排序</span>
-    <span class="token function">build</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> n <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>            <span class="token comment">//建树</span>
-    <span class="token function">memset</span><span class="token punctuation">(</span>lazy<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token keyword">sizeof</span><span class="token punctuation">(</span>lazy<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">update</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>y_1<span class="token punctuation">,</span> p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>y_2<span class="token punctuation">,</span> p<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> <span class="token punctuation">(</span>n <span class="token operator">&lt;&lt;</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
-        ans <span class="token operator">+=</span> <span class="token punctuation">(</span>p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>x <span class="token operator">-</span> p<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>x<span class="token punctuation">)</span> <span class="token operator">*</span> tree<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sum<span class="token punctuation">;</span>
-        <span class="token function">update</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>y_1<span class="token punctuation">,</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>y_2<span class="token punctuation">,</span> p<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>flag<span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token punctuation">}</span>
-    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%lld\n"</span><span class="token punctuation">,</span> ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<blockquote>
-<p>参考：</p>
-<p>​	 <a target="_blank" rel="noopener" href="https://oi-wiki.org/geometry/scanning/">扫描线 - OI Wiki</a></p>
-</blockquote>
+                <h2 id="Resume"><a href="#Resume" class="headerlink" title="Resume"></a>Resume</h2><h3 id="Basic-Information"><a href="#Basic-Information" class="headerlink" title="Basic Information"></a>Basic Information</h3><p>张子嵩 | Zisong ZHANG</p>
+<ul>
+<li>Pseudonym: 居士六如 | Six As Lay</li>
+<li>Male 20 | Feicheng, Shandong</li>
+<li>Email: <a href="mailto:thyzzs@163.com">thyzzs@163.com</a></li>
+<li>QQ: 1458077873</li>
+<li>China Pharmaceutical University, School of Basic Medicine and Clinical Pharmacy | <strong>BSc in Clinical Pharmacy</strong></li>
+<li>The University of Manchester, Faculty of Biology, Medicine and Health | <strong>BSc in Clinical Pharmacy</strong></li>
+</ul>
+<h3 id="Education-Experience"><a href="#Education-Experience" class="headerlink" title="Education Experience"></a>Education Experience</h3><table>
+<thead>
+<tr>
+<th>Time</th>
+<th>School</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>2023-2028</td>
+<td><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/University_of_Manchester_logo.png" alt="University_of_Manchester_logo" style="zoom: 40%;"></td>
+</tr>
+<tr>
+<td>2023-2028</td>
+<td><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/CPU.png" alt="CPU" style="zoom: 25%;"></td>
+</tr>
+<tr>
+<td>2019-2023</td>
+<td>肥城市第一高级中学  Feicheng No.1 Senior High School</td>
+</tr>
+</tbody></table>
+<h3 id="Honor"><a href="#Honor" class="headerlink" title="Honor"></a>Honor</h3><ul>
+<li>08/2020 China High School Biology Olympiad | <strong>Second Prize</strong></li>
+<li>11/2019 National Olympiad in Informatics in Provinces | <strong>Second Prize</strong></li>
+</ul>
+<h3 id="Project"><a href="#Project" class="headerlink" title="Project"></a>Project</h3><ul>
+<li>09/01/2024 - <em>Research on the synthesis of non-natural α-nucleosides</em> | <strong>Second team leader</strong></li>
+</ul>
+<h3 id="Academy"><a href="#Academy" class="headerlink" title="Academy"></a>Academy</h3><p>Null</p>
+<h3 id="Publication-Patent"><a href="#Publication-Patent" class="headerlink" title="Publication &amp; Patent"></a>Publication &amp; Patent</h3><p>Null</p>
 
                 
             </div>
@@ -576,7 +498,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://thyzzs.top/2019/11/12/sao-miao-xian/">https://thyzzs.top/2019/11/12/sao-miao-xian/</a>
+                    <a href="https://thyzzs.top/2024/01/29/introduction/">https://thyzzs.top/2024/01/29/introduction/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -614,8 +536,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/">
-                                    <span class="chip bg-color">计算几何</span>
+                                <a href="/tags/Stack/">
+                                    <span class="chip bg-color">Stack</span>
                                 </a>
                             
                         </div>
@@ -928,46 +850,48 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2019/11/12/ke-duo-li-shu/">
+                <a href="/2024/01/29/introduction/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="【笔记】珂朵莉树">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="Who Am I">
                         
-                        <span class="card-title">【笔记】珂朵莉树</span>
+                        <span class="card-title">Who Am I</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            珂朵莉树（Chtholly Tree），又名老司机树（Old Driver Tree, ODT），是一种非常暴力的维护序列信息的数据结构。
+                            认清“我是什么”，比执著于“做了什么”，更真切，也更幸福
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2019-11-12
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-29
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Life-in-OI/" class="post-category">
-                                    Life in OI
+                            <a href="/categories/Stack/" class="post-category">
+                                    Stack
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/Stack/">
+                        <span class="chip bg-color">Stack</span>
                     </a>
                     
                 </div>
@@ -981,31 +905,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/11/10/zhu-xi-shu/">
+                <a href="/2023/11/11/hong-lou-meng-sui-bi-2/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="【笔记】可持久化线段树（主席树）">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="《红楼梦》随笔（一 - 三十六）">
                         
-                        <span class="card-title">【笔记】可持久化线段树（主席树）</span>
+                        <span class="card-title">《红楼梦》随笔（一 - 三十六）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            可持久化线段树(在中国国内信息学竞赛社区中又称总书记树、主席树或函数式线段树)是一种可持久化数据结构（Persistent data structure）.
+                            “生命中的修行跟执著、痴迷是纠结在一起的，《红楼梦》一直在讲“警幻仙姑”，警告你，一切都是空幻的，可是无论怎么“警幻”还是执著，这便是红尘之楼的一场大梦吧。”
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2019-11-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-11-11
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Life-in-OI/" class="post-category">
-                                    Life in OI
+                            <a href="/categories/Literature/" class="post-category">
+                                    Literature
                                 </a>
                             
                             
@@ -1015,8 +939,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
+                    <a href="/tags/Essay/">
+                        <span class="chip bg-color">Essay</span>
                     </a>
                     
                 </div>
@@ -1177,13 +1101,6 @@
 
 </main>
 
-
-<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-<script>
-    MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
-    });
-</script>
 
 
 
