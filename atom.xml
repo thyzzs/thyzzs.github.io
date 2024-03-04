@@ -6,7 +6,7 @@
   <link href="https://thyzzs.top/atom.xml" rel="self"/>
   
   <link href="https://thyzzs.top/"/>
-  <updated>2024-02-29T11:29:02.564Z</updated>
+  <updated>2024-03-04T11:04:31.448Z</updated>
   <id>https://thyzzs.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Luogu-Problem-List 2.0</title>
+    <link href="https://thyzzs.top/2024/03/04/list/"/>
+    <id>https://thyzzs.top/2024/03/04/list/</id>
+    <published>2024-03-04T11:04:00.000Z</published>
+    <updated>2024-03-04T11:04:31.448Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Luogu-Problem-List&quot;&gt;&lt;a href=&quot;#Luogu-Problem-List&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Life in OI" scheme="https://thyzzs.top/categories/Life-in-OI/"/>
+    
+    
+    <category term="训练" scheme="https://thyzzs.top/tags/%E8%AE%AD%E7%BB%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Who Am I</title>
@@ -501,33 +526,6 @@
     
     
     <category term="数据结构" scheme="https://thyzzs.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSP-S 2019 冲刺训练计划</title>
-    <link href="https://thyzzs.top/2019/10/26/2019-xun-lian-ji-hua/"/>
-    <id>https://thyzzs.top/2019/10/26/2019-xun-lian-ji-hua/</id>
-    <published>2019-10-26T03:27:12.000Z</published>
-    <updated>2022-10-18T02:55:06.688Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;根据 &lt;a href=&quot;https://github.com/SFOI-Team/luogu-problem-list&quot;&gt;luogu-problem-list 2.0 版本&lt;/a&gt; 制作&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;待修改&lt;/del&gt;&lt;/p&gt;
-&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="Life in OI" scheme="https://thyzzs.top/categories/Life-in-OI/"/>
-    
-    
-    <category term="训练" scheme="https://thyzzs.top/tags/%E8%AE%AD%E7%BB%83/"/>
     
   </entry>
   
