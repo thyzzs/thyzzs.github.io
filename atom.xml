@@ -6,7 +6,7 @@
   <link href="https://thyzzs.top/atom.xml" rel="self"/>
   
   <link href="https://thyzzs.top/"/>
-  <updated>2024-03-04T11:04:31.448Z</updated>
+  <updated>2024-05-13T12:22:41.967Z</updated>
   <id>https://thyzzs.top/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>技术栈与项目栈</title>
+    <link href="https://thyzzs.top/2024/05/13/project-stack/"/>
+    <id>https://thyzzs.top/2024/05/13/project-stack/</id>
+    <published>2024-05-13T04:22:00.000Z</published>
+    <updated>2024-05-13T12:22:41.967Z</updated>
+    
+    
+    
+    
+    <category term="Stack" scheme="https://thyzzs.top/categories/Stack/"/>
+    
+    
+    <category term="Stack" scheme="https://thyzzs.top/tags/Stack/"/>
+    
+  </entry>
   
   <entry>
     <title>Luogu-Problem-List 2.0</title>
@@ -46,7 +63,7 @@
     <link href="https://thyzzs.top/2024/01/29/introduction/"/>
     <id>https://thyzzs.top/2024/01/29/introduction/</id>
     <published>2024-01-29T06:00:00.000Z</published>
-    <updated>2024-03-16T15:08:45.623Z</updated>
+    <updated>2024-05-13T12:21:44.410Z</updated>
     
     
       
@@ -122,7 +139,7 @@
     <link href="https://thyzzs.top/2022/11/06/chuang-shi-shi/"/>
     <id>https://thyzzs.top/2022/11/06/chuang-shi-shi/</id>
     <published>2022-11-06T01:20:00.000Z</published>
-    <updated>2024-02-04T12:01:03.609Z</updated>
+    <updated>2024-03-20T14:34:59.609Z</updated>
     
     
       
@@ -501,31 +518,6 @@
     
     
     <category term="计算几何" scheme="https://thyzzs.top/tags/%E8%AE%A1%E7%AE%97%E5%87%A0%E4%BD%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【笔记】可持久化线段树（主席树）</title>
-    <link href="https://thyzzs.top/2019/11/10/zhu-xi-shu/"/>
-    <id>https://thyzzs.top/2019/11/10/zhu-xi-shu/</id>
-    <published>2019-11-10T09:02:12.000Z</published>
-    <updated>2019-11-10T12:42:32.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Part-1-简介&quot;&gt;&lt;a href=&quot;#Part-1-简介&quot; class=&quot;headerlink&quot; title=&quot;Part 1 简介&quot;&gt;&lt;/a&gt;Part 1 简介&lt;/h3&gt;&lt;p&gt;</summary>
-        
-      
-    
-    
-    
-    <category term="Life in OI" scheme="https://thyzzs.top/categories/Life-in-OI/"/>
-    
-    
-    <category term="数据结构" scheme="https://thyzzs.top/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   
