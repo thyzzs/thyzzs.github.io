@@ -4,10 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="月落星桥">
-    <meta name="description" content="概率论与数理统计笔记什么是统计学？
-人生，是从不充分的证据开始，引出完美结论的一种艺术。——Samuel Bulter
-如果我们不在同一时期，把理解了的科学知识变为我们日常生活的一部分，科学家降不可能提高他们互相拥有的知识。——J.D.Be">
+    <meta name="keywords" content="概率论与数理统计笔记, 月落星桥">
+    <meta name="description" content="人生，是从不充分的证据开始，引出完美结论的一种艺术。">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -30,7 +28,7 @@
 </script>
 
 
-    <title>月落星桥</title>
+    <title>概率论与数理统计笔记 | 月落星桥</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -348,12 +346,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">概率论与数理统计笔记</h1>
                 </div>
             </div>
         </div>
@@ -375,12 +373,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Stack/">
+                                <span class="chip bg-color">Stack</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Stack/" class="post-category">
+                                Stack
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -398,14 +409,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    16.9k
+                    17k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    73 Min
+                    74 Min
                 </div>
                 
 
@@ -541,13 +552,17 @@
 <blockquote>
 <p><strong>注：</strong> 右边看似麻烦，其实容易算，左边看似简单，但是难算。</p>
 </blockquote>
-<h2 id="1-6-全概率-Total-Probability"><a href="#1-6-全概率-Total-Probability" class="headerlink" title="1.6 全概率 Total Probability"></a>1.6 全概率 Total Probability</h2><p>  设$B_1,B_2,…B_n$是样本空间$\Omega$中的<strong>两两不相容</strong>的一组事件，即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup_{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,…B_n$是样本空间$\Omega$的一个分割（又称为<strong>完备事件群</strong>，英文为<em>partition</em>）。</p>
+<h2 id="1-6-全概率-Total-Probability"><a href="#1-6-全概率-Total-Probability" class="headerlink" title="1.6 全概率 Total Probability"></a>1.6 全概率 Total Probability</h2><p>  设$B_1,B_2,…B_n$是样本空间$\Omega$中的<strong>两两不相容</strong>的一组事件，即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup_{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,…B_n$是样本空间$\Omega$​的一个分割 partition（又称为<strong>完备事件群</strong> Collectively exhaustive events）。</p>
+<p>  $P(B_i)$ is also known as prior probability. Prior probability, in Bayesian statistics, is <strong>the probability of an event before new data is collected</strong>. $A$ is composed of the sum of all the exclusive events, and $P(A)$ is called total probability.</p>
 <p>  设${B_1,B_2,…B_n}$是样本空间$\Omega$的一个分割，$A$为$\Omega$的一个事件，则（全概率公式 Law of Total Probability）<br>$$<br>P(A)=\sum_{i=1}^{n}P(A|B_i)P(B_i)<br>$$<br><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/full_prob.png" alt="img"></p>
-<p>推导：<br>$$<br>\begin{align}<br>P(A)&amp;=P(A \cap \Omega)\<br>&amp;=P(A \cap \sum_{i=1}^{n}B_i)\<br>&amp;=P(\sum_{i=1}^{n}AB_i)\<br>&amp;=\sum_{i=1}^{n}P(AB_i)\<br>&amp;=\sum_{i=1}^{n}P(A|B_i)P(B_i)\<br>&amp;=\sum_{i=1}^{n}P(A|B_i)P(B_i)<br>\end{align}<br>$$</p>
+<p><strong>Proof</strong>：</p>
+<p>  Since $B_1,B_2,…B_n$ are mutually exclusive, $AB_1,AB_2,…AB_n$ are also mutually exclusive. Therefore, by addition theorem and multiplication theorem we can get</p>
+<p>$$<br>\begin{align}<br>P(A)&amp;=P(A \cap \Omega)\<br>&amp;=P(A \cap \sum_{i=1}^{n}B_i)\<br>&amp;=P(\sum_{i=1}^{n}AB_i)\<br>&amp;=\sum_{i=1}^{n}P(AB_i)\<br>&amp;=\sum_{i=1}^{n}P(A|B_i)P(B_i)\<br>&amp;=\sum_{i=1}^{n}P(A|B_i)P(B_i)<br>\end{align}<br>$$</p>
 <blockquote>
 <p><strong>注：</strong>有时不易直接计算事件$A$的概率，但是在每个$B_i$上$A$的条件概率容易求出</p>
 </blockquote>
-<h2 id="1-7-Bayes公式-Bayes’-Formula（逆概率公式）"><a href="#1-7-Bayes公式-Bayes’-Formula（逆概率公式）" class="headerlink" title="1.7 Bayes公式 Bayes’ Formula（逆概率公式）"></a>1.7 <em>Bayes</em>公式 Bayes’ Formula（逆概率公式）</h2><p>  设${B_1, B_2, …B_n}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)&gt;0$，$i=1,2,…,n$，$P(A)&gt;0$，则<br>$$<br>P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}<br>$$</p>
+<h2 id="1-7-Bayes公式-Bayes’-Theorem（逆概率公式）"><a href="#1-7-Bayes公式-Bayes’-Theorem（逆概率公式）" class="headerlink" title="1.7 Bayes公式 Bayes’ Theorem（逆概率公式）"></a>1.7 <em>Bayes</em>公式 Bayes’ Theorem（逆概率公式）</h2><p>  设${B_1, B_2, …B_n}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)&gt;0$，$i=1,2,…,n$，$P(A)&gt;0$，则<br>$$<br>P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}<br>$$</p>
+<p><strong>Proof</strong>: From conditional probability formula, substitute law of total probability and multiplication theorem.</p>
 <blockquote>
 <p><strong>注：</strong>当有因果关系互换时必须用<em>Bayes</em>公式。</p>
 </blockquote>
@@ -555,7 +570,7 @@
 <p>  If events $A$ and $B$ are mutually independent, then $A$ and $\overline{B}$, $\overline{A}$ and $B$, $\overline{A}$ and $\overline{B}$ are all mutually independent.</p>
 <p>  设$\widetilde{A}$表示事件$A$发生和不发生之一，$\widetilde{B}$表示事件$B$发生和不发生之一。有独立性的定义可推至$P(\widetilde{A}\widetilde{B})=P(\widetilde{A})P(\widetilde{B})$（一共有四个等式 [if and only if (iff)]）。可推广至：<br>$$<br>P(\widetilde{A}_1\widetilde{A}_2…\widetilde{A}_n)=P(\widetilde{A}_1)…P(\widetilde{A}_n)<br>$$<br>上面有$2^n$个等式。</p>
 <blockquote>
-<p><strong>注：</strong>独立（<em>independent</em>）和不相容（<em>exclusive</em>）是不同的两个概念，前者有公共部分，后者没有公共部分，独立一定相容。</p>
+<p><strong>注：</strong>独立（independent）和不相容（exclusive）是不同的两个概念，前者有公共部分，后者没有公共部分，独立一定相容。</p>
 </blockquote>
 <h3 id="1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events"><a href="#1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events" class="headerlink" title="1.8.1 独立事件的条件概率 Conditional Probability of Independent events"></a>1.8.1 独立事件的条件概率 Conditional Probability of Independent events</h3><p>  If $P(A)&gt;0$, then the equivalent condition of events $A$ and $B$ being mutually independent<br>$$<br>P(B)=P(B|A)<br>$$</p>
 <h2 id="1-9-重要公式与结论"><a href="#1-9-重要公式与结论" class="headerlink" title="1.9 重要公式与结论"></a>1.9 重要公式与结论</h2><p>$$<br>\begin{align}<br>&amp;(1)\ P(\overline{A})=1-P(A)\<br>\<br>&amp;(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\<br>\<br>&amp;(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\<br>\<br>&amp;(4)\ P(A-B)=P(A)-P(AB)\<br>\<br>&amp;(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\<br>&amp;\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\<br>\<br>&amp;(6)\ P(\overline{A}<em>1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\<br>&amp;\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\<br>\<br>&amp;(7)\ 若A_1,A_2,…A_n相独立，则P(\bigcap</em>{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))<br>\end{align}<br>$$</p>
@@ -1449,7 +1464,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Stack/">
+                                    <span class="chip bg-color">Stack</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -1760,12 +1779,11 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;Current
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
             <div class="card">
-                <a href="/2024/09/25/statistics/">
+                <a href="/2024/09/26/physiology/">
                     <div class="card-image">
                         
                         
@@ -1781,9 +1799,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-09-25
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-09-26
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -1792,7 +1810,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -2075,7 +2092,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">74.8k</span>
+                        class="white-color">75.8k</span>
             
             
             
