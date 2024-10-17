@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="月落星桥" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="月落星桥" type="application/atom+xml">
 </head>
 
 
@@ -409,14 +409,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    17k
+                    17.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    74 Min
+                    76 Min
                 </div>
                 
 
@@ -434,11 +434,11 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="概率论与数理统计笔记"><a href="#概率论与数理统计笔记" class="headerlink" title="概率论与数理统计笔记"></a>概率论与数理统计笔记</h1><p><font color="gray"><em><strong>什么是统计学？</strong></em></font></p>
+                <p><font color="gray"><em><strong>什么是统计学？</strong></em></font></p>
 <p><font color="gray"><em>人生，是从不充分的证据开始，引出完美结论的一种艺术。——Samuel Bulter</em></font></p>
 <p><font color="gray"><em>如果我们不在同一时期，把理解了的科学知识变为我们日常生活的一部分，科学家降不可能提高他们互相拥有的知识。——J.D.Bernal</em></font></p>
 <p><font color="gray"><em>与人类有关的事实，可以由数量来表示，并且经过大量的积累重复可以导出一般规律。——英国皇家统计学会</em></font></p>
-<h1 id="一-事件与概率"><a href="#一-事件与概率" class="headerlink" title="一 事件与概率"></a>一 事件与概率</h1><h2 id="1-1-随机试验和随机事件"><a href="#1-1-随机试验和随机事件" class="headerlink" title="1.1 随机试验和随机事件"></a>1.1 随机试验和随机事件</h2><ol>
+<h2 id="一-事件与概率-Random-Events-and-Probability"><a href="#一-事件与概率-Random-Events-and-Probability" class="headerlink" title="一 事件与概率 Random Events and Probability"></a>一 事件与概率 Random Events and Probability</h2><h3 id="1-1-随机试验和随机事件"><a href="#1-1-随机试验和随机事件" class="headerlink" title="1.1 随机试验和随机事件"></a>1.1 随机试验和随机事件</h3><ol>
 <li><p><strong>随机现象：</strong>自然界中的客观现象，当人们观测它时，所得结果不能预先确定，而仅仅是多种可能结果之一。</p>
 </li>
 <li><p><strong>随机试验 random experiment：</strong>随机现象的实现和对它某个特征的观测。</p>
@@ -456,7 +456,7 @@
 <li><p><strong>不可能事件 impossible event（$$\emptyset$$）：</strong>在试验中不可能发生的事件。</p>
 </li>
 </ol>
-<h2 id="1-2-事件的运算"><a href="#1-2-事件的运算" class="headerlink" title="1.2 事件的运算"></a>1.2 事件的运算</h2><ol>
+<h3 id="1-2-事件的运算"><a href="#1-2-事件的运算" class="headerlink" title="1.2 事件的运算"></a>1.2 事件的运算</h3><ol>
 <li><p><strong>子事件$$A\subset B$$：</strong>事件$A$发生蕴含时间$B$一定发生，则时间$A$成为事件$B$的子事件。若$A\subset B$，且$B\subset A$，则称时间$A$与事件$B$相等，记为$A=B$.</p>
 <p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/AsubsetB.png" alt="img"></p>
 </li>
@@ -479,8 +479,8 @@
 <p>$$<br>\overline{A\cap B}=\overline{A}\cup \overline{B}<br>$$</p>
 <p>上式可推广到<em>n</em>个事件：<br>$$<br>\overline{\bigcup_{i=1}^{n}A_i}=\bigcap_{i=1}^{n}\overline{A_i},<br>$$</p>
 <p>$$<br>\overline{\bigcap_{i=1}^{n}A_i}=\bigcup_{i=1}^{n}\overline{A_i},<br>$$</p>
-<h2 id="1-3-概率的定义-Event-Probability"><a href="#1-3-概率的定义-Event-Probability" class="headerlink" title="1.3 概率的定义 Event Probability"></a>1.3 概率的定义 Event Probability</h2><p>  概率是随机事件发生可能性大小的数字表征，其值在0和1之间，即概率是事件的函数。概率有以下定义：</p>
-<h3 id="1-3-1-古典概率-Classical-Probability-Model"><a href="#1-3-1-古典概率-Classical-Probability-Model" class="headerlink" title="1.3.1 古典概率 Classical Probability Model"></a>1.3.1 古典概率 Classical Probability Model</h3><p>  设一个试验有<em>N</em>个等可能的结果，而事件$E$恰包含其中的$M$个结果，则事件$E$的概率，记为$P(E)$，定义为<br>$$<br>P(E)=M/N<br>$$<br>或<br>$$<br>P(E)=#(M) / #(N),<br>$$<br>其中，$#(M)$为事件$M$中基本事件的个数。</p>
+<h3 id="1-3-概率的定义-Event-Probability"><a href="#1-3-概率的定义-Event-Probability" class="headerlink" title="1.3 概率的定义 Event Probability"></a>1.3 概率的定义 Event Probability</h3><p>  概率是随机事件发生可能性大小的数字表征，其值在0和1之间，即概率是事件的函数。概率有以下定义：</p>
+<h4 id="1-3-1-古典概率-Classical-Probability-Model"><a href="#1-3-1-古典概率-Classical-Probability-Model" class="headerlink" title="1.3.1 古典概率 Classical Probability Model"></a>1.3.1 古典概率 Classical Probability Model</h4><p>  设一个试验有<em>N</em>个等可能的结果，而事件$E$恰包含其中的$M$个结果，则事件$E$的概率，记为$P(E)$，定义为<br>$$<br>P(E)=M/N<br>$$<br>或<br>$$<br>P(E)=#(M) / #(N),<br>$$<br>其中，$#(M)$为事件$M$中基本事件的个数。</p>
 <p>  古典概型有<strong>两个条件</strong>：</p>
 <ul>
 <li>有限性，试验结果只有有限个（记为<em>n</em>），</li>
@@ -489,12 +489,12 @@
 <blockquote>
 <p><strong>注：</strong>古典概率可引申出“几何概率”。</p>
 </blockquote>
-<h3 id="1-3-2-概率的统计定义-Statistical-Probability"><a href="#1-3-2-概率的统计定义-Statistical-Probability" class="headerlink" title="1.3.2 概率的统计定义 Statistical Probability"></a>1.3.2 概率的统计定义 Statistical Probability</h3><p>  古典概率的两个条件往往不能满足，但可以将事件的随机试验独立反复做<em>n</em>次（<em>Bernouli</em>试验），设事件$A$发生了$n_A$次，称比值$\frac{n_A}{n}$为事件$A$发生的频率，当<em>n</em>越来越大时，频率会在某个值<em>p</em>附近波动，且波动越来越小，这个值<em>p</em>就定义为事件$A$的概率。该学派为频率派。</p>
+<h4 id="1-3-2-概率的统计定义-Statistical-Probability"><a href="#1-3-2-概率的统计定义-Statistical-Probability" class="headerlink" title="1.3.2 概率的统计定义 Statistical Probability"></a>1.3.2 概率的统计定义 Statistical Probability</h4><p>  古典概率的两个条件往往不能满足，但可以将事件的随机试验独立反复做<em>n</em>次（<em>Bernouli</em>试验），设事件$A$发生了$n_A$次，称比值$\frac{n_A}{n}$为事件$A$发生的频率，当<em>n</em>越来越大时，频率会在某个值<em>p</em>附近波动，且波动越来越小，这个值<em>p</em>就定义为事件$A$的概率。该学派为频率派。</p>
 <blockquote>
 <p><strong>注：</strong>不能写为$lim_{n\rightarrow{\infty}}\frac{n_A}{n}=p$，因为$\frac{n_A}{n}$不是<em>n</em>的函数。</p>
 </blockquote>
-<h3 id="1-3-3-主观概率-Subjective-Probability"><a href="#1-3-3-主观概率-Subjective-Probability" class="headerlink" title="1.3.3 主观概率 Subjective Probability"></a>1.3.3 主观概率 Subjective Probability</h3><p>  主观概率可以理解为一种心态或倾向性。究其根由，大抵有二：一是根据其经验和知识，二是根据其利害关系。该学派在金融和管理有大量的应用，这一学派成为<em>Bayes</em>学派。</p>
-<h3 id="1-3-4-概率的公理化定义-Axiomatic-Definition-of-Probability"><a href="#1-3-4-概率的公理化定义-Axiomatic-Definition-of-Probability" class="headerlink" title="1.3.4 概率的公理化定义 Axiomatic Definition of Probability"></a>1.3.4 概率的公理化定义 Axiomatic Definition of Probability</h3><p>  对概率运算规定一些简单的基本法则：</p>
+<h4 id="1-3-3-主观概率-Subjective-Probability"><a href="#1-3-3-主观概率-Subjective-Probability" class="headerlink" title="1.3.3 主观概率 Subjective Probability"></a>1.3.3 主观概率 Subjective Probability</h4><p>  主观概率可以理解为一种心态或倾向性。究其根由，大抵有二：一是根据其经验和知识，二是根据其利害关系。该学派在金融和管理有大量的应用，这一学派成为<em>Bayes</em>学派。</p>
+<h4 id="1-3-4-概率的公理化定义-Axiomatic-Definition-of-Probability"><a href="#1-3-4-概率的公理化定义-Axiomatic-Definition-of-Probability" class="headerlink" title="1.3.4 概率的公理化定义 Axiomatic Definition of Probability"></a>1.3.4 概率的公理化定义 Axiomatic Definition of Probability</h4><p>  对概率运算规定一些简单的基本法则：</p>
 <ol>
 <li><p>非负性 non-negativity：设$A$是随机事件，则$0 \leq P(A) \leq 1$,</p>
 </li>
@@ -515,7 +515,7 @@
 </li>
 </ol>
 </blockquote>
-<h2 id="1-4-古典概率计算"><a href="#1-4-古典概率计算" class="headerlink" title="1.4 古典概率计算"></a>1.4 古典概率计算</h2><h3 id="1-4-1-排列组合"><a href="#1-4-1-排列组合" class="headerlink" title="1.4.1 排列组合"></a>1.4.1 排列组合</h3><ul>
+<h3 id="1-4-古典概率计算"><a href="#1-4-古典概率计算" class="headerlink" title="1.4 古典概率计算"></a>1.4 古典概率计算</h3><h4 id="1-4-1-排列组合"><a href="#1-4-1-排列组合" class="headerlink" title="1.4.1 排列组合"></a>1.4.1 排列组合</h4><ul>
 <li><strong>选排列：</strong>从<em>n</em>个不同元素中取<em>r</em>个不同取法（$1\leq r\leq n$），$P^{n}_{r}=n(n-1)…(n-r+1)$.</li>
 <li><strong>重复排列：</strong>从<em>n</em>个不同元素中可重复地取<em>r</em>个不同取法（$1\leq r\leq n$），$P^{n}_{r}=n^r$.</li>
 <li><strong>组合：</strong>同选排列，但不考虑次序，$\binom{n}{r}=\frac{P^{n}_{r}}{r!}$.</li>
@@ -528,7 +528,7 @@
 <li>一些书中将组合写成$C_{n}^{r}$或$C_{r}^{n}$，更通用的是$\binom{n}{r}$.</li>
 </ol>
 </blockquote>
-<h3 id="1-4-2-其他公式"><a href="#1-4-2-其他公式" class="headerlink" title="1.4.2 其他公式"></a>1.4.2 其他公式</h3><ul>
+<h4 id="1-4-2-其他公式"><a href="#1-4-2-其他公式" class="headerlink" title="1.4.2 其他公式"></a>1.4.2 其他公式</h4><ul>
 <li>组合系数$\binom{n}{r}$又常称为二项式系数</li>
 </ul>
 <p>$$<br>(a+b)^n=\sum_{i=0}^{n}\binom{n}{r}a^i b^{n-1}<br>$$</p>
@@ -536,23 +536,23 @@
 <li><em>n</em>个相异物件分成<em>k</em>堆，各堆物件数分为$r_1, …, r_k$的方法是</li>
 </ul>
 <p>$$<br>n!/(r_1!…r_k!).<br>$$</p>
-<h2 id="1-5-条件概率-Conditional-Probability"><a href="#1-5-条件概率-Conditional-Probability" class="headerlink" title="1.5 条件概率 Conditional Probability"></a>1.5 条件概率 Conditional Probability</h2><p>  条件概率就是知道了<strong>一定信息</strong>下得到的随机事件的概率。设事件$A$和$B$是随机试验$\Omega$中的两个事件，$P(B)&gt;0$，称<br>$$<br>P(A|B)=\frac{P(AB)}{P(B)}<br>$$<br>为事件$B$发生条件下事件$A$发生的条件概率，可用图形表示：</p>
+<h3 id="1-5-条件概率-Conditional-Probability"><a href="#1-5-条件概率-Conditional-Probability" class="headerlink" title="1.5 条件概率 Conditional Probability"></a>1.5 条件概率 Conditional Probability</h3><p>  条件概率就是知道了<strong>一定信息</strong>下得到的随机事件的概率。设事件$A$和$B$是随机试验$\Omega$中的两个事件，$P(B)&gt;0$，称<br>$$<br>P(A|B)=\frac{P(AB)}{P(B)}<br>$$<br>为事件$B$发生条件下事件$A$发生的条件概率，可用图形表示：</p>
 <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/con_prob.png" alt="img" style="zoom:33%;">
 
 <blockquote>
 <p><strong>注：</strong>事实上，我们所考虑的概率都是在一定条件下计算的，因为随机试验就是在一定条件下进行的。</p>
 </blockquote>
-<h3 id="1-5-1-条件概率性质"><a href="#1-5-1-条件概率性质" class="headerlink" title="1.5.1 条件概率性质"></a>1.5.1 条件概率性质</h3><p>  给定$A$发生，$P(A)&gt;0$：</p>
+<h4 id="1-5-1-条件概率性质"><a href="#1-5-1-条件概率性质" class="headerlink" title="1.5.1 条件概率性质"></a>1.5.1 条件概率性质</h4><p>  给定$A$发生，$P(A)&gt;0$：</p>
 <ul>
 <li>$0 \leq P(B|A) \leq 1$</li>
 <li>$0 \leq P(\Omega|A) = 1$</li>
 <li>若$B_1 \cap B_2 = \phi _1$，则$P(B_1 \cup B_2 | A) = P(B_1|A) + P(B_2|A)$，可推广至无穷。</li>
 </ul>
-<h3 id="1-5-2-乘法定理-Multiplication-Theorem-of-Probability"><a href="#1-5-2-乘法定理-Multiplication-Theorem-of-Probability" class="headerlink" title="1.5.2 乘法定理 Multiplication Theorem of Probability"></a>1.5.2 乘法定理 Multiplication Theorem of Probability</h3><p>  由$P(A|B)=\frac{P(AB)}{P(B)} \Rightarrow P(AB)=P(A|B)P(B)$，可推广至<br>$$<br>P(A_1 A_2 …A_n)=P(A_1)P(A_2|A_1)…P(A_n|A_1…A_{n-1})<br>$$</p>
+<h4 id="1-5-2-乘法定理-Multiplication-Theorem-of-Probability"><a href="#1-5-2-乘法定理-Multiplication-Theorem-of-Probability" class="headerlink" title="1.5.2 乘法定理 Multiplication Theorem of Probability"></a>1.5.2 乘法定理 Multiplication Theorem of Probability</h4><p>  由$P(A|B)=\frac{P(AB)}{P(B)} \Rightarrow P(AB)=P(A|B)P(B)$，可推广至<br>$$<br>P(A_1 A_2 …A_n)=P(A_1)P(A_2|A_1)…P(A_n|A_1…A_{n-1})<br>$$</p>
 <blockquote>
 <p><strong>注：</strong> 右边看似麻烦，其实容易算，左边看似简单，但是难算。</p>
 </blockquote>
-<h2 id="1-6-全概率-Total-Probability"><a href="#1-6-全概率-Total-Probability" class="headerlink" title="1.6 全概率 Total Probability"></a>1.6 全概率 Total Probability</h2><p>  设$B_1,B_2,…B_n$是样本空间$\Omega$中的<strong>两两不相容</strong>的一组事件，即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup_{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,…B_n$是样本空间$\Omega$​的一个分割 partition（又称为<strong>完备事件群</strong> Collectively exhaustive events）。</p>
+<h3 id="1-6-全概率-Total-Probability"><a href="#1-6-全概率-Total-Probability" class="headerlink" title="1.6 全概率 Total Probability"></a>1.6 全概率 Total Probability</h3><p>  设$B_1,B_2,…B_n$是样本空间$\Omega$中的<strong>两两不相容</strong>的一组事件，即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup_{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,…B_n$是样本空间$\Omega$​的一个分割 partition（又称为<strong>完备事件群</strong> Collectively exhaustive events）。</p>
 <p>  $P(B_i)$ is also known as prior probability. Prior probability, in Bayesian statistics, is <strong>the probability of an event before new data is collected</strong>. $A$ is composed of the sum of all the exclusive events, and $P(A)$ is called total probability.</p>
 <p>  设${B_1,B_2,…B_n}$是样本空间$\Omega$的一个分割，$A$为$\Omega$的一个事件，则（全概率公式 Law of Total Probability）<br>$$<br>P(A)=\sum_{i=1}^{n}P(A|B_i)P(B_i)<br>$$<br><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/full_prob.png" alt="img"></p>
 <p><strong>Proof</strong>：</p>
@@ -561,26 +561,26 @@
 <blockquote>
 <p><strong>注：</strong>有时不易直接计算事件$A$的概率，但是在每个$B_i$上$A$的条件概率容易求出</p>
 </blockquote>
-<h2 id="1-7-Bayes公式-Bayes’-Theorem（逆概率公式）"><a href="#1-7-Bayes公式-Bayes’-Theorem（逆概率公式）" class="headerlink" title="1.7 Bayes公式 Bayes’ Theorem（逆概率公式）"></a>1.7 <em>Bayes</em>公式 Bayes’ Theorem（逆概率公式）</h2><p>  设${B_1, B_2, …B_n}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)&gt;0$，$i=1,2,…,n$，$P(A)&gt;0$，则<br>$$<br>P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}<br>$$</p>
+<h3 id="1-7-Bayes公式-Bayes’-Theorem（逆概率公式）"><a href="#1-7-Bayes公式-Bayes’-Theorem（逆概率公式）" class="headerlink" title="1.7 Bayes公式 Bayes’ Theorem（逆概率公式）"></a>1.7 <em>Bayes</em>公式 Bayes’ Theorem（逆概率公式）</h3><p>  设${B_1, B_2, …B_n}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)&gt;0$，$i=1,2,…,n$，$P(A)&gt;0$，则<br>$$<br>P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}<br>$$</p>
 <p><strong>Proof</strong>: From conditional probability formula, substitute law of total probability and multiplication theorem.</p>
 <blockquote>
 <p><strong>注：</strong>当有因果关系互换时必须用<em>Bayes</em>公式。</p>
 </blockquote>
-<h2 id="1-8-事件的独立性-Independence-of-Events"><a href="#1-8-事件的独立性-Independence-of-Events" class="headerlink" title="1.8 事件的独立性 Independence of Events"></a>1.8 事件的独立性 Independence of Events</h2><p>  设$A$，$B$是随机试验中的两个事件，若满足$P(AB)=P(A)P(B)$，则称事件$A$和$B$相互独立。判断事件的独立，应该是<strong>从实际出发</strong>，如果能够判断事件$B$的发生与否对事件$A$的发生与否不产生影响，则事件$A$，$B$​即为独立。</p>
+<h3 id="1-8-事件的独立性-Independence-of-Events"><a href="#1-8-事件的独立性-Independence-of-Events" class="headerlink" title="1.8 事件的独立性 Independence of Events"></a>1.8 事件的独立性 Independence of Events</h3><p>  设$A$，$B$是随机试验中的两个事件，若满足$P(AB)=P(A)P(B)$，则称事件$A$和$B$相互独立。判断事件的独立，应该是<strong>从实际出发</strong>，如果能够判断事件$B$的发生与否对事件$A$的发生与否不产生影响，则事件$A$，$B$​即为独立。</p>
 <p>  If events $A$ and $B$ are mutually independent, then $A$ and $\overline{B}$, $\overline{A}$ and $B$, $\overline{A}$ and $\overline{B}$ are all mutually independent.</p>
 <p>  设$\widetilde{A}$表示事件$A$发生和不发生之一，$\widetilde{B}$表示事件$B$发生和不发生之一。有独立性的定义可推至$P(\widetilde{A}\widetilde{B})=P(\widetilde{A})P(\widetilde{B})$（一共有四个等式 [if and only if (iff)]）。可推广至：<br>$$<br>P(\widetilde{A}_1\widetilde{A}_2…\widetilde{A}_n)=P(\widetilde{A}_1)…P(\widetilde{A}_n)<br>$$<br>上面有$2^n$个等式。</p>
 <blockquote>
 <p><strong>注：</strong>独立（independent）和不相容（exclusive）是不同的两个概念，前者有公共部分，后者没有公共部分，独立一定相容。</p>
 </blockquote>
-<h3 id="1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events"><a href="#1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events" class="headerlink" title="1.8.1 独立事件的条件概率 Conditional Probability of Independent events"></a>1.8.1 独立事件的条件概率 Conditional Probability of Independent events</h3><p>  If $P(A)&gt;0$, then the equivalent condition of events $A$ and $B$ being mutually independent<br>$$<br>P(B)=P(B|A)<br>$$</p>
-<h2 id="1-9-重要公式与结论"><a href="#1-9-重要公式与结论" class="headerlink" title="1.9 重要公式与结论"></a>1.9 重要公式与结论</h2><p>$$<br>\begin{align}<br>&amp;(1)\ P(\overline{A})=1-P(A)\<br>\<br>&amp;(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\<br>\<br>&amp;(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\<br>\<br>&amp;(4)\ P(A-B)=P(A)-P(AB)\<br>\<br>&amp;(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\<br>&amp;\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\<br>\<br>&amp;(6)\ P(\overline{A}<em>1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\<br>&amp;\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\<br>\<br>&amp;(7)\ 若A_1,A_2,…A_n相独立，则P(\bigcap</em>{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))<br>\end{align}<br>$$</p>
-<h1 id="二-随机变量及其分布"><a href="#二-随机变量及其分布" class="headerlink" title="二 随机变量及其分布"></a>二 随机变量及其分布</h1><h2 id="2-1-随机变量的概念"><a href="#2-1-随机变量的概念" class="headerlink" title="2.1  随机变量的概念"></a>2.1  随机变量的概念</h2><ol>
-<li><strong>随机变量（<em>Random variable</em>）：</strong>值随机会而定的变量，研究随机试验的一串事件。可按维数分为一维、二维至多维随机变量。按性质可分为<strong>离散型随机变量</strong>以及<strong>连续型随机变量</strong>。</li>
-<li><strong>分布（<em>Distribution</em>）：</strong>事件之间的联系，用来计算概率。</li>
-<li><strong>示性函数（<em>Indication function</em>）：</strong>$I_A(\omega)=\begin{cases}<br> 1&amp; \omega \in A \<br> 0&amp; \text{ 反之}<br>\end{cases}$，事件$A$有随机变量$I_A$表示出来，$I_A$称为事件$A$的示性函数。</li>
+<h4 id="1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events"><a href="#1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events" class="headerlink" title="1.8.1 独立事件的条件概率 Conditional Probability of Independent events"></a>1.8.1 独立事件的条件概率 Conditional Probability of Independent events</h4><p>  If $P(A)&gt;0$, then the equivalent condition of events $A$ and $B$ being mutually independent<br>$$<br>P(B)=P(B|A)<br>$$</p>
+<h3 id="1-9-重要公式与结论"><a href="#1-9-重要公式与结论" class="headerlink" title="1.9 重要公式与结论"></a>1.9 重要公式与结论</h3><p>$$<br>\begin{align}<br>&amp;(1)\ P(\overline{A})=1-P(A)\<br>\<br>&amp;(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\<br>\<br>&amp;(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\<br>\<br>&amp;(4)\ P(A-B)=P(A)-P(AB)\<br>\<br>&amp;(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\<br>&amp;\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\<br>\<br>&amp;(6)\ P(\overline{A}<em>1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\<br>&amp;\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\<br>\<br>&amp;(7)\ 若A_1,A_2,…A_n相独立，则P(\bigcap</em>{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))<br>\end{align}<br>$$</p>
+<h2 id="二-随机变量及其分布-Random-Variables-and-Their-Distribution"><a href="#二-随机变量及其分布-Random-Variables-and-Their-Distribution" class="headerlink" title="二 随机变量及其分布 Random Variables and Their Distribution"></a>二 随机变量及其分布 Random Variables and Their Distribution</h2><h3 id="2-1-随机变量的概念-Random-Variable"><a href="#2-1-随机变量的概念-Random-Variable" class="headerlink" title="2.1  随机变量的概念 Random Variable"></a>2.1  随机变量的概念 Random Variable</h3><ol>
+<li><strong>随机变量 Random variable：</strong>值随机会而定的变量，研究随机试验的一串事件。可按维数分为一维、二维至多维随机变量。按性质可分为<strong>离散型随机变量</strong>以及<strong>连续型随机变量</strong>。A random variable is a function that assigns numeric values to different events in a sample space.</li>
+<li><strong>分布 Distribution：</strong>事件之间的联系，用来计算概率。</li>
+<li><strong>示性函数 Indication function：</strong>$I_A(\omega)=\begin{cases}<br> 1&amp; \omega \in A \<br> 0&amp; \omega \notin A<br>\end{cases}$，事件$A$有随机变量$I_A$表示出来，$I_A$称为事件$A$的示性函数。</li>
 </ol>
-<h2 id="2-2-离散型随机变量及其分布"><a href="#2-2-离散型随机变量及其分布" class="headerlink" title="2.2 离散型随机变量及其分布"></a>2.2 离散型随机变量及其分布</h2><ol>
-<li><p><strong>离散型随机变量：</strong>设$X$为一随机变量，如果$X$<strong>只取有限个或可数个值</strong>，则称$X$为一个（一维）离散型随机变量。</p>
+<h3 id="2-2-离散型随机变量及其分布-Discrete-Random-Variables"><a href="#2-2-离散型随机变量及其分布-Discrete-Random-Variables" class="headerlink" title="2.2 离散型随机变量及其分布 Discrete Random Variables"></a>2.2 离散型随机变量及其分布 Discrete Random Variables</h3><ol>
+<li><p><strong>离散型随机变量 discrete random variables：</strong>设$X$为一随机变量，如果$X$<strong>只取有限个或可数个值</strong>，则称$X$为一个（一维）离散型随机变量。A random variable for which there exists a discrete set of numeric values is a discrete random variable.</p>
 </li>
 <li><p><strong>概率函数：</strong>设$X$为一随机变量，其全部可能值为${a_1, a_2,…}$，则$p_i=P(X=a_i),i=1,2,…$称为$X$的概率函数。</p>
 </li>
@@ -606,7 +606,7 @@
 </tr>
 </tbody></table>
 </li>
-<li><p><strong>概率分布函数：</strong></p>
+<li><p><strong>概率分布函数 distribution function：</strong></p>
 <ul>
 <li><strong>定义：</strong>设$X$为一随机变量，则函数</li>
 </ul>
@@ -617,10 +617,21 @@
 <ul>
 <li><p><strong>性质：</strong></p>
 <ul>
-<li>$F(x)是单调非降的：当$$x_1&lt;x_2$时，有$F(x_1)\leq F(X_2)$.</li>
-<li>当$x \rightarrow \infty$时，$F(x)\rightarrow1$；当$x \rightarrow-\infty$时，$F(x)\rightarrow0$.</li>
+<li>单调性：$F(x)$是单调非降的：$\forall x_1&lt;x_2$，有$F(x_1)\leq F(X_2)$.</li>
 </ul>
 </li>
+<li><p>有界性：$0 \leq F(x) \leq 1$；当$x \rightarrow \infty$时，$F(x)\rightarrow1$；当$x \rightarrow-\infty$时，$F(x)\rightarrow0$​.</p>
+</li>
+<li><p>右连续性：$\forall x_0, \lim_{x\to x_0+0}F(x)=F(x_0)$, that is, $F(x)$​ is a right continuous function.<br>$$<br>\lim_{x\to x_0+0}(F(x)-F(x_0))=\lim_{x \to x_0+0}P{x_0&lt;X\leq x}=0<br>$$</p>
+</li>
+</ul>
+<pre><code>$F(x)$右连续非左连续。
+</code></pre>
+<ul>
+<li>Relationship between probability and distribution function:</li>
+</ul>
+<p>$$<br>\begin{align}<br>&amp;(1)\ P{a&lt;X\leq b}=P{X\leq b}-P{X\leq a}=F(b)-F(a)\<br>\<br>&amp;(2) P{X&gt;a}=1-P{X\leq a}=1-F(a)\<br>\<br>&amp;(3) P{X&lt;a}=\lim_{x\to a-0}P{X\leq x}=\lim_{x\to a-0}F(x)\<br>\<br>&amp;(4) P{X\geq a}=1-P{X&lt;a}=1-\lim_{x\to a-0}F(x)\<br>\<br>&amp;(5) P{X=a}=P{X\leq a}-P{X&lt;a}=F(a)-\lim_{x\to a-0}F(x)\<br>\end{align}<br>$$</p>
+<ul>
 <li><p><strong>离散型随机变量分布函数：</strong></p>
 <p>对于离散型随机变量，$F(X)=P(X\leq x)=\sum_{(i|a_i\leq x)}p_i$, $p_i=P(X=i)=F(i)-F(i-1)$。</p>
 </li>
@@ -651,23 +662,26 @@
 </ul>
 </li>
 </ol>
-<h2 id="2-3-连续型随机变量及其分布"><a href="#2-3-连续型随机变量及其分布" class="headerlink" title="2.3 连续型随机变量及其分布"></a>2.3 连续型随机变量及其分布</h2><ol>
-<li><p><strong>连续型随机变量：</strong>设$X$为一随机变量，如果$X$<strong>不仅有无限个而且有不可数个值</strong>，则称$X$为一个连续型随机变量。</p>
+<h3 id="2-3-连续型随机变量及其分布-Continuous-Random-Variables"><a href="#2-3-连续型随机变量及其分布-Continuous-Random-Variables" class="headerlink" title="2.3 连续型随机变量及其分布 Continuous Random Variables"></a>2.3 连续型随机变量及其分布 Continuous Random Variables</h3><ol>
+<li><p><strong>连续型随机变量 continuous random variable：</strong>设$X$为一随机变量，如果$X$<strong>不仅有无限个而且有不可数个值</strong>，则称$X$为一个连续型随机变量。A random variable whose possible values cannot be enumerated is a continuous random variable.</p>
 </li>
 <li><p><strong>概率密度函数：</strong></p>
 <ul>
-<li><p><strong>定义：</strong>设连续型随机变量$X$有概率分布函数$F(x)$，则$F(x)$的导数$f(x)=F’(x)$称为$X$的概率密度函数。</p>
+<li><p><strong>定义：</strong>The probability density function $f(x)$ of the continuous random variable $X$ is a function whose integral from $x=a$ to $x=b$ $(\forall a,b\in R\ and\ b\geq a)$ gives the probability that $X$ takes a value in the interval $(a,b]$, i.e. 设连续型随机变量$X$有概率分布函数$F(x)$，则$F(x)$的导数$f(x)=F’(x)$称为$X$​的概率密度函数。</p>
+<p>  $P{a&lt;X\leq b}=\int_{a}^{b}f(X),dx$</p>
 </li>
 <li><p><strong>性质：</strong></p>
 <ul>
-<li>对于所有的$-\infty&lt;x&lt;+\infty$，有$f(x)\ge 0$；</li>
-<li>$\int_{-\infty}^{+\infty}f(x)dx=1$；</li>
-<li>对于任意的$-\infty&lt;a\leq b&lt;+\infty$，有$P(a\leq X\leq b)=F(b)-F(a)=\int_{a}^{b}f(x)dx$.</li>
+<li>$F(x)$ is a continuous function;</li>
+<li>对于任意的$-\infty&lt;a\leq b&lt;+\infty$，有$P(a\leq X\leq b)=F(b)-F(a)=\int_{a}^{b}f(x)dx$​​;</li>
+<li>$F’(x)=f(x)$;​</li>
+<li>对于任意的$-\infty&lt;x&lt;+\infty$，有$P(X=x)=\int_{x}^{x}f(u)du=0$.</li>
 </ul>
 </li>
 <li><p><strong>注：</strong></p>
 <ul>
-<li>对于任意的$-\infty&lt;x&lt;+\infty$，有$P(X=x)=\int_{x}^{x}f(u)du=0$.</li>
+<li>对于所有的$-\infty&lt;x&lt;+\infty$，有$f(x)\ge 0$；</li>
+<li>$\int_{-\infty}^{+\infty}f(x)dx=1$；</li>
 <li>假设有总共一个单位的质量连续地分布在$a\leq x\leq b$上，那么$f(x)$表示在点$x$的质量密度且$\int_{c}^{d}f(x)dx$表示在区间$[c, d]$上的全部质量。</li>
 </ul>
 </li>
@@ -727,7 +741,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="2-4-多维随机变量（随机向量）"><a href="#2-4-多维随机变量（随机向量）" class="headerlink" title="2.4 多维随机变量（随机向量）"></a>2.4 多维随机变量（随机向量）</h2><ol>
+<h3 id="2-4-多维随机变量（随机向量）"><a href="#2-4-多维随机变量（随机向量）" class="headerlink" title="2.4 多维随机变量（随机向量）"></a>2.4 多维随机变量（随机向量）</h3><ol>
 <li><p><strong>随机向量：</strong>设$X={X_1,…,X_n}$.如果每个$X_i$都是一个随机变量，$i=1,…,n$，则称$X$为$n$维随机变量或者随机向量。</p>
 </li>
 <li><p><strong>离散型随机向量的分布：</strong>如果每一个$X_i$都是一个离散型随机变量，$i=1,…,n$，则称$X={X_1,…,X_n}$为一$n$维离散型随机变量。设$X_i$的所有可能取值为${a_{i1},a{i2},…},\quad i=1,…,n$，则称<br>$$<br>p(j_1,…,j_n)=P(X_1=a_{1j_1},…,X_n=a_{nj_n}),\quad j_1,…,j_n=1,2,…<br>$$<br>为$n$维随机变量$X$的概率函数，这也是其联合分布。</p>
@@ -770,7 +784,7 @@
 <blockquote>
 <p><strong>注：</strong>二维正态分布$N(a,b,\sigma_1^2,\sigma_2^2,\rho )$的边缘分布密度分别是一维正态分布$N(a,\sigma_1^2)$和$N(b,\sigma_2^2)$。因此联合分布可推边缘分布，而边缘分布不可推联合分布。</p>
 </blockquote>
-<h2 id="2-5-条件分布和随机变量的独立性"><a href="#2-5-条件分布和随机变量的独立性" class="headerlink" title="2.5 条件分布和随机变量的独立性"></a>2.5 条件分布和随机变量的独立性</h2><ol>
+<h3 id="2-5-条件分布和随机变量的独立性"><a href="#2-5-条件分布和随机变量的独立性" class="headerlink" title="2.5 条件分布和随机变量的独立性"></a>2.5 条件分布和随机变量的独立性</h3><ol>
 <li><p><strong>离散型随机变量的条件分布：</strong>设$(X,Y)$为二维离散型随机变量，对于给定的事件${Y=y_j}$，其概率$P(Y=y_j)&gt;0$，则称<br>$$<br>P(X=x_i|Y=y_j)=\frac{P(X=x_i,Y=y_j)}{P(Y=y_j)}=\frac{p_{ij}}{p_{\cdot j}},\quad i=1,2,…<br>$$<br>为在给定$Y=y_j$的条件下$X$的条件分布律。类似的，称<br>$$<br>P(Y=y_i|X=x_j)=\frac{P(X=x_i,Y=y_j)}{P(X=x_j)}=\frac{p_{ij}}{p_{i\cdot}},\quad j=1,2,…<br>$$<br>为在给定$X=x_j$的条件下$Y$的条件分布律。</p>
 </li>
 <li><p><strong>连续型随机变量的条件分布：</strong>设$(X,Y)$为二维连续型随机变量，对于给定条件$Y=y$下的条件概率密度为<br>$$<br>f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}, \quad f_Y(y)&gt;0.\<br>$$<br>类似的，在$X=x$下的条件概率密度为<br>$$<br>f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}, \quad f_X(x)&gt;0.\<br>$$</p>
@@ -797,7 +811,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="2-6-随机变量的函数的概率分布"><a href="#2-6-随机变量的函数的概率分布" class="headerlink" title="2.6 随机变量的函数的概率分布"></a>2.6 随机变量的函数的概率分布</h2><p>  最简单的情形，是由一维随机变量$X$的概率分布去求其一给定函数$Y=g(X)$的分布。较为常见的，是由$(X_1,X_2,…,X_n)$的分布去求$Y=g(X_1,X_2,…,X_n)$的分布。更一般地，由$(X_1,X_2,…,X_n)$的分布去求$(Y_1,Y_2,…,Y_m)$的分布，其中$Y_i=g_i(X_1,X_2,…,X_n),\quad i=1,2,…,m$.</p>
+<h3 id="2-6-随机变量的函数的概率分布"><a href="#2-6-随机变量的函数的概率分布" class="headerlink" title="2.6 随机变量的函数的概率分布"></a>2.6 随机变量的函数的概率分布</h3><p>  最简单的情形，是由一维随机变量$X$的概率分布去求其一给定函数$Y=g(X)$的分布。较为常见的，是由$(X_1,X_2,…,X_n)$的分布去求$Y=g(X_1,X_2,…,X_n)$的分布。更一般地，由$(X_1,X_2,…,X_n)$的分布去求$(Y_1,Y_2,…,Y_m)$的分布，其中$Y_i=g_i(X_1,X_2,…,X_n),\quad i=1,2,…,m$.</p>
 <ol>
 <li><p><strong>离散型分布的情形：</strong>设$X$的分布律为$P(X=x_i)=p_i,\quad i=1,2,…$</p>
 <p>$g:R\rightarrow R$，令$Y=g(X)$，则$Y$的分布律为<br>$$<br>P(Y=y_j)=P(g(X)=y_j)=\sum_{x_i:g(x_i)=y_j}P(X=x_i)=\sum_{i:g(x_i)=y_j}p_i<br>$$<br>即把$Y=g(X_1,…,X_n)$可以取的不同值找出来，把与某个值相应的全部$(X_1,…,X_n)$值的概率加起来，即得$Y$取这个值的概率。</p>
@@ -866,10 +880,10 @@
 </blockquote>
 </li>
 </ul>
-<h1 id="三-随机变量的数字特征"><a href="#三-随机变量的数字特征" class="headerlink" title="三 随机变量的数字特征"></a>三 随机变量的数字特征</h1><h2 id="3-1-数学期望（均值）与中位数"><a href="#3-1-数学期望（均值）与中位数" class="headerlink" title="3.1 数学期望（均值）与中位数"></a>3.1 数学期望（均值）与中位数</h2><ol>
-<li><p><strong>数学期望</strong></p>
+<h2 id="三-随机变量的数字特征-Numerical-Features-of-Random-Variables"><a href="#三-随机变量的数字特征-Numerical-Features-of-Random-Variables" class="headerlink" title="三 随机变量的数字特征 Numerical Features of Random Variables"></a>三 随机变量的数字特征 Numerical Features of Random Variables</h2><h3 id="3-1-数学期望-Expected-Value"><a href="#3-1-数学期望-Expected-Value" class="headerlink" title="3.1 数学期望 Expected Value"></a>3.1 数学期望 Expected Value</h3><ol>
+<li><p><strong>数学期望 Expected Value</strong></p>
 <ul>
-<li><p><strong>定义：</strong>设随机变量$X$只取有限个可能值$a_1,…,a_m$，其概率分布为$P(X=a_i)=p_i\ (i=1,…,m)$.则$X$的数学期望记作$E(X)^*$或$E(X)$，定义为$E(X)=a_1p_1+a_2p_2+…+a_mp_m$.数学期望也常称为”均值“，即指以概率为权的加权平均。</p>
+<li><p><strong>定义：</strong>设随机变量$X$只取有限个可能值$a_1,…,a_m$，其概率分布为$P(X=a_i)=p_i\ (i=1,…,m)$. 则$X$的数学期望记作$E(X)^*$或$E(X)$，定义为$E(X)=a_1p_1+a_2p_2+…+a_mp_m$. 数学期望也常称为”均值“，即指以概率为权的加权平均。</p>
 </li>
 <li><p><strong>离散型变量的数学期望：</strong>$E(X)=\sum^\infty_{i=1}a_ip_i.$（当级数绝对收敛，即$\sum_{i=1}^\infty|a_i|p_i&lt;\infty$）</p>
 </li>
@@ -929,7 +943,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="3-2-方差与矩"><a href="#3-2-方差与矩" class="headerlink" title="3.2 方差与矩"></a>3.2 方差与矩</h2><ol>
+<h3 id="3-2-方差与矩"><a href="#3-2-方差与矩" class="headerlink" title="3.2 方差与矩"></a>3.2 方差与矩</h3><ol>
 <li><p><strong>方差与标准差</strong></p>
 <ul>
 <li><strong>定义：</strong>设$X$为随机变量，分布为$F$，则$Var(X)=E(X-EX)^2$称为$X$（或分布$F$）的方差，其平方根$\sqrt{Var(X)}$（取正值）称为$X$（或分布$F$）的标准差。</li>
@@ -970,7 +984,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="3-3-协方差与相关系数"><a href="#3-3-协方差与相关系数" class="headerlink" title="3.3 协方差与相关系数"></a>3.3 协方差与相关系数</h2><p>  两者都反映了随机变量之间的关系。</p>
+<h3 id="3-3-协方差与相关系数"><a href="#3-3-协方差与相关系数" class="headerlink" title="3.3 协方差与相关系数"></a>3.3 协方差与相关系数</h3><p>  两者都反映了随机变量之间的关系。</p>
 <ol>
 <li><p><strong>协方差（<em>Covariance</em>）</strong></p>
 <ul>
@@ -1003,7 +1017,7 @@
 </blockquote>
 </li>
 </ol>
-<h2 id="3-4-大数定理和中心极限定理"><a href="#3-4-大数定理和中心极限定理" class="headerlink" title="3.4 大数定理和中心极限定理"></a>3.4 大数定理和中心极限定理</h2><ol>
+<h3 id="3-4-大数定理和中心极限定理"><a href="#3-4-大数定理和中心极限定理" class="headerlink" title="3.4 大数定理和中心极限定理"></a>3.4 大数定理和中心极限定理</h3><ol>
 <li><p><strong>大数定理</strong></p>
 <p>“大数”的意思，就是指涉及大量数目的观察值$X_i$，它表明这种定理中指出的现象只有在大量次数的试验和观察之下才能成立。</p>
 <ul>
@@ -1026,8 +1040,8 @@
 <blockquote>
 <p>$$<br>P(t_1\leq X_1+…+X_n\leq t_2)\approx \Phi(y_2)-\Phi(y_1),<br>$$<br>其中<br>$$<br>y_i=(t_i-np)/sqrt{np(1-p)}\quad (i=1,2).<br>$$<br>若把$y_1,y_2$修正为<br>$$<br>y_1=(t_1-\frac{1}{2}-np)/\sqrt{np(1-p)},\<br>y_2=(t_2-\frac{1}{2}-np)/\sqrt{np(1-p)}<br>$$<br>在应用上式，则一般可提高精度。</p>
 </blockquote>
-<h1 id="四-统计量及其分布"><a href="#四-统计量及其分布" class="headerlink" title="四 统计量及其分布"></a>四 统计量及其分布</h1><p><mark>该部分后续需拓展</mark></p>
-<h2 id="4-1-总体与样本"><a href="#4-1-总体与样本" class="headerlink" title="4.1 总体与样本"></a>4.1 <strong>总体与样本</strong></h2><ol>
+<h2 id="四-统计量及其分布"><a href="#四-统计量及其分布" class="headerlink" title="四 统计量及其分布"></a>四 统计量及其分布</h2><p><mark>该部分后续需拓展</mark></p>
+<h3 id="4-1-总体与样本"><a href="#4-1-总体与样本" class="headerlink" title="4.1 总体与样本"></a>4.1 <strong>总体与样本</strong></h3><ol>
 <li><p><strong>总体</strong></p>
 <p>  在一个统计问题里，研究对象的全体叫做总体，构成总体的每个成员称为个体。根据个体的数量指标数量，定义总体的维度，如每个个体只有一个数量指标，总体就是一维的，同理，个体有两个数量指标，总体就是二维的。<strong>总体就是一个分布，数量指标就是服从这个分布的随机变量。</strong><br>  总体根据个体数分为<strong>有限总体</strong>和<strong>无限总体</strong>，当有限总体的个体数充分大时，其可以看为无限总体。</p>
 </li>
@@ -1054,7 +1068,7 @@
 <p>  只知样本观测值所在区间，而不知具体值的样本称为分组样本。<strong>缺点：</strong>与完全样本相比损失部分信息。<strong>优点：</strong>在样本量较大时，用分组样本既简明扼要，又能帮助人们更好地认识总体。</p>
 </li>
 </ol>
-<h2 id="4-2-样本数据的整理与显示"><a href="#4-2-样本数据的整理与显示" class="headerlink" title="4.2 样本数据的整理与显示"></a>4.2 样本数据的整理与显示</h2><ol>
+<h3 id="4-2-样本数据的整理与显示"><a href="#4-2-样本数据的整理与显示" class="headerlink" title="4.2 样本数据的整理与显示"></a>4.2 样本数据的整理与显示</h3><ol>
 <li><p><strong>经验分布函数</strong></p>
 <p>  若将样本观测值$x_1,x_2,…,x_n$由小到大进行排列，得到有序样本$x_{(1)}\leq x_{(2)}\leq…\leq x_{(n)}$，用有序样本定义如下函数<br>$$<br>F_n(x)=\left{\begin{matrix}<br>0 &amp; 当x&lt;x_{(1)}\<br>k/n &amp; 当x_{(k)}\leq x&lt;x_{(k+1)},k=1,2,…,n-1\<br>1 &amp; 当x\geq x_{(n)}<br>\end{matrix}\right.<br>$$<br>则称为$F_n(x)$为该样本的经验分布函数。</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/ex_distribution.png" alt="img"></p>
@@ -1086,7 +1100,7 @@
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/leave.jpg" alt="img"></p>
 </li>
 </ol>
-<h2 id="4-3-统计量及其分布"><a href="#4-3-统计量及其分布" class="headerlink" title="4.3 统计量及其分布"></a>4.3 统计量及其分布</h2><ol>
+<h3 id="4-3-统计量及其分布"><a href="#4-3-统计量及其分布" class="headerlink" title="4.3 统计量及其分布"></a>4.3 统计量及其分布</h3><ol>
 <li><p><strong>统计量</strong></p>
 <p>  不含未知参数的样本函数称为统计量。统计量的分布称为抽样分布。</p>
 </li>
@@ -1143,9 +1157,9 @@
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box_normal.png" alt="img"></p>
 </li>
 </ol>
-<h1 id="五-参数估计"><a href="#五-参数估计" class="headerlink" title="五 参数估计"></a>五 参数估计</h1><p>  统计学与概率论的区别就是归纳和演绎，前者通过样本推测总体的分布，而后者已知总体分布去研究样本。因此参数估计则是归纳的过程，参数估计有两种形式：<strong>点估计</strong>和<strong>区间估计</strong><u>（点估计和区间估计都是对于未知参数的估计，而<strong>点估计给出的是一个参数可能的值</strong>，<strong>区间估计给出的是参数可能在的范围</strong>）</u>。</p>
-<h2 id="5-1-点估计"><a href="#5-1-点估计" class="headerlink" title="5.1 点估计"></a>5.1 点估计</h2><h3 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h3><p><strong>点估计（<em>Point estimation</em>）：</strong>设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
-<h3 id="5-1-2-点估计的方法"><a href="#5-1-2-点估计的方法" class="headerlink" title="5.1.2 点估计的方法"></a>5.1.2 点估计的方法</h3><ol>
+<h2 id="五-参数估计"><a href="#五-参数估计" class="headerlink" title="五 参数估计"></a>五 参数估计</h2><p>  统计学与概率论的区别就是归纳和演绎，前者通过样本推测总体的分布，而后者已知总体分布去研究样本。因此参数估计则是归纳的过程，参数估计有两种形式：<strong>点估计</strong>和<strong>区间估计</strong><u>（点估计和区间估计都是对于未知参数的估计，而<strong>点估计给出的是一个参数可能的值</strong>，<strong>区间估计给出的是参数可能在的范围</strong>）</u>。</p>
+<h3 id="5-1-点估计"><a href="#5-1-点估计" class="headerlink" title="5.1 点估计"></a>5.1 点估计</h3><h4 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h4><p><strong>点估计（<em>Point estimation</em>）：</strong>设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
+<h4 id="5-1-2-点估计的方法"><a href="#5-1-2-点估计的方法" class="headerlink" title="5.1.2 点估计的方法"></a>5.1.2 点估计的方法</h4><ol>
 <li><p><strong>矩估计</strong></p>
 <p><strong>定义：</strong>设总体概率函数已知，为$p(x;\theta_1,…,\theta_k)$，$(\theta_1,…,\theta_k)\in\Theta$是未知参数或参数向量，$x_1,…,x_n$是样本，假定总体的$k$阶原点矩$\mu_k$存在，则对所有的$j$，$o&lt;j&lt;k$，$\mu_j$都存在，若假设$\theta_1,…,\theta_k$能够表示成$\mu_1,…,\mu_k$的函数$\theta_j=\theta_j(\mu_1,…,\mu_k)$，则可给出诸$\theta_j$的矩估计：</p>
 </li>
@@ -1214,7 +1228,7 @@
 </ul>
 </li>
 </ol>
-<h3 id="5-1-3-点估计的优良性准则"><a href="#5-1-3-点估计的优良性准则" class="headerlink" title="5.1.3 点估计的优良性准则"></a>5.1.3 点估计的优良性准则</h3><ol>
+<h4 id="5-1-3-点估计的优良性准则"><a href="#5-1-3-点估计的优良性准则" class="headerlink" title="5.1.3 点估计的优良性准则"></a>5.1.3 点估计的优良性准则</h4><ol>
 <li><p><strong>无偏性：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有<br>$$<br>E_{\theta}(\hat{\theta})=\theta<br>$$<br>则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，否则称为<strong>有偏估计</strong>。无偏性的要求也可以改写为$E_{\theta}(\hat{\theta-\theta})=0$，无偏性表示表示估计参数与真实参数没有系统偏差。</p>
 <blockquote>
 <p><strong>一个重要的结论：</strong>样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^nx_i$是总体均值$\mu$的无偏估计。样本方差$s_n^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$不是总体方差$\sigma^2$的无偏估计（而是渐进无偏估计），因此需要对样本方差进行修正，$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$.</p>
@@ -1255,7 +1269,7 @@
 </ul>
 </li>
 </ol>
-<h2 id="5-2-区间估计"><a href="#5-2-区间估计" class="headerlink" title="5.2 区间估计"></a>5.2 区间估计</h2><h3 id="5-2-1-区间估计的概念"><a href="#5-2-1-区间估计的概念" class="headerlink" title="5.2.1 区间估计的概念"></a>5.2.1 区间估计的概念</h3><ol>
+<h3 id="5-2-区间估计"><a href="#5-2-区间估计" class="headerlink" title="5.2 区间估计"></a>5.2 区间估计</h3><h4 id="5-2-1-区间估计的概念"><a href="#5-2-1-区间估计的概念" class="headerlink" title="5.2.1 区间估计的概念"></a>5.2.1 区间估计的概念</h4><ol>
 <li><p><strong>双侧区间</strong></p>
 <p>设$\theta$是总体的一个参数，其参数空间为$\Theta$，$x_1,…,x_n$是来自该总体的样本，对给定的一个$\alpha\quad(0&lt;\alpha&lt;1)$，假设有两个统计量$\hat{\theta}_L=\hat{\theta}_L(x_1,…,x_n)$和$\hat{\theta}_U=\hat{\theta}_U(x_1,…,x_n)$，若对任意的$\theta\in\Theta$，有<br>$$<br>P_\theta(\hat{\theta}_L\leq\theta\leq\hat{\theta}_U)\geq(=)1-\alpha<br>$$<br>其中，总体为连续分布时取等号，表示用足了置信水平。称随机区间$[\hat{\theta}_L,\hat{\theta}_U]$为$\theta$的<strong>置信水平为$1-\alpha$的置信区间</strong>，或简称$[\hat{\theta}_L,\hat{\theta}_U]$是$\theta$的**$1-\alpha$置信区间<strong>，$\hat{\theta}_L$和$\hat{\theta}_U$分别称为$\theta$的</strong>置信下限<strong>和</strong>置信上限**。</p>
 <blockquote>
@@ -1267,7 +1281,7 @@
 <p>设$\hat{\theta}_L=\hat{\theta}_L(x_1,…,x_n)$是统计量，对给定的$\alpha\in(0,1)$和任意的$\theta\in\Theta$，有<br>$$<br>P_\theta(\hat{\theta}_L\leq\theta)\geq1-\alpha,\quad\forall\theta\in\Theta<br>$$<br>则称$\hat{\theta}_L$为$\theta$的置信水平为$1-\alpha$的<strong>置信下限</strong>。同理，设$\hat{\theta}_U=\hat{\theta}_U(x_1,…,x_n)$是统计量，对给定的$\alpha\in(0,1)$和任意的$\theta\in\Theta$，有<br>$$<br>P_\theta(\hat{\theta}_L\geq\theta)\geq1-\alpha,\quad\forall\theta\in\Theta<br>$$<br>则称$\hat{\theta}_L$为$\theta$的置信水平为$1-\alpha$的<strong>置信上限</strong>。</p>
 </li>
 </ol>
-<h3 id="5-2-2-区间估计的方法"><a href="#5-2-2-区间估计的方法" class="headerlink" title="5.2.2 区间估计的方法"></a>5.2.2 区间估计的方法</h3><ol>
+<h4 id="5-2-2-区间估计的方法"><a href="#5-2-2-区间估计的方法" class="headerlink" title="5.2.2 区间估计的方法"></a>5.2.2 区间估计的方法</h4><ol>
 <li><p><strong>枢轴量法</strong></p>
 <p><em><strong>Step 1</strong></em>：设法构造一个样本和$\theta$的函数$G=G(x_1,…,x_n,\theta)$使得**$G$的分布不依赖于未知参数**，称具有这种性质的$G$为枢轴量。</p>
 <p><em><strong>Step 2</strong></em>：适当地选择两个常数c，d，使对给定的$\alpha\quad(0&lt;\alpha&lt;1)$，有<br>$$<br>P(c\leq G\leq d)=1-\alpha<br>$$<br>（在离散场合，将上式等号改为$\geq$）</p>
@@ -1289,7 +1303,7 @@
 </blockquote>
 </li>
 </ol>
-<h3 id="5-2-3-一些情况下的区间估计"><a href="#5-2-3-一些情况下的区间估计" class="headerlink" title="5.2.3 一些情况下的区间估计"></a>5.2.3 一些情况下的区间估计</h3><ol>
+<h4 id="5-2-3-一些情况下的区间估计"><a href="#5-2-3-一些情况下的区间估计" class="headerlink" title="5.2.3 一些情况下的区间估计"></a>5.2.3 一些情况下的区间估计</h4><ol>
 <li><p><strong>单个正态总体参数的置信区间</strong></p>
 <ul>
 <li><strong>$\sigma$已知时$\mu$的置信区间</strong>：$[\bar{x}-u_{1-\alpha/2}\sigma/\sqrt{n},\quad\bar{x}+u_{1-\alpha/2}\sigma/\sqrt{n}]$</li>
@@ -1315,7 +1329,7 @@
 </ul>
 </li>
 </ol>
-<h1 id="六-假设检验"><a href="#六-假设检验" class="headerlink" title="六 假设检验"></a>六 假设检验</h1><h2 id="6-1-假设检验的基本思想和概念"><a href="#6-1-假设检验的基本思想和概念" class="headerlink" title="6.1 假设检验的基本思想和概念"></a>6.1 假设检验的基本思想和概念</h2><ol>
+<h2 id="六-假设检验"><a href="#六-假设检验" class="headerlink" title="六 假设检验"></a>六 假设检验</h2><h3 id="6-1-假设检验的基本思想和概念"><a href="#6-1-假设检验的基本思想和概念" class="headerlink" title="6.1 假设检验的基本思想和概念"></a>6.1 假设检验的基本思想和概念</h3><ol>
 <li><p><strong>基本思想</strong></p>
 <p>以“女士品茶”为例，对于该女士有没有品茶的能力，有两种假设：该女士没有品茶能力和该女士有品茶能力。在统计上这两个非空不相交参数集合称作<strong>统计假设</strong>，简称<strong>假设</strong>。通过样本对一个假设作出对与不对的判断，则称为该假设的一个<strong>检验</strong>。若检验结果否定该命题，则称<strong>拒绝</strong>这个假设，否则就<strong>接受（不拒绝）</strong>这个假设。</p>
 <p>假设可分为两种：1. <strong>参数假设检验</strong>，即已经知道数据的分布，针对总体的某个参数进行假设检验；2. <strong>非参数假设检验</strong>，即数据分布未知，针对该分布进行假设检验。</p>
@@ -1399,7 +1413,7 @@
 <p>Author：钱小z </p>
 <p>Email：<a href="mailto:qz_gis@163.com">qz_gis@163.com</a></p>
 <p>Bio：GISer，Spatiotemporal data mining</p>
-<p>GitHub：QianXzhen</p>
+<p>GitHub：ChanceQZ</p>
 </blockquote>
 
                 
@@ -2092,7 +2106,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">75.8k</span>
+                        class="white-color">76.1k</span>
             
             
             
