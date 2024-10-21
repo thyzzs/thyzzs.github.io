@@ -6,7 +6,7 @@
   <link href="https://thyzzs.top/atom.xml" rel="self"/>
   
   <link href="https://thyzzs.top/"/>
-  <updated>2024-09-29T07:41:02.292Z</updated>
+  <updated>2024-10-17T12:52:29.870Z</updated>
   <id>https://thyzzs.top/</id>
   
   <author>
@@ -17,44 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
-    <link href="https://thyzzs.top/2024/09/27/marxism/"/>
-    <id>https://thyzzs.top/2024/09/27/marxism/</id>
-    <published>2024-09-27T06:05:29.888Z</published>
-    <updated>2024-09-29T07:41:02.292Z</updated>
+    <title>生理学笔记</title>
+    <link href="https://thyzzs.top/2024/10/17/physiology/"/>
+    <id>https://thyzzs.top/2024/10/17/physiology/</id>
+    <published>2024-10-16T22:00:00.000Z</published>
+    <updated>2024-10-17T12:52:29.870Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;马克思主义哲学&quot;&gt;&lt;a href=&quot;#马克思主义哲学&quot; class=&quot;headerlink&quot; title=&quot;马克思主义哲学&quot;&gt;&lt;/a&gt;马克思主义哲学&lt;/h1&gt;&lt;p&gt;这篇文章收集一些对哲学 /</summary>
+    <summary type="html">&lt;h2 id=&quot;Chapter-1-Introduction&quot;&gt;&lt;a href=&quot;#Chapter-1-Introduction&quot; class=&quot;headerlink&quot; title=&quot;Chapter 1 Introduction&quot;&gt;&lt;/a&gt;Chapter 1</summary>
         
       
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://thyzzs.top/2024/09/26/physiology/"/>
-    <id>https://thyzzs.top/2024/09/26/physiology/</id>
-    <published>2024-09-26T05:15:22.395Z</published>
-    <updated>2024-09-29T09:03:44.385Z</updated>
+    <category term="Course Notes" scheme="https://thyzzs.top/categories/Course-Notes/"/>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;生理学笔记-Physiology&quot;&gt;&lt;a href=&quot;#生理学笔记-Physiology&quot; class=&quot;headerlink&quot; title=&quot;生理学笔记 Physiology&quot;&gt;&lt;/a&gt;生理学笔记 Physiology&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
+    <category term="Biology" scheme="https://thyzzs.top/tags/Biology/"/>
     
   </entry>
   
@@ -63,7 +46,7 @@
     <link href="https://thyzzs.top/2024/09/25/statistics/"/>
     <id>https://thyzzs.top/2024/09/25/statistics/</id>
     <published>2024-09-24T22:00:00.000Z</published>
-    <updated>2024-10-16T07:09:36.736Z</updated>
+    <updated>2024-10-17T12:38:41.926Z</updated>
     
     
       
@@ -77,10 +60,10 @@
     
     
     
-    <category term="Stack" scheme="https://thyzzs.top/categories/Stack/"/>
+    <category term="Course Notes" scheme="https://thyzzs.top/categories/Course-Notes/"/>
     
     
-    <category term="Stack" scheme="https://thyzzs.top/tags/Stack/"/>
+    <category term="Mathematics" scheme="https://thyzzs.top/tags/Mathematics/"/>
     
   </entry>
   
@@ -139,7 +122,7 @@
     <link href="https://thyzzs.top/2024/01/29/introduction/"/>
     <id>https://thyzzs.top/2024/01/29/introduction/</id>
     <published>2024-01-29T06:00:00.000Z</published>
-    <updated>2024-09-27T05:57:28.229Z</updated>
+    <updated>2024-10-21T11:44:18.218Z</updated>
     
     
       
@@ -517,6 +500,32 @@
     
     
     <category term="字符串" scheme="https://thyzzs.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【笔记】CDQ分治</title>
+    <link href="https://thyzzs.top/2019/11/12/cdq-fen-zhi/"/>
+    <id>https://thyzzs.top/2019/11/12/cdq-fen-zhi/</id>
+    <published>2019-11-12T13:44:12.000Z</published>
+    <updated>2019-11-13T01:48:06.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;Part-1-简介&quot;&gt;&lt;a href=&quot;#Part-1-简介&quot; class=&quot;headerlink&quot; title=&quot;Part 1 简介&quot;&gt;&lt;/a&gt;Part 1 简介&lt;/h3&gt;&lt;p&gt;CDQ分治，即基于时间的分治算法，最早被陈丹琦引入国内而得名。&lt;/p&gt;
+&lt;h3</summary>
+        
+      
+    
+    
+    
+    <category term="Life in OI" scheme="https://thyzzs.top/categories/Life-in-OI/"/>
+    
+    
+    <category term="离线算法" scheme="https://thyzzs.top/tags/%E7%A6%BB%E7%BA%BF%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
