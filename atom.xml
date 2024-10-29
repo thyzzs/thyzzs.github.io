@@ -6,7 +6,7 @@
   <link href="https://thyzzs.top/atom.xml" rel="self"/>
   
   <link href="https://thyzzs.top/"/>
-  <updated>2024-10-23T07:58:43.422Z</updated>
+  <updated>2024-10-29T09:18:30.914Z</updated>
   <id>https://thyzzs.top/</id>
   
   <author>
@@ -17,11 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>病理学笔记</title>
+    <link href="https://thyzzs.top/2024/10/29/pathology/"/>
+    <id>https://thyzzs.top/2024/10/29/pathology/</id>
+    <published>2024-10-29T01:18:00.000Z</published>
+    <updated>2024-10-29T09:18:30.914Z</updated>
+    
+    
+    
+    
+    <category term="Course Notes" scheme="https://thyzzs.top/categories/Course-Notes/"/>
+    
+    
+    <category term="Biology" scheme="https://thyzzs.top/tags/Biology/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>思考</title>
+    <link href="https://thyzzs.top/2024/10/29/thought/"/>
+    <id>https://thyzzs.top/2024/10/29/thought/</id>
+    <published>2024-10-29T00:24:00.000Z</published>
+    <updated>2024-10-29T08:54:37.699Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h4 id=&quot;“缸中之脑”&quot;&gt;&lt;a href=&quot;#“缸中之脑”&quot; class=&quot;headerlink&quot; title=&quot;“缸中之脑”&quot;&gt;&lt;/a&gt;“缸中之脑”&lt;/h4&gt;&lt;h4 id=&quot;网红经济&quot;&gt;&lt;a href=&quot;#网红经济&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Course Notes" scheme="https://thyzzs.top/categories/Course-Notes/"/>
+    
+    
+    <category term="Thoughts" scheme="https://thyzzs.top/tags/Thoughts/"/>
+    
+  </entry>
+  
+  <entry>
     <title>生理学笔记</title>
     <link href="https://thyzzs.top/2024/10/17/physiology/"/>
     <id>https://thyzzs.top/2024/10/17/physiology/</id>
     <published>2024-10-16T22:00:00.000Z</published>
-    <updated>2024-10-23T07:58:43.422Z</updated>
+    <updated>2024-10-29T09:20:28.973Z</updated>
     
     
       
@@ -475,57 +517,6 @@
     
     
     <category term="字符串" scheme="https://thyzzs.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【笔记】Knuth-Morris-Pratt 算法</title>
-    <link href="https://thyzzs.top/2019/11/13/kmp/"/>
-    <id>https://thyzzs.top/2019/11/13/kmp/</id>
-    <published>2019-11-13T08:44:12.000Z</published>
-    <updated>2019-11-13T09:31:26.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Part-1-简介&quot;&gt;&lt;a href=&quot;#Part-1-简介&quot; class=&quot;headerlink&quot; title=&quot;Part 1 简介&quot;&gt;&lt;/a&gt;Part 1</summary>
-        
-      
-    
-    
-    
-    <category term="Life in OI" scheme="https://thyzzs.top/categories/Life-in-OI/"/>
-    
-    
-    <category term="字符串" scheme="https://thyzzs.top/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【笔记】CDQ分治</title>
-    <link href="https://thyzzs.top/2019/11/12/cdq-fen-zhi/"/>
-    <id>https://thyzzs.top/2019/11/12/cdq-fen-zhi/</id>
-    <published>2019-11-12T13:44:12.000Z</published>
-    <updated>2019-11-13T01:48:06.000Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h3 id=&quot;Part-1-简介&quot;&gt;&lt;a href=&quot;#Part-1-简介&quot; class=&quot;headerlink&quot; title=&quot;Part 1 简介&quot;&gt;&lt;/a&gt;Part 1 简介&lt;/h3&gt;&lt;p&gt;CDQ分治，即基于时间的分治算法，最早被陈丹琦引入国内而得名。&lt;/p&gt;
-&lt;h3</summary>
-        
-      
-    
-    
-    
-    <category term="Life in OI" scheme="https://thyzzs.top/categories/Life-in-OI/"/>
-    
-    
-    <category term="离线算法" scheme="https://thyzzs.top/tags/%E7%A6%BB%E7%BA%BF%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
