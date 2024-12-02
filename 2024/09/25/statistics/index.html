@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -407,21 +407,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-11-08
+                    2024-11-27
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    18.9k
+                    21.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    86 Min
+                    99 Min
                 </div>
                 
 
@@ -751,7 +751,7 @@
 </li>
 </ul>
 </li>
-<li><p>Standard normal distribution 标准正态分布:</p>
+<li><p><strong>Standard normal distribution 标准正态分布</strong>:</p>
 <ul>
 <li><p><strong>定义</strong>：A normal distribution with mean 0 and variance 1 is called a standard normal distribution. This distribution is denoted by $N(0,1)$.</p>
 </li>
@@ -777,40 +777,44 @@
 <li><p><strong>Theorem</strong>: If $X \sim N\left(\mu, \sigma^2\right)$ and $F(x)$ is the distribution function of $X$, then</p>
 <p>$$<br>F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)<br>$$</p>
 <p><strong>Proof</strong>:</p>
-<p>$$<br>F(x)=P(X \leq x)=P\left(\frac{x-\mu}{\sigma} \leq \frac{x-\mu}{\sigma}\right)=P\left(U \leq \frac{x-\mu}{\sigma}\right)=\Phi\left(\frac{x-\mu}{\sigma}\right) .<br>$$</p>
 </li>
 </ul>
 </li>
+</ul>
+<p>$$<br>    F(x)=P(X \leq x)=P\left(\frac{X-\mu}{\sigma} \leq \frac{x-\mu}{\sigma}\right)=P\left(U \leq \frac{x-\mu}{\sigma}\right)=\Phi\left(\frac{x-\mu}{\sigma}\right) .<br>$$</p>
+</li>
+</ol>
+<ul>
 <li><ol>
 <li>If $X \sim N\left(\mu, \sigma^2\right)$, then</li>
 </ol>
-<p>$$<br>\begin{gathered}<br>P(a&lt;X \leq b)=F(b)-F(a)=\Phi\left(\frac{b-\mu}{\sigma}\right)-\Phi\left(\frac{a-\mu}{\sigma}\right) \<br>P(X&gt;x)=1-F(x)=1-\Phi\left(\frac{x-\mu}{\sigma}\right)<br>\end{gathered}<br>$$</p>
+<p>$$<br>   \begin{gathered}<br>   P(a&lt;X \leq b)=F(b)-F(a)=\Phi\left(\frac{b-\mu}{\sigma}\right)-\Phi\left(\frac{a-\mu}{\sigma}\right) \<br>   P(X&gt;x)=1-F(x)=1-\Phi\left(\frac{x-\mu}{\sigma}\right)<br>   \end{gathered}<br>$$</p>
 <ol start="2">
-<li>Probabilities for any normal distribution can now be evaluated using the normal table.</li>
+<li>Probabilities for any normal distribution can now be evaluated using the normal table.<ol start="3">
 <li>If $X \sim N\left(\mu, \sigma^2\right)$, then</li>
 </ol>
-<p>$$<br>\begin{aligned}<br>P{\mu-k \sigma \leq X \leq \mu+ k \sigma} &amp; =\Phi\left(\frac{\mu+k \sigma-\mu}{\sigma}\right)-\Phi\left(\frac{\mu-k \sigma-\mu}{\sigma}\right) \<br>&amp; =\Phi(k)-\Phi(-k)=\Phi(k)-[1-\Phi(k)] \<br>&amp; =2 \Phi(k)-1<br>\end{aligned}<br>$$</p>
+</li>
+</ol>
+<p>$$<br>   \begin{aligned}<br>   P{\mu-k \sigma \leq X \leq \mu+ k \sigma} &amp; =\Phi\left(\frac{\mu+k \sigma-\mu}{\sigma}\right)-\Phi\left(\frac{\mu-k \sigma-\mu}{\sigma}\right) \<br>   &amp; =\Phi(k)-\Phi(-k)=\Phi(k)-[1-\Phi(k)] \<br>   &amp; =2 \Phi(k)-1<br>   \end{aligned}<br>$$</p>
 <p>When $k=1,2,3$,</p>
-<p>$$<br>\begin{gathered}<br>P{\mu-\sigma \leq X \leq \mu+\sigma}=2 \Phi(1)-1=0.6827=68.27 % \<br>P{\mu-2 \sigma \leq X \leq \mu+2 \sigma}=2 \Phi(2)-1=0.9545=95.45 % \<br>P{\mu-3 \sigma \leq X \leq \mu+3 \sigma}=2 \Phi(3)-1=0.9973=99.73 %<br>\end{gathered}<br>$$</p>
+<p>$$<br>   \begin{gathered}<br>   P{\mu-\sigma \leq X \leq \mu+\sigma}=2 \Phi(1)-1=0.6827=68.27 % \<br>   P{\mu-2 \sigma \leq X \leq \mu+2 \sigma}=2 \Phi(2)-1=0.9545=95.45 % \<br>   P{\mu-3 \sigma \leq X \leq \mu+3 \sigma}=2 \Phi(3)-1=0.9973=99.73 %<br>   \end{gathered}<br>$$</p>
 </li>
 <li><p>Upper percentile of standard normal distribution</p>
 <ul>
 <li><p>Definition: Given $\alpha$ and $X \sim N(0,1)$, if</p>
-<p>$$<br>P\left{X&gt;u_\alpha\right}=\int_{u_\alpha}^{+\infty} \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}} d x=\alpha<br>$$</p>
+<p>$$<br>   P\left{X&gt;u_\alpha\right}=\int_{u_\alpha}^{+\infty} \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}} d x=\alpha<br>$$</p>
 <p>then $u_\alpha$ is called the upper $100 \times \alpha$th percentile 上侧 $\alpha$ 分位数 or critical value 临界值 of a standard normal distribution $N(0,1)$.</p>
 </li>
 <li><p>Given $\alpha$, it follows that $\Phi(u_\alpha)=P{X \leq u_\alpha}=1-P{X&gt;u_\alpha}=1-\alpha$. And $u_\alpha$ can be obtained from referring to normal table.</p>
-<p><em>For example, if $\alpha=0.05$, then $\Phi(u_\alpha)=1-0.05=0.95$. Refer to normal table, $u_\alpha=1.645$.</em></p>
+<p>For example, if $\alpha=0.05$, then $ Phi(u_\alpha)=1-0.05=0.95$. Refer to normal table, $u_\alpha=1.645$.</p>
 </li>
-<li><p>Assume $X \sim N(\mu,\sigma^2 )$. If $P{X&gt;x_0}=\alpha$ then $x_0$ is the upper $100 \times \alpha$th percentile or critical value of a normal distribution $N(\mu,\sigma^2 )$<br>$$<br>\text{i.e.,}\ \Phi(\frac{x_0 - \mu}{\sigma})=1-\alpha,\ \frac{x_0 + \mu}{\sigma}=u_\alpha,\ x_0=\mu + u_\alpha \sigma<br>$$</p>
+<li><p>Assume $X \sim N(\mu,\sigma^2 )$. If $P{X&gt;x_0}=\alpha$ then $x_0$ is the upper $100 \times \alpha$th percentile or critical value of a normal distribution $N(\mu,\sigma^2 )$<br>   $$<br>   \text{i.e.,}\ \Phi(\frac{x_0 - \mu}{\sigma})=1-\alpha,\ \frac{x_0 + \mu}{\sigma}=u_\alpha,\ x_0=\mu + u_\alpha \sigma<br>   $$</p>
 </li>
 </ul>
 </li>
 <li><p><strong>图像（密度和分布函数图）：</strong></p>
 </li>
 </ul>
-</li>
-</ol>
 <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dense.png" alt="img" style="zoom:67%;">
 
 <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dist.png" alt="img" style="zoom:67%;">
@@ -1210,6 +1214,161 @@
 </ul>
 </li>
 </ol>
+<h2 id="Chapter-4-抽样分布-Sampling-Distribution"><a href="#Chapter-4-抽样分布-Sampling-Distribution" class="headerlink" title="Chapter 4 抽样分布 Sampling Distribution"></a>Chapter 4 抽样分布 Sampling Distribution</h2><h3 id="4-1-数理统计基本概念-Some-Basic-Concepts-About-Statistical-Problem"><a href="#4-1-数理统计基本概念-Some-Basic-Concepts-About-Statistical-Problem" class="headerlink" title="4.1 数理统计基本概念 Some Basic Concepts About Statistical Problem"></a>4.1 数理统计基本概念 Some Basic Concepts About Statistical Problem</h3><ol>
+<li><p><strong>总体与个体</strong>: All the possible observations of a trial is called population 总体. Each observation is called individual 个体. </p>
+<ul>
+<li>As each individual of the population is the observation of a trial, it is also can be considered as the value of a certain random variable. Thus a population corresponds to a random variable $X$. <ul>
+<li>From now on, we make no distinction between a population and a random variable, and it is generally referred to as population $X$ (笼统称为总体$X$)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>参数 parameter</strong>: 总体X的数字特征即总体的特征指标。</p>
+</li>
+<li><p><strong>样本 sample</strong>: 从总体X中抽取的部分个体。</p>
+</li>
+<li><p><strong>样本容量 sample size</strong>: 样本中所含的个体数。当$n≥30$时，称为大样本，否则称为小样本。</p>
+</li>
+<li><p><strong>简单随机样本 simple random sample</strong>: If carry out a trial repeatly and independently for n times and obtain n observations: $X_1,X_2,…,X_n$, Then these n observations $X_1,X_2,…,X_n$ can be regarded as $n$ random variables and is called a simple random sample 简单随机样本 of the population $X$, which has two properties: </p>
+<ol>
+<li><p>$X_1,X_2,…X_n$ are independent;</p>
+</li>
+<li><p>$X_1,X_2,…X_n$ have the same distribution as the that of the population.</p>
+<blockquote>
+<p>  $X_is$ are independent and identically distributed (i.i.d.) 独立同分布.</p>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p><strong>统计量 statistic</strong>: To perform statistical inference, we construct appropriate functions of the sample to draw conclusions rather than random sample itself. Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$. Then $\phi(X_1,X_2,…,X_n)$ is called a statistic 统计量, if $\phi(X_1,X_2,…,X_n)$ is just a function of $X_1,X_2,…,X_n$ without any unknown parameters 未知参数. For example: Assume $X\sim N(\mu,\sigma^2)$ with parameter $\mu$ unknown and $\sigma$ known. Then $\sum_{i=1}^{n}(X_i-\bar{X})^2$ is a statistic but $\sum_{i=1}^{n}(X_i-\mu)$ is not a statistic.</p>
+<ol>
+<li>As $X_1,X_2,…,X_n$ are random variables, the statistic $\phi(X_1,X_2,…,X_n)$ is also a random variable.</li>
+<li>Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$. Frequently used statistics: sample mean and sample variance.</li>
+<li>When generally referring to a sampling results,sample X1,X2,…,Xn are n random variables,and then X and S2 are also random variables. 当泛指一次抽样结果时，样本X1,X2,,Xn是n个随机变量，则样本均值双、样本方差S2等统计量也是随机变量；</li>
+<li>When specifically referring to a specific sampling results, observations $X_1,X_2,…,X_n$ are n specific numbers, and then $X$ and $S^2$ are also specific numbers.当特指一次具体的抽样结果时，样本值$X_1,X_2,…,X_n$是n个具体数值，从而样本均值$\bar{X}$、样本方差$S^2$等统计量也是具体的数值所以，后面不引起混淆的情况下，对样本和统计量赋予双重意义：乏指时为随机变量，特指时为相应数值。</li>
+</ol>
+</li>
+<li><p><strong>Sampling distributions</strong></p>
+</li>
+<li><p>…</p>
+</li>
+</ol>
+<p><img src="C:\Users\thyzz\AppData\Roaming\Typora\typora-user-images\image-20241120134731760.png" alt="image-20241120134731760"></p>
+<h3 id="4-2-chi-2-Distributions"><a href="#4-2-chi-2-Distributions" class="headerlink" title="4.2 $\chi^2$ Distributions"></a>4.2 $\chi^2$ Distributions</h3><ol>
+<li><p>Definition: if $\chi^2=X_1^2+X_2^2+…+X_n^2$, where $X_1,X_2,…,X_n \sim N(0,1)$ and the $X_i$‘s are independent, then the statistic $\chi^2$ is said to follow a $\chi^2$ distribution with n degrees of freedom 自由度为 n 的卡方分布, which is denoted by $\chi^2 \sim \chi^2(n)$.</p>
+</li>
+<li><p>The degree of freedom is the number of independent random variables in a statistic. It is often denoted by $d f$ and defined as follows:<br>$$<br>d f=n-r<br>$$<br>Where $n$ is the number of random variables in a statistic, $r$ is the number of constraint conditions 约束条件 of these random variables.</p>
+</li>
+</ol>
+<pre><code>For example: $\quad S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2$
+There are $n$ random variables $X_i-\bar{X}, \mathrm{i}=1, \ldots, \mathrm{n}$, and these random variables satisfy a constraint condition:
+
+$$
+\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n-n \bar{X}=0
+$$
+
+Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
+</code></pre>
+<ol start="2">
+<li><p>If $X \sim N(0,1)$, then $X^2 \sim \chi^2(1)$ 。</p>
+</li>
+<li><p>Assume $X \sim N\left(\mu, \sigma^2\right)$. First standardize $X$, $\frac{X-\mu}{\sigma} \sim N(0,1)$ then $\left(\frac{X-\mu}{\sigma}\right)^2 \sim \chi^2(1) .$</p>
+</li>
+<li><p>Properties</p>
+<ol>
+<li><p>The chi-square distribution only takes positive values and is always skewed to the right.</p>
+</li>
+<li><p>The skewness diminishes as $n$ increases.</p>
+</li>
+<li><p>When $n \rightarrow+\infty$, the distribution of $\chi^2(n)$ approaches a normal distribution.</p>
+</li>
+<li><p>If $\chi_1^2 \sim \chi^2\left(n_1\right), \chi_2^2 \sim \chi^2\left(n_2\right)$ and $\chi_1^2$ and $\chi_2^2$ are independent, then<br> $$<br> \chi_1^2+\chi_2^2 \sim \chi^2\left(n_1+n_2\right)<br> $$</p>
+</li>
+</ol>
+</li>
+<li><p>$E\left(\chi^2\right)=n, \quad D\left(\chi^2\right)=2 n$</p>
+</li>
+<li><p>Theorem 2: If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ and are independent, then</p>
+<ol>
+<li>$\frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1)$</li>
+<li>$\bar{X}$ and $S^2$ are independent.</li>
+</ol>
+<ul>
+<li><strong>Remark</strong>: Standardize $X_i$, then $\frac{X_i-\mu}{\sigma} \sim N(0,1)$ and<br>$$<br>\sum_{\underline{i}=1}^n \frac{\left(X_i-\mu\right)^2}{\sigma^2} \sim \chi^2(n)<br>$$<br>However, if we substitute $\bar{X}$ for $\mu$ in the above equation, then we lose 1 degree of freedom (constraint condition: $\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n - n \bar{X}=0$).<br>i.e.,<br>$$<br>\sum_{i=1}^n \frac{\left(X_i-\bar{X}\right)^2}{\sigma^2} \sim \chi^2(n-1)<br>$$<br>Recall<br>$$<br>S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2<br>$$<br>Thus<br>$$<br>\frac{(n-1) S^2}{\sigma^2}=\sum_{i=1}^n \frac{\left(X_i-\bar{X}\right)^2}{\sigma^2} \sim \chi^2(n-1)<br>$$</li>
+</ul>
+</li>
+<li><p>Upper percentile of a $\chi^2(n)$ distribution</p>
+<ol>
+<li>Definition: The upper $100\times \alpha$th percentiles of a $\chi^(n)$ distribution (i.e., a chi-square distribution with $n\ df$) is denoted by $\chi^2_\alpha(n)$ where<br> $$<br> P{\chi^2&gt;\chi^2_\alpha(n)}=\alpha<br> $$</li>
+</ol>
+</li>
+</ol>
+<h3 id="4-3-t-分布"><a href="#4-3-t-分布" class="headerlink" title="4.3 $t$ 分布"></a>4.3 $t$ 分布</h3><blockquote>
+<p>If normal population variance $\sigma^2$ is known, then the sample mean</p>
+<p>$$<br>\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) \quad \text { i.e., } \quad \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)<br>$$</p>
+<p>If normal population variance $\sigma^2$ is unknown, which can be replaced by $S^2$, what will be the distribution of sample mean</p>
+<p>$$<br>\frac{\bar{X}-\mu}{S / \sqrt{n}} ?<br>$$</p>
+</blockquote>
+<ol>
+<li><p>Definition</p>
+</li>
+<li><p>Properties</p>
+<ol>
+<li>$t$ distribution is symmetric about 0 but is more spread out than the $N(0,1)$ distribution.</li>
+<li>As $n \rightarrow+\infty$, the $t$ distribution converges 收敛 to an $N(0,1)$ distribution.</li>
+<li>When $n$ is large enough ($n \geq 30$), $t$ distribution is approximated by a $N(0,1)$ distribution; when $n$ is small $(n&lt;30)$, these two distributions make a large difference.</li>
+</ol>
+</li>
+<li><p>The sampling distribution of $\bar{X}$ (if $\sigma^2$ is unknown)</p>
+<ol>
+<li><p>If population variance $\sigma^2$ is unknown, we replace population variance $\sigma^2$ with sample variance $S^2$, and we have the following theorem:</p>
+<p> Theorem : If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ with unknown $\sigma^2$ and they are independent, then</p>
+<p> $$<br> \frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)<br> $$</p>
+</li>
+<li><p>Proof:<br> First<br> $$<br> \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1), \quad \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1)<br> $$</p>
+<p> and $\bar{X}$ and $S^2$ are independent.<br> Then by the definition of $t$ distribution,<br> $$<br> \frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}} / \sqrt{\frac{(n-1) S^2}{\sigma^2(n-1)}} \sim t(n-1)<br> $$</p>
+</li>
+</ol>
+</li>
+<li><p>The sampling distribution of difference between two sample means</p>
+<p> When studying the statistical inference of the means $\left(\mu_1, \mu_2\right)$ of two normal populations, it is necessary to investigate the distribution of the difference between the sample means $(\bar{X}, \bar{Y})$ of the two normal populations.</p>
+<p> Theorem:<br> Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent. The means and variances in these two samples are denoted by $\bar{X}$. $\bar{Y}$ and $S_x^2, S_y^2$ respectively.</p>
+<ol>
+<li><p>Assume variances $\sigma_1^2,\sigma_2^2$ are known. Then</p>
+<p> $$<br> \frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}\sim N(0,1).$<br> $$</p>
+</li>
+<li><p>Assume variances $\sigma_1^2,\sigma_2^2$ are unknown but $\sigma_1^2=\sigma_2^2=\sigma^2.$ Then</p>
+<p> $$\frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{S\sqrt{\frac1{n_1}+\frac1{n_2}}}\sim t(n_1+n_2-2)$$</p>
+<p> where</p>
+<p> $$S^2=\frac{(n_1-1)S_x^2+(n_2-1)S_y^2}{n_1+n_2-2}$$</p>
+<p> In particular, when $n_1=n_2$, we get $S^2=\frac{S_x^2+S_y^2}2.$</p>
+</li>
+<li><p>Proof</p>
+</li>
+</ol>
+</li>
+<li></li>
+</ol>
+<h3 id="4-4-F-distribution"><a href="#4-4-F-distribution" class="headerlink" title="4.4 $F$ distribution"></a>4.4 $F$ distribution</h3><blockquote>
+<p>When studying the statistical inference of variances $(\sigma_1^2,\sigma_2^2)$of two normal populations, it is necessary to investigate the distribution of sample variances ratio $(S_1^2,S_2^2)$ of the two normal population.</p>
+<p>First we introduce F distribution.</p>
+</blockquote>
+<ol>
+<li><p>Definition: If</p>
+<p> $$F=\frac{X_1/n_1}{X_2/n_2}$$</p>
+<p> Where $X_1{\sim}\chi^2(n_1),X_2{\sim}\chi^2(n_2)$ and $X_1,X_2$ are independent, then<br> $F$ is said to follow a $F$ distribution with $(n_1,n_2)$ degrees of freedom, which is denoted by $F\thicksim F(n_1,n_2)$<br> and $n_1$ is referred to as numerator分子$df$ and $n_2$ denominator 分母$df.$</p>
+</li>
+<li><p>Remark:</p>
+<ol>
+<li>The F distribution is generally positively skewed and the shape of F distribution depends both on the numerator and denominator $df.$</li>
+<li>If a random variable $X\sim F(n_1,n_2)$,then $\frac1X{\sim}F(n_2,n_1)$</li>
+<li>Assume $T{\sim}t(n).$ Then $T^2{\sim}F(1,n)$. Recall: If $X\sim N(0,1)$, then $X^2\sim\chi^{2}(1).$</li>
+</ol>
+<ul>
+<li>Proof: If $T{\sim}t(n)$, then there exist $X{\sim}N(0,1),Y{\sim}\chi^{2}(n)$,and $X{、}Y$ are<br> independent such that<br> $$<br> T=\frac X{\sqrt{Y/n}}<br> $$<br> which gives<br> $$<br> T^2=\frac{X^2}{Y/n}<br> $$<br> here $X^2{\sim}\chi^2(1),Y{\sim}\chi^2(n)$,and $X^2,Y$ are independent, thus we get $T^2{\sim}F(1,\hat{n}).$</li>
+</ul>
+</li>
+</ol>
 <h2 id="四-统计量及其分布"><a href="#四-统计量及其分布" class="headerlink" title="四 统计量及其分布"></a>四 统计量及其分布</h2><p><mark>该部分后续需拓展</mark></p>
 <h3 id="4-1-总体与样本"><a href="#4-1-总体与样本" class="headerlink" title="4.1 总体与样本"></a>4.1 <strong>总体与样本</strong></h3><ol>
 <li><p><strong>总体</strong></p>
@@ -1341,8 +1500,10 @@
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box_normal.png" alt="img"></p>
 </li>
 </ol>
-<h2 id="五-参数估计"><a href="#五-参数估计" class="headerlink" title="五 参数估计"></a>五 参数估计</h2><p>  统计学与概率论的区别就是归纳和演绎，前者通过样本推测总体的分布，而后者已知总体分布去研究样本。因此参数估计则是归纳的过程，参数估计有两种形式：<strong>点估计</strong>和<strong>区间估计</strong><u>（点估计和区间估计都是对于未知参数的估计，而<strong>点估计给出的是一个参数可能的值</strong>，<strong>区间估计给出的是参数可能在的范围</strong>）</u>。</p>
-<h3 id="5-1-点估计"><a href="#5-1-点估计" class="headerlink" title="5.1 点估计"></a>5.1 点估计</h3><h4 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h4><p><strong>点估计（_Point estimation_）：</strong>设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
+<h2 id="Chapter-5-参数估计-Parameter-Estimation"><a href="#Chapter-5-参数估计-Parameter-Estimation" class="headerlink" title="Chapter 5 参数估计 Parameter Estimation"></a>Chapter 5 参数估计 Parameter Estimation</h2><p>  统计学与概率论的区别就是归纳和演绎，前者通过样本推测总体的分布，而后者已知总体分布去研究样本。因此参数估计则是归纳的过程，参数估计有两种形式：<strong>点估计</strong>和<strong>区间估计</strong><u>（点估计和区间估计都是对于未知参数的估计，而<strong>点估计给出的是一个参数可能的值</strong>，<strong>区间估计给出的是参数可能在的范围</strong>）</u>。</p>
+<h3 id="5-1-点估计-Point-Estimation"><a href="#5-1-点估计-Point-Estimation" class="headerlink" title="5.1 点估计 Point Estimation"></a>5.1 点估计 Point Estimation</h3><h4 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h4><p><strong>点估计（_Point estimation_）：</strong>设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
+<p>Definition: Suppose $\theta$ is an unknown parameter of some population $X.$ Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$, and $x_1,x_2,…,x_n$ be a set of corresponding observations.</p>
+<p>Now construct an appropriate statistic $\hat{\theta}(X_1,X_2,…,X_n)$ to estimate $\theta$ with its value $\hat{\theta}(x_1,x_2,…,x_n).$ Then the function $\hat{\theta}(X_1,X_2,…,X_n)$ is called an estimator估计量of $\theta$ and the value $\hat{\theta}(x_1,x_2,…,x_n)$ is called an estimate 估计值of $\theta.$</p>
 <h4 id="5-1-2-点估计的方法"><a href="#5-1-2-点估计的方法" class="headerlink" title="5.1.2 点估计的方法"></a>5.1.2 点估计的方法</h4><ol>
 <li><p><strong>矩估计</strong></p>
 <p><strong>定义：</strong>设总体概率函数已知，为$p(x;\theta_1,…,\theta_k)$，$(\theta_1,…,\theta_k)\in\Theta$是未知参数或参数向量，$x_1,…,x_n$是样本，假定总体的$k$阶原点矩$\mu_k$存在，则对所有的$j$，$o&lt;j&lt;k$，$\mu_j$都存在，若假设$\theta_1,…,\theta_k$能够表示成$\mu_1,…,\mu_k$的函数$\theta_j=\theta_j(\mu_1,…,\mu_k)$，则可给出诸$\theta_j$的矩估计：</p>
@@ -1356,7 +1517,31 @@
 <ul>
 <li>用样本矩的函数去替换相应的总体矩的函数。</li>
 </ul>
-<blockquote>
+</li>
+<li><p>$$\begin{aligned}&amp;\textbf{Definition: The }k\text{th uncorrected moment k阶原点矩 of a random variable}\&amp;X\mathrm{<del>is</del>}E(X^{k}).\&amp;\textbf{Definition: The }k\text{th corrected moment k阶中心矩 of a random variable }X\&amp;\mathrm{is~}E[(X-E(X))^{k}].\end{aligned}$$</p>
+</li>
+<li><p>The idea of the method of moments:</p>
+<ul>
+<li><p>The sample moment样本矩$\sum_{i=1}^nX_i^s/n,s=1,2,…$ is used as the estimator of the corresponding population moment 总体矩$E(X^s).$ </p>
+</li>
+<li><p>$\begin{array}{lll}\text{Sample moment:}&amp;\frac1n\sum_{i=1}^nX_i:,\frac1n\sum_{i=1}^nX_i^2:,\frac1n\sum_{i=1}^nX_i^3:,\ldots\\text{Population moment:}&amp;E(X),E(X^2),E(X^3),\ldots\end{array}$</p>
+</li>
+<li><p>Assume $F(x;\theta_1,\theta_2,…,\theta_r)$ is the distribution function of population $X$, where parameters $\theta_1,\theta_2,…,\theta_r$ are unknown. Also assume $E(X^k)(k=1,2,…,r)$ exist。</p>
+</li>
+</ul>
+</li>
+<li><p>Using the method of moments, the moment estimators $\widehat{\theta}_1,\widehat{\theta}_2,…,\widehat{\theta}_r$<br>are obtained by equating the first r sample moments to the<br>corresponding first r population moments and solving for $\theta_1,\theta_2,…,\theta_r$</p>
+<p>$$\begin{aligned}&amp;\text{nation monicints ania so}\&amp;=\frac{1}{n}\sum_{i=1}^{n}X_{i}\&amp;=\frac{1}{n}\sum_{i=1}^{n}X_{i}^{2}\&amp;…\&amp;E(X^r)=\frac{1}{n}\sum_{i=1}^nX_i^r\end{aligned}$$</p>
+</li>
+<li><p>More precisely,</p>
+<p>when estimating single parameter, it is suffice to solve the following</p>
+<p>single equation:</p>
+<p>$$E(X)=\sum_{i=1}^nX_i/n=\bar{X}$$</p>
+<p>When estimating two parameters, two estimating equations will be</p>
+<p>needed:</p>
+<p>$$\begin{cases}E(X)=\dfrac{1}{n}\sum_{i=1}^nX_i\E(X^2)=\dfrac{1}{n}\sum_{i=1}^nX_i^2\end{cases}$$</p>
+</li>
+<li><blockquote>
 <p><strong>注：</strong>矩估计可能是不唯一的，尽量使用低阶矩给出未知参数的估计 。</p>
 </blockquote>
 </li>
@@ -2342,7 +2527,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">114.6k</span>
+                        class="white-color">131.8k</span>
             
             
             
