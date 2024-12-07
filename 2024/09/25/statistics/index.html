@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -407,7 +407,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-11-27
+                    2024-12-04
                 </div>
                 
 
@@ -1518,7 +1518,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <li>用样本矩的函数去替换相应的总体矩的函数。</li>
 </ul>
 </li>
-<li><p>$$\begin{aligned}&amp;\textbf{Definition: The }k\text{th uncorrected moment k阶原点矩 of a random variable}\&amp;X\mathrm{<del>is</del>}E(X^{k}).\&amp;\textbf{Definition: The }k\text{th corrected moment k阶中心矩 of a random variable }X\&amp;\mathrm{is~}E[(X-E(X))^{k}].\end{aligned}$$</p>
+<li><p>$$\begin{aligned}&amp;\textbf{Definition: The }k\text{th uncorrected moment k阶原点矩 of a random variable }X\mathrm{<del>is</del>}E(X^{k}).\&amp;\textbf{Definition: The }k\text{th corrected moment k阶中心矩 of a random variable }X\mathrm{<del>is</del>}E[(X-E(X))^{k}].\end{aligned}$$</p>
 </li>
 <li><p>The idea of the method of moments:</p>
 <ul>
@@ -1530,7 +1530,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </li>
 </ul>
 </li>
-<li><p>Using the method of moments, the moment estimators $\widehat{\theta}_1,\widehat{\theta}_2,…,\widehat{\theta}_r$<br>are obtained by equating the first r sample moments to the<br>corresponding first r population moments and solving for $\theta_1,\theta_2,…,\theta_r$</p>
+<li><p>Using the method of moments, the moment estimators $\widehat{\theta}_1,\widehat{\theta}_2,…,\widehat{\theta}_r$ are obtained by equating the first r sample moments to the corresponding first r population moments and solving for $\theta_1,\theta_2,…,\theta_r$</p>
 <p>$$\begin{aligned}&amp;\text{nation monicints ania so}\&amp;=\frac{1}{n}\sum_{i=1}^{n}X_{i}\&amp;=\frac{1}{n}\sum_{i=1}^{n}X_{i}^{2}\&amp;…\&amp;E(X^r)=\frac{1}{n}\sum_{i=1}^nX_i^r\end{aligned}$$</p>
 </li>
 <li><p>More precisely,</p>
@@ -1548,8 +1548,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </ul>
 <ol start="2">
 <li><p><strong>最大似然估计</strong></p>
-<p><strong>定义：</strong>设总体的概率函数为$p(x;\theta),\ \theta\in\Theta$，其中$\theta$是一个未知参数或几个未知参数组成的参数向量，$\Theta$是参数空间，$x_1,…,x_n$是来自该总体的样本，将样本的联合概率函数看成$\theta$的函数，用$L(\theta;x_1,…,x_n)$表示，简记为$L(\theta)$，</p>
-<p>$$<br>L(\theta)=L(\theta;x_1,…,x_n)=p(x_1;\theta)p(x_2;\theta)…p(x_n;\theta)<br>$$</p>
+<p><strong>定义：</strong>设总体的概率函数为$p(x;\theta),\ \theta\in\Theta$，其中$\theta$是一个未知参数或几个未知参数组成的参数向量，$\Theta$是参数空间，$x_1,…,x_n$是来自该总体的样本，将样本的联合概率函数看成$\theta$的函数，用$L(\theta;x_1,…,x_n)$表示，简记为$L(\theta)$，<br>$$<br>L(\theta)=L(\theta;x_1,…,x_n)=p(x_1;\theta)p(x_2;\theta)…p(x_n;\theta)<br>$$</p>
 <p>$L(\theta)$称为样本的<strong>似然函数</strong>。若统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$满足</p>
 <p>$$<br>L(\hat{\theta})=\max_{\theta\in\Theta}L(\theta)<br>$$</p>
 <p>则称$\hat{\theta}$是$\theta$的<strong>最大似然估计</strong>，简称<strong>MLE（maximum likelihood estimate）.</strong></p>
@@ -1617,9 +1616,8 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </li>
 </ol>
 <h4 id="5-1-3-点估计的优良性准则"><a href="#5-1-3-点估计的优良性准则" class="headerlink" title="5.1.3 点估计的优良性准则"></a>5.1.3 点估计的优良性准则</h4><ol>
-<li><p><strong>无偏性：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有</p>
-<p>$$<br>E_{\theta}(\hat{\theta})=\theta<br>$$</p>
-<p>则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，否则称为<strong>有偏估计</strong>。无偏性的要求也可以改写为$E_{\theta}(\hat{\theta-\theta})=0$，无偏性表示表示估计参数与真实参数没有系统偏差。</p>
+<li><p><strong>无偏性 Unbiasedness：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有<br>$$<br>E_{\theta}(\hat{\theta})=\theta<br>$$</p>
+<p>则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，否则称为<strong>有偏估计</strong>。无偏性的要求也可以改写为$E_{\theta}(\hat{\theta}-\theta)=0$，无偏性表示表示估计参数与真实参数没有系统偏差。</p>
 <blockquote>
 <p><strong>一个重要的结论：</strong>样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^nx_i$是总体均值$\mu$的无偏估计。样本方差$s_n^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$不是总体方差$\sigma^2$的无偏估计（而是渐进无偏估计），因此需要对样本方差进行修正，$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$.</p>
 <ul>
@@ -1631,8 +1629,8 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </ul>
 </blockquote>
 </li>
-<li><p><strong>有效性</strong></p>
-<p>无偏估计往往有很多种，以总体均值为例，$x_1,…,x_n$是取自某总体的样本，样本均值$\mu$和样本$x_i$都是总体均值的无偏估计，对于两个估计参数的选取需要基于一个度量无偏估计优劣的准则。有效性作为这样的准则，反映了<strong>参数估计值和参数真值的波动</strong>，波动大小可用方差来衡量，波动越小表示参数的估计越有效。</p>
+<li><p><strong>有效性 Effectiveness</strong></p>
+<p>无偏估计往往有很多种，以总体均值为例，$x_1,…,x_n$是取自某总体的样本，样本均值$\mu$和样本$x_i$都是总体均值的无偏估计，对于两个估计参数的选取需要基于一个度量无偏估计优劣的准则。有效性作为这样的准则，反映了<strong>参数估计值和参数真值的波动</strong>，波动大小可kmc用方差来衡量，波动越小表示参数的估计越有效。</p>
 <p>设$\hat{\theta_1}$，$\hat{\theta_2}$是$\theta$的两个无偏估计，如果对任意的$\theta\in\Theta$有</p>
 <p>$$<br>Var(\hat{\theta}_1)\leq Var(\hat{\theta}_2)<br>$$</p>
 <p>且至少有一个$\theta\in\Theta$使得上述不等号严格成立，则称$\hat{\theta}_1$比$\hat{\theta}_2$有效。</p>
@@ -2527,7 +2525,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">131.8k</span>
+                        class="white-color">130.7k</span>
             
             
             
