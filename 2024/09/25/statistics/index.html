@@ -407,21 +407,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-12-04
+                    2024-12-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    21.2k
+                    22.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    99 Min
+                    106 Min
                 </div>
                 
 
@@ -1732,10 +1732,12 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </ul>
 </li>
 </ol>
-<h2 id="六-假设检验"><a href="#六-假设检验" class="headerlink" title="六 假设检验"></a>六 假设检验</h2><h3 id="6-1-假设检验的基本思想和概念"><a href="#6-1-假设检验的基本思想和概念" class="headerlink" title="6.1 假设检验的基本思想和概念"></a>6.1 假设检验的基本思想和概念</h3><ol>
+<h2 id="Chapter-6-假设检验-Hypothesis-Testing"><a href="#Chapter-6-假设检验-Hypothesis-Testing" class="headerlink" title="Chapter 6 假设检验 Hypothesis Testing"></a>Chapter 6 假设检验 Hypothesis Testing</h2><h3 id="6-1-假设检验的基本思想和概念"><a href="#6-1-假设检验的基本思想和概念" class="headerlink" title="6.1 假设检验的基本思想和概念"></a>6.1 假设检验的基本思想和概念</h3><ol>
 <li><p><strong>基本思想</strong></p>
 <p>以“女士品茶”为例，对于该女士有没有品茶的能力，有两种假设：该女士没有品茶能力和该女士有品茶能力。在统计上这两个非空不相交参数集合称作<strong>统计假设</strong>，简称<strong>假设</strong>。通过样本对一个假设作出对与不对的判断，则称为该假设的一个<strong>检验</strong>。若检验结果否定该命题，则称<strong>拒绝</strong>这个假设，否则就<strong>接受（不拒绝）</strong>这个假设。</p>
-<p>假设可分为两种：1. <strong>参数假设检验</strong>，即已经知道数据的分布，针对总体的某个参数进行假设检验；2. <strong>非参数假设检验</strong>，即数据分布未知，针对该分布进行假设检验。</p>
+<p>Test whether $H_0: \quad \mu=\mu_0$ is correct or not by contradiction 反证法:<br>$\checkmark$ first assume that the null hypothesis $H_0:\mu=\mu_0$ is true.<br>$\checkmark$ under $H_0$, we infer according to the sampling distribution theory and sample information.<br>$\checkmark$ reject $H_0$ if we get contradictory conclusions based on small probability principle; otherwise, accept $H_0$.</p>
+<p>Small probability principle 小概率原理: the event with probability no more than 0.05 is almost impossible to occur in just one trial.</p>
+<p>假设可分为两种：1. <strong>参数假设检验 parametric test</strong>，即已经知道数据的分布，针对总体的某个参数进行假设检验 population distribution is known but population parameter is unknown；2. <strong>非参数假设检验 nonparametric test</strong>，即数据分布未知，针对该分布进行假设检验 population distribution is unknown。</p>
 </li>
 <li><p><strong>假设检验的基本步骤</strong></p>
 <p>_建立假设_—&gt;_选择检验统计量，给出拒绝域形式_—&gt;_选择显著性水平_—&gt;_给出拒绝域_—&gt;<em>做出判断</em></p>
@@ -1743,10 +1745,15 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <blockquote>
 <p><strong>主要针对参数假设检验问题</strong></p>
 <p>设有来自某分布族${F(x,\theta)|\theta\in\Theta}$的样本$x_1,…,x_n$，其中$\Theta$为参数空间，设$\Theta_0\in\Theta$，且$\Theta_0\neq\phi$，则命题$H_0:\theta\in\Theta_0$称为<strong>原假设</strong>或<strong>零假设（null hypothesis）</strong>，若有另一个$\Theta_1$（$\Theta_1\in\Theta,\Theta_1\Theta_0=\phi$，常见的一种情况是$\Theta_1=\Theta-\Theta_0$），则命题$H_1:\theta\in\Theta_1$称为$H_0$的<strong>对立假设</strong>或<strong>备择假设（alternative hypotheis）</strong>，当$H_0$为简单假设，即$\Theta_0$只含一个点时，备择假设有三种可能：$H_1’:\theta\neq\theta_0$，$H_1’’:\theta&lt;\theta_0$，$H_1’’’:\theta&gt;\theta_0$。</p>
+<p>The null hypothesis 零假设，denoted by $H_0$, is the hypothesis that is to be tested. The null hypothesis is a statement of no change, no effect or no difference and is assumed true until evidence indicates otherwise. </p>
+<p>The alternative hypothesis 备择假设，denoted by $H_1$, is the hypothesis that in some sense contradicts the null hypothesis and is a statement that we are trying to find evidence to support.</p>
+<p>In general, the null hypothesis is represented by the value of the unknown population parameter is equal to some specific value, i.e.,</p>
+<p>$$<br>H_0 \text { : parameter }=\text { some value } \quad\left(H_0: \quad \mu=\mu_0\right)<br>$$</p>
+<p>The alternative hypothesis is allowed to be either greater than or less than some specific value.<br>$H_1$ : parameter $\neq$ some value two-tailed test 双侧检验<br>$H_1$ : parameter $&gt;$ some value right(upper)-tailed test 单侧检验<br>$H_1$ ： parameter $&lt;$ some value left(lower)-tailed test 单侧检验</p>
 </blockquote>
 <p><strong>_Step 2_：选择检验统计量，给出拒绝域形式</strong></p>
 <blockquote>
-<p>根据样本计算统计量$Z$（如样本均值、标准差等，称为<strong>检验统计量</strong>），并基于某个法则既可以决定接受$H_0$还是拒绝$H_0$，具体地，当统计量在拒绝域$W$中即拒绝$H_0$，在接受域$\overline{W}$中即接受$H_0$。由此可见，<strong>一个拒绝域$W$唯一确定一个检验法则，反之，一个检验法则也唯一确定一个拒绝域。</strong></p>
+<p>根据样本计算统计量$Z$（如样本均值、标准差等，称为<strong>检验统计量</strong>），并基于某个法则既可以决定接受$H_0$还是拒绝$H_0$，具体地，当统计量在拒绝域$W$ (rejection region) 中即拒绝$H_0$，在接受域$\overline{W}$ (acceptance region) 中即接受$H_0$。由此可见，<strong>一个拒绝域$W$唯一确定一个检验法则，反之，一个检验法则也唯一确定一个拒绝域。</strong></p>
 <p><strong>注：</strong>不能用一个样本（例子）证明一个命题（假设成立），但是可以用一个样本（例子）去推翻一个命题。此外，拒绝域与接受域之间有一个模糊域，即统计量恰好符合法则，通常将模糊域归为接受域，因此接受域是复杂的。</p>
 </blockquote>
 <p><strong>_Step 3_：选择显著性水平</strong></p>
@@ -1767,25 +1774,27 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <td align="center">$H_1$为真</td>
 </tr>
 <tr>
-<td align="center">接受$H_0$</td>
+<td align="center">拒绝$H_0$</td>
 <td align="center">第一类错误（拒真）</td>
 <td align="center">正确</td>
 </tr>
 <tr>
-<td align="center">拒绝$H_0$</td>
+<td align="center">接受$H_0$</td>
 <td align="center">正确</td>
 <td align="center">犯第二类错误（取伪）</td>
 </tr>
 </tbody></table>
 <p>犯第一类错误概率：$\alpha=P(X\in W|H_0)$，即$\alpha=P(拒绝H_0|H_0为真)$；</p>
 <p>犯第二类错误概率：$\beta=P(X\in \overline{W}|H_1)$，即$\beta=P(接受H_0|H_0为假)$。</p>
-<p>可以证明的，在一定样本量下，两类错误概率无法共同减小，但是当样本增加时，可以同时减小。</p>
+<p>Definition: The probability of a type I error 第一类错误，which is usually denoted by $\alpha$, is the probability of rejecting $H_0$ when $H_0$ is true, (“reject the true” 拒真)</p>
+<p>$$<br>\alpha=P{\text { type I error }}=P\left{\text { reject } H_0 \text { when } H_0 \text { true }\right}<br>$$</p>
+<p>Definition: The probability of a type II error 第二类错误, which is usually denoted by $\beta$, is the probability of accepting $H_0$ when $H_1$ is true, (“accept the false” 取伪)<br>$$<br>\beta=P{\text { type II error }}=P\left{\text { accept } H_0 \text { when } H_1 \text { true }\right}<br>$$<br>可以证明的，在一定样本量下，两类错误概率无法共同减小，但是当样本增加时，可以同时减小。</p>
 <blockquote>
 <p>证明该问题需要引入是函数，下面将简单介绍势函数，但不对上述结论证明。</p>
 <p>定义：设检验问题$H_0:\theta\in\Theta_0\quad vs\quad H_1:\theta \in \Theta_1$的拒绝域为$W$，则样本观测值$\mathbf{X}$落在拒绝域$W$内的概率称为该检验的<strong>势函数</strong>，记为</p>
 <p>$$<br>g(\theta)=P_\theta(\mathbf{X}\in W),\ \theta\in\Theta=\Theta_0\cup\Theta_1\<br>g(\theta)=\left{\begin{matrix}<br>\alpha(\theta) &amp; \theta\in\Theta_0\<br>1-\beta(\theta) &amp;\theta\in\Theta_1<br>\end{matrix}\right.<br>$$</p>
 </blockquote>
-<p>第一类错误概率$\alpha$即为初始设定的很小的概率，称为<strong>置信水平</strong>，称该检验时<strong>显著性水平为$\alpha$的显著性检验</strong>，简称<strong>水平为$\alpha$的检验</strong>。为了尽量减少两类错误，可简单的将其简化为减小第一类错误概率（第二类错误概率难求）。常用的$\alpha=0.05$有时也选择0.1或0.01。</p>
+<p>第一类错误概率$\alpha$即为初始设定的很小的概率，称为<strong>置信水平 significance level</strong>，称该检验时<strong>显著性水平为$\alpha$的显著性检验</strong>，简称<strong>水平为$\alpha$的检验</strong>。为了尽量减少两类错误，可简单的将其简化为减小第一类错误概率（第二类错误概率难求）。常用的$\alpha=0.05$有时也选择0.1或0.01。</p>
 </blockquote>
 <p><strong>_Step 4_：给出拒绝域</strong></p>
 <blockquote>
@@ -1808,9 +1817,87 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </blockquote>
 </li>
 </ol>
+<h3 id="6-2-Hypothesis-Testing"><a href="#6-2-Hypothesis-Testing" class="headerlink" title="6.2 Hypothesis Testing"></a>6.2 Hypothesis Testing</h3><p>Tests of hypotheses based on one sample from $N\left(\mu, \sigma^2\right)$</p>
+<ol>
+<li>One-sample $u$ test for the mean of $N\left(\mu, \sigma^2\right)$ with $\sigma^2$ known</li>
+<li>One-sample $t$ test for the mean of $N\left(\mu, \sigma^2\right)$ with $\sigma^2$ unknown</li>
+<li>One-sample $\chi^2$ test for the variance of $N\left(\mu, \sigma^2\right)$</li>
+</ol>
+<p>Tests of hypotheses based on two samples</p>
+<ol>
+<li>Two-sample paired $t$ test</li>
+<li>Two-sample F test</li>
+<li>Two-sample $t$ test</li>
+</ol>
+<p>One-sample u test for the mean of a normal distribution with known variance: two-tailed case</p>
+<p>Summarize the steps in below:</p>
+<ol>
+<li>Establish hypothesis $H_0:\mu=\mu_0$ vs. $H_1: \mu \neq \mu_0$</li>
+<li>Calculate the value of test statistic $u=\frac{x-\mu_0}{\frac{\sigma}{\sqrt{n}}}$ according to observations</li>
+<li>Find $u_{\frac{\alpha}{2}}$ for a given significance level of $\alpha$</li>
+<li>Make statistical inference:</li>
+</ol>
+<p>If $|u|&gt;u_{\frac{\alpha}{2}}$, then $H_0$ is rejected at a significance level of $\alpha$, and it is considered that there is a significant difference between $\mu$ and $\mu_0$. If $|u| \leq u_{\frac{\alpha}{2}}$, then $H_0$ is accepted at a significance level of $\alpha$, and it is considered that there is no significant difference between $\mu$ and $\mu_0$.</p>
+<p>One-sample u test for the mean of a normal distribution with known variance: one-tailed case</p>
+<p>Summarize the steps below:</p>
+<ol>
+<li>Establish hypothesis</li>
+</ol>
+<p>$$<br>H_0: \quad \mu=\mu_0 \quad \text { vs. } H_1: \quad \mu&gt;\mu_0\left(\text { or } H_1: \quad \mu&lt;\mu_0\right)<br>$$</p>
+<ol start="2">
+<li>Calculate the value of test statistic according to observations</li>
+</ol>
+<p>$$<br>u=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}<br>$$</p>
+<ol start="3">
+<li><p>Find $u_\alpha$ for a given significance level of $\alpha$</p>
+</li>
+<li><p>Make statistical inference:</p>
+<p> If $u&gt;u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $u \leq u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$;<br> or<br> (If $u&lt;-u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $u \geq-u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
+</li>
+</ol>
+<p>One-sample t test for the mean of a normal distribution with unknown variance</p>
+<p>We want to test</p>
+<p>$$<br>H_0: \quad \mu=\mu_0 \quad \text { vs. } \quad H_1: \quad \mu \neq \mu_0<br>$$</p>
+<p>If the variance $\sigma^2$ is unknown, we just replace $\sigma^2$ by sample variance $S^2$. Under $H_0: \quad \mu=\mu_0$, we have</p>
+<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br>$$<br>Then the steps for two-tailed $t$ test, which is similar to one-sample $u$ test, is given below:</p>
+<ol>
+<li>Establish hypothesis $H_0: \mu=\mu_0 \quad$ vs. $\quad H_1: \quad \mu \neq \mu_0$</li>
+<li>Calculate the value of test statistic according to observations</li>
+</ol>
+<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br>$$</p>
+<ol start="3">
+<li><p>Find $t_{\frac{\alpha}{2}}(n-1)$ for a given significance level of $\alpha$</p>
+</li>
+<li><p>Make statistical inference:</p>
+<p> If $|t|&gt;t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $|t| \leq t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.<br> Remark: The above test procedure is called a $\boldsymbol{t}$ test because the test statistic</p>
+<p> $$<br> t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br> $$</p>
+</li>
+</ol>
+<p>The steps for one-sample t test in one-tailed case</p>
+<ol>
+<li>Establish hypothesis</li>
+</ol>
+<p>$$<br>H_0: \quad \mu=\mu_0 \quad \text { vs. } \quad H_1: \quad \mu&gt;\mu_0\left(\text { or } H_1: \quad \mu&lt;\mu_0\right)<br>$$</p>
+<ol start="2">
+<li>Calculate the value of test statistic according to observations</li>
+</ol>
+<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br>$$</p>
+<ol start="3">
+<li><p>Find $t_\alpha$ for a given significance level of $\alpha$.</p>
+</li>
+<li><p>Make statistical inference:</p>
+<p> If $t&gt;t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $t \leq t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$; or (If $t&lt;-t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$. If $t \geq-t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
+</li>
+</ol>
+<p>One-sample $\chi^2$ test for the variance of a normal distribution</p>
+<p>If $X_1, X_2, \ldots, X_n$ are random sample from an $N\left(\mu, \sigma^2\right)$ distribution with unknown $\mu$ and $\sigma^2$.</p>
+<p>We want to test the hypothesis</p>
+<p>$$<br>H_0: \sigma^2=\sigma_0^2 \quad \text { vs. } \quad H_1: \sigma^2 \neq \sigma_0^2<br>$$</p>
+<p>Here $\sigma_0^2$ is known.<br>Under $H_0: \sigma^2=\sigma_0^2$, consider $S^2$ is unbiased estimator of $\sigma^2$, we known that</p>
+<p>$$<br>\chi^2=\frac{(n-1) S^2}{\sigma_0^2} \sim \chi^2(n-1)<br>$$</p>
 <blockquote>
 <p>参考：Statistics-note</p>
-<p>Author：钱小z</p>
+<p>Author：ChanceQZ</p>
 <p>Email：<a href="mailto:qz_gis@163.com">qz_gis@163.com</a></p>
 <p>Bio：GISer，Spatiotemporal data mining</p>
 <p>GitHub：ChanceQZ</p>
@@ -2525,7 +2612,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">130.7k</span>
+                        class="white-color">139.1k</span>
             
             
             
