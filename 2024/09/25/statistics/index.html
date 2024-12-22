@@ -407,21 +407,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2024-12-16
+                    2024-12-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    22.3k
+                    24.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    106 Min
+                    119 Min
                 </div>
                 
 
@@ -790,10 +790,7 @@
 </ol>
 <p>$$<br>   \begin{gathered}<br>   P(a&lt;X \leq b)=F(b)-F(a)=\Phi\left(\frac{b-\mu}{\sigma}\right)-\Phi\left(\frac{a-\mu}{\sigma}\right) \<br>   P(X&gt;x)=1-F(x)=1-\Phi\left(\frac{x-\mu}{\sigma}\right)<br>   \end{gathered}<br>$$</p>
 <ol start="2">
-<li>Probabilities for any normal distribution can now be evaluated using the normal table.<ol start="3">
-<li>If $X \sim N\left(\mu, \sigma^2\right)$, then</li>
-</ol>
-</li>
+<li>Probabilities for any normal distribution can now be evaluated using the normal table. 3. If $X \sim N\left(\mu, \sigma^2\right)$, then</li>
 </ol>
 <p>$$<br>   \begin{aligned}<br>   P{\mu-k \sigma \leq X \leq \mu+ k \sigma} &amp; =\Phi\left(\frac{\mu+k \sigma-\mu}{\sigma}\right)-\Phi\left(\frac{\mu-k \sigma-\mu}{\sigma}\right) \<br>   &amp; =\Phi(k)-\Phi(-k)=\Phi(k)-[1-\Phi(k)] \<br>   &amp; =2 \Phi(k)-1<br>   \end{aligned}<br>$$</p>
 <p>When $k=1,2,3$,</p>
@@ -806,9 +803,9 @@
 <p>then $u_\alpha$ is called the upper $100 \times \alpha$th percentile 上侧 $\alpha$ 分位数 or critical value 临界值 of a standard normal distribution $N(0,1)$.</p>
 </li>
 <li><p>Given $\alpha$, it follows that $\Phi(u_\alpha)=P{X \leq u_\alpha}=1-P{X&gt;u_\alpha}=1-\alpha$. And $u_\alpha$ can be obtained from referring to normal table.</p>
-<p>For example, if $\alpha=0.05$, then $ Phi(u_\alpha)=1-0.05=0.95$. Refer to normal table, $u_\alpha=1.645$.</p>
+<p>For example, if $\alpha=0.05$, then $ Phi(u<em>\alpha)=1-0.05=0.95$. Refer to normal table, $u</em>\alpha=1.645$.</p>
 </li>
-<li><p>Assume $X \sim N(\mu,\sigma^2 )$. If $P{X&gt;x_0}=\alpha$ then $x_0$ is the upper $100 \times \alpha$th percentile or critical value of a normal distribution $N(\mu,\sigma^2 )$<br>   $$<br>   \text{i.e.,}\ \Phi(\frac{x_0 - \mu}{\sigma})=1-\alpha,\ \frac{x_0 + \mu}{\sigma}=u_\alpha,\ x_0=\mu + u_\alpha \sigma<br>   $$</p>
+<li><p>Assume $X \sim N(\mu,\sigma^2 )$. If $P{X&gt;x_0}=\alpha$ then $x_0$ is the upper $100 \times \alpha$th percentile or critical value of a normal distribution $N(\mu,\sigma^2 )$<br>$$<br>\text{i.e.,}\ \Phi(\frac{x_0 - \mu}{\sigma})=1-\alpha,\ \frac{x_0 + \mu}{\sigma}=u_\alpha,\ x_0=\mu + u_\alpha \sigma<br>$$</p>
 </li>
 </ul>
 </li>
@@ -1214,62 +1211,190 @@
 </ul>
 </li>
 </ol>
-<h2 id="Chapter-4-抽样分布-Sampling-Distribution"><a href="#Chapter-4-抽样分布-Sampling-Distribution" class="headerlink" title="Chapter 4 抽样分布 Sampling Distribution"></a>Chapter 4 抽样分布 Sampling Distribution</h2><h3 id="4-1-数理统计基本概念-Some-Basic-Concepts-About-Statistical-Problem"><a href="#4-1-数理统计基本概念-Some-Basic-Concepts-About-Statistical-Problem" class="headerlink" title="4.1 数理统计基本概念 Some Basic Concepts About Statistical Problem"></a>4.1 数理统计基本概念 Some Basic Concepts About Statistical Problem</h3><ol>
-<li><p><strong>总体与个体</strong>: All the possible observations of a trial is called population 总体. Each observation is called individual 个体. </p>
+<h2 id="Chapter-4-抽样分布-Sampling-Distribution"><a href="#Chapter-4-抽样分布-Sampling-Distribution" class="headerlink" title="Chapter 4 抽样分布 Sampling Distribution"></a>Chapter 4 抽样分布 Sampling Distribution</h2><h3 id="4-1-总体与样本"><a href="#4-1-总体与样本" class="headerlink" title="4.1 总体与样本"></a>4.1 <strong>总体与样本</strong></h3><ol>
+<li><strong>总体</strong></li>
+</ol>
+<p>    在一个统计问题里，研究对象的全体叫做总体，构成总体的每个成员称为个体。All the possible observations of a trial is called population. Each observation is called individual. 根据个体的数量指标数量，定义总体的维度，如每个个体只有一个数量指标，总体就是一维的，同理，个体有两个数量指标，总体就是二维的。<strong>总体就是一个分布，数量指标就是服从这个分布的随机变量。</strong><br>    总体根据个体数分为<strong>有限总体</strong>和<strong>无限总体</strong>，当有限总体的个体数充分大时，其可以看为无限总体。<br>    As each individual of the population is the observation of a trial, it is also can be considered as the value of a certain random variable. Thus a population corresponds to a random variable $X$. From now on, we make no distinction between a population and a random variable, and it is generally referred to as population $X$ (笼统称为总体$X$)</p>
 <ul>
-<li>As each individual of the population is the observation of a trial, it is also can be considered as the value of a certain random variable. Thus a population corresponds to a random variable $X$. <ul>
-<li>From now on, we make no distinction between a population and a random variable, and it is generally referred to as population $X$ (笼统称为总体$X$)</li>
+<li><strong>参数 parameter</strong>: 总体X的数字特征即总体的特征指标。</li>
+</ul>
+<ol start="2">
+<li><p><strong>样本</strong></p>
+<ul>
+<li><strong>定义：</strong></li>
+</ul>
+<p>   从总体中随机抽取的部分个体组成的集合称为样本，<strong>样本个数称为样本容量</strong>。</p>
+<ul>
+<li><p><strong>性质：</strong></p>
+<ul>
+<li><p><strong>二重性：</strong>抽取前随机，是随机变量；抽取后确定，是一组数值。</p>
+</li>
+<li><p><strong>随机性：</strong>每个个体都有同等的机会被选入样本。</p>
+</li>
 </ul>
 </li>
-</ul>
-</li>
-<li><p><strong>参数 parameter</strong>: 总体X的数字特征即总体的特征指标。</p>
-</li>
-<li><p><strong>样本 sample</strong>: 从总体X中抽取的部分个体。</p>
+<li><p><strong>独立性：</strong>每个样本的取值不影响其他样本取值，即分部独立。</p>
+<p>  满足后面两个性质称为<strong>简单随机样本</strong>，则</p>
+<p>  $$<br>  F(x_1,x_2,…,x_n)=\prod^n_{i=1}F(x_i),\<br>  f(x_1,x_2,…,x_n)=\prod^n_{i=1}f(x_i),\<br>  p(x_1,x_2,…,x_n)=\prod^n_{i=1}p(x_i)<br>  $$</p>
 </li>
 <li><p><strong>样本容量 sample size</strong>: 样本中所含的个体数。当$n≥30$时，称为大样本，否则称为小样本。</p>
 </li>
-<li><p><strong>简单随机样本 simple random sample</strong>: If carry out a trial repeatly and independently for n times and obtain n observations: $X_1,X_2,…,X_n$, Then these n observations $X_1,X_2,…,X_n$ can be regarded as $n$ random variables and is called a simple random sample 简单随机样本 of the population $X$, which has two properties: </p>
-<ol>
-<li><p>$X_1,X_2,…X_n$ are independent;</p>
-</li>
-<li><p>$X_1,X_2,…X_n$ have the same distribution as the that of the population.</p>
-<blockquote>
-<p>  $X_is$ are independent and identically distributed (i.i.d.) 独立同分布.</p>
+<li><p><strong>简单随机样本 simple random sample</strong>: If carry out a trial repeatly and independently for n times and obtain n observations: $X_1,X_2,…,X_n$, Then these n observations $X_1,X_2,…,X_n$ can be regarded as $n$ random variables and is called a simple random sample 简单随机样本 of the population $X$, which has two properties:</p>
+<ul>
+<li>$X_1,X_2,…X_n$ are independent;</li>
+<li>$X_1,X_2,…X_n$ have the same distribution as the that of the population.<blockquote>
+<p>$X_is$ are independent and identically distributed (i.i.d.) 独立同分布.</p>
 </blockquote>
 </li>
-</ol>
+</ul>
 </li>
-<li><p><strong>统计量 statistic</strong>: To perform statistical inference, we construct appropriate functions of the sample to draw conclusions rather than random sample itself. Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$. Then $\phi(X_1,X_2,…,X_n)$ is called a statistic 统计量, if $\phi(X_1,X_2,…,X_n)$ is just a function of $X_1,X_2,…,X_n$ without any unknown parameters 未知参数. For example: Assume $X\sim N(\mu,\sigma^2)$ with parameter $\mu$ unknown and $\sigma$ known. Then $\sum_{i=1}^{n}(X_i-\bar{X})^2$ is a statistic but $\sum_{i=1}^{n}(X_i-\mu)$ is not a statistic.</p>
-<ol>
+</ul>
+</li>
+<li><p><strong>分组样本</strong></p>
+<p>   只知样本观测值所在区间，而不知具体值的样本称为分组样本。<strong>缺点：</strong>与完全样本相比损失部分信息。<strong>优点：</strong>在样本量较大时，用分组样本既简明扼要，又能帮助人们更好地认识总体。</p>
+</li>
+</ol>
+<h3 id="4-2-样本数据的整理与显示"><a href="#4-2-样本数据的整理与显示" class="headerlink" title="4.2 样本数据的整理与显示"></a>4.2 样本数据的整理与显示</h3><ol>
+<li><p><strong>经验分布函数</strong></p>
+<p>   若将样本观测值$x_1,x_2,…,x_n$由小到大进行排列，得到有序样本$x_{(1)}\leq x_{(2)}\leq…\leq x_{(n)}$，用有序样本定义如下函数</p>
+<p> $$<br> F_n(x)=\left{\begin{matrix}<br> 0 &amp; 当x&lt;x_{(1)}\<br> k/n &amp; 当x_{(k)}\leq x&lt;x_{(k+1)},k=1,2,…,n-1\<br> 1 &amp; 当x\geq x_{(n)}<br> \end{matrix}\right.<br> $$</p>
+<p> 则称为$F_n(x)$为该样本的经验分布函数。</p>
+<p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/ex_distribution.png" alt="img"></p>
+</li>
+<li><p><strong>格里纹科定理</strong></p>
+<p>   设$x_1,x_2,…,x_n$是取自总体分布函数为$F(x)$的样本，$F_n(x)$是该样本的经验分布函数，则当$n\rightarrow+\infty$时，有</p>
+<p> $$<br> P(sup_{-\infty&lt;x&lt;+\infty}|F_n(x)-F(x)|\rightarrow0)=1<br> $$</p>
+<p> 表明当n相当大时，经验分布函数$F_n(x)$是总体分布函数$F(x)$的一个良好的近似。它是经典统计学的一块基石。</p>
+</li>
+<li><p><strong>频数频率分布表</strong></p>
+<p>   有样本$x_1,x_2,…,x_n$制作频数频率分布表的操作步骤如下：</p>
+<ul>
+<li>确定组数k；</li>
+<li>确定每组组距，通常取每组组距相等为d（方便起见，可选为整数）；</li>
+<li>确定组限（下限$a_0$略小于最小观测值，上限$a_k$略大于最大观测值）；</li>
+<li>统计样本数据落入每个区间的频数，并计算频率。</li>
+</ul>
+<p> 该表能够简明扼要地把样本特点表示出来。不足之处是该表依赖于分组，不同的分组方式有不同的频数频率分布表。</p>
+<p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/frequency.png" alt="img"></p>
+</li>
+<li><p><strong>直方图</strong></p>
+<ul>
+<li>利用频数频率分布表上的区间（横坐标）和频数（纵坐标）可作为频数直方图；</li>
+<li>若把纵坐标改为频率就得频率直方图；</li>
+<li>若把纵坐标改为频率/组距，就得到单位频率直方图。这时长条矩形的面积之和为1.</li>
+</ul>
+<p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/hist.png" alt="img"></p>
+</li>
+<li><p><strong>茎叶图</strong></p>
+<p>   把样本中的每个数据分为茎与叶，把茎放于一侧，叶放于另一侧，就得到一张该样本的茎叶图。比较两个样本时，可画出背靠背的茎叶图。茎叶图保留数据中全部信息，当样本量较大，数据很分散，<strong>横跨二、三个数量级时，茎叶图并不适用</strong>。</p>
+<p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/leave.jpg" alt="img"></p>
+</li>
+</ol>
+<h3 id="4-3-统计量及其分布"><a href="#4-3-统计量及其分布" class="headerlink" title="4.3 统计量及其分布"></a>4.3 统计量及其分布</h3><ol>
+<li><strong>统计量</strong></li>
+</ol>
+<p>    不含未知参数的样本函数称为统计量。统计量的分布称为抽样分布。</p>
+<p>    To perform statistical inference, we construct appropriate functions of the sample to draw conclusions rather than random sample itself. Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$. Then $\phi(X_1,X_2,…,X_n)$ is called a statistic 统计量, if $\phi(X_1,X_2,…,X_n)$ is just a function of $X_1,X_2,…,X_n$ without any unknown parameters 未知参数. </p>
+<blockquote>
+<p>For example: Assume $X\sim N(\mu,\sigma^2)$ with parameter $\mu$ unknown and $\sigma$ known. Then $\sum_{i=1}^{n}(X_i-\bar{X})^2$ is a statistic but $\sum_{i=1}^{n}(X_i-\mu)$ is not a statistic.</p>
+</blockquote>
+<ul>
 <li>As $X_1,X_2,…,X_n$ are random variables, the statistic $\phi(X_1,X_2,…,X_n)$ is also a random variable.</li>
 <li>Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$. Frequently used statistics: sample mean and sample variance.</li>
-<li>When generally referring to a sampling results,sample X1,X2,…,Xn are n random variables,and then X and S2 are also random variables. 当泛指一次抽样结果时，样本X1,X2,,Xn是n个随机变量，则样本均值双、样本方差S2等统计量也是随机变量；</li>
-<li>When specifically referring to a specific sampling results, observations $X_1,X_2,…,X_n$ are n specific numbers, and then $X$ and $S^2$ are also specific numbers.当特指一次具体的抽样结果时，样本值$X_1,X_2,…,X_n$是n个具体数值，从而样本均值$\bar{X}$、样本方差$S^2$等统计量也是具体的数值所以，后面不引起混淆的情况下，对样本和统计量赋予双重意义：乏指时为随机变量，特指时为相应数值。</li>
+<li>When generally referring to a sampling results,sample $X_1,X_2,…,X_n$ are n random variables,and then $X$ and $S^2$ are also random variables. 当泛指一次抽样结果时，样本$X_1,X_2,…,X_n$是n个随机变量，则样本均值、样本方差等统计量也是随机变量；</li>
+<li>When specifically referring to a specific sampling results, observations $X_1,X_2,…,X_n$ are n specific numbers, and then $X$ and $S^2$ are also specific numbers.当特指一次具体的抽样结果时，样本值$X_1,X_2,…,X_n$是n个具体数值，从而样本均值$\bar{X}$、样本方差$S^2$等统计量也是具体的数值所以，后面不引起混淆的情况下，对样本和统计量赋予双重意义：泛指时为随机变量，特指时为相应数值。</li>
+</ul>
+<ol start="2">
+<li><p><strong>抽样分布</strong></p>
+<p>   Sampling distribution of a statistic: the distribution of the statistic. 统计量作为随机变量所服从的分布.</p>
+</li>
+<li><p><strong>样本均值</strong></p>
+</li>
 </ol>
+<ul>
+<li><p><strong>定义：</strong></p>
+<p>  样本$x_1,x_2,…,x_n$的算数平均值称为样本均值，记为$\bar{x}$.分组样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^{k}x_if_i$，其中n为样本量，k为组数，**$x_i$与$f_i$为第i组的组中值和频率<strong>，</strong>分组样本均值是完全样本均值的一种较好的近似**。</p>
+<p>  样本均值是样本的位置特征，样本中大多数值位于$\bar{x}$左右。平均可消除一些随机干扰，等价交换也是在平均数中实现的。</p>
 </li>
-<li><p><strong>Sampling distributions</strong></p>
+<li><p><strong>性质：</strong></p>
+<ul>
+<li>$\sum_{i=1}^n (x_i-\bar{x})=0$，<strong>样本数据$x_i$对样本均值$\bar{x}$的偏差之和为零</strong>；</li>
+<li><strong>样本数据$x_i$与样本均值$\bar{x}$的偏差平方和最小</strong>，即对任意的实数c有$\sum_{i=1}^n(x_i-\bar{x})^2\leq \sum_{i=1}^n(x_i-c)^2$;</li>
+<li>若总体分布为$N(\mu,\sigma^2)$，则$\bar{x}$的精确分布为$N(\mu,\sigma^2/n)$；</li>
+<li>若总体分布未知，但其期望$\mu$与方差$\sigma^2$存在，则当n较大时，$\bar{x}$的渐进分布为$N(\mu,\sigma^2/n)$，这里渐进分布是指n较大时的近似分布。</li>
+</ul>
 </li>
-<li><p>…</p>
+</ul>
+<blockquote>
+<p>The sampling distribution of sample mean (If population variance $\sigma^2$ is known)</p>
+<p>Let $X_1, X_2, \ldots, X_n$ be a random sample from some population $X$ with mean $E(X)=\mu$ and variance $D(X)=\sigma^2$. Then</p>
+<p>$$<br>E(\bar{X})=\mu \quad D(\bar{X})=\frac{\sigma^2}{n}<br>$$<br>Because normal distribution is one of the most common distributions, we consider the sampling distribution of sample mean $\bar{X}$ with samples drawn from normal population.</p>
+<p>Theorem: If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ and are independent, then</p>
+<p>$$<br>\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)<br>$$</p>
+<p>If we standardize $\bar{X}$, then creating a new random variable</p>
+<p>$$<br>U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)<br>$$</p>
+</blockquote>
+<ol start="4">
+<li><strong>样本方差与样本标准差</strong></li>
+</ol>
+<p>    样本方差有两种，$s_*^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$与$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$，后者为无偏方差，也是最常用的。（这是因为当$\sigma^2$为总体方差时，总有$E(s_*^2)=\frac{n-1}{n}\sigma^2$,$E(s^2)=\sigma^2$，表明$s_*^2$有系统偏小的误差，$s^2$无此系统偏差。）称$\sqrt{s^2}$为样本标准差。</p>
+<p>    样本方差是样本的散布特征，$s^2$<strong>越大样本越分散，$s^2$越小分布越集中</strong>，样本标准差比样本方差使用更频繁，因为前者和样本均值有着相同的单位。</p>
+<p>    $s^2$的计算有如下<strong>三个公式</strong>可供选用：</p>
+<p>$$<br>  s^2=\frac{1}{n-1}\sum(x_i-\bar{x})^2=\frac{1}{n-1}[\sum x_i^2-\frac{(\sum x_i)^2}{n}]=\frac{1}{n-1}(\sum x_i^2-n\bar{x}^2)<br>$$</p>
+<p>  在分组样本场合，样本方差的近似计算公式为</p>
+<p>$$<br>  s^2=\frac{1}{n-1}\sum_{i=1}^kf_i(x_i-\bar{x})^2=\frac{1}{n-1}(\sum_{i=1}^k f_ix_i^2-n\bar{x}^2)<br>$$</p>
+<p>  其中k为组数，$x_i,f_i$分别为第i个区间的组中值与频数，$\bar{x}$为分组样本的均值。</p>
+<ol start="5">
+<li><strong>样本矩及其函数</strong></li>
+</ol>
+<ul>
+<li>样本的k阶原点矩$a_k=\frac{1}{n}\sum_{i=1}^{n}x_i^k$，样本均值$\bar{x}$为样本的一阶原点矩；</li>
+<li>样本的k阶中心距$b_k=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^k$，样本方差$s^2$和$s_*^2$都为样本的二阶中心矩；</li>
+<li>样本变异系数$C_r=s/\bar{x}$；</li>
+<li>样本的偏度$\hat{\beta_s}=b_3/b_2^{3/2}$，反映样本数据与对称性偏离程度和偏离方向；</li>
+<li>样本的峰度$\hat{\beta_k}=\frac{b_4}{b_2^2}-3$，反映总体分布密度曲线在其峰值附近的陡峭程度和尾部粗细.</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/skewness.png" alt="img"></p>
+<ol start="5">
+<li><p><strong>次序统计量及其分布</strong></p>
+<p>   设$x_1,…,x_n$是取自某总体的一个样本，$x_{(i)}$称为该样本的第i个次序统计量（升序排序后，第i个样本）。</p>
+<ul>
+<li><p>$x_{(1)}=min{x_1,…,x_n}$称为该样本的<strong>最小次序统计量</strong>；</p>
+</li>
+<li><p>$x_{(n)}=max{x_1,…,x_n}$称为该样本的<strong>最大次序统计量</strong>；</p>
+</li>
+<li><p>$(x_{(1)},x_{(2)},…,x_{(n)}}$称为该样本的次序统计量，即<strong>不独立也不同分布</strong>；</p>
+</li>
+<li><p>$R=x_{(n)}-x_{(1)}$称为样本极差。<br>  设总体$X$的密度函数为$f(x)$，分布函数为$F(x)$，$x_1,…,x_n$为样本，则有</p>
+</li>
+<li><p>样本第k个次序统计量$x_{(k)}$的密度函数为<br>  $$<br>  f_k(x)=\frac{n!}{(k-1)!(n-k)!}(F(x))^{k-1}(1-F(x))^{n-k}f(x);<br>  $$</p>
+</li>
+<li><p>样本第i个与第j个次序统计量的联合密度函数为<br>  $$<br>  f_{ij}(y,z)=\frac{n!}{(i-1)!(j-i-1)!(n-j)!}(F(y))^{i-1}(F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}f(xy)f(z),\quad y\leq z, 1\leq i&lt;j\leq n<br>  $$</p>
+</li>
+</ul>
+</li>
+<li><p><strong>样本中位数与样本分位数</strong></p>
+<p> 设$x_1,…,x_n$是取自某总体的样本，$x_{(1)}\leq x_{(2)}\leq …\leq x_{(n)}$为该样本的次序统计量，则样本中位数$m_{0.5}$定义为</p>
+<p> $$<br> m_{0.5}=\left{\begin{matrix}<br> x_{(\frac{n+1}{2})} &amp; n为奇数\<br> \frac{1}{2}(x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}) &amp; n为偶数<br> \end{matrix}\right.<br> $$</p>
+<p> 样本的p分位数$m_p$定义为</p>
+<p> $$<br> m_{p}=\left{\begin{matrix}<br> x_{[np+1]} &amp; np不是整数\<br> \frac{1}{2}(x_{(np)} + x_{(np+1)}) &amp; np是整数<br> \end{matrix}\right.<br> $$</p>
+<p> 其中[x]表示向下取整。<strong>中位数对样本的极端值有抗干扰性，或称有稳健性</strong>。<br> <strong>样本分位数的渐近分布：</strong>设总体的密度函数为$f(x)$，$x_p$为总体的p分位数。若$p(x)$在$x_p$处连续且$p(x_p)&gt;0$，则当n充分大时，有</p>
+<p> $$<br> m_p\sim N(x_p,\frac{p(1-p)}{n\cdot p^2(x_p)}),\<br> m_{0.5}\sim N(x_{0.5},\frac{1}{4n\cdot p^2(x_{0.5})})<br> $$</p>
+</li>
+<li><p><strong>五数概括与箱线图</strong></p>
+<p>   五数指用样本的五个次序统计量，即最小观测值，最大观测值，中位数，第一4分位数和第三4分位数。其图形为箱线图，可描述样本分布形状。</p>
+<p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box.png" alt="img"></p>
+<p> <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box_normal.png" alt="img"></p>
 </li>
 </ol>
-<p><img src="C:\Users\thyzz\AppData\Roaming\Typora\typora-user-images\image-20241120134731760.png" alt="image-20241120134731760"></p>
-<h3 id="4-2-chi-2-Distributions"><a href="#4-2-chi-2-Distributions" class="headerlink" title="4.2 $\chi^2$ Distributions"></a>4.2 $\chi^2$ Distributions</h3><ol>
-<li><p>Definition: if $\chi^2=X_1^2+X_2^2+…+X_n^2$, where $X_1,X_2,…,X_n \sim N(0,1)$ and the $X_i$‘s are independent, then the statistic $\chi^2$ is said to follow a $\chi^2$ distribution with n degrees of freedom 自由度为 n 的卡方分布, which is denoted by $\chi^2 \sim \chi^2(n)$.</p>
+<h3 id="4-4-chi-2-Distributions"><a href="#4-4-chi-2-Distributions" class="headerlink" title="4.4 $\chi^2$ Distributions"></a>4.4 $\chi^2$ Distributions</h3><ol>
+<li><p>Definition: if $\chi^2=X_1^2+X_2^2+…+X_n^2$, where $X_1,X_2,…,X_n \sim N(0,1)$ and the $X_i$‘s are independent, then the statistic $\chi^2$ is said to follow a $\chi^2$ distribution with $n$ degrees of freedom, which is denoted by $\chi^2 \sim \chi^2(n)$.</p>
 </li>
 <li><p>The degree of freedom is the number of independent random variables in a statistic. It is often denoted by $d f$ and defined as follows:<br>$$<br>d f=n-r<br>$$<br>Where $n$ is the number of random variables in a statistic, $r$ is the number of constraint conditions 约束条件 of these random variables.</p>
+<p>For example: $\quad S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2$<br>There are $n$ random variables $X_i-\bar{X}, \mathrm{i}=1, \ldots, \mathrm{n}$, and these random variables satisfy a constraint condition:</p>
+<p>$$<br>\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n-n \bar{X}=0<br>$$</p>
+<p>Thus, the degrees of freedom of $S^2$ is $d f=n-1$.</p>
 </li>
-</ol>
-<pre><code>For example: $\quad S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2$
-There are $n$ random variables $X_i-\bar{X}, \mathrm{i}=1, \ldots, \mathrm{n}$, and these random variables satisfy a constraint condition:
-
-$$
-\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n-n \bar{X}=0
-$$
-
-Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
-</code></pre>
-<ol start="2">
 <li><p>If $X \sim N(0,1)$, then $X^2 \sim \chi^2(1)$ 。</p>
 </li>
 <li><p>Assume $X \sim N\left(\mu, \sigma^2\right)$. First standardize $X$, $\frac{X-\mu}{\sigma} \sim N(0,1)$ then $\left(\frac{X-\mu}{\sigma}\right)^2 \sim \chi^2(1) .$</p>
@@ -1282,7 +1407,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </li>
 <li><p>When $n \rightarrow+\infty$, the distribution of $\chi^2(n)$ approaches a normal distribution.</p>
 </li>
-<li><p>If $\chi_1^2 \sim \chi^2\left(n_1\right), \chi_2^2 \sim \chi^2\left(n_2\right)$ and $\chi_1^2$ and $\chi_2^2$ are independent, then<br> $$<br> \chi_1^2+\chi_2^2 \sim \chi^2\left(n_1+n_2\right)<br> $$</p>
+<li><p>If $\chi_1^2 \sim \chi^2\left(n_1\right), \chi_2^2 \sim \chi^2\left(n_2\right)$ and $\chi_1^2$ and $\chi_2^2$ are independent, then<br>$$<br>\chi_1^2+\chi_2^2 \sim \chi^2\left(n_1+n_2\right)<br>$$</p>
 </li>
 </ol>
 </li>
@@ -1298,12 +1423,14 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </ul>
 </li>
 <li><p>Upper percentile of a $\chi^2(n)$ distribution</p>
-<ol>
-<li>Definition: The upper $100\times \alpha$th percentiles of a $\chi^(n)$ distribution (i.e., a chi-square distribution with $n\ df$) is denoted by $\chi^2_\alpha(n)$ where<br> $$<br> P{\chi^2&gt;\chi^2_\alpha(n)}=\alpha<br> $$</li>
-</ol>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218180856268.png" alt="image-20241218180856268"></p>
+<ul>
+<li>Definition: The upper $100\times \alpha$th percentiles of a $\chi^(n)$ distribution (i.e., a chi-square distribution with $n\ df$) is denoted by $\chi^2_\alpha(n)$ where</li>
+</ul>
+<p>$$<br>P{\chi^2&gt;\chi^2_\alpha(n)}=\alpha<br>$$</p>
 </li>
 </ol>
-<h3 id="4-3-t-分布"><a href="#4-3-t-分布" class="headerlink" title="4.3 $t$ 分布"></a>4.3 $t$ 分布</h3><blockquote>
+<h3 id="4-5-t-分布"><a href="#4-5-t-分布" class="headerlink" title="4.5 $t$ 分布"></a>4.5 $t$ 分布</h3><blockquote>
 <p>If normal population variance $\sigma^2$ is known, then the sample mean</p>
 <p>$$<br>\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) \quad \text { i.e., } \quad \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)<br>$$</p>
 <p>If normal population variance $\sigma^2$ is unknown, which can be replaced by $S^2$, what will be the distribution of sample mean</p>
@@ -1311,6 +1438,9 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </blockquote>
 <ol>
 <li><p>Definition</p>
+<p> If</p>
+<p> $$<br> t=\frac{X}{\sqrt{Y / n}}<br> $$</p>
+<p> Where $X \sim N(0,1), Y \sim \chi^2(n)$ and $X$ and $Y$ are independent, then statistic $t$ is said to follow a $t$ distribution with $n$ degrees of freedom, which is denoted by $t \sim t(n)$. </p>
 </li>
 <li><p>Properties</p>
 <ol>
@@ -1322,182 +1452,103 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <li><p>The sampling distribution of $\bar{X}$ (if $\sigma^2$ is unknown)</p>
 <ol>
 <li><p>If population variance $\sigma^2$ is unknown, we replace population variance $\sigma^2$ with sample variance $S^2$, and we have the following theorem:</p>
-<p> Theorem : If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ with unknown $\sigma^2$ and they are independent, then</p>
-<p> $$<br> \frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)<br> $$</p>
+<p>Theorem : If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ with unknown $\sigma^2$ and they are independent, then</p>
+<p>$$<br>\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)<br>$$</p>
 </li>
-<li><p>Proof:<br> First<br> $$<br> \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1), \quad \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1)<br> $$</p>
-<p> and $\bar{X}$ and $S^2$ are independent.<br> Then by the definition of $t$ distribution,<br> $$<br> \frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}} / \sqrt{\frac{(n-1) S^2}{\sigma^2(n-1)}} \sim t(n-1)<br> $$</p>
+<li><p>Proof:<br>First</p>
+<p>$$<br>\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1), \quad \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1)<br>$$</p>
+<p>and $\bar{X}$ and $S^2$ are independent.<br>Then by the definition of $t$ distribution,</p>
+<p>$$<br>\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}} / \sqrt{\frac{(n-1) S^2}{\sigma^2(n-1)}} \sim t(n-1)<br>$$</p>
 </li>
 </ol>
 </li>
 <li><p>The sampling distribution of difference between two sample means</p>
-<p> When studying the statistical inference of the means $\left(\mu_1, \mu_2\right)$ of two normal populations, it is necessary to investigate the distribution of the difference between the sample means $(\bar{X}, \bar{Y})$ of the two normal populations.</p>
-<p> Theorem:<br> Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent. The means and variances in these two samples are denoted by $\bar{X}$. $\bar{Y}$ and $S_x^2, S_y^2$ respectively.</p>
+<p>When studying the statistical inference of the means $\left(\mu_1, \mu_2\right)$ of two normal populations, it is necessary to investigate the distribution of the difference between the sample means $(\bar{X}, \bar{Y})$ of the two normal populations.</p>
+<p><strong>Theorem</strong>:<br>Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are <strong>independent</strong>. The means and variances in these two samples are denoted by $\bar{X}$. $\bar{Y}$ and $S_x^2, S_y^2$ respectively.</p>
 <ol>
 <li><p>Assume variances $\sigma_1^2,\sigma_2^2$ are known. Then</p>
-<p> $$<br> \frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}\sim N(0,1).$<br> $$</p>
+<p>$$<br>\frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}\sim N(0,1).$<br>$$</p>
 </li>
-<li><p>Assume variances $\sigma_1^2,\sigma_2^2$ are unknown but $\sigma_1^2=\sigma_2^2=\sigma^2.$ Then</p>
-<p> $$\frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{S\sqrt{\frac1{n_1}+\frac1{n_2}}}\sim t(n_1+n_2-2)$$</p>
-<p> where</p>
-<p> $$S^2=\frac{(n_1-1)S_x^2+(n_2-1)S_y^2}{n_1+n_2-2}$$</p>
-<p> In particular, when $n_1=n_2$, we get $S^2=\frac{S_x^2+S_y^2}2.$</p>
+<li><p>Assume variances $\sigma_1^2, \sigma_2^2$ are unknown but $\sigma_1^2=\sigma_2^2=\sigma^2$. Then<br> $$<br> \frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)<br> $$<br> where<br> $$<br> S^2=\frac{\left(n_1-1\right) S_x^2+\left(n_2-1\right) S_y^2}{n_1+n_2-2}<br> $$<br> In particular, when $n_1=n_2$, we get $S^2=\frac{S_x^2+S_y^2}{2}$.</p>
 </li>
-<li><p>Proof</p>
+<li><p><strong>Proof</strong>:<br> Assume $\sigma_1^2=\sigma_2^2=\sigma^2$. Then $U=\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{\sigma \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim N(0,1)$.<br> Besides,<br> $$<br> \frac{\left(n_1-1\right) S_x^2}{\sigma^2} \sim \chi^2\left(n_1-1\right), \quad \frac{\left(n_2-1\right) S_y^2}{\sigma^2} \sim \chi^2\left(n_2-1\right)<br> $$</p>
+<p> and $S_x^2$ and $S_y^2$ are independent.</p>
+<p> By the property of $\chi^2$ distribution, we obtain</p>
+<p> $$<br> V=\frac{\left(n_1-1\right) S_x^2}{\sigma^2}+\frac{\left(n_2-1\right) S_y^2}{\sigma^2} \sim \chi^2\left(n_1+n_2-2\right)<br> $$</p>
+<p> Also $U 、 V$ are independent, then</p>
+<p> $$<br> \frac{U}{\sqrt{V / n_1+n_2-2}}=\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)<br> $$</p>
+<p> where $S^2=\frac{\left(n_1-1\right) S_x^2+\left(n_2-1\right) S_y^2}{n_1+n_2-2}$</p>
 </li>
 </ol>
 </li>
-<li></li>
+<li><p>Upper percentile of t distribution</p>
+<p> <img src="C:\Users\thyzz\AppData\Roaming\Typora\typora-user-images\image-20241218180759435.png" alt="image-20241218180759435"></p>
+<ul>
+<li><p>Definition: The $100 \times \alpha$ th percentile of a $t$ distribution with $n$ degrees of freedom is denoted by $t_\alpha(n)$, where</p>
+<p>  $$<br>  P\left{t&gt;t_\alpha(n)\right}=\alpha<br>  $$</p>
+</li>
+<li><ol>
+<li>When $n \leq 45$ and $\alpha$ is small, we can refer to the value of $t_\alpha(n)$ from $t$ distribution table.</li>
+<li>When $\alpha$ is larger, it follows from the definition of upper percentile and the symmetry property of $t$ distribution that</li>
 </ol>
-<h3 id="4-4-F-distribution"><a href="#4-4-F-distribution" class="headerlink" title="4.4 $F$ distribution"></a>4.4 $F$ distribution</h3><blockquote>
+<p>  $$<br>  t_{1-\alpha}(n)=-t_\alpha(n)<br>  $$</p>
+<ol start="3">
+<li>When $n&gt;45, t_\alpha(n)$ can be approximated by the upper percentile of $N(0,1)$, that is,</li>
+</ol>
+<p>  $$<br>  t_\alpha(n) \approx u_\alpha<br>  $$</p>
+</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-6-F-distribution"><a href="#4-6-F-distribution" class="headerlink" title="4.6 $F$ distribution"></a>4.6 $F$ distribution</h3><blockquote>
 <p>When studying the statistical inference of variances $(\sigma_1^2,\sigma_2^2)$of two normal populations, it is necessary to investigate the distribution of sample variances ratio $(S_1^2,S_2^2)$ of the two normal population.</p>
 <p>First we introduce F distribution.</p>
 </blockquote>
 <ol>
-<li><p>Definition: If</p>
-<p> $$F=\frac{X_1/n_1}{X_2/n_2}$$</p>
-<p> Where $X_1{\sim}\chi^2(n_1),X_2{\sim}\chi^2(n_2)$ and $X_1,X_2$ are independent, then<br> $F$ is said to follow a $F$ distribution with $(n_1,n_2)$ degrees of freedom, which is denoted by $F\thicksim F(n_1,n_2)$<br> and $n_1$ is referred to as numerator分子$df$ and $n_2$ denominator 分母$df.$</p>
+<li><p>Definition: </p>
+<p>If $F=\frac{X_1/n_1}{X_2/n_2}$</p>
+<p>Where $X_1{\sim}\chi^2(n_1),X_2{\sim}\chi^2(n_2)$ and $X_1,X_2$ are independent, then $F$ is said to follow a $F$ distribution with $(n_1,n_2)$ degrees of freedom, which is denoted by $F\thicksim F(n_1,n_2)$ and $n_1$ is referred to as numerator 分子 $df$ and $n_2$ denominator 分母 $df$.</p>
 </li>
 <li><p>Remark:</p>
 <ol>
 <li>The F distribution is generally positively skewed and the shape of F distribution depends both on the numerator and denominator $df.$</li>
-<li>If a random variable $X\sim F(n_1,n_2)$,then $\frac1X{\sim}F(n_2,n_1)$</li>
+<li>If a random variable $X\sim F(n_1,n_2)$, then $\frac1X{\sim}F(n_2,n_1)$</li>
 <li>Assume $T{\sim}t(n).$ Then $T^2{\sim}F(1,n)$. Recall: If $X\sim N(0,1)$, then $X^2\sim\chi^{2}(1).$</li>
 </ol>
 <ul>
-<li>Proof: If $T{\sim}t(n)$, then there exist $X{\sim}N(0,1),Y{\sim}\chi^{2}(n)$,and $X{、}Y$ are<br> independent such that<br> $$<br> T=\frac X{\sqrt{Y/n}}<br> $$<br> which gives<br> $$<br> T^2=\frac{X^2}{Y/n}<br> $$<br> here $X^2{\sim}\chi^2(1),Y{\sim}\chi^2(n)$,and $X^2,Y$ are independent, thus we get $T^2{\sim}F(1,\hat{n}).$</li>
+<li>Proof: If $T{\sim}t(n)$, then there exist $X{\sim}N(0,1),Y{\sim}\chi^{2}(n)$,and $X{、}Y$ are<br>independent such that<br>$$<br>T=\frac X{\sqrt{Y/n}}<br>$$<br>which gives<br>$$<br>T^2=\frac{X^2}{Y/n}<br>$$<br>here $X^2{\sim}\chi^2(1),Y{\sim}\chi^2(n)$, and $X^2,Y$ are independent, thus we get $T^2{\sim}F(1,n).$</li>
 </ul>
 </li>
-</ol>
-<h2 id="四-统计量及其分布"><a href="#四-统计量及其分布" class="headerlink" title="四 统计量及其分布"></a>四 统计量及其分布</h2><p><mark>该部分后续需拓展</mark></p>
-<h3 id="4-1-总体与样本"><a href="#4-1-总体与样本" class="headerlink" title="4.1 总体与样本"></a>4.1 <strong>总体与样本</strong></h3><ol>
-<li><p><strong>总体</strong></p>
-<p>  在一个统计问题里，研究对象的全体叫做总体，构成总体的每个成员称为个体。根据个体的数量指标数量，定义总体的维度，如每个个体只有一个数量指标，总体就是一维的，同理，个体有两个数量指标，总体就是二维的。<strong>总体就是一个分布，数量指标就是服从这个分布的随机变量。</strong><br>  总体根据个体数分为<strong>有限总体</strong>和<strong>无限总体</strong>，当有限总体的个体数充分大时，其可以看为无限总体。</p>
-</li>
-<li><p><strong>样本</strong></p>
+<li><p>The sampling distribution of two-sample variances ratio</p>
 <ul>
-<li><strong>定义：</strong></li>
+<li><p>Theorem:<br>  Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent.<br>  Also suppose the variances in these two samples are denoted by $S_x^2$, $S_y^2$ respectively. Then<br>  $$<br>  F=\frac{S_x^2 / \sigma_1^2}{S_y^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>  $$</p>
+<p>  In particular, when $\sigma_1^2=\sigma_2^2$, we get $F=\frac{s_x^2}{s_y^2} \sim F\left(n_1-1, n_2-1\right)$</p>
+</li>
+<li><p>Proof:<br>  First $\frac{\left(n_1-1\right) S_x^2}{\sigma_1^2} \sim \chi^2\left(n_1-1\right), \quad \frac{\left(n_2-1\right) S_y^2}{\sigma_2^2} \sim \chi^2\left(n_2-1\right)$, and $S_x^2$ and $S_y^2$ are independent.</p>
+<p>  Using the definition of F distribution,</p>
+<p>  $$<br>  \frac{\left(n_1-1\right) S_x^2}{\left(n_1-1\right) \sigma_1^2} / \frac{\left(n_2-1\right) S_y^2}{\left(n_2-1\right) \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>  $$</p>
+<p>  i.e.,</p>
+<p>  $$<br>  \frac{S_x^2 / \sigma_1^2}{S_y^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>  $$</p>
+</li>
 </ul>
-<p>  从总体中随机抽取的部分个体组成的集合称为样本，<strong>样本个数称为样本容量</strong>。</p>
+</li>
+<li><p>Upper percentile of F distribution</p>
 <ul>
-<li><p><strong>性质：</strong></p>
+<li><p>Definition: The $100 \times \alpha$ th percentile of an $F$ distribution with $n_1, n_2$ degrees of freedom is denoted by $F_\alpha\left(n_1, n_2\right)$, where</p>
+<p>  $$<br>  P\left{F&gt;F_\alpha\left(n_1, n_2\right)\right}=\alpha<br>  $$</p>
+</li>
+<li><p>Remark:</p>
+<p>  $$<br>  F_{1-\alpha}\left(n_1, n_2\right)=\frac{1}{F_\alpha\left(n_2, n_1\right)}<br>  $$</p>
 <ul>
-<li><p><strong>二重性：</strong>抽取前随机，是随机变量；抽取后确定，是一组数值。</p>
-</li>
-<li><p><strong>随机性：</strong>每个个体都有同等的机会被选入样本。</p>
-</li>
+<li>If $\alpha(=0.1,0.05,0.025,0.01)$ is small, then refer to $F$ table to get upper percentile of $F$ distribution.</li>
+<li>If $\alpha(=0.9,0.95,0.975,0.99)$ is larger, then use $F_{1-\alpha}\left(n_1, n_2\right)=$ $\frac{1}{F_\alpha\left(n_2, n_1\right)}$.</li>
 </ul>
 </li>
-<li><p><strong>独立性：</strong>每个样本的取值不影响其他样本取值，即分部独立。</p>
-<p>满足后面两个性质称为<strong>简单随机样本</strong>，则</p>
-<p>$$<br>F(x_1,x_2,…,x_n)=\prod^n_{i=1}F(x_i),\<br>f(x_1,x_2,…,x_n)=\prod^n_{i=1}f(x_i),\<br>p(x_1,x_2,…,x_n)=\prod^n_{i=1}p(x_i)<br>$$</p>
+<li><p>Proof: Using the definition of upper percentile of $F$ distribution, $P\left{F&gt;F_{1-\alpha}\left(n_1, n_2\right)\right}=1-\alpha$, which derives</p>
+<p>  $$<br>  P\left{\frac{1}{F}&lt;\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right}=1-\alpha .<br>  $$</p>
+<p>  Then $P\left{\frac{1}{F}&gt;\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right}=P\left{\frac{1}{F} \geq \frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right}=\alpha$<br>  Since $\frac{1}{F} \sim F\left(n_2, n_1\right)$, it follows that $F_\alpha\left(n_2, n_1\right)=\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}$<br>  i.e., $F_{1-\alpha}\left(n_1, n_2\right)=\frac{1}{F_\alpha\left(n_2, n_1\right)}$.</p>
 </li>
 </ul>
-</li>
-<li><p><strong>分组样本</strong></p>
-<p>  只知样本观测值所在区间，而不知具体值的样本称为分组样本。<strong>缺点：</strong>与完全样本相比损失部分信息。<strong>优点：</strong>在样本量较大时，用分组样本既简明扼要，又能帮助人们更好地认识总体。</p>
-</li>
-</ol>
-<h3 id="4-2-样本数据的整理与显示"><a href="#4-2-样本数据的整理与显示" class="headerlink" title="4.2 样本数据的整理与显示"></a>4.2 样本数据的整理与显示</h3><ol>
-<li><p><strong>经验分布函数</strong></p>
-<p>  若将样本观测值$x_1,x_2,…,x_n$由小到大进行排列，得到有序样本$x_{(1)}\leq x_{(2)}\leq…\leq x_{(n)}$，用有序样本定义如下函数</p>
-<p>$$<br>F_n(x)=\left{\begin{matrix}<br>0 &amp; 当x&lt;x_{(1)}\<br>k/n &amp; 当x_{(k)}\leq x&lt;x_{(k+1)},k=1,2,…,n-1\<br>1 &amp; 当x\geq x_{(n)}<br>\end{matrix}\right.<br>$$</p>
-<p>则称为$F_n(x)$为该样本的经验分布函数。</p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/ex_distribution.png" alt="img"></p>
-</li>
-<li><p><strong>格里纹科定理</strong></p>
-<p>  设$x_1,x_2,…,x_n$是取自总体分布函数为$F(x)$的样本，$F_n(x)$是该样本的经验分布函数，则当$n\rightarrow+\infty$时，有</p>
-<p>$$<br>P(sup_{-\infty&lt;x&lt;+\infty}|F_n(x)-F(x)|\rightarrow0)=1<br>$$</p>
-<p>表明当n相当大时，经验分布函数$F_n(x)$是总体分布函数$F(x)$的一个良好的近似。它是经典统计学的一块基石。</p>
-</li>
-<li><p><strong>频数频率分布表</strong></p>
-<p>  有样本$x_1,x_2,…,x_n$制作频数频率分布表的操作步骤如下：</p>
-<ul>
-<li>确定组数k；</li>
-<li>确定每组组距，通常取每组组距相等为d（方便起见，可选为整数）；</li>
-<li>确定组限（下限$a_0$略小于最小观测值，上限$a_k$略大于最大观测值）；</li>
-<li>统计样本数据落入每个区间的频数，并计算频率。</li>
-</ul>
-<p>该表能够简明扼要地把样本特点表示出来。不足之处是该表依赖于分组，不同的分组方式有不同的频数频率分布表。</p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/frequency.png" alt="img"></p>
-</li>
-<li><p><strong>直方图</strong></p>
-<ul>
-<li>利用频数频率分布表上的区间（横坐标）和频数（纵坐标）可作为频数直方图；</li>
-<li>若把纵坐标改为频率就得频率直方图；</li>
-<li>若把纵坐标改为频率/组距，就得到单位频率直方图。这时长条矩形的面积之和为1.</li>
-</ul>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/hist.png" alt="img"></p>
-</li>
-<li><p><strong>茎叶图</strong></p>
-<p>  把样本中的每个数据分为茎与叶，把茎放于一侧，叶放于另一侧，就得到一张该样本的茎叶图。比较两个样本时，可画出背靠背的茎叶图。茎叶图保留数据中全部信息，当样本量较大，数据很分散，<strong>横跨二、三个数量级时，茎叶图并不适用</strong>。</p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/leave.jpg" alt="img"></p>
-</li>
-</ol>
-<h3 id="4-3-统计量及其分布"><a href="#4-3-统计量及其分布" class="headerlink" title="4.3 统计量及其分布"></a>4.3 统计量及其分布</h3><ol>
-<li><p><strong>统计量</strong></p>
-<p>  不含未知参数的样本函数称为统计量。统计量的分布称为抽样分布。</p>
-</li>
-<li><p><strong>样本均值</strong></p>
-<ul>
-<li><p><strong>定义：</strong></p>
-<p>  样本$x_1,x_2,…,x_n$的算数平均值称为样本均值，记为$\bar{x}$.分组样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^{k}x_if_i$，其中n为样本量，k为组数，**$x_i$与$f_i$为第i组的组中值和频率<strong>，</strong>分组样本均值是完全样本均值的一种较好的近似**。</p>
-<p>  样本均值是样本的位置特征，样本中大多数值位于$\bar{x}$左右。平均可消除一些随机干扰，等价交换也是在平均数中实现的。</p>
-</li>
-<li><p><strong>性质：</strong></p>
-<ul>
-<li>$\sum_{i=1}^n (x_i-\bar{x})=0$，<strong>样本数据$x_i$对样本均值$\bar{x}$的偏差之和为零</strong>；</li>
-<li><strong>样本数据$x_i$与样本均值$\bar{x}$的偏差平方和最小</strong>，即对任意的实数c有$\sum_{i=1}^n(x_i-\bar{x})^2\leq \sum_{i=1}^n(x_i-c)^2$;</li>
-<li>若总体分布为$N(\mu,\sigma^2)$，则$\bar{x}$的精确分布为$N(\mu,\sigma^2/n)$；</li>
-<li>若总体分布未知，但其期望$\mu$与方差$\sigma^2$存在，则当n较大时，$\bar{x}$的渐进分布为$N(\mu,\sigma^2/n)$，这里渐进分布是指n较大时的近似分布。</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><strong>样本方差与样本标准差</strong></p>
-<p>  样本方差有两种，$s_*^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$与$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$，后者为无偏方差，也是最常用的。（这是因为当$\sigma^2$为总体方差时，总有$E(s_*^2)=\frac{n-1}{n}\sigma^2$,$E(s^2)=\sigma^2$，表明$s_*^2$有系统偏小的误差，$s^2$无此系统偏差。）称$\sqrt{s^2}$为样本标准差。</p>
-<p>  样本方差是样本的散布特征，$s^2$<strong>越大样本越分散，$s^2$越小分布越集中</strong>，样本标准差比样本方差使用更频繁，因为前者和样本均值有着相同的单位。</p>
-<p>  $s^2$的计算有如下<strong>三个公式</strong>可供选用：</p>
-<p>$$<br>s^2=\frac{1}{n-1}\sum(x_i-\bar{x})^2=\frac{1}{n-1}[\sum x_i^2-\frac{(\sum x_i)^2}{n}]=\frac{1}{n-1}(\sum x_i^2-n\bar{x}^2)<br>$$</p>
-<p>在分组样本场合，样本方差的近似计算公式为</p>
-<p>$$<br>s^2=\frac{1}{n-1}\sum_{i=1}^kf_i(x_i-\bar{x})^2=\frac{1}{n-1}(\sum_{i=1}^k f_ix_i^2-n\bar{x}^2)<br>$$</p>
-<p>其中k为组数，$x_i,f_i$分别为第i个区间的组中值与频数，$\bar{x}$为分组样本的均值。</p>
-</li>
-<li><p><strong>样本矩及其函数</strong></p>
-<ul>
-<li>样本的k阶原点矩$a_k=\frac{1}{n}\sum_{i=1}^{n}x_i^k$，样本均值$\bar{x}$为样本的一阶原点矩；</li>
-<li>样本的k阶中心距$b_k=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^k$，样本方差$s^2$和$s_*^2$都为样本的二阶中心矩；</li>
-<li>样本变异系数$C_r=s/\bar{x}$；</li>
-<li>样本的偏度$\hat{\beta_s}=b_3/b_2^{3/2}$，反映样本数据与对称性偏离程度和偏离方向；</li>
-<li>样本的峰度$\hat{\beta_k}=\frac{b_4}{b_2^2}-3$，反映总体分布密度曲线在其峰值附近的陡峭程度和尾部粗细.</li>
-</ul>
-</li>
-</ol>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/skewness.png" alt="img"></p>
-<ol start="5">
-<li><p><strong>次序统计量及其分布</strong></p>
-<p>  设$x_1,…,x_n$是取自某总体的一个样本，$x_{(i)}$称为该样本的第i个次序统计量（升序排序后，第i个样本）。</p>
-<ul>
-<li>$x_{(1)}=min{x_1,…,x_n}$称为该样本的<strong>最小次序统计量</strong>；</li>
-<li>$x_{(n)}=max{x_1,…,x_n}$称为该样本的<strong>最大次序统计量</strong>；</li>
-<li>$(x_{(1)},x_{(2)},…,x_{(n)}}$称为该样本的次序统计量，即<strong>不独立也不同分布</strong>；</li>
-<li>$R=x_{(n)}-x_{(1)}$称为样本极差。<br>设总体$X$的密度函数为$f(x)$，分布函数为$F(x)$，$x_1,…,x_n$为样本，则有</li>
-<li>样本第k个次序统计量$x_{(k)}$的密度函数为<br>$$<br>f_k(x)=\frac{n!}{(k-1)!(n-k)!}(F(x))^{k-1}(1-F(x))^{n-k}f(x);<br>$$</li>
-<li>样本第i个与第j个次序统计量的联合密度函数为<br>$$<br>f_{ij}(y,z)=\frac{n!}{(i-1)!(j-i-1)!(n-j)!}(F(y))^{i-1}(F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}f(xy)f(z),\quad y\leq z, 1\leq i&lt;j\leq n<br>$$</li>
-</ul>
-</li>
-<li><p><strong>样本中位数与样本分位数</strong></p>
-<p>设$x_1,…,x_n$是取自某总体的样本，$x_{(1)}\leq x_{(2)}\leq …\leq x_{(n)}$为该样本的次序统计量，则样本中位数$m_{0.5}$定义为</p>
-<p>$$<br>m_{0.5}=\left{\begin{matrix}<br>x_{(\frac{n+1}{2})} &amp; n为奇数\<br>\frac{1}{2}(x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}) &amp; n为偶数<br>\end{matrix}\right.<br>$$</p>
-<p>样本的p分位数$m_p$定义为</p>
-<p>$$<br>m_{p}=\left{\begin{matrix}<br>x_{[np+1]} &amp; np不是整数\<br>\frac{1}{2}(x_{(np)} + x_{(np+1)}) &amp; np是整数<br>\end{matrix}\right.<br>$$</p>
-<p>其中[x]表示向下取整。<strong>中位数对样本的极端值有抗干扰性，或称有稳健性</strong>。<br><strong>样本分位数的渐近分布：</strong>设总体的密度函数为$f(x)$，$x_p$为总体的p分位数。若$p(x)$在$x_p$处连续且$p(x_p)&gt;0$，则当n充分大时，有</p>
-<p>$$<br>m_p\sim N(x_p,\frac{p(1-p)}{n\cdot p^2(x_p)}),\<br>m_{0.5}\sim N(x_{0.5},\frac{1}{4n\cdot p^2(x_{0.5})})<br>$$</p>
-</li>
-<li><p><strong>五数概括与箱线图</strong></p>
-<p>  五数指用样本的五个次序统计量，即最小观测值，最大观测值，中位数，第一4分位数和第三4分位数。其图形为箱线图，可描述样本分布形状。</p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box.png" alt="img"></p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box_normal.png" alt="img"></p>
 </li>
 </ol>
 <h2 id="Chapter-5-参数估计-Parameter-Estimation"><a href="#Chapter-5-参数估计-Parameter-Estimation" class="headerlink" title="Chapter 5 参数估计 Parameter Estimation"></a>Chapter 5 参数估计 Parameter Estimation</h2><p>  统计学与概率论的区别就是归纳和演绎，前者通过样本推测总体的分布，而后者已知总体分布去研究样本。因此参数估计则是归纳的过程，参数估计有两种形式：<strong>点估计</strong>和<strong>区间估计</strong><u>（点估计和区间估计都是对于未知参数的估计，而<strong>点估计给出的是一个参数可能的值</strong>，<strong>区间估计给出的是参数可能在的范围</strong>）</u>。</p>
@@ -1522,12 +1573,9 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </li>
 <li><p>The idea of the method of moments:</p>
 <ul>
-<li><p>The sample moment样本矩$\sum_{i=1}^nX_i^s/n,s=1,2,…$ is used as the estimator of the corresponding population moment 总体矩$E(X^s).$ </p>
-</li>
-<li><p>$\begin{array}{lll}\text{Sample moment:}&amp;\frac1n\sum_{i=1}^nX_i:,\frac1n\sum_{i=1}^nX_i^2:,\frac1n\sum_{i=1}^nX_i^3:,\ldots\\text{Population moment:}&amp;E(X),E(X^2),E(X^3),\ldots\end{array}$</p>
-</li>
-<li><p>Assume $F(x;\theta_1,\theta_2,…,\theta_r)$ is the distribution function of population $X$, where parameters $\theta_1,\theta_2,…,\theta_r$ are unknown. Also assume $E(X^k)(k=1,2,…,r)$ exist。</p>
-</li>
+<li>The sample moment样本矩$\sum_{i=1}^nX_i^s/n,s=1,2,…$ is used as the estimator of the corresponding population moment 总体矩$E(X^s).$</li>
+<li>$\begin{array}{lll}\text{Sample moment:}&amp;\frac1n\sum_{i=1}^nX_i:,\frac1n\sum_{i=1}^nX_i^2:,\frac1n\sum_{i=1}^nX_i^3:,\ldots\\text{Population moment:}&amp;E(X),E(X^2),E(X^3),\ldots\end{array}$</li>
+<li>Assume $F(x;\theta_1,\theta_2,…,\theta_r)$ is the distribution function of population $X$, where parameters $\theta_1,\theta_2,…,\theta_r$ are unknown. Also assume $E(X^k)(k=1,2,…,r)$ exist。</li>
 </ul>
 </li>
 <li><p>Using the method of moments, the moment estimators $\widehat{\theta}_1,\widehat{\theta}_2,…,\widehat{\theta}_r$ are obtained by equating the first r sample moments to the corresponding first r population moments and solving for $\theta_1,\theta_2,…,\theta_r$</p>
@@ -1548,7 +1596,8 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </ul>
 <ol start="2">
 <li><p><strong>最大似然估计</strong></p>
-<p><strong>定义：</strong>设总体的概率函数为$p(x;\theta),\ \theta\in\Theta$，其中$\theta$是一个未知参数或几个未知参数组成的参数向量，$\Theta$是参数空间，$x_1,…,x_n$是来自该总体的样本，将样本的联合概率函数看成$\theta$的函数，用$L(\theta;x_1,…,x_n)$表示，简记为$L(\theta)$，<br>$$<br>L(\theta)=L(\theta;x_1,…,x_n)=p(x_1;\theta)p(x_2;\theta)…p(x_n;\theta)<br>$$</p>
+<p><strong>定义：</strong>设总体的概率函数为$p(x;\theta),\ \theta\in\Theta$，其中$\theta$是一个未知参数或几个未知参数组成的参数向量，$\Theta$是参数空间，$x_1,…,x_n$是来自该总体的样本，将样本的联合概率函数看成$\theta$的函数，用$L(\theta;x_1,…,x_n)$表示，简记为$L(\theta)$，</p>
+<p>$$<br>L(\theta)=L(\theta;x_1,…,x_n)=p(x_1;\theta)p(x_2;\theta)…p(x_n;\theta)<br>$$</p>
 <p>$L(\theta)$称为样本的<strong>似然函数</strong>。若统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$满足</p>
 <p>$$<br>L(\hat{\theta})=\max_{\theta\in\Theta}L(\theta)<br>$$</p>
 <p>则称$\hat{\theta}$是$\theta$的<strong>最大似然估计</strong>，简称<strong>MLE（maximum likelihood estimate）.</strong></p>
@@ -1616,7 +1665,8 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 </li>
 </ol>
 <h4 id="5-1-3-点估计的优良性准则"><a href="#5-1-3-点估计的优良性准则" class="headerlink" title="5.1.3 点估计的优良性准则"></a>5.1.3 点估计的优良性准则</h4><ol>
-<li><p><strong>无偏性 Unbiasedness：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有<br>$$<br>E_{\theta}(\hat{\theta})=\theta<br>$$</p>
+<li><p><strong>无偏性 Unbiasedness：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有</p>
+<p>$$<br>E_{\theta}(\hat{\theta})=\theta<br>$$</p>
 <p>则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，否则称为<strong>有偏估计</strong>。无偏性的要求也可以改写为$E_{\theta}(\hat{\theta}-\theta)=0$，无偏性表示表示估计参数与真实参数没有系统偏差。</p>
 <blockquote>
 <p><strong>一个重要的结论：</strong>样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^nx_i$是总体均值$\mu$的无偏估计。样本方差$s_n^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$不是总体方差$\sigma^2$的无偏估计（而是渐进无偏估计），因此需要对样本方差进行修正，$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$.</p>
@@ -1735,8 +1785,13 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <h2 id="Chapter-6-假设检验-Hypothesis-Testing"><a href="#Chapter-6-假设检验-Hypothesis-Testing" class="headerlink" title="Chapter 6 假设检验 Hypothesis Testing"></a>Chapter 6 假设检验 Hypothesis Testing</h2><h3 id="6-1-假设检验的基本思想和概念"><a href="#6-1-假设检验的基本思想和概念" class="headerlink" title="6.1 假设检验的基本思想和概念"></a>6.1 假设检验的基本思想和概念</h3><ol>
 <li><p><strong>基本思想</strong></p>
 <p>以“女士品茶”为例，对于该女士有没有品茶的能力，有两种假设：该女士没有品茶能力和该女士有品茶能力。在统计上这两个非空不相交参数集合称作<strong>统计假设</strong>，简称<strong>假设</strong>。通过样本对一个假设作出对与不对的判断，则称为该假设的一个<strong>检验</strong>。若检验结果否定该命题，则称<strong>拒绝</strong>这个假设，否则就<strong>接受（不拒绝）</strong>这个假设。</p>
-<p>Test whether $H_0: \quad \mu=\mu_0$ is correct or not by contradiction 反证法:<br>$\checkmark$ first assume that the null hypothesis $H_0:\mu=\mu_0$ is true.<br>$\checkmark$ under $H_0$, we infer according to the sampling distribution theory and sample information.<br>$\checkmark$ reject $H_0$ if we get contradictory conclusions based on small probability principle; otherwise, accept $H_0$.</p>
-<p>Small probability principle 小概率原理: the event with probability no more than 0.05 is almost impossible to occur in just one trial.</p>
+<p>Test whether $H_0: \quad \mu=\mu_0$ is correct or not by contradiction 反证法:</p>
+<ul>
+<li>first assume that the null hypothesis $H_0:\mu=\mu_0$ is true.</li>
+<li>under $H_0$, we infer according to the sampling distribution theory and sample information.</li>
+<li>reject $H_0$ if we get contradictory conclusions based on <strong>small probability principle</strong>; otherwise, accept $H_0$.</li>
+</ul>
+<p><strong>Small probability principle</strong> 小概率原理: the event with probability no more than 0.05 is almost impossible to occur in just one trial.</p>
 <p>假设可分为两种：1. <strong>参数假设检验 parametric test</strong>，即已经知道数据的分布，针对总体的某个参数进行假设检验 population distribution is known but population parameter is unknown；2. <strong>非参数假设检验 nonparametric test</strong>，即数据分布未知，针对该分布进行假设检验 population distribution is unknown。</p>
 </li>
 <li><p><strong>假设检验的基本步骤</strong></p>
@@ -1745,11 +1800,11 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <blockquote>
 <p><strong>主要针对参数假设检验问题</strong></p>
 <p>设有来自某分布族${F(x,\theta)|\theta\in\Theta}$的样本$x_1,…,x_n$，其中$\Theta$为参数空间，设$\Theta_0\in\Theta$，且$\Theta_0\neq\phi$，则命题$H_0:\theta\in\Theta_0$称为<strong>原假设</strong>或<strong>零假设（null hypothesis）</strong>，若有另一个$\Theta_1$（$\Theta_1\in\Theta,\Theta_1\Theta_0=\phi$，常见的一种情况是$\Theta_1=\Theta-\Theta_0$），则命题$H_1:\theta\in\Theta_1$称为$H_0$的<strong>对立假设</strong>或<strong>备择假设（alternative hypotheis）</strong>，当$H_0$为简单假设，即$\Theta_0$只含一个点时，备择假设有三种可能：$H_1’:\theta\neq\theta_0$，$H_1’’:\theta&lt;\theta_0$，$H_1’’’:\theta&gt;\theta_0$。</p>
-<p>The null hypothesis 零假设，denoted by $H_0$, is the hypothesis that is to be tested. The null hypothesis is a statement of no change, no effect or no difference and is assumed true until evidence indicates otherwise. </p>
+<p>The null hypothesis 零假设，denoted by $H_0$, is the hypothesis that is to be tested. The null hypothesis is a statement of no change, no effect or no difference and is assumed true until evidence indicates otherwise.</p>
 <p>The alternative hypothesis 备择假设，denoted by $H_1$, is the hypothesis that in some sense contradicts the null hypothesis and is a statement that we are trying to find evidence to support.</p>
 <p>In general, the null hypothesis is represented by the value of the unknown population parameter is equal to some specific value, i.e.,</p>
 <p>$$<br>H_0 \text { : parameter }=\text { some value } \quad\left(H_0: \quad \mu=\mu_0\right)<br>$$</p>
-<p>The alternative hypothesis is allowed to be either greater than or less than some specific value.<br>$H_1$ : parameter $\neq$ some value two-tailed test 双侧检验<br>$H_1$ : parameter $&gt;$ some value right(upper)-tailed test 单侧检验<br>$H_1$ ： parameter $&lt;$ some value left(lower)-tailed test 单侧检验</p>
+<p>The alternative hypothesis is allowed to be either greater than or less than some specific value.<br>$H_1$ : parameter $\neq$ some value two-tailed test 双侧检验<br>$H_1$ : parameter $&gt;$ some value right(upper)-tailed test 单侧检验<br>$H_1$ : parameter $&lt;$ some value left(lower)-tailed test 单侧检验</p>
 </blockquote>
 <p><strong>_Step 2_：选择检验统计量，给出拒绝域形式</strong></p>
 <blockquote>
@@ -1788,7 +1843,9 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <p>犯第二类错误概率：$\beta=P(X\in \overline{W}|H_1)$，即$\beta=P(接受H_0|H_0为假)$。</p>
 <p>Definition: The probability of a type I error 第一类错误，which is usually denoted by $\alpha$, is the probability of rejecting $H_0$ when $H_0$ is true, (“reject the true” 拒真)</p>
 <p>$$<br>\alpha=P{\text { type I error }}=P\left{\text { reject } H_0 \text { when } H_0 \text { true }\right}<br>$$</p>
-<p>Definition: The probability of a type II error 第二类错误, which is usually denoted by $\beta$, is the probability of accepting $H_0$ when $H_1$ is true, (“accept the false” 取伪)<br>$$<br>\beta=P{\text { type II error }}=P\left{\text { accept } H_0 \text { when } H_1 \text { true }\right}<br>$$<br>可以证明的，在一定样本量下，两类错误概率无法共同减小，但是当样本增加时，可以同时减小。</p>
+<p>Definition: The probability of a type II error 第二类错误, which is usually denoted by $\beta$, is the probability of accepting $H_0$ when $H_1$ is true, (“accept the false” 取伪)</p>
+<p>$$<br>\beta=P{\text { type II error }}=P\left{\text { accept } H_0 \text { when } H_1 \text { true }\right}<br>$$</p>
+<p>可以证明的，在一定样本量下，两类错误概率无法共同减小，但是当样本增加时，可以同时减小。A common practice is to limit $\alpha$ first and then to determine sample size to make $\beta$ as small as possible. 通常限制犯第一类错误的概率，然后适当确定样本容量使犯第二类错误的概率尽可能小。</p>
 <blockquote>
 <p>证明该问题需要引入是函数，下面将简单介绍势函数，但不对上述结论证明。</p>
 <p>定义：设检验问题$H_0:\theta\in\Theta_0\quad vs\quad H_1:\theta \in \Theta_1$的拒绝域为$W$，则样本观测值$\mathbf{X}$落在拒绝域$W$内的概率称为该检验的<strong>势函数</strong>，记为</p>
@@ -1835,33 +1892,39 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <li>Establish hypothesis $H_0:\mu=\mu_0$ vs. $H_1: \mu \neq \mu_0$</li>
 <li>Calculate the value of test statistic $u=\frac{x-\mu_0}{\frac{\sigma}{\sqrt{n}}}$ according to observations</li>
 <li>Find $u_{\frac{\alpha}{2}}$ for a given significance level of $\alpha$</li>
-<li>Make statistical inference:</li>
+<li>Make statistical inference:<ul>
+<li>If $|u|&gt;u_{\frac{\alpha}{2}}$, then $H_0$ is rejected at a significance level of $\alpha$, and it is considered that there is a significant difference between $\mu$ and $\mu_0$. </li>
+<li>If $|u| \leq u_{\frac{\alpha}{2}}$, then $H_0$ is accepted at a significance level of $\alpha$, and it is considered that there is no significant difference between $\mu$ and $\mu_0$.</li>
+</ul>
+</li>
 </ol>
-<p>If $|u|&gt;u_{\frac{\alpha}{2}}$, then $H_0$ is rejected at a significance level of $\alpha$, and it is considered that there is a significant difference between $\mu$ and $\mu_0$. If $|u| \leq u_{\frac{\alpha}{2}}$, then $H_0$ is accepted at a significance level of $\alpha$, and it is considered that there is no significant difference between $\mu$ and $\mu_0$.</p>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218185843654.png" alt="image-20241218185843654"></p>
 <p>One-sample u test for the mean of a normal distribution with known variance: one-tailed case</p>
 <p>Summarize the steps below:</p>
 <ol>
 <li>Establish hypothesis</li>
 </ol>
-<p>$$<br>H_0: \quad \mu=\mu_0 \quad \text { vs. } H_1: \quad \mu&gt;\mu_0\left(\text { or } H_1: \quad \mu&lt;\mu_0\right)<br>$$</p>
+<p>$$<br>H_0: \mu=\mu_0 \text { vs. } H_1: \mu&gt;\mu_0\left(\text { or } H_1: \mu&lt;\mu_0\right)<br>$$</p>
 <ol start="2">
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
-<p>$$<br>u=\frac{\bar{x}-\mu_0}{\frac{\sigma}{\sqrt{n}}}<br>$$</p>
+<p>$$<br>u=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}<br>$$</p>
 <ol start="3">
 <li><p>Find $u_\alpha$ for a given significance level of $\alpha$</p>
 </li>
 <li><p>Make statistical inference:</p>
-<p> If $u&gt;u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $u \leq u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$;<br> or<br> (If $u&lt;-u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $u \geq-u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
+<p>If $u&gt;u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $u \leq u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$;<br>or<br>(If $u&lt;-u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $u \geq-u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
 </li>
 </ol>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190021954.png" alt="image-20241218190021954"></p>
 <p>One-sample t test for the mean of a normal distribution with unknown variance</p>
 <p>We want to test</p>
-<p>$$<br>H_0: \quad \mu=\mu_0 \quad \text { vs. } \quad H_1: \quad \mu \neq \mu_0<br>$$</p>
+<p>$$<br>H_0:\mu=\mu_0 \text { vs. } H_1: \mu \neq \mu_0<br>$$</p>
 <p>If the variance $\sigma^2$ is unknown, we just replace $\sigma^2$ by sample variance $S^2$. Under $H_0: \quad \mu=\mu_0$, we have</p>
-<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br>$$<br>Then the steps for two-tailed $t$ test, which is similar to one-sample $u$ test, is given below:</p>
+<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br>$$</p>
+<p>Then the steps for two-tailed $t$ test, which is similar to one-sample $u$ test, is given below:</p>
 <ol>
-<li>Establish hypothesis $H_0: \mu=\mu_0 \quad$ vs. $\quad H_1: \quad \mu \neq \mu_0$</li>
+<li>Establish hypothesis $H_0: \mu=\mu_0$ vs. $\quad H_1: \mu \neq \mu_0$</li>
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
 <p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br>$$</p>
@@ -1869,32 +1932,130 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
 <li><p>Find $t_{\frac{\alpha}{2}}(n-1)$ for a given significance level of $\alpha$</p>
 </li>
 <li><p>Make statistical inference:</p>
-<p> If $|t|&gt;t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $|t| \leq t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.<br> Remark: The above test procedure is called a $\boldsymbol{t}$ test because the test statistic</p>
-<p> $$<br> t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br> $$</p>
+<p>If $|t|&gt;t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $|t| \leq t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.</p>
+<p>Remark: The above test procedure is called a $\boldsymbol{t}$ test because the test statistic<br>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br>$$<br><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190503280.png" alt="image-20241218190503280"></p>
 </li>
-</ol>
-<p>The steps for one-sample t test in one-tailed case</p>
+<li><p>The steps for one-sample t test in one-tailed case</p>
 <ol>
 <li>Establish hypothesis</li>
 </ol>
-<p>$$<br>H_0: \quad \mu=\mu_0 \quad \text { vs. } \quad H_1: \quad \mu&gt;\mu_0\left(\text { or } H_1: \quad \mu&lt;\mu_0\right)<br>$$</p>
+<p> $$<br> H_0: \mu=\mu_0 \text { vs. } H_1: \mu&gt;\mu_0\left(\text { or } H_1: \mu&lt;\mu_0\right)<br> $$</p>
 <ol start="2">
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
-<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br>$$</p>
+<p> $$<br> t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br> $$</p>
 <ol start="3">
 <li><p>Find $t_\alpha$ for a given significance level of $\alpha$.</p>
 </li>
 <li><p>Make statistical inference:</p>
-<p> If $t&gt;t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br> If $t \leq t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$; or (If $t&lt;-t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$. If $t \geq-t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
+<ul>
+<li>If $t&gt;t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>  If $t \leq t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$;<br>  or<br>  If $t&lt;-t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>  If $t \geq-t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190646691.png" alt="image-20241218190646691"></p>
+</li>
+</ol>
 </li>
 </ol>
 <p>One-sample $\chi^2$ test for the variance of a normal distribution</p>
 <p>If $X_1, X_2, \ldots, X_n$ are random sample from an $N\left(\mu, \sigma^2\right)$ distribution with unknown $\mu$ and $\sigma^2$.</p>
 <p>We want to test the hypothesis</p>
 <p>$$<br>H_0: \sigma^2=\sigma_0^2 \quad \text { vs. } \quad H_1: \sigma^2 \neq \sigma_0^2<br>$$</p>
-<p>Here $\sigma_0^2$ is known.<br>Under $H_0: \sigma^2=\sigma_0^2$, consider $S^2$ is unbiased estimator of $\sigma^2$, we known that</p>
+<p>Here $\sigma_0^2$ is known.</p>
+<p>Under $H_0: \sigma^2=\sigma_0^2$, consider $S^2$ is unbiased estimator of $\sigma^2$, we known that</p>
 <p>$$<br>\chi^2=\frac{(n-1) S^2}{\sigma_0^2} \sim \chi^2(n-1)<br>$$</p>
+<p>Two-tailed test $H_0: \sigma^2=\sigma_0^2 ; \quad H_1: \sigma^2 \neq \sigma_0^2$</p>
+<p>Steps:</p>
+<ol>
+<li>Establish hypothesis $H_0: \sigma^2=\sigma_0^2$ vs. $H_1: \sigma^2 \neq \sigma_0^2$</li>
+<li>Calculate the value of test statistic according to observations</li>
+</ol>
+<p>$$<br>\chi^2=\frac{(n-1) S^2}{\sigma_0^2}<br>$$</p>
+<ol start="3">
+<li><p>Find $\chi_{\alpha / 2}^2(n-1)$ and $\chi_{1-\frac{\alpha}{2}}^2(n-1)$ for a given significance level of $\alpha$.</p>
+</li>
+<li><p>Make statistical inference</p>
+<p>If $\chi^2&gt;\chi_{\frac{\alpha}{2}}^2(n-1)$ or $\chi^2&lt;\chi_{1-\frac{\alpha}{2}}^2(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.</p>
+<p>If $\chi_{1-\frac{\alpha}{2}}^2(n-1)&lt;\chi^2&lt;\chi_{\alpha / 2}^2(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.</p>
+</li>
+</ol>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218134633679.png" alt="image-20241218134633679"></p>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218191150037.png" alt="image-20241218191150037"></p>
+<h3 id="6-3-Testing-two-Samples"><a href="#6-3-Testing-two-Samples" class="headerlink" title="6.3 Testing-two Samples"></a>6.3 Testing-two Samples</h3><ol>
+<li><p>Introduction:</p>
+<p>All the tests introduced before were one-sample tests:<br>Test for mean: one-sample $u$ test, one-sample $t$ test<br>Test for variance: one-sample $\chi^2$ test.<br>Actually, a more frequently encountered situation is the two-sample hypothesis testing problem.</p>
+<p>These two samples can be paired 配对的 or can be completely independent.</p>
+</li>
+<li><p>Definition: Two samples are said to be paired when each data point in the first sample is matched and is related to a unique data point in the second sample.</p>
+<p>Definition: Two samples are said to be independent when each data points in one sample are unrelated to the data points in the second sample.</p>
+</li>
+<li><p>Remark</p>
+<ol>
+<li>The two paired samples are not independent.</li>
+<li>The paired samples may represent two sets of measurements.<ol>
+<li>On the same subject: in this case, each subject is used as its own control</li>
+<li>On different subjects: that are similar to each other in matching criteria, such as age, twins and so on.</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>Paired t test for mean</p>
+<ol>
+<li><p>Because the paired samples are not independent, we consider <strong>the difference</strong> $\boldsymbol{d}_{\boldsymbol{i}}(\boldsymbol{i}=\mathbf{1}, \mathbf{2}, \ldots, \boldsymbol{n})$ between these two sample points and then $d_i(i=1,2, \ldots, n)$ can be regarded as a random sample from a new population.</p>
+</li>
+<li><p>The new population( i.e., all the possible differences) can be understood as a result caused by many minute independent random factors, and be regarded to follow a normal distribution $N\left(\mu_d, \sigma_d^2\right)$, here $\mu_d, \sigma_d^2$ are the population mean and population variance respectively.</p>
+</li>
+<li><p>To test whether there is a significant difference between th-5321`2is two samples implies to test the whether population mean</p>
+<p>$$<br>\mu_d=0<br>$$</p>
+<p>Hence,</p>
+<p>$$<br>H_0: \mu_d=0 \quad \text { vs. } \quad H_1: \mu_d \neq 0<br>$$</p>
+<p>The hypothesis testing problem is reduced to one-sample $t$ test for mean with unknown variance $\sigma_d^2$ based on differences $d_i(i=1,2, \ldots, n)$.</p>
+<p>The test statistic is</p>
+<p>$$<br>t=\frac{\bar{d}-\mu_d}{S_d / \sqrt{n}}=\frac{\bar{d}}{S_d / \sqrt{n}}<br>$$</p>
+<p>Where:<br>$\bar{d}$ is the sample mean of differences $d_i(i=1,2, \ldots, n)$<br>$S_d$ is the sample standard deviation of differences $d_i(i=1,2, \ldots, n)$ $n$ is the number of matched pairs.</p>
+</li>
+</ol>
+</li>
+<li><p>Two-sample t test for independent samples</p>
+<p> Now we test the equality of two means of two independent samples. Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent. The means and variances in these two samples are denoted by $\bar{x}, \bar{y}, S_1^2, S_2^2$ respectively.</p>
+<p> We want to test the hypothesis</p>
+<p> $$<br> H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2<br> $$</p>
+<p> We will base the significance test on the difference between the two sample means, $\bar{x}-\bar{y}$.</p>
+<p> Assume variances $\sigma_1^2, \sigma_2^2$ are known.</p>
+<p> Frist from the sampling distribution of $\bar{x}-\bar{y}$, we have<br> $$<br> u=\frac{\bar{x}-\bar{y}-\left(\mu_1-\mu_2\right)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}} \sim N(0,1)<br> $$<br> Under $H_0: \quad \mu_1=\mu_2$,</p>
+<p> $$<br> u=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}} \sim N(0,1)<br> $$</p>
+<p> Then the test<br> $$<br> H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2<br> $$<br> can be performed similarly to one-sample $\boldsymbol{u}$ test using test statistic<br> $$<br> u=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}<br> $$<br> Assume variances $\sigma_1^L, \sigma_2^L$ are unknown and the variances are the same, i.e., $\sigma_1^2=\sigma_2^2=\sigma^2$.</p>
+<p> Similarly, to test $H_0: \mu_1=\mu_2$, we first consider the sampling distribution $\bar{X}-\bar{Y}$. From chapter 4 , we know<br> $$<br> \frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)<br> $$<br> where<br> $$<br> \left.S^2=\frac{\left(n_1-1\right) S_1^2+\left(n_2-1\right) S_2^2}{n_1+n_2-2} \quad \text { (if } n_1=n_2, \quad S^2=\frac{S_1^2+S_2^2}{2}\right)<br> $$<br> Then the test<br> $$<br> H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2<br> $$<br> with equal variances can be performed similarly to one-sample $t$ test using test statistic<br> $$<br> t=\frac{\bar{x}-\bar{y}}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}<br> $$<br> with<br> $$<br> S^2=\frac{\left(n_1-1\right) S_1^2+\left(n_2-1\right) S_2^2}{n_1+n_2-2} .<br> $$</p>
+</li>
+<li><p>Testing for the equality of two variances</p>
+<p> In the following sections, we shall test</p>
+<blockquote>
+<p>The equality of two variances 方差齐性检验</p>
+</blockquote>
+<p> We want to test<br> $$<br>  H_0: \sigma_1^2=\sigma_2^2 \quad \text { vs. } \quad H_1: \sigma_1^2 \neq \sigma_2^2<br> $$</p>
+<p> Similar to the idea of one-sample $\chi^2$ test for variance, this test is also based on the ratio of sample variance $\frac{S_1^2}{S_2^2}$ rather than the difference $S_1^2-$ $S_2^2$</p>
+<p>  From the sampling distribution of $\frac{S_1^2}{S_2^2}$ in chapter 4 , we have</p>
+<p> $$<br> F=\frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br> $$</p>
+<p>  Under $H_0: \sigma_1^2=\sigma_2^2$, it follows that</p>
+<p> $$<br> F=\frac{S_1^2}{S_2^2} \sim F\left(n_1-1, n_2-1\right)<br> $$</p>
+<p>  Now steps for the equality of two variances is given below.</p>
+</li>
+<li><p>Steps for F test</p>
+<ol>
+<li><p>Establish hypothesis</p>
+<p> $$<br> H_0: \sigma_1^2=\sigma_2^2 \quad \text { vs. } \quad H_1: \sigma_1^2 \neq \sigma_2^2<br> $$</p>
+</li>
+<li><p>Calculate the value of test statistic according to observations</p>
+<p> $$<br> F=\frac{S_1^2}{S_2^2}<br> $$</p>
+<p> (To simplify the calculation, we normally choose the larger variance as numerator, such that $F=\frac{s_1^2}{s_2^2}&gt;1$).</p>
+</li>
+<li><p>Find $F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)$ for a given significance level $\alpha$.</p>
+<p> Also, according to the property $F$ distribution, we have</p>
+<p> $$<br> F_{1-\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)=\frac{1}{F_{\frac{\alpha}{2}}\left(n_2-1, n_1-1\right)}&lt;1&lt;F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right) .<br> $$</p>
+<p> Then it suffices to find the critical value $F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)$.</p>
+</li>
+</ol>
+</li>
+</ol>
 <blockquote>
 <p>参考：Statistics-note</p>
 <p>Author：ChanceQZ</p>
@@ -2612,7 +2773,7 @@ Thus, the degrees of freedom of $S^2$ is $d f=n-1$.
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">139.1k</span>
+                        class="white-color">145.9k</span>
             
             
             
