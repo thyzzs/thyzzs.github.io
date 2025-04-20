@@ -407,7 +407,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2025-01-01
+                    2025-01-13
                 </div>
                 
 
@@ -814,7 +814,7 @@
 
 <img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dist.png" alt="img" style="zoom:67%;">
 
-<ol start="4">
+<ol start="5">
 <li><strong>指数分布（Exponential distribution）：</strong></li>
 </ol>
 <ul>
@@ -842,7 +842,7 @@
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/exponential_dense.png" alt="img"></p>
 </li>
 </ul>
-<ol start="5">
+<ol start="6">
 <li><p><strong>均匀分布（Uniform distribution）：</strong></p>
 <ul>
 <li><p><strong>定义：</strong>设$a&lt;b$，如果分布$F(x)$具有密度函数</p>
@@ -1555,8 +1555,8 @@
 </ol>
 <h2 id="Chapter-5-参数估计-Parameter-Estimation"><a href="#Chapter-5-参数估计-Parameter-Estimation" class="headerlink" title="Chapter 5 参数估计 Parameter Estimation"></a>Chapter 5 参数估计 Parameter Estimation</h2><p>  统计学与概率论的区别就是归纳和演绎，前者通过样本推测总体的分布，而后者已知总体分布去研究样本。因此参数估计则是归纳的过程，参数估计有两种形式：<strong>点估计</strong>和<strong>区间估计</strong><u>（点估计和区间估计都是对于未知参数的估计，而<strong>点估计给出的是一个参数可能的值</strong>，<strong>区间估计给出的是参数可能在的范围</strong>）</u>。</p>
 <ul>
-<li>Point estimation点估计： specify a values as the estimates of population unknown parameters. i.e., sample mean of a certain sampling can be the estimate of population mean.</li>
-<li>Interval estimation区间估计：specify a range within which the true population parameter are likely to fall. This type of problem involves interval estimation.</li>
+<li>Point estimation 点估计： specify a values as the estimates of population unknown parameters. i.e., sample mean of a certain sampling can be the estimate of population mean.</li>
+<li>Interval estimation 区间估计：specify a range within which the true population parameter are likely to fall. This type of problem involves interval estimation.</li>
 </ul>
 <h3 id="5-1-点估计-Point-Estimation"><a href="#5-1-点估计-Point-Estimation" class="headerlink" title="5.1 点估计 Point Estimation"></a>5.1 点估计 Point Estimation</h3><h4 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h4><p><strong>点估计（Point estimation）：</strong>设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
 <p>Definition: Suppose $\theta$ is an unknown parameter of some population $X.$ Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$, and $x_1,x_2,…,x_n$ be a set of corresponding observations.</p>
@@ -1808,9 +1808,9 @@
 <h4 id="5-2-3-一些情况下的区间估计"><a href="#5-2-3-一些情况下的区间估计" class="headerlink" title="5.2.3 一些情况下的区间估计"></a>5.2.3 一些情况下的区间估计</h4><ol>
 <li><p><strong>单个正态总体参数的置信区间</strong></p>
 <ul>
-<li><strong>$\sigma$已知时$\mu$的置信区间</strong>：$[\bar{x}-u_{1-\alpha/2}\sigma/\sqrt{n},\quad\bar{x}+u_{1-\alpha/2}\sigma/\sqrt{n}]$</li>
-<li><strong>$\sigma$未知时$\mu$的置信区间</strong>：$[\bar{x}-t_{1-\alpha/2}(n-1)s/\sqrt{n},\quad\bar{x}+t_{1-\alpha/2}(n-1)s/\sqrt{n}]$</li>
-<li><strong>$\sigma^2$的置信区间（$\mu,\sigma$未知）</strong>：$[(n-1)s^2/\chi^2_{1-\alpha/2}(n-1),\quad(n-1)s^2/\chi^2_{\alpha/2}(n-1)]$</li>
+<li><strong>$\sigma$已知时$\mu$的置信区间</strong>：$[\bar{x}-u_{\alpha/2}\sigma/\sqrt{n},\quad\bar{x}+u_{\alpha/2}\sigma/\sqrt{n}]$</li>
+<li><strong>$\sigma$未知时$\mu$的置信区间</strong>：$[\bar{x}-t_{\alpha/2}(n-1)s/\sqrt{n},\quad\bar{x}+t_{\alpha/2}(n-1)s/\sqrt{n}]$</li>
+<li><strong>$\sigma^2$的置信区间（$\mu,\sigma$未知）</strong>：$[(n-1)s^2/\chi^2_{\alpha/2}(n-1),\quad(n-1)s^2/\chi^2_{1-\alpha/2}(n-1)]$</li>
 </ul>
 </li>
 <li><p><strong>大样本置信区间</strong>：$[\bar{x}-u_{1-\alpha/2}\sqrt{\frac{\bar{x}(1-\bar{x})}{n}},\quad \bar{x}+u_{1-\alpha/2}\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}]$</p>
@@ -1848,7 +1848,7 @@
 <p><strong>_Step 1_：建立假设</strong></p>
 <blockquote>
 <p><strong>主要针对参数假设检验问题</strong></p>
-<p>设有来自某分布族${F(x,\theta)|\theta\in\Theta}$的样本$x_1,…,x_n$，其中$\Theta$为参数空间，设$\Theta_0\in\Theta$，且$\Theta_0\neq\phi$，则命题$H_0:\theta\in\Theta_0$称为<strong>原假设</strong>或<strong>零假设（null hypothesis）</strong>，若有另一个$\Theta_1$（$\Theta_1\in\Theta,\Theta_1\Theta_0=\phi$，常见的一种情况是$\Theta_1=\Theta-\Theta_0$），则命题$H_1:\theta\in\Theta_1$称为$H_0$的<strong>对立假设</strong>或<strong>备择假设（alternative hypotheis）</strong>，当$H_0$为简单假设，即$\Theta_0$只含一个点时，备择假设有三种可能：$H_1’:\theta\neq\theta_0$，$H_1’’:\theta&lt;\theta_0$，$H_1’’’:\theta&gt;\theta_0$。</p>
+<p>设有来自某分布族${F(x,\theta)|\theta\in\Theta}$的样本$x_1,…,x_n$，其中$\Theta$为参数空间，设$\Theta_0\in\Theta$，且$\Theta_0\neq\phi$，则命题$H_0:\theta\in\Theta_0$称为<strong>原假设</strong>或<strong>零假设（null hypothesis）</strong>，若有另一个$\Theta_1$（$\Theta_1\in\Theta,\Theta_1\Theta_0=\phi$，常见的一种情况是$\Theta_1=\Theta-\Theta_0$），则命题$H_1:\theta\in\Theta_1$称为$H_0$的<strong>对立假设</strong>或<strong>备择假设（alternative hypothesis）</strong>，当$H_0$为简单假设，即$\Theta_0$只含一个点时，备择假设有三种可能：$H_1’:\theta\neq\theta_0$，$H_1’’:\theta&lt;\theta_0$，$H_1’’’:\theta&gt;\theta_0$。</p>
 <p>The null hypothesis 零假设，denoted by $H_0$, is the hypothesis that is to be tested. The null hypothesis is a statement of no change, no effect or no difference and is assumed true until evidence indicates otherwise.</p>
 <p>The alternative hypothesis 备择假设，denoted by $H_1$, is the hypothesis that in some sense contradicts the null hypothesis and is a statement that we are trying to find evidence to support.</p>
 <p>In general, the null hypothesis is represented by the value of the unknown population parameter is equal to some specific value, i.e.,</p>
@@ -1932,8 +1932,8 @@
 <p>Tests of hypotheses based on two samples</p>
 <ol>
 <li>Two-sample paired $t$ test</li>
-<li>Two-sample F test</li>
 <li>Two-sample $t$ test</li>
+<li>Two-sample F test</li>
 </ol>
 <p><strong>One-sample u test for the mean of a normal distribution with known variance: two-tailed case</strong></p>
 <p>Summarize the steps in below:</p>
@@ -2053,7 +2053,7 @@
 <ol>
 <li><p>Because the paired samples are not independent, we consider <strong>the difference</strong> $\boldsymbol{d}_{\boldsymbol{i}}(\boldsymbol{i}=\mathbf{1}, \mathbf{2}, \ldots, \boldsymbol{n})$ between these two sample points and then $d_i(i=1,2, \ldots, n)$ can be regarded as a random sample from a new population.</p>
 </li>
-<li><p>The new population( i.e., all the possible differences) can be understood as a result caused by many minute independent random factors, and be regarded to follow a normal distribution $N\left(\mu_d, \sigma_d^2\right)$, here $\mu_d, \sigma_d^2$ are the population mean and population variance respectively.</p>
+<li><p>The new population (i.e., all the possible differences) can be understood as a result caused by many minute independent random factors, and be regarded to follow a normal distribution $N\left(\mu_d, \sigma_d^2\right)$, here $\mu_d, \sigma_d^2$ are the population mean and population variance respectively.</p>
 </li>
 <li><p>To test whether there is a significant difference between th-5321`2is two samples implies to test the whether population mean</p>
 <p>$$<br>\mu_d=0<br>$$</p>
@@ -2833,7 +2833,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">172.7k</span>
+                        class="white-color">177.2k</span>
             
             
             
