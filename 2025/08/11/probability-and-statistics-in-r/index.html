@@ -472,34 +472,31 @@ dfunc(x, ... ,) # 密度函数
 pfunc(x, ... ,) # 分布函数
 qfunc(x, ... ,) # 分位数函数
 rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="统计推断"><a href="#统计推断" class="headerlink" title="统计推断"></a>统计推断</h2><div class="table-container">
-<table>
+
+<h2 id="统计推断"><a href="#统计推断" class="headerlink" title="统计推断"></a>统计推断</h2><table>
 <thead>
 <tr>
-<th style="text-align:center">Tables</th>
-<th style="text-align:center">Genres</th>
+<th align="center">Tables</th>
+<th align="center">Genres</th>
 </tr>
 </thead>
-<tbody>
-<tr>
-<td style="text-align:center">参数估计</td>
-<td style="text-align:center">点估计：矩方法/极大似然估计</td>
+<tbody><tr>
+<td align="center">参数估计</td>
+<td align="center">点估计：矩方法/极大似然估计</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">区间估计</td>
+<td align="center"></td>
+<td align="center">区间估计</td>
 </tr>
 <tr>
-<td style="text-align:center">假设检验</td>
-<td style="text-align:center">参数假设检验</td>
+<td align="center">假设检验</td>
+<td align="center">参数假设检验</td>
 </tr>
 <tr>
-<td style="text-align:center"></td>
-<td style="text-align:center">非参数假设检验</td>
+<td align="center"></td>
+<td align="center">非参数假设检验</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><p>参数估计是用样本统计量估计总体参数值，$\bar{\theta}$称为估计量。</p>
 <ul>
 <li><strong>点估计(矩估计法，极大似然估计)</strong></li>
@@ -549,6 +546,7 @@ rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-ro
 
  lines(X, f, col ='blue', lwd = 2, lty = 2)
  legend('topright', legend = c('Density Line', 'Max Likelihood'), lwd = c(2,2), lty = c(1,2), col = c('red', 'blue'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>2. 单总体参数区间估计</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 总体比例的区间估计
  # Wald方法：正态分布对二项分布进行估计
@@ -591,6 +589,7 @@ rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-ro
    result$conf.int.se &lt;- sqrt(result$conf.int.var)
    result
  }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>3. 双总体均值差的区间估计</strong></p>
 <p><strong>3.1 独立样本</strong></p>
 <p><strong>总体方差已知</strong></p>
@@ -617,6 +616,7 @@ t.test(weight_gain ~ feed, data = chicks, var.equal = TRUE)
  results_diff = diff+qt(c(alpha/2,1-alpha/2),v)*sqrt(sd[1]^2/n1+sd[2]^2/n2)
 
  t.test(weight_gain ~ feed, data = chicks, var.equal = FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>3.2 配对样本</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 情况一：大样本
 # 情况二：小样本
@@ -632,10 +632,12 @@ sd = sd(diff)
 t.test(Feed.1, Feed.2, paired = T)
 
 t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>4. 双总体比例差的区间估计</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">prop.test()
  prop.test(x=c(225,128),n=c(500,400), correct=F)
  prop.test(x=c(225,128),n=c(500,400)) # 使用连续性修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="参数假设检验"><a href="#参数假设检验" class="headerlink" title="参数假设检验"></a>参数假设检验</h3><p>假设检验的基本思想为小概率反证法思想。</p>
 <ul>
 <li><strong>原假设($H_0$):</strong> 那些单纯由随机因素导致的采样观察结果；<br>  <strong>备择假设($H_1$):</strong> 指受某些非随机因素影响而得到的采样观察结果。</li>
@@ -652,13 +654,13 @@ t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <ul>
 <li>$\bar{p_1} \sim N(p_1,\frac{p_1*(1-p_1)}{n_1})$</li>
 <li>$\bar{p_2} \sim N(p_2,\frac{p_2*(1-p_2)}{n_2})$</li>
-<li>$\bar{p_1}-\bar{p_2} \sim N(p_1-p_2,\frac{p_1<em>(1-p_1)}{n_1}+\frac{p_2</em>(1-p_2)}{n_2})$</li>
-<li>统计量：$z=\frac{\bar{p<em>1}-\bar{p_2}-(p_1-p_2)}{\sigma</em>{p<em>1-p_2}}, \sigma</em>{p_1-p_2}=\sqrt{\frac{p_1<em>(1-p_1)}{n_1}+\frac{p_2</em>(1-p_2)}{n_2}}$，在实际计算中通常用$\bar{p_1}$、$\bar{p_2}$对$p_1$、$p_2$进行替换。</li>
+<li>$\bar{p_1}-\bar{p_2} \sim N(p_1-p_2,\frac{p_1*(1-p_1)}{n_1}+\frac{p_2*(1-p_2)}{n_2})$</li>
+<li>统计量：$z=\frac{\bar{p_1}-\bar{p_2}-(p_1-p_2)}{\sigma_{p_1-p_2}}, \sigma_{p_1-p_2}=\sqrt{\frac{p_1*(1-p_1)}{n_1}+\frac{p_2*(1-p_2)}{n_2}}$，在实际计算中通常用$\bar{p_1}$、$\bar{p_2}$对$p_1$、$p_2$进行替换。</li>
 </ul>
 <p><strong>2. 方差检验</strong></p>
 <p><strong>2.1 单总体方差</strong></p>
 <ul>
-<li><strong>均值$\mu_0$已知</strong>：$\chi^2=\frac{1}{\sigma<em>0^2}\sum\limits</em>{i=0}^{n}(x_i-\mu_0)^2\sim\chi^{2}(n)$</li>
+<li><strong>均值$\mu_0$已知</strong>：$\chi^2=\frac{1}{\sigma_0^2}\sum\limits_{i=0}^{n}(x_i-\mu_0)^2\sim\chi^{2}(n)$</li>
 <li><strong>均值$\mu_0$未知</strong>：$\chi^2=\frac{(n-1)S^2}{\sigma_0^2}\sim\chi^{2}(n-1)$</li>
 </ul>
 <p><strong>2.2 双总体方差差值</strong></p>
@@ -687,6 +689,7 @@ t.test(pH, mu=7)
 # 单尾检验（左端）
 pt(t.value, n-1)
 t.test(pH, mu=7, alternative = 'less')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 双总体均值差的假设检验(独立样本，总体方差相同)
 chicks &lt;- data.frame(feed = rep(c(1,2), times=c(3,6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
 n1 &lt;- sum(chicks$feed == 1)
@@ -703,6 +706,7 @@ qt(alpha/2,n-2);qt(1-alpha/2,n-2)
 2*pt(t.value, n-2, lower.tail = T)
 
 t.test(weight_gain ~ feed, data = chicks, var.equal = TRUE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 双总体均值差的假设检验(独立样本，总体方差不同)
 chicks &lt;- data.frame(feed = rep(c(1,2), times=c(3,6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
 n1 &lt;- sum(chicks$feed == 1)
@@ -718,6 +722,7 @@ qt(alpha/2,v);qt(1-alpha/2,v)
 2*pt(t.value, v, lower.tail = T)
 
 t.test(weight_gain ~ feed, data = chicks, var.equal = FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 双总体均值差的假设检验(配对样本)
 Feed.1 &lt;- c(44, 55, 68, 85, 90, 97)
 Feed.2 &lt;- c(42, 61, 81, 95, 97, 103)
@@ -736,6 +741,7 @@ qt(alpha/2,n-1);qt(1-alpha/2,n-1)
 t.test(Feed.2, Feed.1, paired = T)
 
 t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="非参数假设检验"><a href="#非参数假设检验" class="headerlink" title="非参数假设检验"></a>非参数假设检验</h3><p>总体分布服从正态分布或总体分布已知条件下进行的统计检验称为<strong>参数检验</strong>；总体分布不要求服从正态分布或总体分布情况不明时，用来检验<strong>数据资源是否来自同一个总体的统计检验方法</strong>就是<strong>非参数检验方法</strong>。</p>
 <p><strong>1. 列联分析</strong></p>
 <p>列联分析是研究<strong>两个分类变量</strong>之间关系的统计方法，<strong>统计数据</strong> 有类别型数据和数值型数据之分，<strong>列联表</strong> 是由两个以上的变量进行交叉分类的频数分布表。</p>
@@ -749,9 +755,37 @@ t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 </ul>
 </li>
 <li><p><strong>费希尔确切检验</strong><br>  2*2的列联表检验的方法，为超几何分布。</p>
-<p>  |      |  X1  |  X2  |  X   |<br>  | :—: | :—: | :—: | :—: |<br>  |  Y1  |  a   |  b   | a+b  |<br>  |  Y2  |  c   |  d   | c+d  |<br>  |  Y   | a+c  | b+d  |  N   |</p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">X1</th>
+<th align="center">X2</th>
+<th align="center">X</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Y1</td>
+<td align="center">a</td>
+<td align="center">b</td>
+<td align="center">a+b</td>
+</tr>
+<tr>
+<td align="center">Y2</td>
+<td align="center">c</td>
+<td align="center">d</td>
+<td align="center">c+d</td>
+</tr>
+<tr>
+<td align="center">Y</td>
+<td align="center">a+c</td>
+<td align="center">b+d</td>
+<td align="center">N</td>
+</tr>
+</tbody></table>
 <pre><code>$P(X=a) = \frac{C_{a+b}^aC_{c+d}^c}{C_{a+c}^N}$
-</code></pre></li>
+</code></pre>
+</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 骰子是否有偏
  chisq.test(c(25, 18, 28, 20, 16, 13))
@@ -767,9 +801,11 @@ t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
  aluminium.by.alzheimers &lt;- matrix(c(112, 3, 5, 8, 114, 9, 3, 2), nrow=2, byrow = TRUE)
  chisq.test(aluminium.by.alzheimers, simulate.p.value = TRUE)
  # 蒙特卡洛模拟法计算P值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 左利手与性别是否有关
 handedness &lt;- matrix(c(1, 30, 4, 12), nrow = 2, byrow = TRUE)
 fisher.test(handedness)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>2. 两个顺序变量的秩方法</strong></p>
 <p><strong>2.1 两个顺序变量的秩方法($\gamma$系数)</strong></p>
 <p>研究两个顺序变量之前的相关性，相关程度可使用系数$\gamma$度量，范围为[-1, 1]。</p>
@@ -810,7 +846,7 @@ fisher.test(handedness)<span aria-hidden="true" class="line-numbers-rows"><span>
 <ul>
 <li><strong>检验的假设：</strong> 涉及<strong>单一总体中位数的假设</strong>和<strong>配对样本数据</strong>的假设；</li>
 <li><strong>核心思想：</strong> 分析数据中正负号出现的频率，并确定它们是否有显著差异；</li>
-<li><strong>检测方法：</strong> 判断观察值与原假设中心位置的大小，$S<em>+$为正符号的数目，$S</em>-$为负符号的数目，<strong>$S_*$为两者中较小者作为统计量</strong>。以<strong>二项分布为基础，概率为0.5</strong>的一种假设检验；当n大于25时，近似认为结果分布服从正态N(0,1)分布。</li>
+<li><strong>检测方法：</strong> 判断观察值与原假设中心位置的大小，$S_+$为正符号的数目，$S_-$为负符号的数目，<strong>$S_*$为两者中较小者作为统计量</strong>。以<strong>二项分布为基础，概率为0.5</strong>的一种假设检验；当n大于25时，近似认为结果分布服从正态N(0,1)分布。</li>
 <li><strong>统计量修正：</strong> 由于正态分布是连续分布，所以需要进行连续修正，计算公式为：$z=\frac{(x+0.5)-0.5n}{0.5\sqrt{n}}$，x表示频率较小的符号出现的次数，<em>证明略</em>。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">z = -2.23 # 已知统计量并已经对其进行修正
@@ -819,12 +855,13 @@ pnorm(z) # 正态分布近似
 x &lt;- c(......)
 binom.test(sum(x&gt;99), length(x), alternative = 'less') # 二项分布
 pbinom(sum(x&gt;99), length(x), prob=0.5, lower.tail = T) * 2 # 双尾<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>4. 威尔科克森符号秩检验</strong></p>
 <p>利用观察值和原假设中心位置的差的正负，以及差值的大小的信息。</p>
 <ul>
 <li><strong>检验的假设：</strong> 一个样本是否来自一个具有指定中位数的总体；</li>
 <li><strong>核心思想：</strong> 差值按照绝对值的大小编秩并给秩次加上原来差值符号，所形成的的正秩和与负秩和在理论上是相等的（满足原假设）。</li>
-<li><strong>检测方法：</strong> $T<em>+$为正号的秩和，$T</em>-$为负号的秩和，$T$为两者中较小者。<strong>当T不大于30时，T为统计量；当T小于30时，$z=\frac{T-n(n+1)/4}{\sqrt{n(n+1)(2n+1)/24}}$，<em>证明略</em></strong>。</li>
+<li><strong>检测方法：</strong> $T_+$为正号的秩和，$T_-$为负号的秩和，$T$为两者中较小者。<strong>当T不大于30时，T为统计量；当T小于30时，$z=\frac{T-n(n+1)/4}{\sqrt{n(n+1)(2n+1)/24}}$，<em>证明略</em></strong>。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 原假设中位数为8
 x=c(4.12,5.81,7.63,9.74,10.39,11.92,12.32,12.89,13.54,14.45)
@@ -840,12 +877,13 @@ wilcox.test(x, y, paired = TRUE, alternative = "greater")
 # 数据较多，计算近似P值
 wilcox.test(y - x, alternative = "less",exact = FALSE, correct = FALSE)
  # exact = F, correct表示是否进行连续型修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>5. 威尔科克森的秩和检验</strong></p>
 <p>两个样本所代表的总体是否有相同的分布或是否来自同一个分布。</p>
 <ul>
 <li><strong>核心思想：</strong> 如果两个样本来自同一个总体，这些值都在数值的一个合并集中进行排序，那么高和低的秩应该平均地落在两个样本中；如果一个样本中发现低秩特别显著，而在另一个总体中发现高秩特别显著，有理由怀疑这两个样本来自不同的总体。</li>
 <li><strong>方法优势：</strong> 总体正态分布要求不成立的情况下，可以用秩和检验法；另外，秩和检验法简单方便且高效。</li>
-<li><strong>检验方法：</strong> 样本1的容量为n1，样本2的容量为n2，总体1观察值的秩和为T,合并两个样本后秩集的均值为$\frac{(n<em>1+n_2)(n_1+n_2+1)}{2(n_1+n_2)} = (n_1+n_2+1)/2$；原假设前提，T的期望$\mu_T = \frac{n_1(n_1+n_2+1)}{2}$，T的方差$\sigma{_T}{^2} = \frac{n_1n_2}{12}(n_1+n_2+1)$。$T_L$表示左边界临界值，$T_L$表示右边界临界值。<br>  **当两个样本数均不大于10时，T为统计量，比较T和临界表中的数值；当两个样本数大于10时，$z = \frac{T-\mu_T}{\sigma{_T}}$，调整T的方差：$\sigma{_T}{^2} = \frac{n_1n_2}{12}[(n_1+n_2+1)-\frac{\sum</em>{j=1}^{k}t_j(t^2_j-1)}{(n_1+n_2)(n_1+n_2-1)}]$**</li>
+<li><strong>检验方法：</strong> 样本1的容量为n1，样本2的容量为n2，总体1观察值的秩和为T,合并两个样本后秩集的均值为$\frac{(n_1+n_2)(n_1+n_2+1)}{2(n_1+n_2)} = (n_1+n_2+1)/2$；原假设前提，T的期望$\mu_T = \frac{n_1(n_1+n_2+1)}{2}$，T的方差$\sigma{_T}{^2} = \frac{n_1n_2}{12}(n_1+n_2+1)$。$T_L$表示左边界临界值，$T_L$表示右边界临界值。<br>  <strong>当两个样本数均不大于10时，T为统计量，比较T和临界表中的数值；当两个样本数大于10时，$z = \frac{T-\mu_T}{\sigma{_T}}$，调整T的方差：$\sigma{<em>T}{^2} = \frac{n_1n_2}{12}[(n_1+n_2+1)-\frac{\sum</em>{j=1}^{k}t_j(t^2_j-1)}{(n_1+n_2)(n_1+n_2-1)}]$</strong></li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 小样本
 placebo &lt;- c(0.90, 0.37, 1.63, 0.83, 0.95, 0.78, 0.86, 0.61, 0.38, 1.97)
@@ -858,23 +896,25 @@ pnorm(3.817159, lower.tail = FALSE)
 before &lt;- c(11.0, 11.2, 11.2, 11.2, 11.4, 11.5, 11.6, 11.7, 11.8, 11.9, 11.9, 12.1)
 after &lt;- c(10.2, 10.3, 10.4, 10.6, 10.6, 10.7, 10.8, 10.8, 10.9, 11.1, 11.1, 11.3)
 wilcox.test(before, after, alternative = "greater", exact = FALSE, correct = FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>6. 克鲁斯卡尔-沃里斯检验</strong></p>
 <p>来自3个或更多独立总体的样本数据是否具有相同的分布，无总体分布要求。</p>
 <ul>
 <li><strong>应用要求：</strong> 每个样本中至少有5个观察值，统计量H的分布才用$\chi^2$分布来近似。</li>
-<li><strong>统计量：</strong> $H = \frac{12}{n<em>T(n_T+1)}(\sum</em>{i}\frac{T<em>{i}^{2}}{n_i})-3(n_T+1)$, 其中$n_i$是样本i的观察值数量，k是样本的个数，$n_T$是混合后的总样本容量，$T_i$是样本i在总的样本观察值中的秩和。<br>  <strong>等价于：</strong> $H = \frac{12}{n_T(n_T+1)}(\sum{n_i}(\bar{T</em>{i}}-\widehat{T<em>{i}})^2,  \bar{T</em>{i}} = \frac{T<em>i}{n_i},  \widehat{T</em>{i}} = \frac{T<em>i}{\sum{n_i}}$<br>  对给定的显著水平$\alpha$，如果统计量H超过自由度为k-1的$\chi^2$的临界值，则拒绝原假设。<br>  <strong>当样本观察值的秩有大量存在时，</strong> $H’ = H / (1-\sum</em>{j}\frac{t<em>{i}^{3}-t_j}{n</em>{T}^{3}-n_T})$，其中$t_j$是第j个相等秩组中的观察值数量。</li>
+<li><strong>统计量：</strong> $H = \frac{12}{n_T(n_T+1)}(\sum_{i}\frac{T_{i}^{2}}{n_i})-3(n_T+1)$, 其中$n_i$是样本i的观察值数量，k是样本的个数，$n_T$是混合后的总样本容量，$T_i$是样本i在总的样本观察值中的秩和。<br>  <strong>等价于：</strong> $H = \frac{12}{n_T(n_T+1)}(\sum{n_i}(\bar{T_{i}}-\widehat{T_{i}})^2,  \bar{T_{i}} = \frac{T_i}{n_i},  \widehat{T_{i}} = \frac{T_i}{\sum{n_i}}$<br>  对给定的显著水平$\alpha$，如果统计量H超过自由度为k-1的$\chi^2$的临界值，则拒绝原假设。<br>  <strong>当样本观察值的秩有大量存在时，</strong> $H’ = H / (1-\sum_{j}\frac{t_{i}^{3}-t_j}{n_{T}^{3}-n_T})$，其中$t_j$是第j个相等秩组中的观察值数量。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># e.g.
 x &lt;-c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3)
 y &lt;-c(4.5, 4.4, 3.5, 4.2, 4.6, 4.2)
 z &lt;-c(5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
 kruskal.test(list(x, y, z))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="方差分析方法"><a href="#方差分析方法" class="headerlink" title="方差分析方法"></a>方差分析方法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>方差分析(Analysis of variance, ANOVA)</strong> 是通过检验各总体均值是否相等来判断分类型变量对数值型变量是否有显著影响的统计检验方法（检验多总体间的分布是否一致）。由费希尔提出，故又称为<strong>F检验</strong>。<br>方差分析中，将要检验的对象称为<strong>因素或因子(factor)</strong>，因素的不同表现称为<strong>水平或处理(treatment)</strong>，每个水平下得到的样本数据称为<strong>观察值(observed value)</strong>。<br>方差分析是通过对<strong>数据误差的考察</strong>来判断不同总体的均值是否相等，进而分析自变量对因变量是否有显著影响，主要分为两类误差：<strong>随机误差（随机因素的影响）</strong>和<strong>系统误差（系统性的处理因素造成）</strong>。<br>单双因素方差分析都要服从以下<strong>基本假定：</strong> ① 每个总体都服从正态分布，② 各观测值互相独立，③ 各组观察数据都是从相同方差的正态总体中抽取的(方差齐性)。</p>
+
+<h2 id="方差分析方法"><a href="#方差分析方法" class="headerlink" title="方差分析方法"></a>方差分析方法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>方差分析(Analysis of variance, ANOVA)</strong> 是通过检验各总体均值是否相等来判断分类型变量对数值型变量是否有显著影响的统计检验方法（检验多总体间的分布是否一致）。由费希尔提出，故又称为<strong>F检验</strong>。<br>方差分析中，将要检验的对象称为<strong>因素或因子(factor)</strong>，因素的不同表现称为<strong>水平或处理(treatment)</strong>，每个水平下得到的样本数据称为<strong>观察值(observed value)</strong>。<br>方差分析是通过对<strong>数据误差的考察</strong>来判断不同总体的均值是否相等，进而分析自变量对因变量是否有显著影响，主要分为两类误差：<strong>随机误差（随机因素的影响）<strong>和</strong>系统误差（系统性的处理因素造成）</strong>。<br>单双因素方差分析都要服从以下<strong>基本假定：</strong> ① 每个总体都服从正态分布，② 各观测值互相独立，③ 各组观察数据都是从相同方差的正态总体中抽取的(方差齐性)。</p>
 <h3 id="单因素方差分析"><a href="#单因素方差分析" class="headerlink" title="单因素方差分析"></a>单因素方差分析</h3><p>只有一个因素的方差分析称为<strong>单因素方差分析</strong>。在单因素分析中，涉及两个变量：一个是分类型变量（自变量），一个是数值型变量（因变量）。</p>
 <ul>
-<li><strong>总变异(Total variation)：反应全体数据误差大小的平方和，用总离差平方和$SS_T$表示</strong>：$SS<em>T = \sum</em>{i=1}^{g}\sum<em>{j=1}^{n_i}(X</em>{ij}-\bar{X})^2,df_T=N-1$</li>
-<li><strong>组间变异(between group variation)：主要反映处理因素的作用以及一定的随机误差作用，用组间离差平方和$SS_R$表示</strong>：$SS<em>R = \sum</em>{i=1}^{g}n_i(\bar{X_i}-\bar{X})^2,df_R=g-1$</li>
-<li><strong>组内变异(within group variation)：主要反映随机误差作用，用组内离差平方和$SS_E$表示</strong>：$SS<em>E = \sum</em>{i=1}^{g}\sum<em>{j=1}^{n_i}(X</em>{ij}-\bar{X<em>i})^2=\sum</em>{i=1}^{g}(n_i-1)S_i^2,df_E=N-g$</li>
+<li><strong>总变异(Total variation)：反应全体数据误差大小的平方和，用总离差平方和$SS_T$表示</strong>：$SS_T = \sum_{i=1}^{g}\sum_{j=1}^{n_i}(X_{ij}-\bar{X})^2,df_T=N-1$</li>
+<li><strong>组间变异(between group variation)：主要反映处理因素的作用以及一定的随机误差作用，用组间离差平方和$SS_R$表示</strong>：$SS_R = \sum_{i=1}^{g}n_i(\bar{X_i}-\bar{X})^2,df_R=g-1$</li>
+<li><strong>组内变异(within group variation)：主要反映随机误差作用，用组内离差平方和$SS_E$表示</strong>：$SS_E = \sum_{i=1}^{g}\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})^2=\sum_{i=1}^{g}(n_i-1)S_i^2,df_E=N-g$</li>
 <li><strong>关系：</strong> $SS_T = SS_R + SS_E, df_T = df_R + df_E$</li>
 <li><strong>性质：</strong> $\frac{SS_T}{\sigma^2}$ ~ $\chi^{2}(N-1)$, $\frac{SS_E}{\sigma^2}$ ~ $\chi^{2}(N-g)$, $\frac{SS_R}{\sigma^2}$ ~ $\chi^{2}(g-1)$</li>
 <li><strong>均方差：</strong> $MS_R = \frac{SS_R}{df_R}=\frac{SS_R}{g-1}(组间均方), MS_E = \frac{SS_E}{df_E}=\frac{SS_E}{N-g}(组内均方)$</li>
@@ -886,12 +926,13 @@ A &lt;- factor(rep(1:3, each=6))
 my.data &lt;- data.frame(X, A)
 my.aov &lt;- aov(X~A, data = my.data)
 summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="双因素方差分析"><a href="#双因素方差分析" class="headerlink" title="双因素方差分析"></a>双因素方差分析</h3><p><strong>1. 无交互作用的分析</strong></p>
 <ul>
-<li><strong>总变异：</strong> $SS<em>T = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}(x</em>{ij}-\bar{x})^2 = SS_A+SS_B+SS_E, df_T=ab-1$</li>
-<li><strong>因素A组间变异：</strong> $SS<em>A = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}(\bar{x_i}-\bar{x})^2=\sum</em>{i=1}^{a}b(\bar{x_i}-\bar{x})^2, df_A=a-1$</li>
-<li><strong>因素B组间变异：</strong> $SS<em>B = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}(\bar{x_j}-\bar{x})^2=\sum</em>{j=1}^{b}a(\bar{x_j}-\bar{x})^2, df_B=b-1$</li>
-<li><strong>随机误差平方和：</strong> $SS<em>E = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}(x</em>{ij}-\bar{x_i}-\bar{x_j}+\bar{x})^2, df_E=(a-1)(b-1)$</li>
+<li><strong>总变异：</strong> $SS_T = \sum_{i=1}^{a}\sum_{j=1}^{b}(x_{ij}-\bar{x})^2 = SS_A+SS_B+SS_E, df_T=ab-1$</li>
+<li><strong>因素A组间变异：</strong> $SS_A = \sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{x_i}-\bar{x})^2=\sum_{i=1}^{a}b(\bar{x_i}-\bar{x})^2, df_A=a-1$</li>
+<li><strong>因素B组间变异：</strong> $SS_B = \sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{x_j}-\bar{x})^2=\sum_{j=1}^{b}a(\bar{x_j}-\bar{x})^2, df_B=b-1$</li>
+<li><strong>随机误差平方和：</strong> $SS_E = \sum_{i=1}^{a}\sum_{j=1}^{b}(x_{ij}-\bar{x_i}-\bar{x_j}+\bar{x})^2, df_E=(a-1)(b-1)$</li>
 <li><strong>均方差：</strong> $MS_A = \frac{SS_A}{a-1}, MS_B = \frac{SS_B}{b-1}, MS_E = \frac{SS_E}{(a-1)(b-1)}$</li>
 <li><strong>F统计量：</strong> $F_A = \frac{MS_A}{MS_E}$ ~ $F(a-1,(a-1)(b-1)), \ F_B = \frac{MS_B}{MS_E}$ ~ $F(b-1,(a-1)(b-1))$</li>
 </ul>
@@ -900,14 +941,15 @@ my.data &lt;- data.frame(x, A = gl(6, 3), B = gl(3, 1, 18))
 
 my.aov &lt;- aov(x ~ A+B, data = my.data)
 summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>2. 有交互作用的分析</strong></p>
 <ul>
-<li><strong>总变异：</strong> $SS<em>T = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}\sum</em>{k=1}^{c}(x<em>{ijk}-\bar{x})^2 = SS_A+SS_A+SS_E+SS</em>{AB}, 其中，c为给定i和j后组内数据量。$</li>
-<li><strong>因素A组间变异：</strong> $SS<em>A = bc\sum</em>{i=1}^{a}(\bar{x_i}-\bar{x})^2,df_A=a-1$</li>
-<li><strong>因素B组间变异：</strong> $SS<em>B = ac\sum</em>{j=1}^{b}(\bar{x_j}-\bar{x})^2,df_B=b-1$</li>
-<li><strong>交互变异：</strong> $SS<em>{AB} = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}c(\bar{x</em>{ij}}-\bar{x<em>i}-\bar{x_j}+\bar{x})^2,df</em>{AB}=(a-1)(b-1)$</li>
-<li><strong>随机误差平方和：</strong> $SS<em>E = \sum</em>{i=1}^{a}\sum<em>{j=1}^{b}\sum</em>{k=1}^{c}(x<em>{ijk}-\bar{x</em>{ij}})^2,df_E=ab(c-1)$</li>
-<li><strong>F统计量：</strong> $F<em>A = \frac{MS_A}{MS_E} = \frac{SS_A/(a-1)}{SS_E/[ab(c-1)]} \sim F(a-1,ab(c-1)),\ F_B = \frac{MS_B}{MS_E} = \frac{SS_B/(b-1)}{SS_E/[ab(c-1)]} \sim F(b-1,ab(c-1)),\ F</em>{AB} = \frac{MS<em>{AB}}{MS_E} = \frac{SS</em>{AB}/(a-1)(b-1)}{SS_E/[ab(c-1)]} \sim F((a-1)(b-1),ab(c-1))$</li>
+<li><strong>总变异：</strong> $SS_T = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{c}(x_{ijk}-\bar{x})^2 = SS_A+SS_A+SS_E+SS_{AB}, 其中，c为给定i和j后组内数据量。$</li>
+<li><strong>因素A组间变异：</strong> $SS_A = bc\sum_{i=1}^{a}(\bar{x_i}-\bar{x})^2,df_A=a-1$</li>
+<li><strong>因素B组间变异：</strong> $SS_B = ac\sum_{j=1}^{b}(\bar{x_j}-\bar{x})^2,df_B=b-1$</li>
+<li><strong>交互变异：</strong> $SS_{AB} = \sum_{i=1}^{a}\sum_{j=1}^{b}c(\bar{x_{ij}}-\bar{x_i}-\bar{x_j}+\bar{x})^2,df_{AB}=(a-1)(b-1)$</li>
+<li><strong>随机误差平方和：</strong> $SS_E = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{c}(x_{ijk}-\bar{x_{ij}})^2,df_E=ab(c-1)$</li>
+<li><strong>F统计量：</strong> $F_A = \frac{MS_A}{MS_E} = \frac{SS_A/(a-1)}{SS_E/[ab(c-1)]} \sim F(a-1,ab(c-1)),\ F_B = \frac{MS_B}{MS_E} = \frac{SS_B/(b-1)}{SS_E/[ab(c-1)]} \sim F(b-1,ab(c-1)),\ F_{AB} = \frac{MS_{AB}}{MS_E} = \frac{SS_{AB}/(a-1)(b-1)}{SS_E/[ab(c-1)]} \sim F((a-1)(b-1),ab(c-1))$</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">#e.g. 是否添加增味剂和乳清用量对蛋糕口感的影响
  # 输入数据
@@ -926,6 +968,7 @@ summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><
 
  my.aov &lt;- aov(quality ~ supp * whey, data = pancakes)
  summary(my.aov) # 与上述的代码功能一致<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h3 id="多重比较"><a href="#多重比较" class="headerlink" title="多重比较"></a>多重比较</h3><p>要得到各组均值间更详细的信息，需要在方差分析的基础上进行多个样本均值的两两比较，此方法称为<strong>多重比较法</strong>。  </p>
 <p><strong>1. 多重t检验</strong></p>
 <p>多重t检验是对每个处理下的数据均值进行两两比较的t检验。多次重复使用t检验时会增大犯第一类错误的概率，因此在进行较多次重复比较时，要对P值进行调整。<br><strong>Bonferroni修正法的思路</strong>：如果在同一数据集同时进行n个独立的假设检验，那么用于每一个假设的统计显著水平应该为仅检验一个假设时显著水平的1/n，<strong>即$\alpha’ = \alpha/n$, n是多重t检验的次数</strong>。  </p>
@@ -940,6 +983,7 @@ pairwise.t.test() # 执行均值的多重t检验
  X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
  A &lt;- factor(rep(1:3, each=6))
  pairwise.t.test(X,A,p.adjust.method = "bonferroni")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>2. Dunnett-t检验/LSD-t检验</strong></p>
 <p>Dunnett-t检验法又称新复极差法检验，一种方差分析中多个实验组与对照组均值比较的方法。LSD-t检验(least significant difference，最小显著差异方法)与Dunnett-t统计量的计算公式完全相同。</p>
 <ul>
@@ -947,8 +991,8 @@ pairwise.t.test() # 执行均值的多重t检验
 <li>H0: $\mu_i=\mu_j$</li>
 <li>H1: $\mu_i≠\mu_j$</li>
 <li>统计量: $t_D = \frac{|\bar{x_i}-\bar{x_j}|}{\sqrt{MS_E(\frac{1}{n_i}+\frac{1}{n_j})}}$</li>
-<li>若$t<em>D &gt; t</em>{\frac{\alpha}{2}}$, 则拒绝H0</li>
-<li>另也可以以${|\bar{x<em>i}-\bar{x_j}|}$为统计值，$LSD=t</em>{\frac{\alpha}{2}}\sqrt{MS_E(\frac{1}{n_i}+\frac{1}{n_j})}$，若${|\bar{x_i}-\bar{x_j}|} &gt; LSD$，则拒绝H0.</li>
+<li>若$t_D &gt; t_{\frac{\alpha}{2}}$, 则拒绝H0</li>
+<li>另也可以以${|\bar{x_i}-\bar{x_j}|}$为统计值，$LSD=t_{\frac{\alpha}{2}}\sqrt{MS_E(\frac{1}{n_i}+\frac{1}{n_j})}$，若${|\bar{x_i}-\bar{x_j}|} &gt; LSD$，则拒绝H0.</li>
 </ul>
 </li>
 </ul>
@@ -970,9 +1014,10 @@ summary(mice.Dunnett)
 windows(width=5,height=3,pointsize=10)
 plot(mice.Dunnett,sub="Mice Data")
 mtext("Dunnet's Method",side=3,line=0.5)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p><strong>3. Tukey的HSD检验</strong></p>
 <p>该方法为了控制每一对比较的错误率。</p>
-<p>在进行检验时，首先对g个样本均值进行排序。如果$|\bar{X<em>i}-\bar{X_j}| \ge W$，则连个总体均值$\mu_i$和$\mu_j$不相等，其中：$W = q</em>\alpha(g,v)\sqrt{MSE/n}$。<br>MSE是自由度为v的样本组内均方差，$q_\alpha(g,v)$是比较g个不同总体是学生化极差的上侧尾部临界值，n是每个样本的观察值个数。</p>
+<p>在进行检验时，首先对g个样本均值进行排序。如果$|\bar{X_i}-\bar{X_j}| \ge W$，则连个总体均值$\mu_i$和$\mu_j$不相等，其中：$W = q_\alpha(g,v)\sqrt{MSE/n}$。<br>MSE是自由度为v的样本组内均方差，$q_\alpha(g,v)$是比较g个不同总体是学生化极差的上侧尾部临界值，n是每个样本的观察值个数。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
 group &lt;- factor(rep(LETTERS[1:3], each=6))
 mice.data &lt;- data.frame(X, group)
@@ -1001,6 +1046,7 @@ colnames(result) &lt;- c('groups', 'value')
 result
 
 (posthoc &lt;- TukeyHSD(mice.aov, 'group'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <blockquote>
 <p>参考：</p>
 <p><a target="_blank" rel="noopener" href="https://happykelee.github.io/">Zhengting Cai</a></p>
@@ -1717,7 +1763,7 @@ result
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">190.1k</span>
             
             
             
