@@ -7,13 +7,16 @@
     <meta name="keywords" content="题解 T93279 【最长上升子树链】, 天何言哉">
     <meta name="description" content="传送门
 30%的题解：
+
 这棵树是一个链，所以直接做一遍LIS和LDS，经典DP算法，不多赘述。
 
 60%的题解：
-$N&amp;lt;=1000$,可以直接$n^2$地做满分题解所说的DP。
+
+N &amp;lt;  = 1000,可以直接n2地做满分题解所说的DP。
 
 满分题解：
-$F1[i]$表示以从以$i$为根节点的子">
+
+F1[i]表示以从以i为根节点的子树中">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -71,7 +74,119 @@ $F1[i]$表示以从以$i$为根节点的子">
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -422,7 +537,7 @@ $F1[i]$表示以从以$i$为根节点的子">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    635
+                    629
                 </div>
                 
 
@@ -448,21 +563,20 @@ $F1[i]$表示以从以$i$为根节点的子">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93279">传送门</a></p>
-<h3 id="30-的题解："><a href="#30-的题解：" class="headerlink" title="30%的题解："></a>30%的题解：</h3><ul>
+<h3 id="的题解">30%的题解：</h3>
+<ul>
 <li>这棵树是一个链，所以直接做一遍LIS和LDS，经典DP算法，不多赘述。</li>
 </ul>
-<h3 id="60-的题解："><a href="#60-的题解：" class="headerlink" title="60%的题解："></a>60%的题解：</h3><ul>
-<li>$N&lt;=1000$,可以直接$n^2$地做满分题解所说的DP。</li>
+<h3 id="的题解-1">60%的题解：</h3>
+<ul>
+<li><span class="math inline"><em>N</em> &lt;  = 1000</span>,可以直接<span class="math inline"><em>n</em><sup>2</sup></span>地做满分题解所说的DP。</li>
 </ul>
-<h3 id="满分题解："><a href="#满分题解：" class="headerlink" title="满分题解："></a>满分题解：</h3><ul>
-<li><p>$F1[i]$表示以从以$i$为根节点的子树中出发，以$i$为结束点的LIS，同样设计一个$F2[i]$表示相同意思的LDS。</p>
-</li>
-<li><p>用动态开点的线段树维护，以权值为下标，记录$F1$、$F2$的值。</p>
-</li>
-<li><p>计算$u$节点的$F$值时，如果是计算$F1$,那么在子树中的$0 - (val[u]-1)$中找最大值，如果是计算$F2$，那么找$val[u] - inf$中的最大值。</p>
-</li>
-<li><p>答案就是找最大的$F1[u]+F2[u]-1$。注意子树的线段树最后要合并到父亲。时间复杂度$O(n \log n)$</p>
-</li>
+<h3 id="满分题解">满分题解：</h3>
+<ul>
+<li><p><span class="math inline"><em>F</em>1[<em>i</em>]</span>表示以从以<span class="math inline"><em>i</em></span>为根节点的子树中出发，以<span class="math inline"><em>i</em></span>为结束点的LIS，同样设计一个<span class="math inline"><em>F</em>2[<em>i</em>]</span>表示相同意思的LDS。</p></li>
+<li><p>用动态开点的线段树维护，以权值为下标，记录<span class="math inline"><em>F</em>1</span>、<span class="math inline"><em>F</em>2</span>的值。</p></li>
+<li><p>计算<span class="math inline"><em>u</em></span>节点的<span class="math inline"><em>F</em></span>值时，如果是计算<span class="math inline"><em>F</em>1</span>,那么在子树中的<span class="math inline">0 − (<em>v</em><em>a</em><em>l</em>[<em>u</em>]−1)</span>中找最大值，如果是计算<span class="math inline"><em>F</em>2</span>，那么找<span class="math inline"><em>v</em><em>a</em><em>l</em>[<em>u</em>] − <em>i</em><em>n</em><em>f</em></span>中的最大值。</p></li>
+<li><p>答案就是找最大的<span class="math inline"><em>F</em>1[<em>u</em>] + <em>F</em>2[<em>u</em>] − 1</span>。注意子树的线段树最后要合并到父亲。时间复杂度<span class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span></p></li>
 </ul>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// luogu-judger-enable-o2</span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio&gt;</span></span>
@@ -1282,7 +1396,7 @@ $F1[i]$表示以从以$i$为根节点的子">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">164.3k</span>
             
             
             

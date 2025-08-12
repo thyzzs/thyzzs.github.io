@@ -7,15 +7,17 @@
     <meta name="keywords" content="题解 T93270 【轰炸城市】, 天何言哉">
     <meta name="description" content="传送门
 30%的题解：
+
 直接每次询问枚举所有点。
 
 60%的题解：
-坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度
+
+坐标值很小，可以尝试用链表，可以做到O(n)的时间复杂度
 
 100%的题解：
-$map$套$multiset$
 
-$X$坐标开个$mapx$，里面存的是每个$X$坐标的">
+map套multiset
+X坐标开个mapx，里面存的是每个X坐标的不同Y坐标，这些Y坐">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -73,7 +75,119 @@ $X$坐标开个$mapx$，里面存的是每个$X$坐标的">
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -424,7 +538,7 @@ $X$坐标开个$mapx$，里面存的是每个$X$坐标的">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    465
+                    454
                 </div>
                 
 
@@ -450,25 +564,22 @@ $X$坐标开个$mapx$，里面存的是每个$X$坐标的">
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93270">传送门</a></p>
-<h4 id="30-的题解："><a href="#30-的题解：" class="headerlink" title="30%的题解："></a>30%的题解：</h4><ul>
+<h4 id="的题解">30%的题解：</h4>
+<ul>
 <li>直接每次询问枚举所有点。</li>
 </ul>
-<h4 id="60-的题解："><a href="#60-的题解：" class="headerlink" title="60%的题解："></a>60%的题解：</h4><ul>
-<li>坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度</li>
+<h4 id="的题解-1">60%的题解：</h4>
+<ul>
+<li>坐标值很小，可以尝试用链表，可以做到<span class="math inline"><em>O</em>(<em>n</em>)</span>的时间复杂度</li>
 </ul>
-<h4 id="100-的题解："><a href="#100-的题解：" class="headerlink" title="100%的题解："></a>100%的题解：</h4><ul>
-<li><p>$map$套$multiset$</p>
-</li>
-<li><p>$X$坐标开个$mapx$，里面存的是每个$X$坐标的不同$Y$坐标，这些$Y$坐标用$multiset$保存。</p>
-</li>
-<li><p>$Y$坐标也同理开一个$mapy$。</p>
-</li>
-<li><p>统计点的时候，以平行于$y$轴的轰炸带为例，在$X$坐标的$mapx$中，枚举所有在$n1-n2$范围内的$x$，然后统计每个x里面所有的$y$，同时删去在$mapy$中对应的点，最后把$mapx$中$n1-n2$范围的所有元素都删掉。</p>
-</li>
-<li><p>时间复杂度$O(n \log n)$</p>
-</li>
-<li><p>也可以使用珂朵莉树。</p>
-</li>
+<h4 id="的题解-2">100%的题解：</h4>
+<ul>
+<li><p><span class="math inline"><em>m</em><em>a</em><em>p</em></span>套<span class="math inline"><em>m</em><em>u</em><em>l</em><em>t</em><em>i</em><em>s</em><em>e</em><em>t</em></span></p></li>
+<li><p><span class="math inline"><em>X</em></span>坐标开个<span class="math inline"><em>m</em><em>a</em><em>p</em><em>x</em></span>，里面存的是每个<span class="math inline"><em>X</em></span>坐标的不同<span class="math inline"><em>Y</em></span>坐标，这些<span class="math inline"><em>Y</em></span>坐标用<span class="math inline"><em>m</em><em>u</em><em>l</em><em>t</em><em>i</em><em>s</em><em>e</em><em>t</em></span>保存。</p></li>
+<li><p><span class="math inline"><em>Y</em></span>坐标也同理开一个<span class="math inline"><em>m</em><em>a</em><em>p</em><em>y</em></span>。</p></li>
+<li><p>统计点的时候，以平行于<span class="math inline"><em>y</em></span>轴的轰炸带为例，在<span class="math inline"><em>X</em></span>坐标的<span class="math inline"><em>m</em><em>a</em><em>p</em><em>x</em></span>中，枚举所有在<span class="math inline"><em>n</em>1 − <em>n</em>2</span>范围内的<span class="math inline"><em>x</em></span>，然后统计每个x里面所有的<span class="math inline"><em>y</em></span>，同时删去在<span class="math inline"><em>m</em><em>a</em><em>p</em><em>y</em></span>中对应的点，最后把<span class="math inline"><em>m</em><em>a</em><em>p</em><em>x</em></span>中<span class="math inline"><em>n</em>1 − <em>n</em>2</span>范围的所有元素都删掉。</p></li>
+<li><p>时间复杂度<span class="math inline"><em>O</em>(<em>n</em>log<em>n</em>)</span></p></li>
+<li><p>也可以使用珂朵莉树。</p></li>
 </ul>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdlib&gt;</span></span>
@@ -537,6 +648,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
                 
             </div>
             <hr/>
@@ -1246,7 +1358,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">164.3k</span>
             
             
             

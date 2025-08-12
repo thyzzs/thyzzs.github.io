@@ -5,8 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="【笔记】Knuth-Morris-Pratt 算法, 天何言哉">
-    <meta name="description" content="Part 1 简介模式串匹配，就是给定一个需要处理的文本串（理论上应该很长）和一个需要在文本串中搜索的模式串（理论上长度应该远小于文本串），查询在该文本串中，给出的模式串的出现有无、次数、位置等。 
-Part 2 前缀函数给定一个长度为 $">
+    <meta name="description" content="Part 1 简介
+模式串匹配，就是给定一个需要处理的文本串（理论上应该很长）和一个需要在文本串中搜索的模式串（理论上长度应该远小于文本串），查询在该文本串中，给出的模式串的出现有无、次数、位置等。
+Part 2 前缀函数
+给定一个长度为 ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -64,7 +66,119 @@ Part 2 前缀函数给定一个长度为 $">
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -415,7 +529,7 @@ Part 2 前缀函数给定一个长度为 $">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    515
+                    511
                 </div>
                 
 
@@ -440,10 +554,18 @@ Part 2 前缀函数给定一个长度为 $">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Part-1-简介"><a href="#Part-1-简介" class="headerlink" title="Part 1 简介"></a>Part 1 简介</h3><p>模式串匹配，就是给定一个需要处理的文本串（理论上应该很长）和一个需要在文本串中搜索的模式串（理论上长度应该远小于文本串），查询在该文本串中，给出的模式串的出现有无、次数、位置等。 </p>
-<h3 id="Part-2-前缀函数"><a href="#Part-2-前缀函数" class="headerlink" title="Part 2 前缀函数"></a>Part 2 前缀函数</h3><p>给定一个长度为 $n$ 的字符串 ，其<strong>前缀函数</strong>被定义为一个长度为 $n$ 的数组$Next$。其中 $n$ 为既是子串 $s[0…i]$ 的前缀同时也是该子串的后缀的最长真前缀（proper prefix）长度。一个字符串的真前缀是其前缀但不等于该字符串自身。根据定义， $Next[0] = 0$ 。 </p>
-<script type="math/tex; mode=display">
-Next[i] = \max_{k = 0 \dots i}\{k: s[0 \dots k - 1] = s[i - (k - 1) \dots i]\}</script><h3 id="Part-3-KMP代码实现"><a href="#Part-3-KMP代码实现" class="headerlink" title="Part 3 KMP代码实现"></a>Part 3 KMP代码实现</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
+                <h3 id="part-1-简介">Part 1 简介</h3>
+<p>模式串匹配，就是给定一个需要处理的文本串（理论上应该很长）和一个需要在文本串中搜索的模式串（理论上长度应该远小于文本串），查询在该文本串中，给出的模式串的出现有无、次数、位置等。</p>
+<h3 id="part-2-前缀函数">Part 2 前缀函数</h3>
+<p>给定一个长度为 <span class="math inline"><em>n</em></span> 的字符串
+，其<strong>前缀函数</strong>被定义为一个长度为 <span class="math inline"><em>n</em></span> 的数组<span class="math inline"><em>N</em><em>e</em><em>x</em><em>t</em></span>。其中
+<span class="math inline"><em>n</em></span> 为既是子串 <span class="math inline"><em>s</em>[0...<em>i</em>]</span>
+的前缀同时也是该子串的后缀的最长真前缀（proper
+prefix）长度。一个字符串的真前缀是其前缀但不等于该字符串自身。根据定义，
+<span class="math inline"><em>N</em><em>e</em><em>x</em><em>t</em>[0] = 0</span>
+。 <span class="math display"><em>N</em><em>e</em><em>x</em><em>t</em>[<em>i</em>] = max<sub><em>k</em> = 0…<em>i</em></sub>{<em>k</em> : <em>s</em>[0…<em>k</em>−1] = <em>s</em>[<em>i</em>−(<em>k</em>−1)…<em>i</em>]}</span></p>
+<h3 id="part-3-kmp代码实现">Part 3 KMP代码实现</h3>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
  * @Author: thyzzs
  * @Date: 2019-11-13 15:27:35
  * @LastEditTime: 2019-11-13 16:48:08
@@ -1215,7 +1337,7 @@ Next[i] = \max_{k = 0 \dots i}\{k: s[0 \dots k - 1] = s[i - (k - 1) \dots i]\}</
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">164.3k</span>
             
             
             

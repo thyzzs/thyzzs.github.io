@@ -5,9 +5,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="【笔记】基于链式前向星的图论算法（二） 最短路, 天何言哉">
-    <meta name="description" content="Part 1 单源最短路（SSSP）DijkstraDijkstra只能用于无负权边的图。
-设图$G=(V,E)$所有顶点的集合为$V$，起点为$s$,最短路径树中包含的顶点集合为$S$。
-在各计算步骤中，我们将选岀最短路径树的边和顶点并将">
+    <meta name="description" content="Part 1 单源最短路（SSSP）
+Dijkstra
+Dijkstra只能用于无负权边的图。
+设图G = (V,E)所有顶点的集合为V，起点为s,最短路径树中包含的顶点集合为S。
+在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -65,7 +67,119 @@
 
 <meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+<style>mjx-container[jax="SVG"] {
+  direction: ltr;
+}
+
+mjx-container[jax="SVG"] > svg {
+  overflow: visible;
+}
+
+mjx-container[jax="SVG"][display="true"] {
+  display: block;
+  text-align: center;
+  margin: 1em 0;
+}
+
+mjx-container[jax="SVG"][justify="left"] {
+  text-align: left;
+}
+
+mjx-container[jax="SVG"][justify="right"] {
+  text-align: right;
+}
+
+g[data-mml-node="merror"] > g {
+  fill: red;
+  stroke: red;
+}
+
+g[data-mml-node="merror"] > rect[data-background] {
+  fill: yellow;
+  stroke: none;
+}
+
+g[data-mml-node="mtable"] > line[data-line] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > rect[data-frame] {
+  stroke-width: 70px;
+  fill: none;
+}
+
+g[data-mml-node="mtable"] > .mjx-dashed {
+  stroke-dasharray: 140;
+}
+
+g[data-mml-node="mtable"] > .mjx-dotted {
+  stroke-linecap: round;
+  stroke-dasharray: 0,140;
+}
+
+g[data-mml-node="mtable"] > svg {
+  overflow: visible;
+}
+
+[jax="SVG"] mjx-tool {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+}
+
+[jax="SVG"] mjx-tool > mjx-tip {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+mjx-tool > mjx-tip {
+  display: inline-block;
+  padding: .2em;
+  border: 1px solid #888;
+  font-size: 70%;
+  background-color: #F8F8F8;
+  color: black;
+  box-shadow: 2px 2px 5px #AAAAAA;
+}
+
+g[data-mml-node="maction"][data-toggle] {
+  cursor: pointer;
+}
+
+mjx-status {
+  display: block;
+  position: fixed;
+  left: 1em;
+  bottom: 1em;
+  min-width: 25%;
+  padding: .2em .4em;
+  border: 1px solid #888;
+  font-size: 90%;
+  background-color: #F8F8F8;
+  color: black;
+}
+
+foreignObject[data-mjx-xml] {
+  font-family: initial;
+  line-height: normal;
+  overflow: visible;
+}
+
+.MathJax path {
+  stroke-width: 3;
+}
+
+mjx-container[display="true"] {
+  overflow: auto hidden;
+}
+
+mjx-container[display="true"] + br {
+  display: none;
+}
+</style><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -416,7 +530,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.6k
+                    1.5k
                 </div>
                 
 
@@ -441,22 +555,20 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Part-1-单源最短路（SSSP）"><a href="#Part-1-单源最短路（SSSP）" class="headerlink" title="Part 1 单源最短路（SSSP）"></a>Part 1 单源最短路（SSSP）</h3><h4 id="Dijkstra"><a href="#Dijkstra" class="headerlink" title="Dijkstra"></a>Dijkstra</h4><p><strong>Dijkstra只能用于无负权边的图。</strong></p>
-<p>设图$G=(V,E)$所有顶点的集合为$V$，起点为$s$,最短路径树中包含的顶点集合为$S$。</p>
-<p>在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至$S$。</p>
-<p>对于各顶点$i$，设仅经由$S$内顶点的$s$到$i$的最短路径成本为$d[i]$，$i$在最短路径树中的父结点为$p[i]$。</p>
+                <h3 id="part-1-单源最短路sssp">Part 1 单源最短路（SSSP）</h3>
+<h4 id="dijkstra">Dijkstra</h4>
+<p><strong>Dijkstra只能用于无负权边的图。</strong></p>
+<p>设图<span class="math inline"><em>G</em> = (<em>V</em>,<em>E</em>)</span>所有顶点的集合为<span class="math inline"><em>V</em></span>，起点为<span class="math inline"><em>s</em></span>,最短路径树中包含的顶点集合为<span class="math inline"><em>S</em></span>。</p>
+<p>在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至<span class="math inline"><em>S</em></span>。</p>
+<p>对于各顶点<span class="math inline"><em>i</em></span>，设仅经由<span class="math inline"><em>S</em></span>内顶点的<span class="math inline"><em>s</em></span>到<span class="math inline"><em>i</em></span>的最短路径成本为<span class="math inline"><em>d</em>[<em>i</em>]</span>，<span class="math inline"><em>i</em></span>在最短路径树中的父结点为<span class="math inline"><em>p</em>[<em>i</em>]</span>。</p>
 <ul>
-<li><p>初始状态下将$S$置空。</p>
-<p>初始化$S$的$d[s] = 0$；除s以外，所有属于V的顶点i的$d[i]=\infty$</p>
-</li>
-<li><p>循环进行下述处理，直至$S=F$为止。</p>
+<li><p>初始状态下将<span class="math inline"><em>S</em></span>置空。</p>
+<p>初始化<span class="math inline"><em>S</em></span>的<span class="math inline"><em>d</em>[<em>s</em>] = 0</span>；除s以外，所有属于V的顶点i的<span class="math inline"><em>d</em>[<em>i</em>] = ∞</span></p></li>
+<li><p>循环进行下述处理，直至<span class="math inline"><em>S</em> = <em>F</em></span>为止。</p>
 <ul>
-<li><p>从$V-S$中选岀$d[u]$最小的顶点$u$</p>
-</li>
-<li><p>将$u$添加$S$至，同时将与$u$相邻且属于$V-S$的所有顶点$v$的值按下述方式更新：</p>
-</li>
-</ul>
-</li>
+<li><p>从<span class="math inline"><em>V</em> − <em>S</em></span>中选岀<span class="math inline"><em>d</em>[<em>u</em>]</span>最小的顶点<span class="math inline"><em>u</em></span></p></li>
+<li><p>将<span class="math inline"><em>u</em></span>添加<span class="math inline"><em>S</em></span>至，同时将与<span class="math inline"><em>u</em></span>相邻且属于<span class="math inline"><em>V</em> − <em>S</em></span>的所有顶点<span class="math inline"><em>v</em></span>的值按下述方式更新：</p></li>
+</ul></li>
 </ul>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">if</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token function">w</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token operator">&lt;</span> d<span class="token punctuation">[</span>v<span class="token punctuation">]</span>
     d<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token function">w</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
@@ -485,8 +597,10 @@
                     d<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> M<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>v<span class="token punctuation">]</span>
                     p<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> u
                     color<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> GRAY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>邻接矩阵实现的Dijkstra算法复杂度为$O(|V|^2)$。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为$O(|E|)$。<br>但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是$O(|V|^2)$。</p>
-<h4 id="Dijkstra堆优化"><a href="#Dijkstra堆优化" class="headerlink" title="Dijkstra堆优化"></a>Dijkstra堆优化</h4><p>把每个顶点当前的最短距离用堆维护，可以省去松弛和查找操作，直接把节点和数据丢进优先队列。</p>
+<p>邻接矩阵实现的Dijkstra算法复杂度为<span class="math inline"><em>O</em>(|<em>V</em>|<sup>2</sup>)</span>。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为<span class="math inline"><em>O</em>(|<em>E</em>|)</span>。
+但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是<span class="math inline"><em>O</em>(|<em>V</em>|<sup>2</sup>)</span>。</p>
+<h4 id="dijkstra堆优化">Dijkstra堆优化</h4>
+<p>把每个顶点当前的最短距离用堆维护，可以省去松弛和查找操作，直接把节点和数据丢进优先队列。</p>
 <p>更新最短距离时，每次从堆中取出的最小值就是下一次要使用的顶点。</p>
 <p>在使用堆优化时，加入堆的应为当前将要被更新的点的编号和当前距离；而当距离被更新时，应新加入一个包含当前点的编号和当前距离的节点。</p>
 <ul>
@@ -565,19 +679,17 @@ vector<span class="token operator">&lt;</span>edge<span class="token operator">&
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Bellman-Ford"><a href="#Bellman-Ford" class="headerlink" title="Bellman-Ford"></a>Bellman-Ford</h4><p>Bellman-Ford算法基于动态规划的思想，即反复用已有的边来更新最短距离。即如果$d[u] + cost(u, v) &lt; d[v]$则更新d[v]。</p>
-<p>因为最短路经过的边数量不超过n − 1，所以至多n − 1次更新后d[x]即为源点S到地图上其余每个点的最短距离。</p>
+<h4 id="bellman-ford">Bellman-Ford</h4>
+<p>Bellman-Ford算法基于动态规划的思想，即反复用已有的边来更新最短距离。即如果<span class="math inline"><em>d</em>[<em>u</em>] + <em>c</em><em>o</em><em>s</em><em>t</em>(<em>u</em>,<em>v</em>) &lt; <em>d</em>[<em>v</em>]</span>则更新d[v]。</p>
+<p>因为最短路经过的边数量不超过n − 1，所以至多n −
+1次更新后d[x]即为源点S到地图上其余每个点的最短距离。</p>
 <ul>
-<li><p>d[S] = 0，其余d[x] = INF</p>
-</li>
-<li><p>对于每条边$(u, v)$，如果$d[u] &lt; INF$且$d[u] + cost(u, v) &lt; d[v]$，则$d[v] = d[u] + cost(u, v) &lt; d[v]$</p>
-</li>
-<li><p>循环上一步至多n − 1次</p>
-</li>
-<li><p>对于每条边$(u, v)$，如果$d[u] &lt; INF$且$d[u] + cost(u, v) &lt; d[v]$，则图中存在负权回路</p>
-</li>
+<li><p>d[S] = 0，其余d[x] = INF</p></li>
+<li><p>对于每条边<span class="math inline">(<em>u</em>,<em>v</em>)</span>，如果<span class="math inline"><em>d</em>[<em>u</em>] &lt; <em>I</em><em>N</em><em>F</em></span>且<span class="math inline"><em>d</em>[<em>u</em>] + <em>c</em><em>o</em><em>s</em><em>t</em>(<em>u</em>,<em>v</em>) &lt; <em>d</em>[<em>v</em>]</span>，则<span class="math inline"><em>d</em>[<em>v</em>] = <em>d</em>[<em>u</em>] + <em>c</em><em>o</em><em>s</em><em>t</em>(<em>u</em>,<em>v</em>) &lt; <em>d</em>[<em>v</em>]</span></p></li>
+<li><p>循环上一步至多n − 1次</p></li>
+<li><p>对于每条边<span class="math inline">(<em>u</em>,<em>v</em>)</span>，如果<span class="math inline"><em>d</em>[<em>u</em>] &lt; <em>I</em><em>N</em><em>F</em></span>且<span class="math inline"><em>d</em>[<em>u</em>] + <em>c</em><em>o</em><em>s</em><em>t</em>(<em>u</em>,<em>v</em>) &lt; <em>d</em>[<em>v</em>]</span>，则图中存在负权回路</p></li>
 </ul>
-<p>总时间复杂度$O(nm)$</p>
+<p>总时间复杂度<span class="math inline"><em>O</em>(<em>n</em><em>m</em>)</span></p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
  * @Author: thyzzs
  * @Date: 2019-11-06 19:00:52
@@ -632,13 +744,18 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
 	<span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="Bellman-Ford队列优化（SPFA）"><a href="#Bellman-Ford队列优化（SPFA）" class="headerlink" title="Bellman-Ford队列优化（SPFA）"></a>Bellman-Ford队列优化（SPFA）</h4><p>SPFA队列优化在随机数据下复杂度较优，但在构造数据下容易被卡。</p>
+<h4 id="bellman-ford队列优化spfa">Bellman-Ford队列优化（SPFA）</h4>
+<p>SPFA队列优化在随机数据下复杂度较优，但在构造数据下容易被卡。</p>
 <p>通常来讲，就是有网格套链式菊花图外挂诱导次短路节点就可以用一个数据卡掉所有的SPFA。</p>
-<h3 id="Part-2-所有点对间最短路径（APSP）"><a href="#Part-2-所有点对间最短路径（APSP）" class="headerlink" title="Part 2 所有点对间最短路径（APSP）"></a>Part 2 所有点对间最短路径（APSP）</h3><p>所有点对间最短路径问题（All Pairs Shortest Path, APSP) 是以图$G = (V, E)$为对象，求$G$中每两点之间的最短路径（距离）的问题。</p>
-<h4 id="Dijkstra-1"><a href="#Dijkstra-1" class="headerlink" title="Dijkstra"></a>Dijkstra</h4><p>如果$G$中不存在权值为负的边，我们可以将各个顶点作为起点执行$|K|$次Dijkstra算法来求解这类问题。</p>
-<p>这样做的算法复杂度为$O(|V|^3)$</p>
-<p>用优先级队列实现的话可以简化至$O(|V|(|E|+|V|) \log |V|)$</p>
-<h4 id="Floyd"><a href="#Floyd" class="headerlink" title="Floyd"></a>Floyd</h4><p><strong>使用邻接矩阵存图</strong></p>
+<h3 id="part-2-所有点对间最短路径apsp">Part 2
+所有点对间最短路径（APSP）</h3>
+<p>所有点对间最短路径问题（All Pairs Shortest Path, APSP) 是以图<span class="math inline"><em>G</em> = (<em>V</em>,<em>E</em>)</span>为对象，求<span class="math inline"><em>G</em></span>中每两点之间的最短路径（距离）的问题。</p>
+<h4 id="dijkstra-1">Dijkstra</h4>
+<p>如果<span class="math inline"><em>G</em></span>中不存在权值为负的边，我们可以将各个顶点作为起点执行<span class="math inline">|<em>K</em>|</span>次Dijkstra算法来求解这类问题。</p>
+<p>这样做的算法复杂度为<span class="math inline"><em>O</em>(|<em>V</em>|<sup>3</sup>)</span></p>
+<p>用优先级队列实现的话可以简化至<span class="math inline"><em>O</em>(|<em>V</em>|(|<em>E</em>|+|<em>V</em>|)log|<em>V</em>|)</span></p>
+<h4 id="floyd">Floyd</h4>
+<p><strong>使用邻接矩阵存图</strong></p>
 <p>先初始化f[i][i] = 0；若i不能到j，f[i][j] = INF</p>
 <p>若从i到j有一条边权为a[i][j]的边，则f[i][j] = a[i][j]</p>
 <p>Floyd的本质是一个三维的DP，f[k][i][j]表示可以用1到k的点作为中间点从i到j的最短距离。</p>
@@ -646,10 +763,8 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
 <p>而实际我们可以去掉k这一维</p>
 <p><code>f[i][j] = min(f[i][j], f[i][k] + f[k][j])</code></p>
 <ul>
-<li><p>值f[i][j]不变就对应<code>f[k][i][j] = f[k − 1][i][j]</code></p>
-</li>
-<li><p>值改变就对应<code>f[k][i][j] = f[k − 1][i][k] + f[k − 1][k][j]</code></p>
-</li>
+<li><p>值f[i][j]不变就对应<code>f[k][i][j] = f[k − 1][i][j]</code></p></li>
+<li><p>值改变就对应<code>f[k][i][j] = f[k − 1][i][k] + f[k − 1][k][j]</code></p></li>
 </ul>
 
                 
@@ -1361,7 +1476,7 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">164.3k</span>
             
             
             
