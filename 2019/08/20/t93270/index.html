@@ -12,21 +12,15 @@
 
 60%的题解：
 
-坐标值很小，可以尝试用链表，可以做到的时间复杂度
+坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度
 
 100%的题解：
 
 
-套
+$map$套$multiset$
 
 
-坐标开个，里面存的是每个坐标的不同坐标，这些坐标用保存。
-
-
-坐标也同理开一个。
-
-
-">
+$X$坐标开个$mapx$，里面存的是每个$">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -82,9 +76,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -435,7 +429,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    438
+                    465
                 </div>
                 
 
@@ -467,24 +461,24 @@
 </ul>
 <h4 id="60-的题解：">60%的题解：</h4>
 <ul>
-<li>坐标值很小，可以尝试用链表，可以做到<img src="https://math.now.sh?inline=O%28n%29" style="display:inline-block;margin: 0;">的时间复杂度</li>
+<li>坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度</li>
 </ul>
 <h4 id="100-的题解：">100%的题解：</h4>
 <ul>
 <li>
-<p><img src="https://math.now.sh?inline=map" style="display:inline-block;margin: 0;">套<img src="https://math.now.sh?inline=multiset" style="display:inline-block;margin: 0;"></p>
+<p>$map$套$multiset$</p>
 </li>
 <li>
-<p><img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">坐标开个<img src="https://math.now.sh?inline=mapx" style="display:inline-block;margin: 0;">，里面存的是每个<img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">坐标的不同<img src="https://math.now.sh?inline=Y" style="display:inline-block;margin: 0;">坐标，这些<img src="https://math.now.sh?inline=Y" style="display:inline-block;margin: 0;">坐标用<img src="https://math.now.sh?inline=multiset" style="display:inline-block;margin: 0;">保存。</p>
+<p>$X$坐标开个$mapx$，里面存的是每个$X$坐标的不同$Y$坐标，这些$Y$坐标用$multiset$保存。</p>
 </li>
 <li>
-<p><img src="https://math.now.sh?inline=Y" style="display:inline-block;margin: 0;">坐标也同理开一个<img src="https://math.now.sh?inline=mapy" style="display:inline-block;margin: 0;">。</p>
+<p>$Y$坐标也同理开一个$mapy$。</p>
 </li>
 <li>
-<p>统计点的时候，以平行于<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">轴的轰炸带为例，在<img src="https://math.now.sh?inline=X" style="display:inline-block;margin: 0;">坐标的<img src="https://math.now.sh?inline=mapx" style="display:inline-block;margin: 0;">中，枚举所有在<img src="https://math.now.sh?inline=n1-n2" style="display:inline-block;margin: 0;">范围内的<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">，然后统计每个x里面所有的<img src="https://math.now.sh?inline=y" style="display:inline-block;margin: 0;">，同时删去在<img src="https://math.now.sh?inline=mapy" style="display:inline-block;margin: 0;">中对应的点，最后把<img src="https://math.now.sh?inline=mapx" style="display:inline-block;margin: 0;">中<img src="https://math.now.sh?inline=n1-n2" style="display:inline-block;margin: 0;">范围的所有元素都删掉。</p>
+<p>统计点的时候，以平行于$y$轴的轰炸带为例，在$X$坐标的$mapx$中，枚举所有在$n1-n2$范围内的$x$，然后统计每个x里面所有的$y$，同时删去在$mapy$中对应的点，最后把$mapx$中$n1-n2$范围的所有元素都删掉。</p>
 </li>
 <li>
-<p>时间复杂度<img src="https://math.now.sh?inline=O%28n%20%5Clog%20n%29" style="display:inline-block;margin: 0;"></p>
+<p>时间复杂度$O(n \log n)$</p>
 </li>
 <li>
 <p>也可以使用珂朵莉树。</p>
@@ -1184,6 +1178,13 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1259,7 +1260,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">178.6k</span>
+                        class="white-color">190.5k</span>
             
             
             

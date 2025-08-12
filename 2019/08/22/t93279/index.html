@@ -12,12 +12,12 @@
 
 60%的题解：
 
-,可以直接地做满分题解所说的DP。
+$N&amp;lt;=1000$,可以直接$n^2$地做满分题解所说的DP。
 
 满分题解：
 
 
-表示以从以为根节点的子树中出发，以为结束点的LIS，同样设计一个表示">
+$F1[i]$表示以从以$i$为根">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -73,9 +73,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -426,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    602
+                    635
                 </div>
                 
 
@@ -458,21 +458,21 @@
 </ul>
 <h3 id="60-的题解：">60%的题解：</h3>
 <ul>
-<li><img src="https://math.now.sh?inline=N%3C%3D1000" style="display:inline-block;margin: 0;">,可以直接<img src="https://math.now.sh?inline=n%5E2" style="display:inline-block;margin: 0;">地做满分题解所说的DP。</li>
+<li>$N&lt;=1000$,可以直接$n^2$地做满分题解所说的DP。</li>
 </ul>
 <h3 id="满分题解：">满分题解：</h3>
 <ul>
 <li>
-<p><img src="https://math.now.sh?inline=F1%5Bi%5D" style="display:inline-block;margin: 0;">表示以从以<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">为根节点的子树中出发，以<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">为结束点的LIS，同样设计一个<img src="https://math.now.sh?inline=F2%5Bi%5D" style="display:inline-block;margin: 0;">表示相同意思的LDS。</p>
+<p>$F1[i]$表示以从以$i$为根节点的子树中出发，以$i$为结束点的LIS，同样设计一个$F2[i]$表示相同意思的LDS。</p>
 </li>
 <li>
-<p>用动态开点的线段树维护，以权值为下标，记录<img src="https://math.now.sh?inline=F1" style="display:inline-block;margin: 0;">、<img src="https://math.now.sh?inline=F2" style="display:inline-block;margin: 0;">的值。</p>
+<p>用动态开点的线段树维护，以权值为下标，记录$F1$、$F2$的值。</p>
 </li>
 <li>
-<p>计算<img src="https://math.now.sh?inline=u" style="display:inline-block;margin: 0;">节点的<img src="https://math.now.sh?inline=F" style="display:inline-block;margin: 0;">值时，如果是计算<img src="https://math.now.sh?inline=F1" style="display:inline-block;margin: 0;">,那么在子树中的<img src="https://math.now.sh?inline=0%20-%20%28val%5Bu%5D-1%29" style="display:inline-block;margin: 0;">中找最大值，如果是计算<img src="https://math.now.sh?inline=F2" style="display:inline-block;margin: 0;">，那么找<img src="https://math.now.sh?inline=val%5Bu%5D%20-%20inf" style="display:inline-block;margin: 0;">中的最大值。</p>
+<p>计算$u$节点的$F$值时，如果是计算$F1$,那么在子树中的$0 - (val[u]-1)$中找最大值，如果是计算$F2$，那么找$val[u] - inf$中的最大值。</p>
 </li>
 <li>
-<p>答案就是找最大的<img src="https://math.now.sh?inline=F1%5Bu%5D%2BF2%5Bu%5D-1" style="display:inline-block;margin: 0;">。注意子树的线段树最后要合并到父亲。时间复杂度<img src="https://math.now.sh?inline=O%28n%20%5Clog%20n%29" style="display:inline-block;margin: 0;"></p>
+<p>答案就是找最大的$F1[u]+F2[u]-1$。注意子树的线段树最后要合并到父亲。时间复杂度$O(n \log n)$</p>
 </li>
 </ul>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">// luogu-judger-enable-o2</span>
@@ -1211,6 +1211,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1286,7 +1293,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">178.6k</span>
+                        class="white-color">190.5k</span>
             
             
             

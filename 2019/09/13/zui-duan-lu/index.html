@@ -8,9 +8,8 @@
     <meta name="description" content="Part 1 单源最短路（SSSP）
 Dijkstra
 Dijkstra只能用于无负权边的图。
-设图所有顶点的集合为，起点为,最短路径树中包含的顶点集合为。
-在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至。
-对于各顶点，设仅经由">
+设图$G=(V,E)$所有顶点的集合为$V$，起点为$s$,最短路径树中包含的顶点集合为$S$。
+在各计算步骤中，我们将选岀最短路径树的边和顶点">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -66,9 +65,9 @@ Dijkstra只能用于无负权边的图。
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -419,14 +418,14 @@ Dijkstra只能用于无负权边的图。
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    1.4k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    6 Min
+                    7 Min
                 </div>
                 
 
@@ -447,22 +446,22 @@ Dijkstra只能用于无负权边的图。
                 <h3 id="Part-1-单源最短路（SSSP）">Part 1 单源最短路（SSSP）</h3>
 <h4 id="Dijkstra">Dijkstra</h4>
 <p><strong>Dijkstra只能用于无负权边的图。</strong></p>
-<p>设图<img src="https://math.now.sh?inline=G%3D%28V%2CE%29" style="display:inline-block;margin: 0;">所有顶点的集合为<img src="https://math.now.sh?inline=V" style="display:inline-block;margin: 0;">，起点为<img src="https://math.now.sh?inline=s" style="display:inline-block;margin: 0;">,最短路径树中包含的顶点集合为<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">。</p>
-<p>在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">。</p>
-<p>对于各顶点<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">，设仅经由<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">内顶点的<img src="https://math.now.sh?inline=s" style="display:inline-block;margin: 0;">到<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">的最短路径成本为<img src="https://math.now.sh?inline=d%5Bi%5D" style="display:inline-block;margin: 0;">，<img src="https://math.now.sh?inline=i" style="display:inline-block;margin: 0;">在最短路径树中的父结点为<img src="https://math.now.sh?inline=p%5Bi%5D" style="display:inline-block;margin: 0;">。</p>
+<p>设图$G=(V,E)$所有顶点的集合为$V$，起点为$s$,最短路径树中包含的顶点集合为$S$。</p>
+<p>在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至$S$。</p>
+<p>对于各顶点$i$，设仅经由$S$内顶点的$s$到$i$的最短路径成本为$d[i]$，$i$在最短路径树中的父结点为$p[i]$。</p>
 <ul>
 <li>
-<p>初始状态下将<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">置空。</p>
-<p>初始化<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">的<img src="https://math.now.sh?inline=d%5Bs%5D%20%3D%200" style="display:inline-block;margin: 0;">；除s以外，所有属于V的顶点i的<img src="https://math.now.sh?inline=d%5Bi%5D%3D%5Cinfty" style="display:inline-block;margin: 0;"></p>
+<p>初始状态下将$S$置空。</p>
+<p>初始化$S$的$d[s] = 0$；除s以外，所有属于V的顶点i的$d[i]=\infty$</p>
 </li>
 <li>
-<p>循环进行下述处理，直至<img src="https://math.now.sh?inline=S%3DF" style="display:inline-block;margin: 0;">为止。</p>
+<p>循环进行下述处理，直至$S=F$为止。</p>
 <ul>
 <li>
-<p>从<img src="https://math.now.sh?inline=V-S" style="display:inline-block;margin: 0;">中选岀<img src="https://math.now.sh?inline=d%5Bu%5D" style="display:inline-block;margin: 0;">最小的顶点<img src="https://math.now.sh?inline=u" style="display:inline-block;margin: 0;"></p>
+<p>从$V-S$中选岀$d[u]$最小的顶点$u$</p>
 </li>
 <li>
-<p>将<img src="https://math.now.sh?inline=u" style="display:inline-block;margin: 0;">添加<img src="https://math.now.sh?inline=S" style="display:inline-block;margin: 0;">至，同时将与<img src="https://math.now.sh?inline=u" style="display:inline-block;margin: 0;">相邻且属于<img src="https://math.now.sh?inline=V-S" style="display:inline-block;margin: 0;">的所有顶点<img src="https://math.now.sh?inline=v" style="display:inline-block;margin: 0;">的值按下述方式更新：</p>
+<p>将$u$添加$S$至，同时将与$u$相邻且属于$V-S$的所有顶点$v$的值按下述方式更新：</p>
 </li>
 </ul>
 </li>
@@ -494,8 +493,8 @@ Dijkstra只能用于无负权边的图。
                     d<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> M<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>v<span class="token punctuation">]</span>
                     p<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> u
                     color<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> GRAY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>邻接矩阵实现的Dijkstra算法复杂度为<img src="https://math.now.sh?inline=O%28%7CV%7C%5E2%29" style="display:inline-block;margin: 0;">。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为<img src="https://math.now.sh?inline=O%28%7CE%7C%29" style="display:inline-block;margin: 0;">。<br>
-但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是<img src="https://math.now.sh?inline=O%28%7CV%7C%5E2%29" style="display:inline-block;margin: 0;">。</p>
+<p>邻接矩阵实现的Dijkstra算法复杂度为$O(|V|^2)$。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为$O(|E|)$。<br>
+但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是$O(|V|^2)$。</p>
 <h4 id="Dijkstra堆优化">Dijkstra堆优化</h4>
 <p>把每个顶点当前的最短距离用堆维护，可以省去松弛和查找操作，直接把节点和数据丢进优先队列。</p>
 <p>更新最短距离时，每次从堆中取出的最小值就是下一次要使用的顶点。</p>
@@ -577,23 +576,23 @@ vector<span class="token operator">&lt;</span>edge<span class="token operator">&
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="Bellman-Ford">Bellman-Ford</h4>
-<p>Bellman-Ford算法基于动态规划的思想，即反复用已有的边来更新最短距离。即如果<img src="https://math.now.sh?inline=d%5Bu%5D%20%2B%20cost%28u%2C%20v%29%20%3C%20d%5Bv%5D" style="display:inline-block;margin: 0;">则更新d[v]。</p>
+<p>Bellman-Ford算法基于动态规划的思想，即反复用已有的边来更新最短距离。即如果$d[u] + cost(u, v) &lt; d[v]$则更新d[v]。</p>
 <p>因为最短路经过的边数量不超过n − 1，所以至多n − 1次更新后d[x]即为源点S到地图上其余每个点的最短距离。</p>
 <ul>
 <li>
 <p>d[S] = 0，其余d[x] = INF</p>
 </li>
 <li>
-<p>对于每条边<img src="https://math.now.sh?inline=%28u%2C%20v%29" style="display:inline-block;margin: 0;">，如果<img src="https://math.now.sh?inline=d%5Bu%5D%20%3C%20INF" style="display:inline-block;margin: 0;">且<img src="https://math.now.sh?inline=d%5Bu%5D%20%2B%20cost%28u%2C%20v%29%20%3C%20d%5Bv%5D" style="display:inline-block;margin: 0;">，则<img src="https://math.now.sh?inline=d%5Bv%5D%20%3D%20d%5Bu%5D%20%2B%20cost%28u%2C%20v%29%20%3C%20d%5Bv%5D" style="display:inline-block;margin: 0;"></p>
+<p>对于每条边$(u, v)$，如果$d[u] &lt; INF$且$d[u] + cost(u, v) &lt; d[v]$，则$d[v] = d[u] + cost(u, v) &lt; d[v]$</p>
 </li>
 <li>
 <p>循环上一步至多n − 1次</p>
 </li>
 <li>
-<p>对于每条边<img src="https://math.now.sh?inline=%28u%2C%20v%29" style="display:inline-block;margin: 0;">，如果<img src="https://math.now.sh?inline=d%5Bu%5D%20%3C%20INF" style="display:inline-block;margin: 0;">且<img src="https://math.now.sh?inline=d%5Bu%5D%20%2B%20cost%28u%2C%20v%29%20%3C%20d%5Bv%5D" style="display:inline-block;margin: 0;">，则图中存在负权回路</p>
+<p>对于每条边$(u, v)$，如果$d[u] &lt; INF$且$d[u] + cost(u, v) &lt; d[v]$，则图中存在负权回路</p>
 </li>
 </ul>
-<p>总时间复杂度<img src="https://math.now.sh?inline=O%28nm%29" style="display:inline-block;margin: 0;"></p>
+<p>总时间复杂度$O(nm)$</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
  * @Author: thyzzs
  * @Date: 2019-11-06 19:00:52
@@ -652,11 +651,11 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
 <p>SPFA队列优化在随机数据下复杂度较优，但在构造数据下容易被卡。</p>
 <p>通常来讲，就是有网格套链式菊花图外挂诱导次短路节点就可以用一个数据卡掉所有的SPFA。</p>
 <h3 id="Part-2-所有点对间最短路径（APSP）">Part 2 所有点对间最短路径（APSP）</h3>
-<p>所有点对间最短路径问题（All Pairs Shortest Path, APSP) 是以图<img src="https://math.now.sh?inline=G%20%3D%20%28V%2C%20E%29" style="display:inline-block;margin: 0;">为对象，求<img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;">中每两点之间的最短路径（距离）的问题。</p>
+<p>所有点对间最短路径问题（All Pairs Shortest Path, APSP) 是以图$G = (V, E)$为对象，求$G$中每两点之间的最短路径（距离）的问题。</p>
 <h4 id="Dijkstra-2">Dijkstra</h4>
-<p>如果<img src="https://math.now.sh?inline=G" style="display:inline-block;margin: 0;">中不存在权值为负的边，我们可以将各个顶点作为起点执行<img src="https://math.now.sh?inline=%7CK%7C" style="display:inline-block;margin: 0;">次Dijkstra算法来求解这类问题。</p>
-<p>这样做的算法复杂度为<img src="https://math.now.sh?inline=O%28%7CV%7C%5E3%29" style="display:inline-block;margin: 0;"></p>
-<p>用优先级队列实现的话可以简化至<img src="https://math.now.sh?inline=O%28%7CV%7C(%7CE%7C%2B%7CV%7C%29%20%5Clog%20%7CV%7C)" style="display:inline-block;margin: 0;"></p>
+<p>如果$G$中不存在权值为负的边，我们可以将各个顶点作为起点执行$|K|$次Dijkstra算法来求解这类问题。</p>
+<p>这样做的算法复杂度为$O(|V|^3)$</p>
+<p>用优先级队列实现的话可以简化至$O(|V|(|E|+|V|) \log |V|)$</p>
 <h4 id="Floyd">Floyd</h4>
 <p><strong>使用邻接矩阵存图</strong></p>
 <p>先初始化f[i][i] = 0；若i不能到j，f[i][j] = INF</p>
@@ -1301,6 +1300,13 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1376,7 +1382,7 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">178.6k</span>
+                        class="white-color">190.5k</span>
             
             
             

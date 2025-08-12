@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -414,7 +414,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    858
+                    944
                 </div>
                 
 
@@ -443,8 +443,8 @@
 <p><strong>可持久化线段树</strong>(在中国国内信息学竞赛社区中又称<strong>总书记树</strong>、<strong>主席树</strong>或<strong>函数式线段树</strong>)是一种<strong>可持久化数据结构</strong>（Persistent data structure）. 由于引入者黄嘉泰姓名的缩写与前中共中央总书记、国家主席胡锦涛相同，因此这种数据结构也可被称为<strong>总书记树</strong>或<strong>主席树</strong>。这种数据结构在普通线段树的基础之上支持查询某个历史版本，同时时间复杂度与线段树是同级，空间复杂度相较而言更高。</p>
 <h3 id="Part-2-应用">Part 2 应用</h3>
 <h4 id="静态区间第k大数值">静态区间第k大数值</h4>
-<p>这类问题需要求解在一个长度为$ {\displaystyle n}$ 的数列中，第$ {\displaystyle i} <img src="https://math.now.sh?inline=%E4%B8%AA%E6%95%B0%E4%B8%BA" style="display:inline-block;margin: 0;"> {\displaystyle a_{i}}$. 现在给定一些形如 ${\displaystyle (l,r,k)} <img src="https://math.now.sh?inline=%E7%9A%84%E4%B8%89%E5%85%83%E7%BB%84%E4%BD%9C%E4%B8%BA%E8%AF%A2%E9%97%AE%EF%BC%8C%E8%AE%BE%E8%AE%A1%E7%A8%8B%E5%BA%8F%E8%AE%A1%E7%AE%97%E6%95%B0%E5%88%97%E7%AC%AC" style="display:inline-block;margin: 0;"> {\displaystyle l~r} <img src="https://math.now.sh?inline=%E8%BF%99%E4%BA%9B%E5%85%83%E7%B4%A0%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E6%8E%92%E5%9C%A8%E7%AC%AC" style="display:inline-block;margin: 0;"> {\displaystyle k} $位的是多少。</p>
-<p>利用可持久化线段树，维护区间$ {\displaystyle (l,r)} <img src="https://math.now.sh?inline=%E4%BB%A3%E8%A1%A8%E5%8C%BA%E9%97%B4" style="display:inline-block;margin: 0;"> {\displaystyle [l,r]} <img src="https://math.now.sh?inline=%E4%B8%AD%E7%9A%84%E5%85%83%E7%B4%A0%E5%87%BA%E7%8E%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E6%AC%A1%EF%BC%8C%E4%BB%A5%E6%AD%A4%E4%BD%9C%E4%B8%BA%E5%8E%9F%E5%A7%8B%E7%89%88%E6%9C%AC" style="display:inline-block;margin: 0;"> {\displaystyle S_{0}}$，此后每次建立一个新版本 <img src="https://math.now.sh?inline=%7B%5Cdisplaystyle%20S_%7Bi%7D%7D" style="display:inline-block;margin: 0;">，代表去掉原数列中 ${\displaystyle a_{0}~a_{i-1}} <img src="https://math.now.sh?inline=%E7%9A%84%E5%85%83%E7%B4%A0%E4%B9%8B%E5%90%8E%E5%BB%BA%E7%AB%8B%E7%9A%84%E7%BA%BF%E6%AE%B5%E6%A0%91%EF%BC%8C%E7%BB%B4%E6%8A%A4%E7%9B%AE%E6%A0%87%E4%B8%8E%E4%B8%8A%E8%BF%B0%E7%9B%B8%E5%90%8C%E3%80%82%E5%85%B7%E4%BD%93%E8%BF%87%E7%A8%8B%E5%8F%AF%E4%BB%A5%E6%AF%8F%E6%AC%A1%E5%B0%86" style="display:inline-block;margin: 0;"> {\displaystyle a_{i}}$的出现次数减一，并保存此时生成的新版本。</p>
+<p>这类问题需要求解在一个长度为$ {\displaystyle n}$ 的数列中，第$ {\displaystyle i} $个数为$ {\displaystyle a_{i}}$. 现在给定一些形如 ${\displaystyle (l,r,k)} $的三元组作为询问，设计程序计算数列第$ {\displaystyle l~r} $这些元素中出现次数排在第$ {\displaystyle k} $位的是多少。</p>
+<p>利用可持久化线段树，维护区间$ {\displaystyle (l,r)} $代表区间$ {\displaystyle [l,r]} $中的元素出现了多少次，以此作为原始版本$ {\displaystyle S_{0}}$，此后每次建立一个新版本 ${\displaystyle S_{i}}$，代表去掉原数列中 ${\displaystyle a_{0}~a_{i-1}} $的元素之后建立的线段树，维护目标与上述相同。具体过程可以每次将$ {\displaystyle a_{i}}$的出现次数减一，并保存此时生成的新版本。</p>
 <h3 id="Part-3-代码实现">Part 3 代码实现</h3>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio&gt;</span></span>
@@ -1162,6 +1162,13 @@
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1237,7 +1244,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">178.6k</span>
+                        class="white-color">190.5k</span>
             
             
             

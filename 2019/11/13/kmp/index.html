@@ -64,9 +64,9 @@ Part 2 前缀函数
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -417,7 +417,7 @@ Part 2 前缀函数
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    486
+                    515
                 </div>
                 
 
@@ -445,8 +445,11 @@ Part 2 前缀函数
                 <h3 id="Part-1-简介">Part 1 简介</h3>
 <p>模式串匹配，就是给定一个需要处理的文本串（理论上应该很长）和一个需要在文本串中搜索的模式串（理论上长度应该远小于文本串），查询在该文本串中，给出的模式串的出现有无、次数、位置等。</p>
 <h3 id="Part-2-前缀函数">Part 2 前缀函数</h3>
-<p>给定一个长度为 <img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"> 的字符串 ，其<strong>前缀函数</strong>被定义为一个长度为 <img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"> 的数组<img src="https://math.now.sh?inline=Next" style="display:inline-block;margin: 0;">。其中 <img src="https://math.now.sh?inline=n" style="display:inline-block;margin: 0;"> 为既是子串 <img src="https://math.now.sh?inline=s%5B0...i%5D" style="display:inline-block;margin: 0;"> 的前缀同时也是该子串的后缀的最长真前缀（proper prefix）长度。一个字符串的真前缀是其前缀但不等于该字符串自身。根据定义， <img src="https://math.now.sh?inline=Next%5B0%5D%20%3D%200" style="display:inline-block;margin: 0;"> 。</p>
-<p style=""><img src="https://math.now.sh?from=Next%5Bi%5D%20%3D%20%5Cmax_%7Bk%20%3D%200%20%5Cdots%20i%7D%5C%7Bk%3A%20s%5B0%20%5Cdots%20k%20-%201%5D%20%3D%20s%5Bi%20-%20%28k%20-%201%29%20%5Cdots%20i%5D%5C%7D%0A"></p><h3 id="Part-3-KMP代码实现">Part 3 KMP代码实现</h3>
+<p>给定一个长度为 $n$ 的字符串 ，其<strong>前缀函数</strong>被定义为一个长度为 $n$ 的数组$Next$。其中 $n$ 为既是子串 $s[0…i]$ 的前缀同时也是该子串的后缀的最长真前缀（proper prefix）长度。一个字符串的真前缀是其前缀但不等于该字符串自身。根据定义， $Next[0] = 0$ 。<br>
+$$<br>
+Next[i] = \max_{k = 0 \dots i}{k: s[0 \dots k - 1] = s[i - (k - 1) \dots i]}<br>
+$$</p>
+<h3 id="Part-3-KMP代码实现">Part 3 KMP代码实现</h3>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
  * @Author: thyzzs
  * @Date: 2019-11-13 15:27:35
@@ -1137,6 +1140,13 @@ Part 2 前缀函数
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1212,7 +1222,7 @@ Part 2 前缀函数
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">178.6k</span>
+                        class="white-color">190.5k</span>
             
             
             

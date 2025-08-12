@@ -7,8 +7,7 @@
     <meta name="keywords" content="【笔记】C++的常数优化技巧, 天何言哉">
     <meta name="description" content="Part 0 时间复杂度常数优化的意义
 在科学研究意义上，时间复杂度的常数优化并不是十分重要的。
-但在信息学竞赛中，同样的复杂度为的程序，对于一组  的数据，有的可能常数为20，需要运行1000ms，有的可能常数为5，需要运行500ms。
-">
+但在信息学竞赛中，同样的复杂度为$O(n^2)$的程序，对于一组 $n=5000$ 的数据，有的可能常数为20，需要运行1000ms，有的可能">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -64,9 +63,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -444,7 +443,7 @@
             <div id="articleContent">
                 <h3 id="Part-0-时间复杂度常数优化的意义">Part 0 时间复杂度常数优化的意义</h3>
 <p>在科学研究意义上，时间复杂度的常数优化并不是十分重要的。</p>
-<p>但在信息学竞赛中，同样的复杂度为<img src="https://math.now.sh?inline=O%28n%5E2%29" style="display:inline-block;margin: 0;">的程序，对于一组 <img src="https://math.now.sh?inline=n%3D5000" style="display:inline-block;margin: 0;"> 的数据，有的可能常数为20，需要运行1000ms，有的可能常数为5，需要运行500ms。</p>
+<p>但在信息学竞赛中，同样的复杂度为$O(n^2)$的程序，对于一组 $n=5000$ 的数据，有的可能常数为20，需要运行1000ms，有的可能常数为5，需要运行500ms。</p>
 <p>这样，两个看似相同的算法，一个超时错误，一个正确得分。</p>
 <p>同一个程序设计思想，用不同算法，会有不同的运行效率；而即使是同样的算法，由于在代码的细节方面设计有所不同，执行起来效率也会有所不同。</p>
 <p>当遇到所需时间较长的问题时，一个常数级优化可能是AC的关键所在。</p>
@@ -1234,6 +1233,13 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\\(', '\\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -1309,7 +1315,7 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">178.6k</span>
+                        class="white-color">190.5k</span>
             
             
             
