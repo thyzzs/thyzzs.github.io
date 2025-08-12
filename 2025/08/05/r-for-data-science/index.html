@@ -477,7 +477,6 @@ A &lt;- 2
  odbcConnectExcel('E:/b.xls') # 正确
  odbcConnectExcel('E:\\b.xls') # 正确
  odbcConnectExcel('E:\b.xls') # 错误<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 函数基本格式
 hi.world &lt;- function() {
 cat("Hello World!\n")
@@ -488,7 +487,6 @@ hi.world()
 source()
 edit()
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 包的安装
 install.packages('')
  # dependencies=TRUE (安装依赖包)
@@ -504,7 +502,6 @@ require()
 # 加载多个包
  x&lt;-c("plyr", "psych", "tm")
  lapply(x, require, character.only = TRUE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 帮助
 help(exp)
 ?exp
@@ -512,9 +509,8 @@ help(exp)
 example(exp)
 help.search("poisson")
 ??"poisson"<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h2><p>R是一种基于对象的语言。R的对象分为单纯对象和复合对象两种：<strong>单纯对象</strong>的所有元素都是同一数据类型（数值、字符串），元素不再是对象；<strong>复合对象</strong>的元素可是是不同的类型，每个元素是一个对象。</p>
-<p>在统计学中，变量分为<strong>名义变量(nominal variable)或分类变量(categorical variable)</strong>，和<strong>数值变量(numerical variable)</strong>。<br>在R中，变量类型可以归类为三种类型：名义型、有序型和连续型。<strong>名义型</strong>表示分类，并且类型之间没有顺序之分，如性别（男性和女性）；<strong>有序型</strong>也表示分类，不过类型之间存在顺序关系，而非数量关系，如近视程度（不近视、轻微近视、严重近视）；<strong>连续型</strong>呈现某个范围内的取值，同时存在顺序和数量上的区别，如年龄。<br><strong>其中，名义型变量和有序型变量在R中被称为<a href="#%E5%9B%A0%E5%AD%90">因子</a>。</strong></p>
+<p>在统计学中，变量分为<strong>名义变量(nominal variable)或分类变量(categorical variable)</strong>，和<strong>数值变量(numerical variable)</strong>。<br>在R中，变量类型可以归类为三种类型：名义型、有序型和连续型。<strong>名义型</strong>表示分类，并且类型之间没有顺序之分，如性别（男性和女性）；<strong>有序型</strong>也表示分类，不过类型之间存在顺序关系，而非数量关系，如近视程度（不近视、轻微近视、严重近视）；<strong>连续型</strong>呈现某个范围内的取值，同时存在顺序和数量上的区别，如年龄。<br><strong>其中，名义型变量和有序型变量在R中被称为<a href="#因子">因子</a>。</strong></p>
 <ul>
 <li><p><strong>R语言中S3,S4,RC结构详见：</strong>  </p>
 <ul>
@@ -557,7 +553,6 @@ Inf # ∞
 NA # 缺失值
 NULL # 空值
 NaN # Not a Number（数据不确定）<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">apply()  # 应用于矩阵、数据框或表（数据框和矩阵相似）
  apply(m, dimcode, f, fargs) # 详见#矩阵-对行列调用函数
 tapply() # 应用于原子型对象（向量）和因子
@@ -565,7 +560,6 @@ tapply() # 应用于原子型对象（向量）和因子
 lapply() # 应用于列表或数据框（数据框为列表的特例），返回列表
 sapply() # 应用于列表或数据框，可以返回列表、向量或矩阵
  lapply(m,f) # 详见列表-列表调用函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 类型转换函数(is./as.)
  # is. 判断数据类型，返回TRUE或FALSE
  is.na() # 是否缺失
@@ -592,12 +586,10 @@ sapply() # 应用于列表或数据框，可以返回列表、向量或矩阵
  as.factor()
  as.matrix()
  as.data.frame()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">names() # 向量元素的命名/数据集的列标签
 dimnames()
  dimnames(US_data)[[2]] # 输出列标签 相当于names()
  dimnames(US_data)[[1]] # 输出行标签<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">#数据整形
 reshape()/stack()/unstack() # 数据框/列表的长、宽格式之间转换
 
@@ -642,7 +634,6 @@ reshape()/stack()/unstack() # 数据框/列表的长、宽格式之间转换
  cast() # 还原数据及汇总
  cast(aq, Ozone+Month+Day~V.type)
  cast(aq, Month~V.type, fun.aggregate=mean, na.rm=TRUE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h3><ol>
 <li><strong>在R中，无法随意添加或删除元素，需要给向量重新赋值，后面的矩阵运算遵循相同规则；</strong></li>
 <li><strong>两个向量进行运算时，R会自动循环补齐，后面的矩阵运算遵循相同规则；</strong></li>
@@ -661,7 +652,6 @@ c() # 没有规则，很常用
 
 assign() # 赋值函数
 assign（"a",c(1,2,3,4,5,6,7,8,9))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 无法随意添加或删除元素，需要给向量重新赋值
 z &lt;- c(11, 13, 19, 23)
 z &lt;- c(z[1:2],17,z[3:4])
@@ -670,7 +660,6 @@ z &lt;- c(z[1:2],17,z[3:4])
 x &lt;- c(1,2,3)
 y &lt;- c(4,6,8,10,12)
 x + y<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 索引向量的语法规则为：向量1[向量2]
 x &lt;- c(0.1,0.2,0.3,0.4,0.5,0.6)
 x[c(2,4)]
@@ -693,7 +682,6 @@ subset()
  subset(a, a&gt;=0) # 区别体现subset()排除掉NA值
 which()/which.min()/which.max() # 返回元素的位置
  which(a&lt;0)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="因子"><a href="#因子" class="headerlink" title="因子"></a>因子</h3><p>在R中，因子可以看成一个包含了更多信息的向量，是将一个向量的重新“编码”；不同值的分类被称为“水平”。</p>
 <ol>
 <li><strong>将向量转化成因子，默认转化为名义型变量，如果要有目的地转化为有序型变量，需要设置参数order和levels.</strong></li>
@@ -743,7 +731,6 @@ by(X, INDEX, F) # tapply()函数的变种，X可以是数据框和矩阵
 
 split(X, f) # 形成分组 X为待处理数据，f为因子或因子列表
  split(wt,list(diet,gender))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>列表是R的结构型数据中最为复杂的一种，是向量的泛化，也就是对一些对象的有序集合。</p>
 <ol>
 <li><strong>列表元素访问时，双方括号返回对应元素的取值，单方括号返回原列表的字列表；</strong></li>
@@ -761,7 +748,6 @@ temp[["name"]] &lt;- "Cookie"
 a1 &lt;- list(name="Cookie", price=4.0, outdate=FALSE)
 a2 &lt;- list(name="Milk", price=2.0, outdate=TRUE)
 warehouse &lt;- list(a1, a2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 访问元素：双方括号返回对应元素的取值，单方括号返回原列表的字列表
 goods$name
 goods[["name"]]
@@ -798,7 +784,6 @@ lapply()
 sapply()
  sapply(temp,mean) # 返回向量
  sapply(temp,mean,simplify=FALSE,USE.NAMES=FALSE) # 等同于lapply(temp, mean)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="矩阵-数组"><a href="#矩阵-数组" class="headerlink" title="矩阵/数组"></a>矩阵/数组</h3><p>矩阵是一个二维数组，只是每个元素都拥有相同的模式（数值型、字符型或逻辑型），<strong>矩阵可通过函数matrix创建矩阵</strong>；数组与矩阵类似，但是维度可以大于2，<strong>数组可通过array函数创建</strong>。</p>
 <ol>
 <li><strong>在R中，矩阵的行列都是从1开始编号，矩阵是按列存储；</strong></li>
@@ -826,7 +811,6 @@ record["John", "Physics"]
 
 # drop=FALSE防止矩阵筛选后降维
 m[m[,1]%%2==1 &amp; m[,2]%%2==1 &amp; m[,3]%%2==1,drop=FALSE]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">rowSums()
 colSums()
 
@@ -856,7 +840,6 @@ apply(m, dimcode, f, fargs) # dimcode=1，对每行应用函数，dimcode=2，�
   }
  apply(m,1,outlier_value,1)
  apply(m,1,outlier_value,0)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="数据框"><a href="#数据框" class="headerlink" title="数据框"></a>数据框</h3><p>数据框（和矩阵相似）有行列两个维度，“列”表示变量，“行”表示变量的观察记录。<br>数据框的每列可以是不同的模式(mode)，更像是列表的扩展。每列相当于一个向量（列表），向量长度一致，如果不一致会按“循环补齐”原则补充完整。</p>
 <ol>
 <li><strong>在数据框进行行列添加时，rbind(),cbind(),transform()和within()会返回一个新的数据框，并不会对原数据框做任何更改，frame$newcolumm会对原数据直接进行修改。</strong></li>
@@ -867,7 +850,6 @@ apply(m, dimcode, f, fargs) # dimcode=1，对每行应用函数，dimcode=2，�
  degree &lt;- c("low","middle","high")
  myopia &lt;- data.frame(degree,male,female)
  myopia &lt;- data.frame(c("low","middle","high"),c(124,88,200),c(108,56,221))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 列表形式访问元素
  # 输出向量
  myopia$degree
@@ -924,7 +906,6 @@ merge()
 apply(tt[,2:3,drop=F],2,mean)
 lapply(students,sort)
 sapply(students,sort)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="表"><a href="#表" class="headerlink" title="表"></a>表</h3><p>表和矩阵或数据框十分相似，对表进行过复杂的操作都可以类比矩阵或数据框。</p>
 <ol>
 <li><strong>table()的原理是使用交叉分类因子创建列联表，记录每一个因子水平组合的频数；</strong></li>
@@ -945,13 +926,14 @@ dh_tab &lt;- table(list(D=artery$Diabetes,H=artery$Hypertension))
  apply(dh_tab,2,sum)
  # 使用addmargins()函数
  addmargins(dhs_tab)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="数据输入-输出"><a href="#数据输入-输出" class="headerlink" title="数据输入/输出"></a>数据输入/输出</h2><h3 id="数据输入"><a href="#数据输入" class="headerlink" title="数据输入"></a>数据输入</h3><ol>
 <li><strong>读取Excel数据的方法：</strong> <a target="_blank" rel="noopener" href="http://blog.csdn.net/cl1143015961/article/details/50035529">http://blog.csdn.net/cl1143015961/article/details/50035529</a></li>
 <li><ul>
-<li><strong>加载RODBC安装包如下如下问题：</strong><br>   [RODBC] ERROR: state IM002, code 0, message [Microsoft][ODBC 驱动程序管理器]</li>
-<li><strong>加载rJava安装包如下如下问题：</strong><br>  loadNamespace()里算’rJava’时.onLoad失败了，详细内容：<br>  调用: fun(libname, pkgname)<br>  错误: JAVA_HOME cannot be determined from the Registry  </li>
+<li><strong>加载RODBC安装包如下如下问题：</strong><br>   [RODBC] ERROR: state IM002, code 0, message [Microsoft][ODBC 驱动程序管理器]<ul>
+<li><strong>加载rJava安装包如下如下问题：</strong><br> loadNamespace()里算’rJava’时.onLoad失败了，详细内容：<br> 调用: fun(libname, pkgname)<br> 错误: JAVA_HOME cannot be determined from the Registry  </li>
 <li><strong>解决方法：使用R 32-bit系统</strong></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
@@ -960,7 +942,6 @@ detach() # 解除
 
 readline()
  website.address &lt;- readline("Please input the website address:\n")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="读取表格"><a href="#读取表格" class="headerlink" title="读取表格"></a>读取表格</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 读取表格
 read.table()/read.csv()/read.delim()
  -header # default = F(table), T(csv,delim)
@@ -975,10 +956,8 @@ read.table()/read.csv()/read.delim()
 
 read.fwf # 逐行读入数据
  -widths # 设置变量的宽度<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="读取网页"><a href="#读取网页" class="headerlink" title="读取网页"></a>读取网页</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 读取网页
 readHTMLTable() #XML安装包<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <h4 id="读取数据库和其他软件格式数据"><a href="#读取数据库和其他软件格式数据" class="headerlink" title="读取数据库和其他软件格式数据"></a>读取数据库和其他软件格式数据</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R"># RODBC安装包，ODBC为微软公司提供的多类数据库的接口（Access, SQL Sever, Excel等）
  odbcConnectExcel() # Excel
  odbcConnectExcel2007()
@@ -1026,14 +1005,12 @@ readHTMLTable() #XML安装包<span aria-hidden="true" class="line-numbers-rows">
 
 # 处理数据库数据
 略<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="数据输出"><a href="#数据输出" class="headerlink" title="数据输出"></a>数据输出</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R">cat()
  car = file("d:/car.txt")
  cat("Make lp100km mass.kg List.price", "\"Alpha Romeo\" 9.5 1242 38500", "\"Audi A3\" 8.8 1160 38700", file = car, sep = "\n")
  close(car)
 
 write.table()/write.csv()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 判断数据是否缺失
  is.na()
   air_data = airquality[1:7,1:4]
@@ -1059,7 +1036,6 @@ write.table()/write.csv()<span aria-hidden="true" class="line-numbers-rows"><spa
  air_data2 = air_data
  air_data2$Ozone[is.na(air_data2$Ozone)] = median(air_data$Ozone[!is.na(air_data$Ozone)])
  air_data2$Solar.R[is.na(air_data2$Solar.R)] = round(mean(air_data$Solar.R[!is.na(air_data$Solar.R)]))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="统计图形绘制"><a href="#统计图形绘制" class="headerlink" title="统计图形绘制"></a>统计图形绘制</h2><p><strong>参考资料：</strong></p>
 <ul>
 <li>R绘图基础（一）：<a target="_blank" rel="noopener" href="http://bbs.pinggu.org/thread-3162571-1-1.html">http://bbs.pinggu.org/thread-3162571-1-1.html</a></li>
@@ -1074,7 +1050,6 @@ dev.cur() # 显示当前活动的图形设备
 dev.set(…) # 切换活动图形设备号
 dev.off() # 关闭指定设备号
 graphics.off() # 关闭所有绘图窗口和图形设备<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="布局"><a href="#布局" class="headerlink" title="布局"></a>布局</h4><p>R绘图所占的区域，被分成两大部分，一是外围边距，一是绘图区域。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">par() # 图形参数永久设置，par()（括号中不写任何参数）返回当前的图形参数设置(list)
 
@@ -1096,11 +1071,9 @@ layout()
  layout(matrix(c(1,2,3,3), 2, 2, byrow = TRUE)) # 布局第一排有二个图，第二排有一个图
 layout.show() # 显示具体的布局
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 绘制参数之绘图区域（绘图边距）！仅par()设置
 -mar # 图形边空的四个向量 c(bottom, left, top, right)，default: par(mar=c(5, 4, 4, 2) + 0.1)，行高(line)为单位
 -mai # 同上，inch为单位<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 可视化显示设置内容（R中运行如下脚本）
 SOUTH&lt;-1; WEST&lt;-2; NORTH&lt;-3; EAST&lt;-4;
 
@@ -1143,7 +1116,6 @@ plotline&lt;-function(n,direc){
   }
 }
 plotline(4,SOUTH)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"> # 绘制参数之绘图区域（主绘图）
  -fig # 任意未知作图（左下角(0,0),右上角(1,1)）
  -new # 是否在原画布基础上作图
@@ -1182,7 +1154,6 @@ plot()  # 创建一幅新的图形
 curve(expr, from =, to =, …… ) # 绘制函数对应的曲线
 image()
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 低级图形函数（向已经存在的图形中添加自己定义的信息）
 
 points()
@@ -1207,7 +1178,6 @@ polygon() # 曲线内填充颜色函数
  -border # 边界颜色 F/NA为省略边界色，T/NULL为前景色
 
 locator() # 交互<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="图像读取及处理"><a href="#图像读取及处理" class="headerlink" title="图像读取及处理"></a>图像读取及处理</h3><p><strong>参考资料：</strong></p>
 <ul>
 <li>R语言图像处理： <a target="_blank" rel="noopener" href="http://blog.csdn.net/pyramidnail/article/details/8627880">http://blog.csdn.net/pyramidnail/article/details/8627880</a></li>
@@ -1243,7 +1213,6 @@ rgbAlter&lt;- rgbImage
 rgbAlter[,c(3:5)] &lt;- round(rgbAlter[, c(3:5)] * 2) / 2
 with(rgbAlter,plot(X2, X1, col = rgb(rgbAlter[, 3:5]), asp = 1, pch =".",axes=F,xlab='',ylab=''))
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="饼状图"><a href="#饼状图" class="headerlink" title="饼状图"></a>饼状图</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 二维饼状图
 pie()
  -main # 标题
@@ -1268,7 +1237,6 @@ pie3D() # plotreix程序包
 # 扇形图
 fan.plot()
  fan.plot(GDP, labels = countries, main = "Fan Plot")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="直方图"><a href="#直方图" class="headerlink" title="直方图"></a>直方图</h3><p>直方图是一种对数据分布情况进行展示的二维统计图形，横轴将值域划分划分一定数量的组别，纵轴上则显示相应值出现的频数，<strong>与条形图不同</strong>。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">hist()
  -breaks # 划分档次，控制分组数量（调用pretty函数进行分组划分）
@@ -1286,7 +1254,6 @@ fan.plot()
  yfit &lt;- dnorm(xfit, mean=mean(mpg), sd=sd(mpg))
  yfit &lt;- yfit*diff(h$mids[1:2])*length(mpg) # diff(h$mids[1:2])求间隙大小，diff求相邻两项的差
  lines(xfit, yfit, col = "red", lwd = 2)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="核密图"><a href="#核密图" class="headerlink" title="核密图"></a>核密图</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R">density();plot()
 
  d &lt;- density(mpg)
@@ -1311,7 +1278,6 @@ par(new=TRUE)
 curve(dnorm(x,mean(mtcars[mtcars$cyl==8, ]$mpg), sd(mtcars[mtcars$cyl==8, ]$mpg)), from = 5, to = 40, ylim=c(0,0.28),col = "green", lty = 3, xlab = "Miles/Gallon", ylab = "Density", main="MPG Distribution by Cylinders")
 text.legend = c("cyl=4","cyl=6", "cyl=8")
 legend("topright", legend = text.legend, lty=c(1,2,3), col = c("red", "blue", "green"))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="箱线图"><a href="#箱线图" class="headerlink" title="箱线图"></a>箱线图</h3><p>箱线图通过绘制一组数据的“<strong>最大值、最小值、中位数、下四分位数及上四分位数</strong>”这五个指标来显示该组数据的分散情况。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">boxplot()
  boxplot(mpg, main="Box plot", ylab="Miles per Gallon")
@@ -1347,7 +1313,6 @@ axis(side = 1, at = c(1, 2, 3), labels = c("4 cylinders", "6 cylinders", "8 cyli
 cyl.f &lt;- factor (cyl, levels = c(4, 6, 8), labels = c("4 cyls", "6 cyls", "8 cyls"))
 am.f &lt;- factor(am, levels = c(0, 1), labels = c("auto","std"))
 boxplot(mpg ~ am.f*cyl.f, data = mtcars, varwidth = TRUE, col = c("wheat", "orange"), xlab = " ", main = " ")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="条形图"><a href="#条形图" class="headerlink" title="条形图"></a>条形图</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R">barplot()
   - height # 要求为矩阵或者向量
   - names.arg # 添加条形名称
@@ -1373,7 +1338,6 @@ boxplot(mpg ~ am.f*cyl.f, data = mtcars, varwidth = TRUE, col = c("wheat", "oran
  # 棘状图
  library(vcd)
  spine(my.data, main="Employment in Three Industries")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="qq图"><a href="#qq图" class="headerlink" title="qq图"></a>qq图</h3><p>分位数函数就是相应累积分布函数的反函数，<br>QQ图(Quantile-Quantile Plot)用于直观验证一组数据是否来自于某个分布。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 累积分布函数及分位数函数(其反函数)
 x &lt;- seq(-3, 3, by = 0.1)
@@ -1406,7 +1370,6 @@ round(q.norm, 2) # 区小数点后两位
  exp.pop &lt;- rexp(100, rate = 1)
  qqplot(exp.pop, rexp(100, rate = 1))
  qqplot(exp.pop, rexp(50, rate = 1)) # 两组数据元素不一致，元素个数少的那组数据通过插值方法补齐<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="等高线图及三维图"><a href="#等高线图及三维图" class="headerlink" title="等高线图及三维图"></a>等高线图及三维图</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 等高线图
 contour()/filled.contour/image()
 
@@ -1432,10 +1395,8 @@ persp()
  persp(x, y, volcano, col=heat.colors(30), theta = 45, phi = 15,r = sqrt(3), d = 1,axes=FALSE)
 
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><h4 id="花瓣点图-sunflowerplot"><a href="#花瓣点图-sunflowerplot" class="headerlink" title="花瓣点图(sunflowerplot())"></a>花瓣点图(sunflowerplot())</h4><h4 id="interaction-plot-f1-f2-y"><a href="#interaction-plot-f1-f2-y" class="headerlink" title="interaction.plot(f1, f2, y)"></a>interaction.plot(f1, f2, y)</h4><h4 id="matplot"><a href="#matplot" class="headerlink" title="matplot()"></a>matplot()</h4><h4 id="pairs"><a href="#pairs" class="headerlink" title="pairs()"></a>pairs()</h4><h4 id="coplot"><a href="#coplot" class="headerlink" title="coplot()"></a>coplot()</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 关于z的每个数值（数值区间）绘制x与y的二元图
 coplot(lat ~ long | depth, data = quakes)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
 <h4 id="点图-striptchart"><a href="#点图-striptchart" class="headerlink" title="点图/striptchart()"></a>点图/striptchart()</h4><pre class="line-numbers language-R" data-language="R"><code class="language-R">dotchart()
  # 数据
    cars trucks suvs
@@ -1447,7 +1408,6 @@ coplot(lat ~ long | depth, data = quakes)<span aria-hidden="true" class="line-nu
  dotchart(t(autos_data), color=c("red","blue","darkgreen"), main="Dotchart for Autos", cex=0.8)
 
 striptchart() # x的值画在同一条直线上<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h2 id="重要函数"><a href="#重要函数" class="headerlink" title="重要函数"></a>重要函数</h2><h3 id="报错警告"><a href="#报错警告" class="headerlink" title="报错警告"></a>报错警告</h3><h4 id="try"><a href="#try" class="headerlink" title="try()"></a>try()</h4><p>在R中编程，可以使用try()函数捕捉错误。</p>
 <p><strong>参考资料：</strong> <a target="_blank" rel="noopener" href="http://blog.csdn.net/fanfanrenrenmi/article/details/52142395">http://blog.csdn.net/fanfanrenrenmi/article/details/52142395</a></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">fit&lt;-try(auto.arima(index,trace=T),silent=TRUE)
@@ -1461,7 +1421,6 @@ else{
 # %in%
 # usage: a %in% table
 # a值是否包含于table中，为真输出TURE，否者输出FALSE<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="警告"><a href="#警告" class="headerlink" title="警告"></a>警告</h4><p>涉及警告的函数或参数众多，常用的有如下几个：</p>
 <ol>
 <li><strong>warn</strong>: options()的参数。设置为负数-关闭，设置为0-程序运行结束显示警告信息(default)，设置为1-出现警告信息立即显示，设置为2-警告上升为错误级别</li>
@@ -1479,7 +1438,6 @@ for(w in -1:1) {
 warnings() # 输出上述循环的warning信息
 
 suppressWarnings(dnorm(data, params[1], params[2]))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <blockquote>
 <p>参考：</p>
 <p><a target="_blank" rel="noopener" href="https://happykelee.github.io/">Zhengting Cai</a></p>
@@ -2194,7 +2152,7 @@ suppressWarnings(dnorm(data, params[1], params[2]))<span aria-hidden="true" clas
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">167.9k</span>
             
             
             

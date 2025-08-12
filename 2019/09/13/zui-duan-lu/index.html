@@ -461,7 +461,6 @@
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">if</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token function">w</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span> <span class="token operator">&lt;</span> d<span class="token punctuation">[</span>v<span class="token punctuation">]</span>
     d<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token function">w</span><span class="token punctuation">(</span>u<span class="token punctuation">,</span> v<span class="token punctuation">)</span>
     p<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> u<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
 <p>伪代码：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token function">dijkstra</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
     将所有顶点u的color<span class="token punctuation">[</span>u<span class="token punctuation">]</span>设为WHITE，d<span class="token punctuation">[</span>u<span class="token punctuation">]</span>初始化为INFTY
@@ -486,7 +485,6 @@
                     d<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> M<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>v<span class="token punctuation">]</span>
                     p<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> u
                     color<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> GRAY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <p>邻接矩阵实现的Dijkstra算法复杂度为$O(|V|^2)$。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为$O(|E|)$。<br>但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是$O(|V|^2)$。</p>
 <h4 id="Dijkstra堆优化"><a href="#Dijkstra堆优化" class="headerlink" title="Dijkstra堆优化"></a>Dijkstra堆优化</h4><p>把每个顶点当前的最短距离用堆维护，可以省去松弛和查找操作，直接把节点和数据丢进优先队列。</p>
 <p>更新最短距离时，每次从堆中取出的最小值就是下一次要使用的顶点。</p>
@@ -567,7 +565,6 @@ vector<span class="token operator">&lt;</span>edge<span class="token operator">&
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
 <h4 id="Bellman-Ford"><a href="#Bellman-Ford" class="headerlink" title="Bellman-Ford"></a>Bellman-Ford</h4><p>Bellman-Ford算法基于动态规划的思想，即反复用已有的边来更新最短距离。即如果$d[u] + cost(u, v) &lt; d[v]$则更新d[v]。</p>
 <p>因为最短路经过的边数量不超过n − 1，所以至多n − 1次更新后d[x]即为源点S到地图上其余每个点的最短距离。</p>
 <ul>
@@ -635,9 +632,6 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
 	<span class="token function">puts</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
 <h4 id="Bellman-Ford队列优化（SPFA）"><a href="#Bellman-Ford队列优化（SPFA）" class="headerlink" title="Bellman-Ford队列优化（SPFA）"></a>Bellman-Ford队列优化（SPFA）</h4><p>SPFA队列优化在随机数据下复杂度较优，但在构造数据下容易被卡。</p>
 <p>通常来讲，就是有网格套链式菊花图外挂诱导次短路节点就可以用一个数据卡掉所有的SPFA。</p>
 <h3 id="Part-2-所有点对间最短路径（APSP）"><a href="#Part-2-所有点对间最短路径（APSP）" class="headerlink" title="Part 2 所有点对间最短路径（APSP）"></a>Part 2 所有点对间最短路径（APSP）</h3><p>所有点对间最短路径问题（All Pairs Shortest Path, APSP) 是以图$G = (V, E)$为对象，求$G$中每两点之间的最短路径（距离）的问题。</p>
@@ -1367,7 +1361,7 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">167.9k</span>
             
             
             
