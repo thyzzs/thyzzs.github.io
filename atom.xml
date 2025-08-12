@@ -28,8 +28,10 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;&lt;a href=&quot;#基础&quot; class=&quot;headerlink&quot; title=&quot;基础&quot;&gt;&lt;/a&gt;基础&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;&lt;strong&gt;随机变量X&lt;/strong&gt; - &lt;strong&gt;累积分布函数(CDF)&lt;/strong&gt; -</summary>
+    <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;随机变量X&lt;/strong&gt; - &lt;strong&gt;累积分布函数(CDF)&lt;/strong&gt; -</summary>
         
       
     
@@ -54,7 +56,9 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;基本操作&quot;&gt;&lt;a href=&quot;#基本操作&quot; class=&quot;headerlink&quot; title=&quot;基本操作&quot;&gt;&lt;/a&gt;基本操作&lt;/h2&gt;&lt;pre class=&quot;line-numbers language-R&quot; data-language=&quot;R&quot;&gt;&lt;code</summary>
+    <summary type="html">&lt;h2 id=&quot;基本操作&quot;&gt;基本操作&lt;/h2&gt;
+&lt;pre class=&quot;line-numbers language-R&quot; data-language=&quot;R&quot;&gt;&lt;code class=&quot;language-R&quot;&gt;system()
+system.time() #</summary>
         
       
     
@@ -79,7 +83,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;文献汇报&quot;&gt;&lt;a href=&quot;#文献汇报&quot; class=&quot;headerlink&quot; title=&quot;文献汇报&quot;&gt;&lt;/a&gt;文献汇报&lt;/h2&gt;&lt;h3 id=&quot;Slides&quot;&gt;&lt;a href=&quot;#Slides&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;文献汇报&quot;&gt;文献汇报&lt;/h2&gt;
+&lt;h3</summary>
         
       
     
@@ -104,7 +109,8 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;论文结构&quot;&gt;&lt;a href=&quot;#论文结构&quot; class=&quot;headerlink&quot; title=&quot;论文结构&quot;&gt;&lt;/a&gt;论文结构&lt;/h2&gt;&lt;h3 id=&quot;封面页&quot;&gt;&lt;a href=&quot;#封面页&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;论文结构&quot;&gt;论文结构&lt;/h2&gt;
+&lt;h3</summary>
         
       
     
@@ -129,7 +135,12 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;检索技术&quot;&gt;&lt;a href=&quot;#检索技术&quot; class=&quot;headerlink&quot; title=&quot;检索技术&quot;&gt;&lt;/a&gt;检索技术&lt;/h3&gt;&lt;h4 id=&quot;布尔逻辑运算&quot;&gt;&lt;a href=&quot;#布尔逻辑运算&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h3 id=&quot;检索技术&quot;&gt;检索技术&lt;/h3&gt;
+&lt;h4 id=&quot;布尔逻辑运算&quot;&gt;布尔逻辑运算&lt;/h4&gt;
+&lt;ol&gt;
+&lt;li&gt;逻辑与：缩小范围 (AND, *)&lt;/li&gt;
+&lt;li&gt;逻辑或：扩大范围 (OR, +)&lt;/li&gt;
+&lt;li&gt;逻辑非：排除 (NOT,</summary>
         
       
     
@@ -154,7 +165,10 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;Transition-Checklist&quot;&gt;&lt;a href=&quot;#Transition-Checklist&quot; class=&quot;headerlink&quot; title=&quot;Transition Checklist&quot;&gt;&lt;/a&gt;Transition</summary>
+    <summary type="html">&lt;h2 id=&quot;Transition-Checklist&quot;&gt;Transition Checklist&lt;/h2&gt;
+&lt;h3 id=&quot;To-Complete&quot;&gt;To Complete&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;[x] &lt;strong&gt;Pass IELTS Academic</summary>
         
       
     
@@ -199,7 +213,8 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;这个网页非常非常大，需要等待一段时间才能完全加载。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h2 id=&quot;Chapter-1-Introduction&quot;&gt;&lt;a href=&quot;#Chapter-1-Introduction&quot;</summary>
+&lt;h2 id=&quot;Chapter-1-Introduction&quot;&gt;Chapter 1 Introduction&lt;/h2&gt;
+&lt;h3</summary>
         
       
     
@@ -227,9 +242,7 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;网站渲染LaTeX存在严重失真，如有需要请Email联系我获取PDF版本笔记。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;font color=&quot;gray&quot;&gt;**_什么是统计学？_**&lt;/font&gt;
-
-&lt;font</summary>
+&lt;p&gt;&lt;font</summary>
         
       
     
@@ -254,7 +267,11 @@
       
         
         
-    <summary type="html">&lt;h2 id=&quot;技术栈&quot;&gt;&lt;a href=&quot;#技术栈&quot; class=&quot;headerlink&quot; title=&quot;技术栈&quot;&gt;&lt;/a&gt;技术栈&lt;/h2&gt;&lt;h3 id=&quot;程序设计&quot;&gt;&lt;a href=&quot;#程序设计&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h2 id=&quot;技术栈&quot;&gt;技术栈&lt;/h2&gt;
+&lt;h3 id=&quot;程序设计&quot;&gt;程序设计&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;C++ 基本语法&lt;/li&gt;
+&lt;li&gt;Python</summary>
         
       
     
@@ -279,7 +296,10 @@
       
         
         
-    <summary type="html">&lt;h1 id=&quot;Luogu-Problem-List&quot;&gt;&lt;a href=&quot;#Luogu-Problem-List&quot; class=&quot;headerlink&quot;</summary>
+    <summary type="html">&lt;h1&gt;Luogu-Problem-List&lt;/h1&gt;
+&lt;p&gt;洛谷试炼场的题目确实很具有代表性，但是近几年以来，又有许多经典题目出现在 OI 界中，这个大题单就是作为洛谷试炼场的扩展和补充。&lt;/p&gt;
+&lt;h2 id=&quot;Copyleft&quot;&gt;Copyleft&lt;/h2&gt;
+&lt;p&gt;&lt;a</summary>
         
       
     
@@ -381,7 +401,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;一-三：满纸荒唐言，一把辛酸泪-都云作者痴，谁解其中味？&quot;&gt;&lt;a href=&quot;#一-三：满纸荒唐言，一把辛酸泪-都云作者痴，谁解其中味？&quot; class=&quot;headerlink&quot; title=&quot;一 - 三：满纸荒唐言，一把辛酸泪 </summary>
+    <summary type="html">&lt;h3 id=&quot;一-三：满纸荒唐言，一把辛酸泪-都云作者痴，谁解其中味？&quot;&gt;一 - 三：满纸荒唐言，一把辛酸泪 </summary>
         
       
     
@@ -407,7 +427,8 @@
         
         
     <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
+&lt;li&gt;
+&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
         
       
     
@@ -432,7 +453,7 @@
       
         
         
-    <summary type="html">&lt;h3 id=&quot;六十一-六十三：从司棋看生命存在的重要性&quot;&gt;&lt;a href=&quot;#六十一-六十三：从司棋看生命存在的重要性&quot; class=&quot;headerlink&quot; title=&quot;六十一 - 六十三：从司棋看生命存在的重要性&quot;&gt;&lt;/a&gt;六十一 -</summary>
+    <summary type="html">&lt;h3 id=&quot;六十一-六十三：从司棋看生命存在的重要性&quot;&gt;六十一 -</summary>
         
       
     
@@ -458,7 +479,7 @@
         
         
     <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;）&lt;br&gt; </summary>
+&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
         
       
     
@@ -484,7 +505,7 @@
         
         
     <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议&lt;/a&gt;）&lt;br&gt; </summary>
+&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
         
       
     
@@ -512,7 +533,7 @@
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;“他只是告诉你，在所有的生命中，权力、财富、爱情，全部是一场空。他要告诉你，知道是空，你还是执著。知道归知道，执著归执著。”——蒋勋&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;h3 id=&quot;红楼空一梦（一）&quot;&gt;&lt;a href=&quot;#红楼空一梦（一）&quot;</summary>
+&lt;h3</summary>
         
       
     

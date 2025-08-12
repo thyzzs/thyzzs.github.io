@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -528,14 +528,19 @@
                                 
                                     传送门
 30%的题解：
+
 是一棵树，所以只要枚举根，然后计算代价即可
 
 100%的题解：
-$vals[S]$表示集合$S$的权值和
 
-设计状态$F[S][h]$, 表示现在已经选择了的点的集合是$S$，$h$表示当前深度
 
-枚举S的补集的子集
+表示集合的权值和
+
+
+设计状态, 表示现在已经选择了的点的集合是，表示当前深度
+
+
+枚举S的补集的子集，只要满足中每个点都有和集合中某个点相连的话
                                 
                             </div>
                             <div class="publish-info">
@@ -596,16 +601,28 @@ $vals[S]$表示集合$S$的权值和
                                 
                                     传送门
 30%的做法
-floyd预处理出每两点间的最短路,每次询问$O(1)$回答
 
-复杂度$O(n^3+q)$
+
+floyd预处理出每两点间的最短路,每次询问回答
+
+
+复杂度
 
 
 
 另外20%的做法
+
+
 树的情况
 
-对于$u,v$的最短路，求出他们的LCA为$k$，$ans=d[u]+d[v]-2*d[k
+
+对于的最短路，求出他们的LCA为，
+
+
+可以用tarjan算法离线求LCA，那么总复杂度
+
+
+也可以倍增 / 
                                 
                             </div>
                             <div class="publish-info">
@@ -666,10 +683,22 @@ floyd预处理出每两点间的最短路,每次询问$O(1)$回答
                                 
                                     传送门
 30%的做法
-暴力枚举删掉哪些数即可，复杂度$O(n \log (\max(a_i)) \times 2^n)$
+
+暴力枚举删掉哪些数即可，复杂度
 
 另外20%的做法
-枚举删掉一些数后的最大公因数$g$，那么不能被$g$整除的数的个数即为要删的数的个数，对结果取$\
+
+
+枚举删掉一些数后的最大公因数，那么不能被整除的数的个数即为要删的数的个数，对结果取即可
+
+
+复杂度
+
+
+100%的做法
+
+
+首先，用这个序列的去除每个，得到一个
                                 
                             </div>
                             <div class="publish-info">
@@ -729,11 +758,25 @@ floyd预处理出每两点间的最短路,每次询问$O(1)$回答
                             <div class="summary block-with-text">
                                 
                                     传送门
-考虑如何将s中的每种数分到$a$和$b$集中假设一个数$x$有$k$个，可以对$a$和$b$集“好的”数的个数差产生什么影响？$k=1$
+考虑如何将s中的每种数分到和集中
+假设一个数有个，可以对和集“好的”数的个数差产生什么影响？
+
+
 让一个集合“好的”数个数++，另一集合的个数不变
 
-$k=2$
+
+
+
 让两个集合“好的”数个数都++
+
+
+让两个集合“好的”数个数不变
+
+
+
+
+
+
                                 
                             </div>
                             <div class="publish-info">
@@ -869,7 +912,7 @@ $k=2$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">178.6k</span>
             
             
             

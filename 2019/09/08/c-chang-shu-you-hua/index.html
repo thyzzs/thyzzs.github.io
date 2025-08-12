@@ -5,8 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="【笔记】C++的常数优化技巧, 天何言哉">
-    <meta name="description" content="Part 0 时间复杂度常数优化的意义在科学研究意义上，时间复杂度的常数优化并不是十分重要的。
-但在信息学竞赛中，同样的复杂度为$O(n^2)$的程序，对于一组 $n=5000$ 的数据，有的可能常数为20，需要运行1000ms，有的可能常">
+    <meta name="description" content="Part 0 时间复杂度常数优化的意义
+在科学研究意义上，时间复杂度的常数优化并不是十分重要的。
+但在信息学竞赛中，同样的复杂度为的程序，对于一组  的数据，有的可能常数为20，需要运行1000ms，有的可能常数为5，需要运行500ms。
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -62,9 +64,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -440,14 +442,17 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="Part-0-时间复杂度常数优化的意义"><a href="#Part-0-时间复杂度常数优化的意义" class="headerlink" title="Part 0 时间复杂度常数优化的意义"></a>Part 0 时间复杂度常数优化的意义</h3><p>在科学研究意义上，时间复杂度的常数优化并不是十分重要的。</p>
-<p>但在信息学竞赛中，同样的复杂度为$O(n^2)$的程序，对于一组 $n=5000$ 的数据，有的可能常数为20，需要运行1000ms，有的可能常数为5，需要运行500ms。</p>
+                <h3 id="Part-0-时间复杂度常数优化的意义">Part 0 时间复杂度常数优化的意义</h3>
+<p>在科学研究意义上，时间复杂度的常数优化并不是十分重要的。</p>
+<p>但在信息学竞赛中，同样的复杂度为<img src="https://math.now.sh?inline=O%28n%5E2%29" style="display:inline-block;margin: 0;">的程序，对于一组 <img src="https://math.now.sh?inline=n%3D5000" style="display:inline-block;margin: 0;"> 的数据，有的可能常数为20，需要运行1000ms，有的可能常数为5，需要运行500ms。</p>
 <p>这样，两个看似相同的算法，一个超时错误，一个正确得分。</p>
 <p>同一个程序设计思想，用不同算法，会有不同的运行效率；而即使是同样的算法，由于在代码的细节方面设计有所不同，执行起来效率也会有所不同。</p>
 <p>当遇到所需时间较长的问题时，一个常数级优化可能是AC的关键所在。</p>
-<h3 id="Part-1-基本运算"><a href="#Part-1-基本运算" class="headerlink" title="Part 1 基本运算"></a>Part 1 基本运算</h3><p>众所周知，除法和取模运算的运行时间相对赋值、比较、加、减、乘运算要慢得多，而由于计算机内部的原因，位运算的速度是最快的。</p>
+<h3 id="Part-1-基本运算">Part 1 基本运算</h3>
+<p>众所周知，除法和取模运算的运行时间相对赋值、比较、加、减、乘运算要慢得多，而由于计算机内部的原因，位运算的速度是最快的。</p>
 <p>因此，我们应当尽可能用速度较快的运算代替速度慢的运算。</p>
-<h4 id="位压缩的技巧："><a href="#位压缩的技巧：" class="headerlink" title="位压缩的技巧："></a>位压缩的技巧：</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">读取第 k 位： a <span class="token operator">&gt;&gt;</span> k <span class="token operator">&amp;</span> <span class="token number">1</span>
+<h4 id="位压缩的技巧：">位压缩的技巧：</h4>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">读取第 k 位： a <span class="token operator">&gt;&gt;</span> k <span class="token operator">&amp;</span> <span class="token number">1</span>
 读取第 k 位并取反： <span class="token operator">~</span>a <span class="token operator">&gt;&gt;</span> k <span class="token operator">&amp;</span> <span class="token number">1</span>
 将第 k 位清 <span class="token number">0</span>： a <span class="token operator">&amp;=</span> <span class="token operator">~</span><span class="token punctuation">(</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> k<span class="token punctuation">)</span>
 将第 k 位置 <span class="token number">1</span>： a <span class="token operator">|=</span> <span class="token number">1</span> <span class="token operator">&lt;&lt;</span> k
@@ -456,7 +461,8 @@
 是否恰好只有一个 <span class="token boolean">true</span>： <span class="token operator">!</span><span class="token punctuation">(</span>x <span class="token operator">&amp;</span> <span class="token punctuation">(</span>x <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> x
 判断是否有两个相邻的 <span class="token boolean">true</span>： x <span class="token operator">&gt;&gt;</span> <span class="token number">1</span> <span class="token operator">&amp;</span> x
 是否有三个相邻的 <span class="token boolean">true</span>： x <span class="token operator">&gt;&gt;</span> <span class="token number">1</span> <span class="token operator">&amp;</span> x <span class="token operator">&gt;&gt;</span> <span class="token number">2</span> <span class="token operator">&amp;</span> x<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="特殊运算："><a href="#特殊运算：" class="headerlink" title="特殊运算："></a>特殊运算：</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">乘除<span class="token number">2</span>的整数幂
+<h4 id="特殊运算：">特殊运算：</h4>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">乘除<span class="token number">2</span>的整数幂
 x<span class="token operator">*</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">^</span>k<span class="token punctuation">)</span><span class="token operator">=</span>x<span class="token operator">&lt;&lt;</span>k
 x<span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token operator">^</span>k<span class="token punctuation">)</span><span class="token operator">=</span>x<span class="token operator">&gt;&gt;</span>k
 乘除常数的优化
@@ -467,7 +473,8 @@ x<span class="token operator">*</span><span class="token number">17</span><span 
 x<span class="token operator">*</span><span class="token number">63</span><span class="token operator">=</span><span class="token punctuation">(</span>x<span class="token operator">&lt;&lt;</span><span class="token number">6</span><span class="token punctuation">)</span><span class="token operator">-</span>x
 对<span class="token number">2</span><span class="token operator">^</span>k取模优化
 x<span class="token operator">%</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>k<span class="token punctuation">)</span><span class="token operator">=</span>x<span class="token operator">&amp;</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span>k<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="位运算代替四则运算："><a href="#位运算代替四则运算：" class="headerlink" title="位运算代替四则运算："></a>位运算代替四则运算：</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h4 id="位运算代替四则运算：">位运算代替四则运算：</h4>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">int</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token keyword">int</span> a<span class="token punctuation">,</span> <span class="token keyword">int</span> b<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token keyword">if</span> <span class="token punctuation">(</span>b <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
 		<span class="token keyword">return</span> a<span class="token punctuation">;</span>
 	
@@ -507,47 +514,64 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
 	<span class="token punctuation">}</span>
 	<span class="token keyword">return</span> ans<span class="token punctuation">;</span>
 <span class="token punctuation">}</span> <span class="token comment">//除法</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="对于取模的优化："><a href="#对于取模的优化：" class="headerlink" title="对于取模的优化："></a>对于取模的优化：</h4><p>可以将其优化为：<br></p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;</span> Mod <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p></p>
-<p>而对于某些题目，仅需要对答案取模。这类题目要边运算边取模的目的一般是防止溢出。<br>故我们甚至可以写成这样：</p>
+<h4 id="对于取模的优化：">对于取模的优化：</h4>
+<p>可以将其优化为：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;</span> Mod <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>而对于某些题目，仅需要对答案取模。这类题目要边运算边取模的目的一般是防止溢出。<br>
+故我们甚至可以写成这样：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;=</span> <span class="token number">0x3f3f3f3f</span> <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>如果是乘法，我们相应地可以写成：<br></p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;=</span> <span class="token number">45000</span> <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><br>总之，这个范围要保证结果在计算时不会有溢出的风险。但采用了这种方式后，最后输出时一定要取模。<p></p>
-<p>对于负数取模的优化：<br></p><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MODF</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<p>如果是乘法，我们相应地可以写成：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;=</span> <span class="token number">45000</span> <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>总之，这个范围要保证结果在计算时不会有溢出的风险。但采用了这种方式后，最后输出时一定要取模。</p>
+<p>对于负数取模的优化：</p>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MODF</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	x <span class="token operator">=</span> <span class="token function">MOD</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">return</span> x <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">?</span> x <span class="token operator">+</span> MOD <span class="token operator">:</span> x<span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre><p></p>
-<h3 id="Part-2-内存优化"><a href="#Part-2-内存优化" class="headerlink" title="Part 2 内存优化"></a>Part 2 内存优化</h3><p>内存的访问是非常慢的，除了内存，还有寄存器(register)、高速缓存(cache)，它们的访问速度比内存更快。</p>
-<h4 id="register循环："><a href="#register循环：" class="headerlink" title="register循环："></a>register循环：</h4><p>寄存器具有最高的访问速度，在变量前加关键词register即将其加入寄存器。但寄存器的空间是有限的，不应该滥用register，应该仅在访问最频繁的几个变量（如循环变量）前加register。</p>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Part-2-内存优化">Part 2 内存优化</h3>
+<p>内存的访问是非常慢的，除了内存，还有寄存器(register)、高速缓存(cache)，它们的访问速度比内存更快。</p>
+<h4 id="register循环：">register循环：</h4>
+<p>寄存器具有最高的访问速度，在变量前加关键词register即将其加入寄存器。但寄存器的空间是有限的，不应该滥用register，应该仅在访问最频繁的几个变量（如循环变量）前加register。</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">register</span> <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h4 id="让某个数组的大小能够卡进cache"><a href="#让某个数组的大小能够卡进cache" class="headerlink" title="让某个数组的大小能够卡进cache"></a>让某个数组的大小能够卡进cache</h4><p>cache即高速缓存，一般分为3级（有些电脑为2级），访问速度逐级递减。访问变量时，CPU会优先在cache而不是内存中查找，如果cache中不存在此变量，则会进入内存查找，这称为cache miss。</p>
+<h4 id="让某个数组的大小能够卡进cache">让某个数组的大小能够卡进cache</h4>
+<p>cache即高速缓存，一般分为3级（有些电脑为2级），访问速度逐级递减。访问变量时，CPU会优先在cache而不是内存中查找，如果cache中不存在此变量，则会进入内存查找，这称为cache miss。</p>
 <p>与register一样，cache的大小同样有限。一些过大的内存是不可以进入cache的。</p>
 <p>基数排序时，以256为基数会比256*256更快。因为256大小的四个数组可以轻松进入cache。</p>
 <ul>
-<li><p>保证时空局部性</p>
+<li>
+<p>保证时空局部性</p>
 <ul>
-<li><p>时间局部性：当一个变量被使用时，它会在短时间内再次被使用。</p>
+<li>
+<p>时间局部性：当一个变量被使用时，它会在短时间内再次被使用。</p>
 </li>
-<li><p>空间局部性：当一个变量被使用时，它的内存附近的变量会再次被使用。</p>
+<li>
+<p>空间局部性：当一个变量被使用时，它的内存附近的变量会再次被使用。</p>
 </li>
 </ul>
 </li>
 </ul>
 <p>保证这两样东西的良好有益于减少cache miss。</p>
 <ul>
-<li><p>怎样优化空间局部性？</p>
+<li>
+<p>怎样优化空间局部性？</p>
 <ul>
 <li>将一些关系密切，例如经常连着使用的变量尽量定义在一起，或用结构体封装起来。</li>
 <li>适当调整变量定义顺序</li>
 <li>保证内存连续访问。例如：Floyd和矩阵乘法的程序中，将第三层循环作为第一层会大大提高速度。</li>
 </ul>
 </li>
-<li><p>怎样优化时间局部性？</p>
+<li>
+<p>怎样优化时间局部性？</p>
 <ul>
 <li>尽量使用局部变量。因为堆栈的数据访问十分频繁。</li>
 </ul>
 </li>
 </ul>
-<h3 id="Part-3-I-O优化"><a href="#Part-3-I-O优化" class="headerlink" title="Part 3 I\O优化"></a>Part 3 I\O优化</h3><p>C++为了兼容性导致<code>cin</code>、<code>cout</code>极慢，对于大量数据的读入和输出往往不堪重负。这个时候使用读入优化、输出优化可以节省数倍的时间。<br>简单使用可以用<code>scanf</code>和<code>printf</code>代替<code>cin</code>和<code>cout</code>。</p>
-<h4 id="基本读入优化"><a href="#基本读入优化" class="headerlink" title="基本读入优化"></a>基本读入优化</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<h3 id="Part-3-I-O优化">Part 3 I\O优化</h3>
+<p>C++为了兼容性导致<code>cin</code>、<code>cout</code>极慢，对于大量数据的读入和输出往往不堪重负。这个时候使用读入优化、输出优化可以节省数倍的时间。<br>
+简单使用可以用<code>scanf</code>和<code>printf</code>代替<code>cin</code>和<code>cout</code>。</p>
+<h4 id="基本读入优化">基本读入优化</h4>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> f <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
 	<span class="token keyword">char</span> ch <span class="token operator">=</span> <span class="token function">getchar</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 	<span class="token keyword">while</span> <span class="token punctuation">(</span>ch <span class="token operator">&lt;</span> <span class="token char">'0'</span> <span class="token operator">||</span> ch <span class="token operator">&gt;</span> <span class="token char">'9'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
@@ -561,9 +585,11 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
 	<span class="token punctuation">}</span>
 	<span class="token keyword">return</span> x <span class="token operator">*</span> f<span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="fread优化"><a href="#fread优化" class="headerlink" title="fread优化"></a>fread优化</h4><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">getchar</span><span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>p1<span class="token operator">==</span>p2<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>p2<span class="token operator">=</span><span class="token punctuation">(</span>p1<span class="token operator">=</span>buf<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">fread</span><span class="token punctuation">(</span>buf<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">,</span>p1<span class="token operator">==</span>p2<span class="token punctuation">)</span><span class="token operator">?</span><span class="token constant">EOF</span><span class="token operator">:</span><span class="token operator">*</span>p1<span class="token operator">++</span><span class="token punctuation">)</span></span></span>
+<h4 id="fread优化">fread优化</h4>
+<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name function">getchar</span><span class="token expression"><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">(</span>p1<span class="token operator">==</span>p2<span class="token operator">&amp;&amp;</span><span class="token punctuation">(</span>p2<span class="token operator">=</span><span class="token punctuation">(</span>p1<span class="token operator">=</span>buf<span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">fread</span><span class="token punctuation">(</span>buf<span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token operator">&lt;&lt;</span><span class="token number">21</span><span class="token punctuation">,</span><span class="token constant">stdin</span><span class="token punctuation">)</span><span class="token punctuation">,</span>p1<span class="token operator">==</span>p2<span class="token punctuation">)</span><span class="token operator">?</span><span class="token constant">EOF</span><span class="token operator">:</span><span class="token operator">*</span>p1<span class="token operator">++</span><span class="token punctuation">)</span></span></span>
 <span class="token keyword">char</span> buf<span class="token punctuation">[</span><span class="token number">1</span> <span class="token operator">&lt;&lt;</span> <span class="token number">21</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token operator">*</span>p1 <span class="token operator">=</span> buf<span class="token punctuation">,</span> <span class="token operator">*</span>p2 <span class="token operator">=</span> buf<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-<h4 id="基本输出优化"><a href="#基本输出优化" class="headerlink" title="基本输出优化"></a>基本输出优化</h4><p><del>其实没有<code>printf</code>快</del></p>
+<h4 id="基本输出优化">基本输出优化</h4>
+<p><s>其实没有<code>printf</code>快</s></p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">char</span> F<span class="token punctuation">[</span><span class="token number">200</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">write</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> tmp <span class="token operator">=</span> x <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">?</span> x <span class="token operator">:</span> <span class="token operator">-</span>x<span class="token punctuation">;</span>
@@ -577,7 +603,8 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
 	<span class="token keyword">while</span> <span class="token punctuation">(</span>cnt <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span>
 		<span class="token function">putchar</span><span class="token punctuation">(</span>F<span class="token punctuation">[</span><span class="token operator">--</span>cnt<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="fwrite优化"><a href="#fwrite优化" class="headerlink" title="fwrite优化"></a>fwrite优化</h4><p><del>不会ing</del></p>
+<h4 id="fwrite优化">fwrite优化</h4>
+<p><s>不会ing</s></p>
 <p>留坑待填(逃</p>
 
                 
@@ -1289,7 +1316,7 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">178.6k</span>
             
             
             

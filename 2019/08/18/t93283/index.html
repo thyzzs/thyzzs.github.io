@@ -6,11 +6,25 @@
     <meta charset="utf-8">
     <meta name="keywords" content="题解 T93283 【集合】, 天何言哉">
     <meta name="description" content="传送门
-考虑如何将s中的每种数分到$a$和$b$集中假设一个数$x$有$k$个，可以对$a$和$b$集“好的”数的个数差产生什么影响？$k=1$
+考虑如何将s中的每种数分到和集中
+假设一个数有个，可以对和集“好的”数的个数差产生什么影响？
+
+
 让一个集合“好的”数个数++，另一集合的个数不变
 
-$k=2$
-让两个集合“好的”数个数都++">
+
+
+
+让两个集合“好的”数个数都++
+
+
+让两个集合“好的”数个数不变
+
+
+
+
+
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -66,9 +80,9 @@ $k=2$
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -419,7 +433,7 @@ $k=2$
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    348
+                    319
                 </div>
                 
 
@@ -445,30 +459,45 @@ $k=2$
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93283">传送门</a></p>
-<h4 id="考虑如何将s中的每种数分到-a-和-b-集中"><a href="#考虑如何将s中的每种数分到-a-和-b-集中" class="headerlink" title="考虑如何将s中的每种数分到$a$和$b$集中"></a>考虑如何将s中的每种数分到$a$和$b$集中</h4><h4 id="假设一个数-x-有-k-个，可以对-a-和-b-集“好的”数的个数差产生什么影响？"><a href="#假设一个数-x-有-k-个，可以对-a-和-b-集“好的”数的个数差产生什么影响？" class="headerlink" title="假设一个数$x$有$k$个，可以对$a$和$b$集“好的”数的个数差产生什么影响？"></a>假设一个数$x$有$k$个，可以对$a$和$b$集“好的”数的个数差产生什么影响？</h4><h4 id="k-1"><a href="#k-1" class="headerlink" title="$k=1$"></a>$k=1$</h4><ul>
+<h4 id="考虑如何将s中的每种数分到a和b集中">考虑如何将s中的每种数分到<img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;">和<img src="https://math.now.sh?inline=b" style="display:inline-block;margin: 0;">集中</h4>
+<h4 id="假设一个数x有k个，可以对a和b集“好的”数的个数差产生什么影响？">假设一个数<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">有<img src="https://math.now.sh?inline=k" style="display:inline-block;margin: 0;">个，可以对<img src="https://math.now.sh?inline=a" style="display:inline-block;margin: 0;">和<img src="https://math.now.sh?inline=b" style="display:inline-block;margin: 0;">集“好的”数的个数差产生什么影响？</h4>
+<h4 id="k-1"><img src="https://math.now.sh?inline=k%3D1" style="display:inline-block;margin: 0;"></h4>
+<ul>
 <li>让一个集合“好的”数个数++，另一集合的个数不变</li>
 </ul>
-<h4 id="k-2"><a href="#k-2" class="headerlink" title="$k=2$"></a>$k=2$</h4><ul>
-<li><p>让两个集合“好的”数个数都++</p>
-</li>
-<li><p>让两个集合“好的”数个数不变</p>
-</li>
-</ul>
-<h4 id="k-gt-2"><a href="#k-gt-2" class="headerlink" title="$k>2$"></a>$k&gt;2$</h4><ul>
-<li><p>让一个集合“好的”数个数++，另一集合的个数不变</p>
-</li>
-<li><p>让两个集合“好的”数个数不变</p>
-</li>
-</ul>
-<h4 id="因此-k-2-的情况对答案没有影响"><a href="#因此-k-2-的情况对答案没有影响" class="headerlink" title="因此$k=2$的情况对答案没有影响"></a>因此$k=2$的情况对答案没有影响</h4><p>$k=1$的$x$会使两个集合的差别++，$k&gt;2$的$x$可以起到“平衡”的作用</p>
-<h4 id="可如下分类讨论："><a href="#可如下分类讨论：" class="headerlink" title="可如下分类讨论："></a>可如下分类讨论：</h4><ul>
-<li><p>$k=1$的数个数为偶数，平均分到两组即可。其它的数可以不产生影响。</p>
-</li>
-<li><p>$k=1$的数个数为奇数，必然有一个集合多出一个。</p>
+<h4 id="k-2"><img src="https://math.now.sh?inline=k%3D2" style="display:inline-block;margin: 0;"></h4>
 <ul>
-<li><p>如果存在$k&gt;2$的数，那么可以平衡这多出的一个。</p>
+<li>
+<p>让两个集合“好的”数个数都++</p>
 </li>
-<li><p>否则是唯一的无解情况。</p>
+<li>
+<p>让两个集合“好的”数个数不变</p>
+</li>
+</ul>
+<h4 id="k-2-2"><img src="https://math.now.sh?inline=k%3E2" style="display:inline-block;margin: 0;"></h4>
+<ul>
+<li>
+<p>让一个集合“好的”数个数++，另一集合的个数不变</p>
+</li>
+<li>
+<p>让两个集合“好的”数个数不变</p>
+</li>
+</ul>
+<h4 id="因此k-2的情况对答案没有影响">因此<img src="https://math.now.sh?inline=k%3D2" style="display:inline-block;margin: 0;">的情况对答案没有影响</h4>
+<p><img src="https://math.now.sh?inline=k%3D1" style="display:inline-block;margin: 0;">的<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">会使两个集合的差别++，<img src="https://math.now.sh?inline=k%3E2" style="display:inline-block;margin: 0;">的<img src="https://math.now.sh?inline=x" style="display:inline-block;margin: 0;">可以起到“平衡”的作用</p>
+<h4 id="可如下分类讨论：">可如下分类讨论：</h4>
+<ul>
+<li>
+<p><img src="https://math.now.sh?inline=k%3D1" style="display:inline-block;margin: 0;">的数个数为偶数，平均分到两组即可。其它的数可以不产生影响。</p>
+</li>
+<li>
+<p><img src="https://math.now.sh?inline=k%3D1" style="display:inline-block;margin: 0;">的数个数为奇数，必然有一个集合多出一个。</p>
+<ul>
+<li>
+<p>如果存在<img src="https://math.now.sh?inline=k%3E2" style="display:inline-block;margin: 0;">的数，那么可以平衡这多出的一个。</p>
+</li>
+<li>
+<p>否则是唯一的无解情况。</p>
 </li>
 </ul>
 </li>
@@ -1219,7 +1248,7 @@ $k=2$
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">178.6k</span>
             
             
             

@@ -6,9 +6,18 @@
     <meta charset="utf-8">
     <meta name="keywords" content="Probability and Statistics in R, 天何言哉">
     <meta name="description" content="基础
+
+
 随机变量X - 累积分布函数(CDF) - 概率质量函数(PMF)/概率密度函数(PDF)
 
-k阶矩：期望(一阶矩)$E(X)(\mu)$ - 方差(二阶中心距)$D(X)/Var(X)$ - 标准差$\sqrt{D(X)}/\sig">
+
+k阶矩：期望(一阶矩) - 方差(二阶中心距) - 标准差
+
+
+大数定理： 样本数量越多，则其平均就越趋近期望值。(简)
+
+
+中央极限">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -64,9 +73,9 @@ k阶矩：期望(一阶矩)$E(X)(\mu)$ - 方差(二阶中心距)$D(X)/Var(X)$ - 
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -417,14 +426,14 @@ k阶矩：期望(一阶矩)$E(X)(\mu)$ - 方差(二阶中心距)$D(X)/Var(X)$ - 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    7.3k
+                    6.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    34 Min
+                    26 Min
                 </div>
                 
 
@@ -442,19 +451,28 @@ k阶矩：期望(一阶矩)$E(X)(\mu)$ - 方差(二阶中心距)$D(X)/Var(X)$ - 
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><ol>
-<li><p><strong>随机变量X</strong> - <strong>累积分布函数(CDF)</strong> - <strong>概率质量函数(PMF)/概率密度函数(PDF)</strong></p>
+                <h2 id="基础">基础</h2>
+<ol>
+<li>
+<p><strong>随机变量X</strong> - <strong>累积分布函数(CDF)</strong> - <strong>概率质量函数(PMF)/概率密度函数(PDF)</strong></p>
 </li>
-<li><p><strong>k阶矩</strong>：<strong>期望(一阶矩)$E(X)(\mu)$</strong> - <strong>方差(二阶中心距)$D(X)/Var(X)$</strong> - <strong>标准差$\sqrt{D(X)}/\sigma(X)$</strong></p>
+<li>
+<p><strong>k阶矩</strong>：<strong>期望(一阶矩)<img src="https://math.now.sh?inline=E%28X%29(%5Cmu)" style="display:inline-block;margin: 0;"></strong> - <strong>方差(二阶中心距)<img src="https://math.now.sh?inline=D%28X%29%2FVar(X)" style="display:inline-block;margin: 0;"></strong> - <strong>标准差<img src="https://math.now.sh?inline=%5Csqrt%7BD%28X%29%7D%2F%5Csigma(X)" style="display:inline-block;margin: 0;"></strong></p>
 </li>
-<li><p><strong>大数定理：</strong> 样本数量越多，则其平均就越趋近期望值。<em>(简)</em></p>
+<li>
+<p><strong>大数定理：</strong> 样本数量越多，则其平均就越趋近期望值。<em>(简)</em></p>
 </li>
-<li><p><strong>中央极限定理：</strong> 大量相互独立的随机变量之和的分布以正态分布为极限。<em>(简)</em></p>
+<li>
+<p><strong>中央极限定理：</strong> 大量相互独立的随机变量之和的分布以正态分布为极限。<em>(简)</em></p>
 </li>
-<li><p><strong>总体(总体容器/有限总体/无限总体)</strong> - <strong>个体</strong> - <strong>抽样(sample)</strong><br> <strong>样本(样本容量)</strong> - <strong>样本值(观察值)</strong> - <strong>分布函数F</strong><br> <strong>样本均值$\bar{X}$</strong> - <strong>样本方差(无偏估计/有偏估计)$S^2$</strong> - <strong>来自正态分布$N(\mu,\sigma^2)$的一个样本，样本均值和样本方差分别是$\bar{X}$和$S^2$，则有$\frac{\bar{X}-\mu}{S/\sqrt{n}}$ ~ $t(n-1)$</strong></p>
+<li>
+<p><strong>总体(总体容器/有限总体/无限总体)</strong> - <strong>个体</strong> - <strong>抽样(sample)</strong><br>
+<strong>样本(样本容量)</strong> - <strong>样本值(观察值)</strong> - <strong>分布函数F</strong><br>
+<strong>样本均值<img src="https://math.now.sh?inline=%5Cbar%7BX%7D" style="display:inline-block;margin: 0;"></strong> - <strong>样本方差(无偏估计/有偏估计)<img src="https://math.now.sh?inline=S%5E2" style="display:inline-block;margin: 0;"></strong> - <strong>来自正态分布<img src="https://math.now.sh?inline=N%28%5Cmu%2C%5Csigma%5E2%29" style="display:inline-block;margin: 0;">的一个样本，样本均值和样本方差分别是<img src="https://math.now.sh?inline=%5Cbar%7BX%7D" style="display:inline-block;margin: 0;">和<img src="https://math.now.sh?inline=S%5E2" style="display:inline-block;margin: 0;">，则有<img src="https://math.now.sh?inline=%5Cfrac%7B%5Cbar%7BX%7D-%5Cmu%7D%7BS%2F%5Csqrt%7Bn%7D%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=t%28n-1%29" style="display:inline-block;margin: 0;"></strong></p>
 </li>
 </ol>
-<h3 id="概率分布模型"><a href="#概率分布模型" class="headerlink" title="概率分布模型"></a>概率分布模型</h3><pre class="line-numbers language-R" data-language="R"><code class="language-R"># 离散概率分布
+<h3 id="概率分布模型">概率分布模型</h3>
+<pre class="line-numbers language-R" data-language="R"><code class="language-R"># 离散概率分布
   # 伯努利分布/二项分布:binom
   # 负二项分布:nbinom
   # 几何分布:geom
@@ -472,7 +490,7 @@ dfunc(x, ... ,) # 密度函数
 pfunc(x, ... ,) # 分布函数
 qfunc(x, ... ,) # 分位数函数
 rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="统计推断"><a href="#统计推断" class="headerlink" title="统计推断"></a>统计推断</h2><div class="table-container">
+<h2 id="统计推断">统计推断</h2>
 <table>
 <thead>
 <tr>
@@ -499,15 +517,17 @@ rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-ro
 </tr>
 </tbody>
 </table>
-</div>
-<h3 id="参数估计"><a href="#参数估计" class="headerlink" title="参数估计"></a>参数估计</h3><p>参数估计是用样本统计量估计总体参数值，$\bar{\theta}$称为估计量。</p>
+<h3 id="参数估计">参数估计</h3>
+<p>参数估计是用样本统计量估计总体参数值，<img src="https://math.now.sh?inline=%5Cbar%7B%5Ctheta%7D" style="display:inline-block;margin: 0;">称为估计量。</p>
 <ul>
 <li><strong>点估计(矩估计法，极大似然估计)</strong></li>
 <li><strong>区间估计：</strong> 置信区间、置信水平、显著水平</li>
 </ul>
 <p><strong>1. 极大似然估计</strong></p>
-<p>总体含有待估参数$\theta$，可以取很多值，要在$\theta$的一切可能取值中选出一个是样本观测值出现的概率最大的$\theta$值，记为$\hat{\theta}$，并称$\hat{\theta}$为$\theta$的极大似然估计。</p>
-<p><strong>似然函数：</strong> $L(\theta) = \prod\limits_{i=1}^{n}p(x_i;\theta)$<br><strong>对数似然函数：</strong> $l(\theta) = lnL(\theta)$, 通过$l(\theta)$对$\theta$的每一个分量求偏导并令其为0求解。<br><strong>对于不同的分布形式而言，其似然函数的形式也是各式各样的。</strong></p>
+<p>总体含有待估参数<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;">，可以取很多值，要在<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;">的一切可能取值中选出一个是样本观测值出现的概率最大的<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;">值，记为<img src="https://math.now.sh?inline=%5Chat%7B%5Ctheta%7D" style="display:inline-block;margin: 0;">，并称<img src="https://math.now.sh?inline=%5Chat%7B%5Ctheta%7D" style="display:inline-block;margin: 0;">为<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;">的极大似然估计。</p>
+<p><strong>似然函数：</strong> <img src="https://math.now.sh?inline=L%28%5Ctheta%29%20%3D%20%5Cprod%5Climits_%7Bi%3D1%7D%5E%7Bn%7Dp(x_i%3B%5Ctheta)" style="display:inline-block;margin: 0;"><br>
+<strong>对数似然函数：</strong> <img src="https://math.now.sh?inline=l%28%5Ctheta%29%20%3D%20lnL(%5Ctheta)" style="display:inline-block;margin: 0;">, 通过<img src="https://math.now.sh?inline=l%28%5Ctheta%29" style="display:inline-block;margin: 0;">对<img src="https://math.now.sh?inline=%5Ctheta" style="display:inline-block;margin: 0;">的每一个分量求偏导并令其为0求解。<br>
+<strong>对于不同的分布形式而言，其似然函数的形式也是各式各样的。</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 单参数情况，使用optimize()/maxLik()函数求解
 # e.g.(optimize()) 指数分布求解参数lamda
  f &lt;- function(lamda){
@@ -594,8 +614,10 @@ rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-ro
 <p><strong>3. 双总体均值差的区间估计</strong></p>
 <p><strong>3.1 独立样本</strong></p>
 <p><strong>总体方差已知</strong></p>
-<p><strong>总体方差未知但相同（总体方差由样本方差代替）：</strong><br>$t=\frac{\bar{x_1}-\bar{x_2}-(\mu_1-\mu_2)}{s’/\sqrt{1/n_1+1/n_2}}$ ~ $t(n_1+n_2-2)$, $s’=\sqrt\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}$</p>
-<p><strong>总体方差未知但不相同（总体方差由样本方差代替）：</strong><br>$t=\frac{\bar{x_1}-\bar{x_2}-(\mu_1-\mu_2)}{\sqrt{s_1^2/n_1+s_2^2/n_2}}$ ~ $t(v)$, $v=(\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2})^2/[\frac{(\sigma_1^2)^2}{n_1^2(n_1-1)}+\frac{(\sigma_2^2)^2}{n_2^2(n_2-2)}]$, $\hat{v}=(\frac{s_1^2}{n_1}+\frac{s_2^2}{n_2})^2/[\frac{(s_1^2)^2}{n_1^2(n_1-1)}+\frac{(s_2^2)^2}{n_2^2(n_2-2)}]$</p>
+<p><strong>总体方差未知但相同（总体方差由样本方差代替）：</strong><br>
+<img src="https://math.now.sh?inline=t%3D%5Cfrac%7B%5Cbar%7Bx_1%7D-%5Cbar%7Bx_2%7D-%28%5Cmu_1-%5Cmu_2%29%7D%7Bs'%2F%5Csqrt%7B1%2Fn_1%2B1%2Fn_2%7D%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=t%28n_1%2Bn_2-2%29" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=s'%3D%5Csqrt%5Cfrac%7B%28n_1-1%29s_1%5E2%2B(n_2-1)s_2%5E2%7D%7Bn_1%2Bn_2-2%7D" style="display:inline-block;margin: 0;"></p>
+<p><strong>总体方差未知但不相同（总体方差由样本方差代替）：</strong><br>
+<img src="https://math.now.sh?inline=t%3D%5Cfrac%7B%5Cbar%7Bx_1%7D-%5Cbar%7Bx_2%7D-%28%5Cmu_1-%5Cmu_2%29%7D%7B%5Csqrt%7Bs_1%5E2%2Fn_1%2Bs_2%5E2%2Fn_2%7D%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=t%28v%29" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=v%3D%28%5Cfrac%7B%5Csigma_1%5E2%7D%7Bn_1%7D%2B%5Cfrac%7B%5Csigma_2%5E2%7D%7Bn_2%7D%29%5E2%2F%5B%5Cfrac%7B(%5Csigma_1%5E2)%5E2%7D%7Bn_1%5E2(n_1-1)%7D%2B%5Cfrac%7B(%5Csigma_2%5E2)%5E2%7D%7Bn_2%5E2(n_2-2)%7D%5D" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=%5Chat%7Bv%7D%3D%28%5Cfrac%7Bs_1%5E2%7D%7Bn_1%7D%2B%5Cfrac%7Bs_2%5E2%7D%7Bn_2%7D%29%5E2%2F%5B%5Cfrac%7B(s_1%5E2)%5E2%7D%7Bn_1%5E2(n_1-1)%7D%2B%5Cfrac%7B(s_2%5E2)%5E2%7D%7Bn_2%5E2(n_2-2)%7D%5D" style="display:inline-block;margin: 0;"></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">t.test()
 # 情况一：两总体方差已知
 # 情况二：两总体方差未知但相同，用两个样本方差代替
@@ -636,40 +658,44 @@ t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">prop.test()
  prop.test(x=c(225,128),n=c(500,400), correct=F)
  prop.test(x=c(225,128),n=c(500,400)) # 使用连续性修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<h3 id="参数假设检验"><a href="#参数假设检验" class="headerlink" title="参数假设检验"></a>参数假设检验</h3><p>假设检验的基本思想为小概率反证法思想。</p>
+<h3 id="参数假设检验">参数假设检验</h3>
+<p>假设检验的基本思想为小概率反证法思想。</p>
 <ul>
-<li><strong>原假设($H_0$):</strong> 那些单纯由随机因素导致的采样观察结果；<br>  <strong>备择假设($H_1$):</strong> 指受某些非随机因素影响而得到的采样观察结果。</li>
-<li><strong>单侧问题</strong><br>  <strong>双侧问题</strong></li>
-<li><strong>Ⅰ型错误：</strong> 拒绝对的零假设（假阳）<br>  <strong>Ⅱ型错误：</strong> 没有拒绝不对的零假设（假阴）</li>
+<li><strong>原假设(<img src="https://math.now.sh?inline=H_0" style="display:inline-block;margin: 0;">):</strong> 那些单纯由随机因素导致的采样观察结果；<br>
+<strong>备择假设(<img src="https://math.now.sh?inline=H_1" style="display:inline-block;margin: 0;">):</strong> 指受某些非随机因素影响而得到的采样观察结果。</li>
+<li><strong>单侧问题</strong><br>
+<strong>双侧问题</strong></li>
+<li><strong>Ⅰ型错误：</strong> 拒绝对的零假设（假阳）<br>
+<strong>Ⅱ型错误：</strong> 没有拒绝不对的零假设（假阴）</li>
 </ul>
 <p><strong>1. 比例检验</strong></p>
 <p><strong>1.1 单总体比例</strong></p>
 <ul>
 <li>使用二项分布进行检验，通常要对离散整数进行连续性修正</li>
-<li>当样本量足够大，使用正态分布近似进行参数检验：$\bar{p}$ ~ $N(p_0,\frac{p_0*(1-p_0)}{n})$，统计量$z=\frac{\bar{p}-p_0}{\sqrt{p_0(1-p_0)/n}}$</li>
+<li>当样本量足够大，使用正态分布近似进行参数检验：<img src="https://math.now.sh?inline=%5Cbar%7Bp%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=N%28p_0%2C%5Cfrac%7Bp_0*(1-p_0%29%7D%7Bn%7D)" style="display:inline-block;margin: 0;">，统计量<img src="https://math.now.sh?inline=z%3D%5Cfrac%7B%5Cbar%7Bp%7D-p_0%7D%7B%5Csqrt%7Bp_0%281-p_0%29%2Fn%7D%7D" style="display:inline-block;margin: 0;"></li>
 </ul>
 <p><strong>1.2 双总体比例差</strong></p>
 <ul>
-<li>$\bar{p_1} \sim N(p_1,\frac{p_1*(1-p_1)}{n_1})$</li>
-<li>$\bar{p_2} \sim N(p_2,\frac{p_2*(1-p_2)}{n_2})$</li>
-<li>$\bar{p_1}-\bar{p_2} \sim N(p_1-p_2,\frac{p_1<em>(1-p_1)}{n_1}+\frac{p_2</em>(1-p_2)}{n_2})$</li>
-<li>统计量：$z=\frac{\bar{p_1}-\bar{p_2}-(p_1-p_2)}{\sigma_{p_1-p_2}}, \sigma_{p_1-p_2}=\sqrt{\frac{p_1<em>(1-p_1)}{n_1}+\frac{p_2</em>(1-p_2)}{n_2}}$，在实际计算中通常用$\bar{p_1}$、$\bar{p_2}$对$p_1$、$p_2$进行替换。</li>
+<li><img src="https://math.now.sh?inline=%5Cbar%7Bp_1%7D%20%5Csim%20N%28p_1%2C%5Cfrac%7Bp_1*(1-p_1%29%7D%7Bn_1%7D)" style="display:inline-block;margin: 0;"></li>
+<li><img src="https://math.now.sh?inline=%5Cbar%7Bp_2%7D%20%5Csim%20N%28p_2%2C%5Cfrac%7Bp_2*(1-p_2%29%7D%7Bn_2%7D)" style="display:inline-block;margin: 0;"></li>
+<li><img src="https://math.now.sh?inline=%5Cbar%7Bp_1%7D-%5Cbar%7Bp_2%7D%20%5Csim%20N%28p_1-p_2%2C%5Cfrac%7Bp_1*(1-p_1%29%7D%7Bn_1%7D%2B%5Cfrac%7Bp_2*(1-p_2)%7D%7Bn_2%7D)" style="display:inline-block;margin: 0;"></li>
+<li>统计量：<img src="https://math.now.sh?inline=z%3D%5Cfrac%7B%5Cbar%7Bp_1%7D-%5Cbar%7Bp_2%7D-%28p_1-p_2%29%7D%7B%5Csigma_%7Bp_1-p_2%7D%7D%2C%20%5Csigma_%7Bp_1-p_2%7D%3D%5Csqrt%7B%5Cfrac%7Bp_1*(1-p_1)%7D%7Bn_1%7D%2B%5Cfrac%7Bp_2*(1-p_2)%7D%7Bn_2%7D%7D" style="display:inline-block;margin: 0;">，在实际计算中通常用<img src="https://math.now.sh?inline=%5Cbar%7Bp_1%7D" style="display:inline-block;margin: 0;">、<img src="https://math.now.sh?inline=%5Cbar%7Bp_2%7D" style="display:inline-block;margin: 0;">对<img src="https://math.now.sh?inline=p_1" style="display:inline-block;margin: 0;">、<img src="https://math.now.sh?inline=p_2" style="display:inline-block;margin: 0;">进行替换。</li>
 </ul>
 <p><strong>2. 方差检验</strong></p>
 <p><strong>2.1 单总体方差</strong></p>
 <ul>
-<li><strong>均值$\mu_0$已知</strong>：$\chi^2=\frac{1}{\sigma_0^2}\sum\limits_{i=0}^{n}(x_i-\mu_0)^2\sim\chi^{2}(n)$</li>
-<li><strong>均值$\mu_0$未知</strong>：$\chi^2=\frac{(n-1)S^2}{\sigma_0^2}\sim\chi^{2}(n-1)$</li>
+<li><strong>均值<img src="https://math.now.sh?inline=%5Cmu_0" style="display:inline-block;margin: 0;">已知</strong>：<img src="https://math.now.sh?inline=%5Cchi%5E2%3D%5Cfrac%7B1%7D%7B%5Csigma_0%5E2%7D%5Csum%5Climits_%7Bi%3D0%7D%5E%7Bn%7D%28x_i-%5Cmu_0%29%5E2%5Csim%5Cchi%5E%7B2%7D(n)" style="display:inline-block;margin: 0;"></li>
+<li><strong>均值<img src="https://math.now.sh?inline=%5Cmu_0" style="display:inline-block;margin: 0;">未知</strong>：<img src="https://math.now.sh?inline=%5Cchi%5E2%3D%5Cfrac%7B%28n-1%29S%5E2%7D%7B%5Csigma_0%5E2%7D%5Csim%5Cchi%5E%7B2%7D(n-1)" style="display:inline-block;margin: 0;"></li>
 </ul>
 <p><strong>2.2 双总体方差差值</strong></p>
 <ul>
-<li><strong>均值$\mu_x,\mu_y$已知</strong>：$F=\frac{\sum(x_i-\mu_x)^2/n_x}{\sum(y_i-\mu_y)^2/n_y} \sim F(n_x,n_y)$</li>
-<li><strong>均值$\mu_x,\mu_y$未知</strong>：$F=\frac{S_x^2}{S_y^2} \sim F(n_x-1,n_y-1)$</li>
+<li><strong>均值<img src="https://math.now.sh?inline=%5Cmu_x%2C%5Cmu_y" style="display:inline-block;margin: 0;">已知</strong>：<img src="https://math.now.sh?inline=F%3D%5Cfrac%7B%5Csum%28x_i-%5Cmu_x%29%5E2%2Fn_x%7D%7B%5Csum(y_i-%5Cmu_y)%5E2%2Fn_y%7D%20%5Csim%20F(n_x%2Cn_y)" style="display:inline-block;margin: 0;"></li>
+<li><strong>均值<img src="https://math.now.sh?inline=%5Cmu_x%2C%5Cmu_y" style="display:inline-block;margin: 0;">未知</strong>：<img src="https://math.now.sh?inline=F%3D%5Cfrac%7BS_x%5E2%7D%7BS_y%5E2%7D%20%5Csim%20F%28n_x-1%2Cn_y-1%29" style="display:inline-block;margin: 0;"></li>
 </ul>
 <p><strong>3. 均值检验</strong></p>
 <ul>
-<li>大样本下的统计量都被看成是正态分布，需要使用z统计量，计算公式为$z=\frac{\bar{x}-\mu}{\sigma/\sqrt{n}}$，通常用样本标准差s代替$\sigma$。</li>
-<li>小样本情况下，样本统计量服从t分布，使用t统计量，计算公式为$t=\frac{\bar{x}-\mu}{S/\sqrt{n}}$，t的自由度为n-1。</li>
+<li>大样本下的统计量都被看成是正态分布，需要使用z统计量，计算公式为<img src="https://math.now.sh?inline=z%3D%5Cfrac%7B%5Cbar%7Bx%7D-%5Cmu%7D%7B%5Csigma%2F%5Csqrt%7Bn%7D%7D" style="display:inline-block;margin: 0;">，通常用样本标准差s代替<img src="https://math.now.sh?inline=%5Csigma" style="display:inline-block;margin: 0;">。</li>
+<li>小样本情况下，样本统计量服从t分布，使用t统计量，计算公式为<img src="https://math.now.sh?inline=t%3D%5Cfrac%7B%5Cbar%7Bx%7D-%5Cmu%7D%7BS%2F%5Csqrt%7Bn%7D%7D" style="display:inline-block;margin: 0;">，t的自由度为n-1。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 小样本情况
 pH &lt;- c(......)
@@ -736,22 +762,56 @@ qt(alpha/2,n-1);qt(1-alpha/2,n-1)
 t.test(Feed.2, Feed.1, paired = T)
 
 t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="非参数假设检验"><a href="#非参数假设检验" class="headerlink" title="非参数假设检验"></a>非参数假设检验</h3><p>总体分布服从正态分布或总体分布已知条件下进行的统计检验称为<strong>参数检验</strong>；总体分布不要求服从正态分布或总体分布情况不明时，用来检验<strong>数据资源是否来自同一个总体的统计检验方法</strong>就是<strong>非参数检验方法</strong>。</p>
+<h3 id="非参数假设检验">非参数假设检验</h3>
+<p>总体分布服从正态分布或总体分布已知条件下进行的统计检验称为<strong>参数检验</strong>；总体分布不要求服从正态分布或总体分布情况不明时，用来检验<strong>数据资源是否来自同一个总体的统计检验方法</strong>就是<strong>非参数检验方法</strong>。</p>
 <p><strong>1. 列联分析</strong></p>
 <p>列联分析是研究<strong>两个分类变量</strong>之间关系的统计方法，<strong>统计数据</strong> 有类别型数据和数值型数据之分，<strong>列联表</strong> 是由两个以上的变量进行交叉分类的频数分布表。</p>
 <ul>
-<li><p><strong>皮尔逊卡方检验</strong></p>
+<li>
+<p><strong>皮尔逊卡方检验</strong></p>
 <ul>
-<li><strong>卡方统计值：</strong>$\chi^2 = \sum\frac{(f_o-f_e)^2}{f_e}$, $f_o$表示观察值频数，$f_e$表示期望值频数</li>
-<li><strong>期望：</strong> 行和与列和之积再除以表中数据总和，$E_r,c = n_r*n_c/n$</li>
-<li><strong>自由度：</strong> $df = (r-1) * (c-1)$</li>
+<li><strong>卡方统计值：</strong><img src="https://math.now.sh?inline=%5Cchi%5E2%20%3D%20%5Csum%5Cfrac%7B%28f_o-f_e%29%5E2%7D%7Bf_e%7D" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=f_o" style="display:inline-block;margin: 0;">表示观察值频数，<img src="https://math.now.sh?inline=f_e" style="display:inline-block;margin: 0;">表示期望值频数</li>
+<li><strong>期望：</strong> 行和与列和之积再除以表中数据总和，<img src="https://math.now.sh?inline=E_r%2Cc%20%3D%20n_r*n_c%2Fn" style="display:inline-block;margin: 0;"></li>
+<li><strong>自由度：</strong> <img src="https://math.now.sh?inline=df%20%3D%20%28r-1%29%20*%20(c-1)" style="display:inline-block;margin: 0;"></li>
 <li><strong>应用条件：</strong> 隐含条件为正态分布近似二项分布，故每个单元格数据是确切的频数/类别不可相互交织/期望频数频数不小于5/样本总数不小于40</li>
 </ul>
 </li>
-<li><p><strong>费希尔确切检验</strong><br>  2*2的列联表检验的方法，为超几何分布。</p>
-<p>  |      |  X1  |  X2  |  X   |<br>  | :—: | :—: | :—: | :—: |<br>  |  Y1  |  a   |  b   | a+b  |<br>  |  Y2  |  c   |  d   | c+d  |<br>  |  Y   | a+c  | b+d  |  N   |</p>
+<li>
+<p><strong>费希尔确切检验</strong><br>
+2*2的列联表检验的方法，为超几何分布。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:center">X1</th>
+<th style="text-align:center">X2</th>
+<th style="text-align:center">X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">Y1</td>
+<td style="text-align:center">a</td>
+<td style="text-align:center">b</td>
+<td style="text-align:center">a+b</td>
+</tr>
+<tr>
+<td style="text-align:center">Y2</td>
+<td style="text-align:center">c</td>
+<td style="text-align:center">d</td>
+<td style="text-align:center">c+d</td>
+</tr>
+<tr>
+<td style="text-align:center">Y</td>
+<td style="text-align:center">a+c</td>
+<td style="text-align:center">b+d</td>
+<td style="text-align:center">N</td>
+</tr>
+</tbody>
+</table>
 <pre><code>$P(X=a) = \frac{C_{a+b}^aC_{c+d}^c}{C_{a+c}^N}$
-</code></pre></li>
+</code></pre>
+</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 骰子是否有偏
  chisq.test(c(25, 18, 28, 20, 16, 13))
@@ -771,37 +831,41 @@ t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 handedness &lt;- matrix(c(1, 30, 4, 12), nrow = 2, byrow = TRUE)
 fisher.test(handedness)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p><strong>2. 两个顺序变量的秩方法</strong></p>
-<p><strong>2.1 两个顺序变量的秩方法($\gamma$系数)</strong></p>
-<p>研究两个顺序变量之前的相关性，相关程度可使用系数$\gamma$度量，范围为[-1, 1]。</p>
+<p><strong>2.1 两个顺序变量的秩方法(<img src="https://math.now.sh?inline=%5Cgamma" style="display:inline-block;margin: 0;">系数)</strong></p>
+<p>研究两个顺序变量之前的相关性，相关程度可使用系数<img src="https://math.now.sh?inline=%5Cgamma" style="display:inline-block;margin: 0;">度量，范围为[-1, 1]。</p>
 <ul>
-<li><strong>$\gamma$系数计算</strong><ul>
+<li><strong><img src="https://math.now.sh?inline=%5Cgamma" style="display:inline-block;margin: 0;">系数计算</strong>
+<ul>
 <li>先对两个顺序变量进行频率的表格统计，行项和列项需要按照程度依次排列。</li>
-<li>相同的次序=$\sum$所有频率与左上方(左下方)的频率的和的乘积</li>
-<li>不同的次序=$\sum$所有频率与右上方(右下方)的频率的和的乘积</li>
-<li>$\gamma=\frac{相同的次序-不同的次序}{相同的次序+不同的次序}$，可以改进为$\gamma=\frac{(相同的次序+不同的次序)/2-不同的次序}{(相同的次序+不同的次序)/2}$</li>
+<li>相同的次序=<img src="https://math.now.sh?inline=%5Csum" style="display:inline-block;margin: 0;">所有频率与左上方(左下方)的频率的和的乘积</li>
+<li>不同的次序=<img src="https://math.now.sh?inline=%5Csum" style="display:inline-block;margin: 0;">所有频率与右上方(右下方)的频率的和的乘积</li>
+<li><img src="https://math.now.sh?inline=%5Cgamma%3D%5Cfrac%7B%E7%9B%B8%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F-%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%7D%7B%E7%9B%B8%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%2B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%7D" style="display:inline-block;margin: 0;">，可以改进为<img src="https://math.now.sh?inline=%5Cgamma%3D%5Cfrac%7B%28%E7%9B%B8%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%2B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%29%2F2-%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%7D%7B(%E7%9B%B8%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%2B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F)%2F2%7D" style="display:inline-block;margin: 0;"></li>
 </ul>
 </li>
-<li><strong>假设检验</strong><ul>
-<li>H0: $r=0$</li>
-<li>H1: $r≠0$</li>
-<li>统计量: $z=\frac{\gamma}{\sqrt{\frac{4(row+1)(col+1)}{9n(row-1)(col-1)}}}$，更精确的计算公式为$z=\frac{\gamma}{1-\gamma^2}\sqrt{\frac{相同的次序+不同的次序}{n}}$</li>
+<li><strong>假设检验</strong>
+<ul>
+<li>H0: <img src="https://math.now.sh?inline=r%3D0" style="display:inline-block;margin: 0;"></li>
+<li>H1: <img src="https://math.now.sh?inline=r%E2%89%A00" style="display:inline-block;margin: 0;"></li>
+<li>统计量: <img src="https://math.now.sh?inline=z%3D%5Cfrac%7B%5Cgamma%7D%7B%5Csqrt%7B%5Cfrac%7B4%28row%2B1%29(col%2B1)%7D%7B9n(row-1)(col-1)%7D%7D%7D" style="display:inline-block;margin: 0;">，更精确的计算公式为<img src="https://math.now.sh?inline=z%3D%5Cfrac%7B%5Cgamma%7D%7B1-%5Cgamma%5E2%7D%5Csqrt%7B%5Cfrac%7B%E7%9B%B8%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%2B%E4%B8%8D%E5%90%8C%E7%9A%84%E6%AC%A1%E5%BA%8F%7D%7Bn%7D%7D" style="display:inline-block;margin: 0;"></li>
 </ul>
 </li>
 </ul>
 <p><strong>2.2 两个顺序变量的秩方法(spearman秩相关系数)</strong></p>
 <p>Spearman相关系数计算的不是变量的具体数值，而是变量对应的秩。</p>
 <ul>
-<li><strong>Spearman相关系数计算</strong><ul>
-<li>$R_i$是变量$X_i$在{$X_1,X_2,…,X_n$}中的秩</li>
-<li>$Q_i$是变量$Y_i$在{$Y_1,Y_2,…,Y_n$}中的秩</li>
-<li>相关系数计算：$r_s=\frac{\sum{(R_i-\overline{R})(Q_i-\overline{Q})}}{\sqrt{\sum{(R_i-\overline{R})^2}}\sqrt{\sum{(Q_i-\overline{Q})^2}}}$</li>
-<li>可简化为：$r_s=1-\frac{6}{n(n^2-1)}\sum(R_i-Q_i)^2$</li>
+<li><strong>Spearman相关系数计算</strong>
+<ul>
+<li><img src="https://math.now.sh?inline=R_i" style="display:inline-block;margin: 0;">是变量<img src="https://math.now.sh?inline=X_i" style="display:inline-block;margin: 0;">在{<img src="https://math.now.sh?inline=X_1%2CX_2%2C%E2%80%A6%2CX_n" style="display:inline-block;margin: 0;">}中的秩</li>
+<li><img src="https://math.now.sh?inline=Q_i" style="display:inline-block;margin: 0;">是变量<img src="https://math.now.sh?inline=Y_i" style="display:inline-block;margin: 0;">在{<img src="https://math.now.sh?inline=Y_1%2CY_2%2C%E2%80%A6%2CY_n" style="display:inline-block;margin: 0;">}中的秩</li>
+<li>相关系数计算：<img src="https://math.now.sh?inline=r_s%3D%5Cfrac%7B%5Csum%7B%28R_i-%5Coverline%7BR%7D%29(Q_i-%5Coverline%7BQ%7D)%7D%7D%7B%5Csqrt%7B%5Csum%7B(R_i-%5Coverline%7BR%7D)%5E2%7D%7D%5Csqrt%7B%5Csum%7B(Q_i-%5Coverline%7BQ%7D)%5E2%7D%7D%7D" style="display:inline-block;margin: 0;"></li>
+<li>可简化为：<img src="https://math.now.sh?inline=r_s%3D1-%5Cfrac%7B6%7D%7Bn%28n%5E2-1%29%7D%5Csum(R_i-Q_i)%5E2" style="display:inline-block;margin: 0;"></li>
 </ul>
 </li>
-<li><strong>假设检验</strong><ul>
-<li>H0: $r_s=0$</li>
-<li>H1: $r_s≠0$</li>
-<li>统计量: $t=\frac{r_s}{\sqrt{(1-r_s^2)/(n-2)}}, df=n-2$</li>
+<li><strong>假设检验</strong>
+<ul>
+<li>H0: <img src="https://math.now.sh?inline=r_s%3D0" style="display:inline-block;margin: 0;"></li>
+<li>H1: <img src="https://math.now.sh?inline=r_s%E2%89%A00" style="display:inline-block;margin: 0;"></li>
+<li>统计量: <img src="https://math.now.sh?inline=t%3D%5Cfrac%7Br_s%7D%7B%5Csqrt%7B%281-r_s%5E2%29%2F(n-2)%7D%7D%2C%20df%3Dn-2" style="display:inline-block;margin: 0;"></li>
 </ul>
 </li>
 </ul>
@@ -810,8 +874,8 @@ fisher.test(handedness)<span aria-hidden="true" class="line-numbers-rows"><span>
 <ul>
 <li><strong>检验的假设：</strong> 涉及<strong>单一总体中位数的假设</strong>和<strong>配对样本数据</strong>的假设；</li>
 <li><strong>核心思想：</strong> 分析数据中正负号出现的频率，并确定它们是否有显著差异；</li>
-<li><strong>检测方法：</strong> 判断观察值与原假设中心位置的大小，$S_+$为正符号的数目，$S_-$为负符号的数目，<strong>$S_*$为两者中较小者作为统计量</strong>。以<strong>二项分布为基础，概率为0.5</strong>的一种假设检验；当n大于25时，近似认为结果分布服从正态N(0,1)分布。</li>
-<li><strong>统计量修正：</strong> 由于正态分布是连续分布，所以需要进行连续修正，计算公式为：$z=\frac{(x+0.5)-0.5n}{0.5\sqrt{n}}$，x表示频率较小的符号出现的次数，<em>证明略</em>。</li>
+<li><strong>检测方法：</strong> 判断观察值与原假设中心位置的大小，<img src="https://math.now.sh?inline=S_%2B" style="display:inline-block;margin: 0;">为正符号的数目，<img src="https://math.now.sh?inline=S_-" style="display:inline-block;margin: 0;">为负符号的数目，<strong><img src="https://math.now.sh?inline=S_*" style="display:inline-block;margin: 0;">为两者中较小者作为统计量</strong>。以<strong>二项分布为基础，概率为0.5</strong>的一种假设检验；当n大于25时，近似认为结果分布服从正态N(0,1)分布。</li>
+<li><strong>统计量修正：</strong> 由于正态分布是连续分布，所以需要进行连续修正，计算公式为：<img src="https://math.now.sh?inline=z%3D%5Cfrac%7B%28x%2B0.5%29-0.5n%7D%7B0.5%5Csqrt%7Bn%7D%7D" style="display:inline-block;margin: 0;">，x表示频率较小的符号出现的次数，<em>证明略</em>。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">z = -2.23 # 已知统计量并已经对其进行修正
 pnorm(z) # 正态分布近似
@@ -824,7 +888,7 @@ pbinom(sum(x&gt;99), length(x), prob=0.5, lower.tail = T) * 2 # 双尾<span aria
 <ul>
 <li><strong>检验的假设：</strong> 一个样本是否来自一个具有指定中位数的总体；</li>
 <li><strong>核心思想：</strong> 差值按照绝对值的大小编秩并给秩次加上原来差值符号，所形成的的正秩和与负秩和在理论上是相等的（满足原假设）。</li>
-<li><strong>检测方法：</strong> $T_+$为正号的秩和，$T_-$为负号的秩和，$T$为两者中较小者。<strong>当T不大于30时，T为统计量；当T小于30时，$z=\frac{T-n(n+1)/4}{\sqrt{n(n+1)(2n+1)/24}}$，<em>证明略</em></strong>。</li>
+<li><strong>检测方法：</strong> <img src="https://math.now.sh?inline=T_%2B" style="display:inline-block;margin: 0;">为正号的秩和，<img src="https://math.now.sh?inline=T_-" style="display:inline-block;margin: 0;">为负号的秩和，<img src="https://math.now.sh?inline=T" style="display:inline-block;margin: 0;">为两者中较小者。<strong>当T不大于30时，T为统计量；当T小于30时，<img src="https://math.now.sh?inline=z%3D%5Cfrac%7BT-n%28n%2B1%29%2F4%7D%7B%5Csqrt%7Bn(n%2B1)(2n%2B1)%2F24%7D%7D" style="display:inline-block;margin: 0;">，<em>证明略</em></strong>。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 原假设中位数为8
 x=c(4.12,5.81,7.63,9.74,10.39,11.92,12.32,12.89,13.54,14.45)
@@ -845,7 +909,8 @@ wilcox.test(y - x, alternative = "less",exact = FALSE, correct = FALSE)
 <ul>
 <li><strong>核心思想：</strong> 如果两个样本来自同一个总体，这些值都在数值的一个合并集中进行排序，那么高和低的秩应该平均地落在两个样本中；如果一个样本中发现低秩特别显著，而在另一个总体中发现高秩特别显著，有理由怀疑这两个样本来自不同的总体。</li>
 <li><strong>方法优势：</strong> 总体正态分布要求不成立的情况下，可以用秩和检验法；另外，秩和检验法简单方便且高效。</li>
-<li><strong>检验方法：</strong> 样本1的容量为n1，样本2的容量为n2，总体1观察值的秩和为T,合并两个样本后秩集的均值为$\frac{(n_1+n_2)(n_1+n_2+1)}{2(n_1+n_2)} = (n_1+n_2+1)/2$；原假设前提，T的期望$\mu_T = \frac{n_1(n_1+n_2+1)}{2}$，T的方差$\sigma{_T}{^2} = \frac{n_1n_2}{12}(n_1+n_2+1)$。$T_L$表示左边界临界值，$T_L$表示右边界临界值。<br>  <strong>当两个样本数均不大于10时，T为统计量，比较T和临界表中的数值；当两个样本数大于10时，$z = \frac{T-\mu_T}{\sigma{_T}}$，调整T的方差：$\sigma{_T}{^2} = \frac{n_1n_2}{12}[(n_1+n_2+1)-\frac{\sum_{j=1}^{k}t_j(t^2_j-1)}{(n_1+n_2)(n_1+n_2-1)}]$</strong></li>
+<li><strong>检验方法：</strong> 样本1的容量为n1，样本2的容量为n2，总体1观察值的秩和为T,合并两个样本后秩集的均值为<img src="https://math.now.sh?inline=%5Cfrac%7B%28n_1%2Bn_2%29(n_1%2Bn_2%2B1)%7D%7B2(n_1%2Bn_2)%7D%20%3D%20(n_1%2Bn_2%2B1)%2F2" style="display:inline-block;margin: 0;">；原假设前提，T的期望<img src="https://math.now.sh?inline=%5Cmu_T%20%3D%20%5Cfrac%7Bn_1%28n_1%2Bn_2%2B1%29%7D%7B2%7D" style="display:inline-block;margin: 0;">，T的方差<img src="https://math.now.sh?inline=%5Csigma%7B_T%7D%7B%5E2%7D%20%3D%20%5Cfrac%7Bn_1n_2%7D%7B12%7D%28n_1%2Bn_2%2B1%29" style="display:inline-block;margin: 0;">。<img src="https://math.now.sh?inline=T_L" style="display:inline-block;margin: 0;">表示左边界临界值，<img src="https://math.now.sh?inline=T_L" style="display:inline-block;margin: 0;">表示右边界临界值。<br>
+<strong>当两个样本数均不大于10时，T为统计量，比较T和临界表中的数值；当两个样本数大于10时，<img src="https://math.now.sh?inline=z%20%3D%20%5Cfrac%7BT-%5Cmu_T%7D%7B%5Csigma%7B_T%7D%7D" style="display:inline-block;margin: 0;">，调整T的方差：<img src="https://math.now.sh?inline=%5Csigma%7B_T%7D%7B%5E2%7D%20%3D%20%5Cfrac%7Bn_1n_2%7D%7B12%7D%5B%28n_1%2Bn_2%2B1%29-%5Cfrac%7B%5Csum_%7Bj%3D1%7D%5E%7Bk%7Dt_j(t%5E2_j-1)%7D%7B(n_1%2Bn_2)(n_1%2Bn_2-1)%7D%5D" style="display:inline-block;margin: 0;"></strong></li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 小样本
 placebo &lt;- c(0.90, 0.37, 1.63, 0.83, 0.95, 0.78, 0.86, 0.61, 0.38, 1.97)
@@ -861,39 +926,49 @@ wilcox.test(before, after, alternative = "greater", exact = FALSE, correct = FAL
 <p><strong>6. 克鲁斯卡尔-沃里斯检验</strong></p>
 <p>来自3个或更多独立总体的样本数据是否具有相同的分布，无总体分布要求。</p>
 <ul>
-<li><strong>应用要求：</strong> 每个样本中至少有5个观察值，统计量H的分布才用$\chi^2$分布来近似。</li>
-<li><strong>统计量：</strong> $H = \frac{12}{n_T(n_T+1)}(\sum_{i}\frac{T_{i}^{2}}{n_i})-3(n_T+1)$, 其中$n_i$是样本i的观察值数量，k是样本的个数，$n_T$是混合后的总样本容量，$T_i$是样本i在总的样本观察值中的秩和。<br>  <strong>等价于：</strong> $H = \frac{12}{n_T(n_T+1)}(\sum{n_i}(\bar{T_{i}}-\widehat{T_{i}})^2,  \bar{T_{i}} = \frac{T_i}{n_i},  \widehat{T_{i}} = \frac{T_i}{\sum{n_i}}$<br>  对给定的显著水平$\alpha$，如果统计量H超过自由度为k-1的$\chi^2$的临界值，则拒绝原假设。<br>  <strong>当样本观察值的秩有大量存在时，</strong> $H’ = H / (1-\sum_{j}\frac{t_{i}^{3}-t_j}{n_{T}^{3}-n_T})$，其中$t_j$是第j个相等秩组中的观察值数量。</li>
+<li><strong>应用要求：</strong> 每个样本中至少有5个观察值，统计量H的分布才用<img src="https://math.now.sh?inline=%5Cchi%5E2" style="display:inline-block;margin: 0;">分布来近似。</li>
+<li><strong>统计量：</strong> <img src="https://math.now.sh?inline=H%20%3D%20%5Cfrac%7B12%7D%7Bn_T%28n_T%2B1%29%7D(%5Csum_%7Bi%7D%5Cfrac%7BT_%7Bi%7D%5E%7B2%7D%7D%7Bn_i%7D)-3(n_T%2B1)" style="display:inline-block;margin: 0;">, 其中<img src="https://math.now.sh?inline=n_i" style="display:inline-block;margin: 0;">是样本i的观察值数量，k是样本的个数，<img src="https://math.now.sh?inline=n_T" style="display:inline-block;margin: 0;">是混合后的总样本容量，<img src="https://math.now.sh?inline=T_i" style="display:inline-block;margin: 0;">是样本i在总的样本观察值中的秩和。<br>
+<strong>等价于：</strong> <img src="https://math.now.sh?inline=H%20%3D%20%5Cfrac%7B12%7D%7Bn_T%28n_T%2B1%29%7D(%5Csum%7Bn_i%7D(%5Cbar%7BT_%7Bi%7D%7D-%5Cwidehat%7BT_%7Bi%7D%7D)%5E2%2C%20%20%5Cbar%7BT_%7Bi%7D%7D%20%3D%20%5Cfrac%7BT_i%7D%7Bn_i%7D%2C%20%20%5Cwidehat%7BT_%7Bi%7D%7D%20%3D%20%5Cfrac%7BT_i%7D%7B%5Csum%7Bn_i%7D%7D" style="display:inline-block;margin: 0;"><br>
+对给定的显著水平<img src="https://math.now.sh?inline=%5Calpha" style="display:inline-block;margin: 0;">，如果统计量H超过自由度为k-1的<img src="https://math.now.sh?inline=%5Cchi%5E2" style="display:inline-block;margin: 0;">的临界值，则拒绝原假设。<br>
+<strong>当样本观察值的秩有大量存在时，</strong> <img src="https://math.now.sh?inline=H'%20%3D%20H%20%2F%20%281-%5Csum_%7Bj%7D%5Cfrac%7Bt_%7Bi%7D%5E%7B3%7D-t_j%7D%7Bn_%7BT%7D%5E%7B3%7D-n_T%7D%29" style="display:inline-block;margin: 0;">，其中<img src="https://math.now.sh?inline=t_j" style="display:inline-block;margin: 0;">是第j个相等秩组中的观察值数量。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># e.g.
 x &lt;-c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3)
 y &lt;-c(4.5, 4.4, 3.5, 4.2, 4.6, 4.2)
 z &lt;-c(5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
 kruskal.test(list(x, y, z))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="方差分析方法"><a href="#方差分析方法" class="headerlink" title="方差分析方法"></a>方差分析方法</h2><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><p><strong>方差分析(Analysis of variance, ANOVA)</strong> 是通过检验各总体均值是否相等来判断分类型变量对数值型变量是否有显著影响的统计检验方法（检验多总体间的分布是否一致）。由费希尔提出，故又称为<strong>F检验</strong>。<br>方差分析中，将要检验的对象称为<strong>因素或因子(factor)</strong>，因素的不同表现称为<strong>水平或处理(treatment)</strong>，每个水平下得到的样本数据称为<strong>观察值(observed value)</strong>。<br>方差分析是通过对<strong>数据误差的考察</strong>来判断不同总体的均值是否相等，进而分析自变量对因变量是否有显著影响，主要分为两类误差：<strong>随机误差（随机因素的影响）</strong>和<strong>系统误差（系统性的处理因素造成）</strong>。<br>单双因素方差分析都要服从以下<strong>基本假定：</strong> ① 每个总体都服从正态分布，② 各观测值互相独立，③ 各组观察数据都是从相同方差的正态总体中抽取的(方差齐性)。</p>
-<h3 id="单因素方差分析"><a href="#单因素方差分析" class="headerlink" title="单因素方差分析"></a>单因素方差分析</h3><p>只有一个因素的方差分析称为<strong>单因素方差分析</strong>。在单因素分析中，涉及两个变量：一个是分类型变量（自变量），一个是数值型变量（因变量）。</p>
+<h2 id="方差分析方法">方差分析方法</h2>
+<h3 id="基本概念">基本概念</h3>
+<p><strong>方差分析(Analysis of variance, ANOVA)</strong> 是通过检验各总体均值是否相等来判断分类型变量对数值型变量是否有显著影响的统计检验方法（检验多总体间的分布是否一致）。由费希尔提出，故又称为<strong>F检验</strong>。<br>
+方差分析中，将要检验的对象称为<strong>因素或因子(factor)</strong>，因素的不同表现称为<strong>水平或处理(treatment)</strong>，每个水平下得到的样本数据称为<strong>观察值(observed value)</strong>。<br>
+方差分析是通过对<strong>数据误差的考察</strong>来判断不同总体的均值是否相等，进而分析自变量对因变量是否有显著影响，主要分为两类误差：<strong>随机误差（随机因素的影响）<strong>和</strong>系统误差（系统性的处理因素造成）</strong>。<br>
+单双因素方差分析都要服从以下<strong>基本假定：</strong> ① 每个总体都服从正态分布，② 各观测值互相独立，③ 各组观察数据都是从相同方差的正态总体中抽取的(方差齐性)。</p>
+<h3 id="单因素方差分析">单因素方差分析</h3>
+<p>只有一个因素的方差分析称为<strong>单因素方差分析</strong>。在单因素分析中，涉及两个变量：一个是分类型变量（自变量），一个是数值型变量（因变量）。</p>
 <ul>
-<li><strong>总变异(Total variation)：反应全体数据误差大小的平方和，用总离差平方和$SS_T$表示</strong>：$SS_T = \sum_{i=1}^{g}\sum_{j=1}^{n_i}(X_{ij}-\bar{X})^2,df_T=N-1$</li>
-<li><strong>组间变异(between group variation)：主要反映处理因素的作用以及一定的随机误差作用，用组间离差平方和$SS_R$表示</strong>：$SS_R = \sum_{i=1}^{g}n_i(\bar{X_i}-\bar{X})^2,df_R=g-1$</li>
-<li><strong>组内变异(within group variation)：主要反映随机误差作用，用组内离差平方和$SS_E$表示</strong>：$SS_E = \sum_{i=1}^{g}\sum_{j=1}^{n_i}(X_{ij}-\bar{X_i})^2=\sum_{i=1}^{g}(n_i-1)S_i^2,df_E=N-g$</li>
-<li><strong>关系：</strong> $SS_T = SS_R + SS_E, df_T = df_R + df_E$</li>
-<li><strong>性质：</strong> $\frac{SS_T}{\sigma^2}$ ~ $\chi^{2}(N-1)$, $\frac{SS_E}{\sigma^2}$ ~ $\chi^{2}(N-g)$, $\frac{SS_R}{\sigma^2}$ ~ $\chi^{2}(g-1)$</li>
-<li><strong>均方差：</strong> $MS_R = \frac{SS_R}{df_R}=\frac{SS_R}{g-1}(组间均方), MS_E = \frac{SS_E}{df_E}=\frac{SS_E}{N-g}(组内均方)$</li>
-<li><strong>统计量：</strong> $F = \frac{MS_R}{MS_E} = \frac{SS_R/(g-1)}{SS_E/(N-g)}$ ~ $F(g-1,N-g)$. 如果自变量对因变量没有影响，那么组间误差将值包含随机误差，F值接近于1；否则F值会大于1。</li>
-<li><strong>关系强度：</strong> $R^2 = \frac{SS_R}{SS_T}$，用于测量因子（自变量）与观察值（因变量）之间的关系强度。</li>
+<li><strong>总变异(Total variation)：反应全体数据误差大小的平方和，用总离差平方和<img src="https://math.now.sh?inline=SS_T" style="display:inline-block;margin: 0;">表示</strong>：<img src="https://math.now.sh?inline=SS_T%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bg%7D%5Csum_%7Bj%3D1%7D%5E%7Bn_i%7D%28X_%7Bij%7D-%5Cbar%7BX%7D%29%5E2%2Cdf_T%3DN-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>组间变异(between group variation)：主要反映处理因素的作用以及一定的随机误差作用，用组间离差平方和<img src="https://math.now.sh?inline=SS_R" style="display:inline-block;margin: 0;">表示</strong>：<img src="https://math.now.sh?inline=SS_R%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bg%7Dn_i%28%5Cbar%7BX_i%7D-%5Cbar%7BX%7D%29%5E2%2Cdf_R%3Dg-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>组内变异(within group variation)：主要反映随机误差作用，用组内离差平方和<img src="https://math.now.sh?inline=SS_E" style="display:inline-block;margin: 0;">表示</strong>：<img src="https://math.now.sh?inline=SS_E%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Bg%7D%5Csum_%7Bj%3D1%7D%5E%7Bn_i%7D%28X_%7Bij%7D-%5Cbar%7BX_i%7D%29%5E2%3D%5Csum_%7Bi%3D1%7D%5E%7Bg%7D(n_i-1)S_i%5E2%2Cdf_E%3DN-g" style="display:inline-block;margin: 0;"></li>
+<li><strong>关系：</strong> <img src="https://math.now.sh?inline=SS_T%20%3D%20SS_R%20%2B%20SS_E%2C%20df_T%20%3D%20df_R%20%2B%20df_E" style="display:inline-block;margin: 0;"></li>
+<li><strong>性质：</strong> <img src="https://math.now.sh?inline=%5Cfrac%7BSS_T%7D%7B%5Csigma%5E2%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=%5Cchi%5E%7B2%7D%28N-1%29" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=%5Cfrac%7BSS_E%7D%7B%5Csigma%5E2%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=%5Cchi%5E%7B2%7D%28N-g%29" style="display:inline-block;margin: 0;">, <img src="https://math.now.sh?inline=%5Cfrac%7BSS_R%7D%7B%5Csigma%5E2%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=%5Cchi%5E%7B2%7D%28g-1%29" style="display:inline-block;margin: 0;"></li>
+<li><strong>均方差：</strong> <img src="https://math.now.sh?inline=MS_R%20%3D%20%5Cfrac%7BSS_R%7D%7Bdf_R%7D%3D%5Cfrac%7BSS_R%7D%7Bg-1%7D%28%E7%BB%84%E9%97%B4%E5%9D%87%E6%96%B9%29%2C%20MS_E%20%3D%20%5Cfrac%7BSS_E%7D%7Bdf_E%7D%3D%5Cfrac%7BSS_E%7D%7BN-g%7D(%E7%BB%84%E5%86%85%E5%9D%87%E6%96%B9)" style="display:inline-block;margin: 0;"></li>
+<li><strong>统计量：</strong> <img src="https://math.now.sh?inline=F%20%3D%20%5Cfrac%7BMS_R%7D%7BMS_E%7D%20%3D%20%5Cfrac%7BSS_R%2F%28g-1%29%7D%7BSS_E%2F(N-g)%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=F%28g-1%2CN-g%29" style="display:inline-block;margin: 0;">. 如果自变量对因变量没有影响，那么组间误差将值包含随机误差，F值接近于1；否则F值会大于1。</li>
+<li><strong>关系强度：</strong> <img src="https://math.now.sh?inline=R%5E2%20%3D%20%5Cfrac%7BSS_R%7D%7BSS_T%7D" style="display:inline-block;margin: 0;">，用于测量因子（自变量）与观察值（因变量）之间的关系强度。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
 A &lt;- factor(rep(1:3, each=6))
 my.data &lt;- data.frame(X, A)
 my.aov &lt;- aov(X~A, data = my.data)
 summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="双因素方差分析"><a href="#双因素方差分析" class="headerlink" title="双因素方差分析"></a>双因素方差分析</h3><p><strong>1. 无交互作用的分析</strong></p>
+<h3 id="双因素方差分析">双因素方差分析</h3>
+<p><strong>1. 无交互作用的分析</strong></p>
 <ul>
-<li><strong>总变异：</strong> $SS_T = \sum_{i=1}^{a}\sum_{j=1}^{b}(x_{ij}-\bar{x})^2 = SS_A+SS_B+SS_E, df_T=ab-1$</li>
-<li><strong>因素A组间变异：</strong> $SS_A = \sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{x_i}-\bar{x})^2=\sum_{i=1}^{a}b(\bar{x_i}-\bar{x})^2, df_A=a-1$</li>
-<li><strong>因素B组间变异：</strong> $SS_B = \sum_{i=1}^{a}\sum_{j=1}^{b}(\bar{x_j}-\bar{x})^2=\sum_{j=1}^{b}a(\bar{x_j}-\bar{x})^2, df_B=b-1$</li>
-<li><strong>随机误差平方和：</strong> $SS_E = \sum_{i=1}^{a}\sum_{j=1}^{b}(x_{ij}-\bar{x_i}-\bar{x_j}+\bar{x})^2, df_E=(a-1)(b-1)$</li>
-<li><strong>均方差：</strong> $MS_A = \frac{SS_A}{a-1}, MS_B = \frac{SS_B}{b-1}, MS_E = \frac{SS_E}{(a-1)(b-1)}$</li>
-<li><strong>F统计量：</strong> $F_A = \frac{MS_A}{MS_E}$ ~ $F(a-1,(a-1)(b-1)), \\ F_B = \frac{MS_B}{MS_E}$ ~ $F(b-1,(a-1)(b-1))$</li>
+<li><strong>总变异：</strong> <img src="https://math.now.sh?inline=SS_T%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%28x_%7Bij%7D-%5Cbar%7Bx%7D%29%5E2%20%3D%20SS_A%2BSS_B%2BSS_E%2C%20df_T%3Dab-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>因素A组间变异：</strong> <img src="https://math.now.sh?inline=SS_A%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%28%5Cbar%7Bx_i%7D-%5Cbar%7Bx%7D%29%5E2%3D%5Csum_%7Bi%3D1%7D%5E%7Ba%7Db(%5Cbar%7Bx_i%7D-%5Cbar%7Bx%7D)%5E2%2C%20df_A%3Da-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>因素B组间变异：</strong> <img src="https://math.now.sh?inline=SS_B%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%28%5Cbar%7Bx_j%7D-%5Cbar%7Bx%7D%29%5E2%3D%5Csum_%7Bj%3D1%7D%5E%7Bb%7Da(%5Cbar%7Bx_j%7D-%5Cbar%7Bx%7D)%5E2%2C%20df_B%3Db-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>随机误差平方和：</strong> <img src="https://math.now.sh?inline=SS_E%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%28x_%7Bij%7D-%5Cbar%7Bx_i%7D-%5Cbar%7Bx_j%7D%2B%5Cbar%7Bx%7D%29%5E2%2C%20df_E%3D(a-1)(b-1)" style="display:inline-block;margin: 0;"></li>
+<li><strong>均方差：</strong> <img src="https://math.now.sh?inline=MS_A%20%3D%20%5Cfrac%7BSS_A%7D%7Ba-1%7D%2C%20MS_B%20%3D%20%5Cfrac%7BSS_B%7D%7Bb-1%7D%2C%20MS_E%20%3D%20%5Cfrac%7BSS_E%7D%7B%28a-1%29(b-1)%7D" style="display:inline-block;margin: 0;"></li>
+<li><strong>F统计量：</strong> <img src="https://math.now.sh?inline=F_A%20%3D%20%5Cfrac%7BMS_A%7D%7BMS_E%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=F%28a-1%2C(a-1%29(b-1))%2C%20%5C%5C%20F_B%20%3D%20%5Cfrac%7BMS_B%7D%7BMS_E%7D" style="display:inline-block;margin: 0;"> ~ <img src="https://math.now.sh?inline=F%28b-1%2C(a-1%29(b-1))" style="display:inline-block;margin: 0;"></li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">x &lt;- c(64, 65, 73, 53, 54, 59, 71, 68, 79, 41, 46, 38, 50, 58, 65, 42, 40, 46)
 my.data &lt;- data.frame(x, A = gl(6, 3), B = gl(3, 1, 18))
@@ -902,12 +977,12 @@ my.aov &lt;- aov(x ~ A+B, data = my.data)
 summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>2. 有交互作用的分析</strong></p>
 <ul>
-<li><strong>总变异：</strong> $SS_T = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{c}(x_{ijk}-\bar{x})^2 = SS_A+SS_A+SS_E+SS_{AB}, 其中，c为给定i和j后组内数据量。$</li>
-<li><strong>因素A组间变异：</strong> $SS_A = bc\sum_{i=1}^{a}(\bar{x_i}-\bar{x})^2,df_A=a-1$</li>
-<li><strong>因素B组间变异：</strong> $SS_B = ac\sum_{j=1}^{b}(\bar{x_j}-\bar{x})^2,df_B=b-1$</li>
-<li><strong>交互变异：</strong> $SS_{AB} = \sum_{i=1}^{a}\sum_{j=1}^{b}c(\bar{x_{ij}}-\bar{x_i}-\bar{x_j}+\bar{x})^2,df_{AB}=(a-1)(b-1)$</li>
-<li><strong>随机误差平方和：</strong> $SS_E = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{c}(x_{ijk}-\bar{x_{ij}})^2,df_E=ab(c-1)$</li>
-<li><strong>F统计量：</strong> $F_A = \frac{MS_A}{MS_E} = \frac{SS_A/(a-1)}{SS_E/[ab(c-1)]} \sim F(a-1,ab(c-1)),\\ F_B = \frac{MS_B}{MS_E} = \frac{SS_B/(b-1)}{SS_E/[ab(c-1)]} \sim F(b-1,ab(c-1)),\\ F_{AB} = \frac{MS_{AB}}{MS_E} = \frac{SS_{AB}/(a-1)(b-1)}{SS_E/[ab(c-1)]} \sim F((a-1)(b-1),ab(c-1))$</li>
+<li><strong>总变异：</strong> <img src="https://math.now.sh?inline=SS_T%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%5Csum_%7Bk%3D1%7D%5E%7Bc%7D%28x_%7Bijk%7D-%5Cbar%7Bx%7D%29%5E2%20%3D%20SS_A%2BSS_A%2BSS_E%2BSS_%7BAB%7D%2C%20%E5%85%B6%E4%B8%AD%EF%BC%8Cc%E4%B8%BA%E7%BB%99%E5%AE%9Ai%E5%92%8Cj%E5%90%8E%E7%BB%84%E5%86%85%E6%95%B0%E6%8D%AE%E9%87%8F%E3%80%82" style="display:inline-block;margin: 0;"></li>
+<li><strong>因素A组间变异：</strong> <img src="https://math.now.sh?inline=SS_A%20%3D%20bc%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%28%5Cbar%7Bx_i%7D-%5Cbar%7Bx%7D%29%5E2%2Cdf_A%3Da-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>因素B组间变异：</strong> <img src="https://math.now.sh?inline=SS_B%20%3D%20ac%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%28%5Cbar%7Bx_j%7D-%5Cbar%7Bx%7D%29%5E2%2Cdf_B%3Db-1" style="display:inline-block;margin: 0;"></li>
+<li><strong>交互变异：</strong> <img src="https://math.now.sh?inline=SS_%7BAB%7D%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7Dc%28%5Cbar%7Bx_%7Bij%7D%7D-%5Cbar%7Bx_i%7D-%5Cbar%7Bx_j%7D%2B%5Cbar%7Bx%7D%29%5E2%2Cdf_%7BAB%7D%3D(a-1)(b-1)" style="display:inline-block;margin: 0;"></li>
+<li><strong>随机误差平方和：</strong> <img src="https://math.now.sh?inline=SS_E%20%3D%20%5Csum_%7Bi%3D1%7D%5E%7Ba%7D%5Csum_%7Bj%3D1%7D%5E%7Bb%7D%5Csum_%7Bk%3D1%7D%5E%7Bc%7D%28x_%7Bijk%7D-%5Cbar%7Bx_%7Bij%7D%7D%29%5E2%2Cdf_E%3Dab(c-1)" style="display:inline-block;margin: 0;"></li>
+<li><strong>F统计量：</strong> <img src="https://math.now.sh?inline=F_A%20%3D%20%5Cfrac%7BMS_A%7D%7BMS_E%7D%20%3D%20%5Cfrac%7BSS_A%2F%28a-1%29%7D%7BSS_E%2F%5Bab(c-1)%5D%7D%20%5Csim%20F(a-1%2Cab(c-1))%2C%5C%5C%20F_B%20%3D%20%5Cfrac%7BMS_B%7D%7BMS_E%7D%20%3D%20%5Cfrac%7BSS_B%2F(b-1)%7D%7BSS_E%2F%5Bab(c-1)%5D%7D%20%5Csim%20F(b-1%2Cab(c-1))%2C%5C%5C%20F_%7BAB%7D%20%3D%20%5Cfrac%7BMS_%7BAB%7D%7D%7BMS_E%7D%20%3D%20%5Cfrac%7BSS_%7BAB%7D%2F(a-1)(b-1)%7D%7BSS_E%2F%5Bab(c-1)%5D%7D%20%5Csim%20F((a-1)(b-1)%2Cab(c-1))" style="display:inline-block;margin: 0;"></li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">#e.g. 是否添加增味剂和乳清用量对蛋糕口感的影响
  # 输入数据
@@ -926,9 +1001,11 @@ summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><
 
  my.aov &lt;- aov(quality ~ supp * whey, data = pancakes)
  summary(my.aov) # 与上述的代码功能一致<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="多重比较"><a href="#多重比较" class="headerlink" title="多重比较"></a>多重比较</h3><p>要得到各组均值间更详细的信息，需要在方差分析的基础上进行多个样本均值的两两比较，此方法称为<strong>多重比较法</strong>。  </p>
+<h3 id="多重比较">多重比较</h3>
+<p>要得到各组均值间更详细的信息，需要在方差分析的基础上进行多个样本均值的两两比较，此方法称为<strong>多重比较法</strong>。</p>
 <p><strong>1. 多重t检验</strong></p>
-<p>多重t检验是对每个处理下的数据均值进行两两比较的t检验。多次重复使用t检验时会增大犯第一类错误的概率，因此在进行较多次重复比较时，要对P值进行调整。<br><strong>Bonferroni修正法的思路</strong>：如果在同一数据集同时进行n个独立的假设检验，那么用于每一个假设的统计显著水平应该为仅检验一个假设时显著水平的1/n，<strong>即$\alpha’ = \alpha/n$, n是多重t检验的次数</strong>。  </p>
+<p>多重t检验是对每个处理下的数据均值进行两两比较的t检验。多次重复使用t检验时会增大犯第一类错误的概率，因此在进行较多次重复比较时，要对P值进行调整。<br>
+<strong>Bonferroni修正法的思路</strong>：如果在同一数据集同时进行n个独立的假设检验，那么用于每一个假设的统计显著水平应该为仅检验一个假设时显著水平的1/n，<strong>即<img src="https://math.now.sh?inline=%5Calpha'%20%3D%20%5Calpha%2Fn" style="display:inline-block;margin: 0;">, n是多重t检验的次数</strong>。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">p.adjust.method # 输出P修正的方法
 pairwise.t.test() # 执行均值的多重t检验
  -x # 响应向量
@@ -943,12 +1020,13 @@ pairwise.t.test() # 执行均值的多重t检验
 <p><strong>2. Dunnett-t检验/LSD-t检验</strong></p>
 <p>Dunnett-t检验法又称新复极差法检验，一种方差分析中多个实验组与对照组均值比较的方法。LSD-t检验(least significant difference，最小显著差异方法)与Dunnett-t统计量的计算公式完全相同。</p>
 <ul>
-<li><strong>假设检验</strong><ul>
-<li>H0: $\mu_i=\mu_j$</li>
-<li>H1: $\mu_i≠\mu_j$</li>
-<li>统计量: $t_D = \frac{|\bar{x_i}-\bar{x_j}|}{\sqrt{MS_E(\frac{1}{n_i}+\frac{1}{n_j})}}$</li>
-<li>若$t_D &gt; t_{\frac{\alpha}{2}}$, 则拒绝H0</li>
-<li>另也可以以${|\bar{x_i}-\bar{x_j}|}$为统计值，$LSD=t_{\frac{\alpha}{2}}\sqrt{MS_E(\frac{1}{n_i}+\frac{1}{n_j})}$，若${|\bar{x_i}-\bar{x_j}|} &gt; LSD$，则拒绝H0.</li>
+<li><strong>假设检验</strong>
+<ul>
+<li>H0: <img src="https://math.now.sh?inline=%5Cmu_i%3D%5Cmu_j" style="display:inline-block;margin: 0;"></li>
+<li>H1: <img src="https://math.now.sh?inline=%5Cmu_i%E2%89%A0%5Cmu_j" style="display:inline-block;margin: 0;"></li>
+<li>统计量: <img src="https://math.now.sh?inline=t_D%20%3D%20%5Cfrac%7B%7C%5Cbar%7Bx_i%7D-%5Cbar%7Bx_j%7D%7C%7D%7B%5Csqrt%7BMS_E%28%5Cfrac%7B1%7D%7Bn_i%7D%2B%5Cfrac%7B1%7D%7Bn_j%7D%29%7D%7D" style="display:inline-block;margin: 0;"></li>
+<li>若<img src="https://math.now.sh?inline=t_D%20%3E%20t_%7B%5Cfrac%7B%5Calpha%7D%7B2%7D%7D" style="display:inline-block;margin: 0;">, 则拒绝H0</li>
+<li>另也可以以<img src="https://math.now.sh?inline=%7B%7C%5Cbar%7Bx_i%7D-%5Cbar%7Bx_j%7D%7C%7D" style="display:inline-block;margin: 0;">为统计值，<img src="https://math.now.sh?inline=LSD%3Dt_%7B%5Cfrac%7B%5Calpha%7D%7B2%7D%7D%5Csqrt%7BMS_E%28%5Cfrac%7B1%7D%7Bn_i%7D%2B%5Cfrac%7B1%7D%7Bn_j%7D%29%7D" style="display:inline-block;margin: 0;">，若<img src="https://math.now.sh?inline=%7B%7C%5Cbar%7Bx_i%7D-%5Cbar%7Bx_j%7D%7C%7D%20%3E%20LSD" style="display:inline-block;margin: 0;">，则拒绝H0.</li>
 </ul>
 </li>
 </ul>
@@ -972,7 +1050,8 @@ plot(mice.Dunnett,sub="Mice Data")
 mtext("Dunnet's Method",side=3,line=0.5)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>3. Tukey的HSD检验</strong></p>
 <p>该方法为了控制每一对比较的错误率。</p>
-<p>在进行检验时，首先对g个样本均值进行排序。如果$|\bar{X_i}-\bar{X_j}| \ge W$，则连个总体均值$\mu_i$和$\mu_j$不相等，其中：$W = q_\alpha(g,v)\sqrt{MSE/n}$。<br>MSE是自由度为v的样本组内均方差，$q_\alpha(g,v)$是比较g个不同总体是学生化极差的上侧尾部临界值，n是每个样本的观察值个数。</p>
+<p>在进行检验时，首先对g个样本均值进行排序。如果<img src="https://math.now.sh?inline=%7C%5Cbar%7BX_i%7D-%5Cbar%7BX_j%7D%7C%20%5Cge%20W" style="display:inline-block;margin: 0;">，则连个总体均值<img src="https://math.now.sh?inline=%5Cmu_i" style="display:inline-block;margin: 0;">和<img src="https://math.now.sh?inline=%5Cmu_j" style="display:inline-block;margin: 0;">不相等，其中：<img src="https://math.now.sh?inline=W%20%3D%20q_%5Calpha%28g%2Cv%29%5Csqrt%7BMSE%2Fn%7D" style="display:inline-block;margin: 0;">。<br>
+MSE是自由度为v的样本组内均方差，<img src="https://math.now.sh?inline=q_%5Calpha%28g%2Cv%29" style="display:inline-block;margin: 0;">是比较g个不同总体是学生化极差的上侧尾部临界值，n是每个样本的观察值个数。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
 group &lt;- factor(rep(LETTERS[1:3], each=6))
 mice.data &lt;- data.frame(X, group)
@@ -1717,7 +1796,7 @@ result
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">178.6k</span>
             
             
             

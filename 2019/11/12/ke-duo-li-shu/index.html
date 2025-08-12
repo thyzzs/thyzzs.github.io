@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -444,9 +444,11 @@
 </blockquote>
 <p>珂朵莉树（Chtholly Tree），又名老司机树（Old Driver Tree, ODT），是一种非常暴力的维护序列信息的数据结构。</p>
 <p>其通过维护值相同的连续段来保证效率，在特殊构造的数据下会退化为普通暴力算法。</p>
-<h3 id="Part-1-前置知识"><a href="#Part-1-前置知识" class="headerlink" title="Part 1 前置知识"></a>Part 1 前置知识</h3><p> 熟练掌握 <code>std::set</code> 的用法。 </p>
-<p> 没了？没错。 </p>
-<h3 id="Part-2-一个例子"><a href="#Part-2-一个例子" class="headerlink" title="Part 2 一个例子"></a>Part 2 一个例子</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/896/C">CF896C</a> 是一个非常经典的模板题，珂朵莉树也正是来源于本题。</p>
+<h3 id="Part-1-前置知识">Part 1 前置知识</h3>
+<p>熟练掌握 <code>std::set</code> 的用法。</p>
+<p>没了？没错。</p>
+<h3 id="Part-2-一个例子">Part 2 一个例子</h3>
+<p><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/896/C">CF896C</a> 是一个非常经典的模板题，珂朵莉树也正是来源于本题。</p>
 <p>下面是题面部分：</p>
 <p>你需要维护一个序列，并支持如下几种操作：</p>
 <ol>
@@ -460,7 +462,9 @@
 <p>前三个操作都不算太难，使用常规的数据结构都可以圆满解决。</p>
 <p>问题在于第四个操作。为什么常规的数据结构在第四个操作面前无能为力呢？主要在于其并不能方便地分解为两个子区间的问题。</p>
 <p>这时候珂朵莉树就要出场了。</p>
-<h3 id="Part-3-正文"><a href="#Part-3-正文" class="headerlink" title="Part 3 正文"></a>Part 3 正文</h3><h4 id="Part-3-1-节点结构"><a href="#Part-3-1-节点结构" class="headerlink" title="Part 3.1 节点结构"></a>Part 3.1 节点结构</h4><p> 我们这样定义一个珂朵莉树的节点： </p>
+<h3 id="Part-3-正文">Part 3 正文</h3>
+<h4 id="Part-3-1-节点结构">Part 3.1 节点结构</h4>
+<p>我们这样定义一个珂朵莉树的节点：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> l<span class="token punctuation">,</span> r<span class="token punctuation">;</span>              <span class="token comment">//该节点对应的区间</span>
@@ -474,8 +478,9 @@
         <span class="token keyword">return</span> l <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>l<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> 接下来，我们定义一个 <code>set&lt;node&gt; odt</code> 来维护一棵 ODT。 </p>
-<h4 id="Part-3-2-分割区间操作：split"><a href="#Part-3-2-分割区间操作：split" class="headerlink" title="Part 3.2 分割区间操作：split"></a>Part 3.2 分割区间操作：split</h4><p>给出一个区间 [l,r] 和一个位置 pos ，怎么把这个区间分割为 [l,pos−1] 和 [pos,r] 两个区间呢？</p>
+<p>接下来，我们定义一个 <code>set&lt;node&gt; odt</code> 来维护一棵 ODT。</p>
+<h4 id="Part-3-2-分割区间操作：split">Part 3.2 分割区间操作：split</h4>
+<p>给出一个区间 [l,r] 和一个位置 pos ，怎么把这个区间分割为 [l,pos−1] 和 [pos,r] 两个区间呢？</p>
 <p>大致流程很简单：</p>
 <ol>
 <li>先在 ODT 中找到含有 pos 位置的区间。</li>
@@ -496,8 +501,9 @@
     <span class="token keyword">return</span> odt<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">node</span><span class="token punctuation">(</span>pos<span class="token punctuation">,</span> r<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>first<span class="token punctuation">;</span> <span class="token comment">//插入两个新区间</span>
                                                 <span class="token comment">//这里的返回值是后半段区间对应的迭代器</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> 经过这样的分割操作后，容易发现任意两个区间没有相交的部分，这是保证我们接下来操作正确性的前提。 </p>
-<h4 id="Part-3-3-合并区间操作：assign"><a href="#Part-3-3-合并区间操作：assign" class="headerlink" title="Part 3.3 合并区间操作：assign"></a>Part 3.3 合并区间操作：assign</h4><p>如果光分割区间而不合并的话，我们事实上就是对一堆长度为 1 的区间进行操作，珂朵莉树也就会退化为普通暴力算法。</p>
+<p>经过这样的分割操作后，容易发现任意两个区间没有相交的部分，这是保证我们接下来操作正确性的前提。</p>
+<h4 id="Part-3-3-合并区间操作：assign">Part 3.3 合并区间操作：assign</h4>
+<p>如果光分割区间而不合并的话，我们事实上就是对一堆长度为 1 的区间进行操作，珂朵莉树也就会退化为普通暴力算法。</p>
 <p>通过合并操作，我们可以迅速降低珂朵莉树的大小，保证珂朵莉树的效率。</p>
 <p>这里先给出合并操作的代码：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">assign</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> val<span class="token punctuation">)</span>
@@ -509,7 +515,8 @@
 <p><strong>注意：在执行 <code>split</code> 操作时，应先 <code>split</code> 右端点，再 <code>split</code> 左端点，否则可能会RE。</strong></p>
 <p>通过两次 <code>split</code> 操作，[l,r] 区间内一定都是整段区间。因此我们可以安全地删除原来的零散区间，用大区间代替。</p>
 <p>经过 <code>assign</code> 操作后，ODT 的规模会下降不少，从而保证 ODT 的实际运行效率。</p>
-<h4 id="Part-3-4-其他操作"><a href="#Part-3-4-其他操作" class="headerlink" title="Part 3.4 其他操作"></a>Part 3.4 其他操作</h4><p>所有区间操作都可以套这样的一个模板：</p>
+<h4 id="Part-3-4-其他操作">Part 3.4 其他操作</h4>
+<p>所有区间操作都可以套这样的一个模板：</p>
 <ol>
 <li>先 <code>split</code> 右端点，再 <code>split</code> 左端点，获得两个端点（左闭右开）的迭代器。</li>
 <li>对两个端点之间的所有区间暴力更改。</li>
@@ -529,7 +536,7 @@
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">=</span> itl<span class="token punctuation">;</span> it <span class="token operator">!=</span> itr<span class="token punctuation">;</span> it<span class="token operator">++</span><span class="token punctuation">)</span>
         it<span class="token operator">-&gt;</span>val <span class="token operator">+=</span> val<span class="token punctuation">;</span> <span class="token comment">//因为 val 被 mutable 关键字修饰，从而可以直接修改 set 里元素的值</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> 接下来是区间第 k 小，暴力取出区间内所有段排序一遍即可： </p>
+<p>接下来是区间第 k 小，暴力取出区间内所有段排序一遍即可：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> pii<span class="token punctuation">;</span>
 <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">kth</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -546,7 +553,7 @@
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p> 然后是区间幂次和，还是暴力，取出区间内所有段累加求和： </p>
+<p>然后是区间幂次和，还是暴力，取出区间内所有段累加求和：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">long</span> <span class="token keyword">long</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -675,7 +682,8 @@ set<span class="token operator">&lt;</span>node<span class="token operator">&gt;
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="Part-4-总结"><a href="#Part-4-总结" class="headerlink" title="Part 4 总结"></a>Part 4 总结</h3><p><strong>在数据中区间赋值操作较多的时候，珂朵莉树的规模较小，实际运行效率较高。但特殊构造的数据往往并不具有这样的性质，导致其退化为普通暴力算法，因此要结合题目性质来考虑是否使用珂朵莉树来解题。</strong></p>
+<h3 id="Part-4-总结">Part 4 总结</h3>
+<p><strong>在数据中区间赋值操作较多的时候，珂朵莉树的规模较小，实际运行效率较高。但特殊构造的数据往往并不具有这样的性质，导致其退化为普通暴力算法，因此要结合题目性质来考虑是否使用珂朵莉树来解题。</strong></p>
 <p>虽然事实上珂朵莉树在很多题目中都可以用其他常规数据结构代替之，但其简单直接，易于调试的特点让它成为了一个解决不少题目的第二选择。</p>
 
                 
@@ -1387,7 +1395,7 @@ set<span class="token operator">&lt;</span>node<span class="token operator">&gt;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">167.9k</span>
+                        class="white-color">178.6k</span>
             
             
             
