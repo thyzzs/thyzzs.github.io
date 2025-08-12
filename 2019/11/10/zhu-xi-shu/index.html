@@ -61,121 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -526,7 +414,7 @@ mjx-container[display="true"] + br {
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    928
+                    944
                 </div>
                 
 
@@ -551,22 +439,10 @@ mjx-container[display="true"] + br {
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>### Part 1 简介</p>
-<p><strong>可持久化线段树</strong>(在中国国内信息学竞赛社区中又称<strong>总书记树</strong>、<strong>主席树</strong>或<strong>函数式线段树</strong>)是一种<strong>可持久化数据结构</strong>（Persistent
-data structure）.
-由于引入者黄嘉泰姓名的缩写与前中共中央总书记、国家主席胡锦涛相同，因此这种数据结构也可被称为<strong>总书记树</strong>或<strong>主席树</strong>。这种数据结构在普通线段树的基础之上支持查询某个历史版本，同时时间复杂度与线段树是同级，空间复杂度相较而言更高。</p>
-<h3 id="part-2-应用">Part 2 应用</h3>
-<h4 id="静态区间第k大数值">静态区间第k大数值</h4>
-<p>这类问题需要求解在一个长度为<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.025ex;" xmlns="http://www.w3.org/2000/svg" width="1.357ex" height="1.025ex" role="img" focusable="false" viewBox="0 -442 600 453"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D45B" d="M21 287Q22 293 24 303T36 341T56 388T89 425T135 442Q171 442 195 424T225 390T231 369Q231 367 232 367L243 378Q304 442 382 442Q436 442 469 415T503 336T465 179T427 52Q427 26 444 26Q450 26 453 27Q482 32 505 65T540 145Q542 153 560 153Q580 153 580 145Q580 144 576 130Q568 101 554 73T508 17T439 -10Q392 -10 371 17T350 73Q350 92 386 193T423 345Q423 404 379 404H374Q288 404 229 303L222 291L189 157Q156 26 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 112 180T152 343Q153 348 153 366Q153 405 129 405Q91 405 66 305Q60 285 60 284Q58 278 41 278H27Q21 284 21 287Z"></path></g></g></g></g></svg></mjx-container> 的数列中，第$ {i} <span class="math inline"><em>个</em><em>数</em><em>为</em></span> {a_{i}}<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.452ex;" xmlns="http://www.w3.org/2000/svg" width="19.106ex" height="2.149ex" role="img" focusable="false" viewBox="0 -750 8444.7 950"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mo"><path data-c="2E" d="M78 60Q78 84 95 102T138 120Q162 120 180 104T199 61Q199 36 182 18T139 0T96 17T78 60Z"></path></g><g data-mml-node="mi" transform="translate(444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">现</text></g><g data-mml-node="mi" transform="translate(1444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">在</text></g><g data-mml-node="mi" transform="translate(2444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">给</text></g><g data-mml-node="mi" transform="translate(3444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">定</text></g><g data-mml-node="mi" transform="translate(4444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">一</text></g><g data-mml-node="mi" transform="translate(5444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">些</text></g><g data-mml-node="mi" transform="translate(6444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">形</text></g><g data-mml-node="mi" transform="translate(7444.7,0)"><text data-variant="normal" transform="scale(1,-1)" font-size="884px" font-family="serif">如</text></g></g></g></svg></mjx-container>{(l,r,k)} <span class="math inline"><em>的</em><em>三</em><em>元</em><em>组</em><em>作</em><em>为</em><em>询</em><em>问</em>，<em>设</em><em>计</em><em>程</em><em>序</em><em>计</em><em>算</em><em>数</em><em>列</em><em>第</em></span>
-{l~r} <span class="math inline"><em>这</em><em>些</em><em>元</em><em>素</em><em>中</em><em>出</em><em>现</em><em>次</em><em>数</em><em>排</em><em>在</em><em>第</em></span>
-{k} $位的是多少。</p>
-<p>利用可持久化线段树，维护区间$ {(l,r)} <span class="math inline"><em>代</em><em>表</em><em>区</em><em>间</em></span>
-{} <span class="math inline"><em>中</em><em>的</em><em>元</em><em>素</em><em>出</em><em>现</em><em>了</em><em>多</em><em>少</em><em>次</em>，<em>以</em><em>此</em><em>作</em><em>为</em><em>原</em><em>始</em><em>版</em><em>本</em></span>
-{S_{0}}$，此后每次建立一个新版本 <span class="math inline"><em>S</em><sub><em>i</em></sub></span>，代表去掉原数列中
-${a_{0}~a_{i-1}} <span class="math inline"><em>的</em><em>元</em><em>素</em><em>之</em><em>后</em><em>建</em><em>立</em><em>的</em><em>线</em><em>段</em><em>树</em>，<em>维</em><em>护</em><em>目</em><em>标</em><em>与</em><em>上</em><em>述</em><em>相</em><em>同</em>。<em>具</em><em>体</em><em>过</em><em>程</em><em>可</em><em>以</em><em>每</em><em>次</em><em>将</em></span>
-{a_{i}}$的出现次数减一，并保存此时生成的新版本。</p>
-<h3 id="part-3-代码实现">Part 3 代码实现</h3>
-<pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
+                <h3 id="Part-1-简介"><a href="#Part-1-简介" class="headerlink" title="Part 1 简介"></a>Part 1 简介</h3><p> <strong>可持久化线段树</strong>(在中国国内信息学竞赛社区中又称<strong>总书记树</strong>、<strong>主席树</strong>或<strong>函数式线段树</strong>)是一种<strong>可持久化数据结构</strong>（Persistent data structure）. 由于引入者黄嘉泰姓名的缩写与前中共中央总书记、国家主席胡锦涛相同，因此这种数据结构也可被称为<strong>总书记树</strong>或<strong>主席树</strong>。这种数据结构在普通线段树的基础之上支持查询某个历史版本，同时时间复杂度与线段树是同级，空间复杂度相较而言更高。</p>
+<h3 id="Part-2-应用"><a href="#Part-2-应用" class="headerlink" title="Part 2 应用"></a>Part 2 应用</h3><h4 id="静态区间第k大数值"><a href="#静态区间第k大数值" class="headerlink" title="静态区间第k大数值"></a>静态区间第k大数值</h4><p>这类问题需要求解在一个长度为$ {\displaystyle n}$ 的数列中，第$ {\displaystyle i} $个数为$ {\displaystyle a_{i}}$. 现在给定一些形如 ${\displaystyle (l,r,k)} $的三元组作为询问，设计程序计算数列第$ {\displaystyle l~r} $这些元素中出现次数排在第$ {\displaystyle k} $位的是多少。</p>
+<p>利用可持久化线段树，维护区间$ {\displaystyle (l,r)} $代表区间$ {\displaystyle [l,r]} $中的元素出现了多少次，以此作为原始版本$ {\displaystyle S_{0}}$，此后每次建立一个新版本 ${\displaystyle S_{i}}$，代表去掉原数列中 ${\displaystyle a_{0}~a_{i-1}} $的元素之后建立的线段树，维护目标与上述相同。具体过程可以每次将$ {\displaystyle a_{i}}$的出现次数减一，并保存此时生成的新版本。</p>
+<h3 id="Part-3-代码实现"><a href="#Part-3-代码实现" class="headerlink" title="Part 3 代码实现"></a>Part 3 代码实现</h3><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;algorithm&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstdio&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;cstring&gt;</span></span>
 <span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;iostream&gt;</span></span>
@@ -652,8 +528,7 @@ ${a_{0}~a_{i-1}} <span class="math inline"><em>的</em><em>元</em><em>素</em><
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>参考：</p>
-<p>​ <a href="%5Bhttps://zh.wikipedia.org/wiki/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91%5D(https://zh.wikipedia.org/wiki/可持久化线段树)">可持久化线段树
-- 维基百科，自由的百科全书</a></p>
+<p>​     <a href="[https://zh.wikipedia.org/wiki/%E5%8F%AF%E6%8C%81%E4%B9%85%E5%8C%96%E7%BA%BF%E6%AE%B5%E6%A0%91](https://zh.wikipedia.org/wiki/可持久化线段树">可持久化线段树 - 维基百科，自由的百科全书</a> )</p>
 </blockquote>
 
                 
@@ -1365,7 +1240,7 @@ ${a_{0}~a_{i-1}} <span class="math inline"><em>的</em><em>元</em><em>素</em><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">164.3k</span>
+                        class="white-color">167.9k</span>
             
             
             

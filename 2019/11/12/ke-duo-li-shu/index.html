@@ -61,121 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<style>mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-.MathJax path {
-  stroke-width: 3;
-}
-
-mjx-container[display="true"] {
-  overflow: auto hidden;
-}
-
-mjx-container[display="true"] + br {
-  display: none;
-}
-</style><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -552,34 +440,27 @@ mjx-container[display="true"] + br {
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <blockquote>
-<p><strong>转载自<a target="_blank" rel="noopener" href="https://studyingfather.com/archives/1718">珂朵莉树学习笔记 -
-Studying Father’s blog</a></strong></p>
+<p><strong>转载自<a target="_blank" rel="noopener" href="https://studyingfather.com/archives/1718">珂朵莉树学习笔记 - Studying Father’s blog</a></strong></p>
 </blockquote>
-<p>珂朵莉树（Chtholly Tree），又名老司机树（Old Driver Tree,
-ODT），是一种非常暴力的维护序列信息的数据结构。</p>
+<p>珂朵莉树（Chtholly Tree），又名老司机树（Old Driver Tree, ODT），是一种非常暴力的维护序列信息的数据结构。</p>
 <p>其通过维护值相同的连续段来保证效率，在特殊构造的数据下会退化为普通暴力算法。</p>
-<p>### Part 1 前置知识</p>
-<p>熟练掌握 <code>std::set</code> 的用法。</p>
-<p>没了？没错。</p>
-<h3 id="part-2-一个例子">Part 2 一个例子</h3>
-<p><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/896/C">CF896C</a>
-是一个非常经典的模板题，珂朵莉树也正是来源于本题。</p>
+<h3 id="Part-1-前置知识"><a href="#Part-1-前置知识" class="headerlink" title="Part 1 前置知识"></a>Part 1 前置知识</h3><p> 熟练掌握 <code>std::set</code> 的用法。 </p>
+<p> 没了？没错。 </p>
+<h3 id="Part-2-一个例子"><a href="#Part-2-一个例子" class="headerlink" title="Part 2 一个例子"></a>Part 2 一个例子</h3><p><a target="_blank" rel="noopener" href="http://codeforces.com/problemset/problem/896/C">CF896C</a> 是一个非常经典的模板题，珂朵莉树也正是来源于本题。</p>
 <p>下面是题面部分：</p>
 <p>你需要维护一个序列，并支持如下几种操作：</p>
-<ol type="1">
+<ol>
 <li>给区间 [l,r] 内的所有数字加上 x。</li>
 <li>将区间 [l,r] 内的所有数字赋值为 x。</li>
 <li>求区间 [l,r] 内所有数字中第 x 小的数字（重复数字多次计算）。</li>
-<li>求<mjx-container class="MathJax" jax="SVG"><svg style="vertical-align: -0.777ex;" xmlns="http://www.w3.org/2000/svg" width="8.636ex" height="2.563ex" role="img" focusable="false" viewBox="0 -789.6 3816.9 1132.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msubsup"><g data-mml-node="mo"><path data-c="2211" d="M61 748Q64 750 489 750H913L954 640Q965 609 976 579T993 533T999 516H979L959 517Q936 579 886 621T777 682Q724 700 655 705T436 710H319Q183 710 183 709Q186 706 348 484T511 259Q517 250 513 244L490 216Q466 188 420 134T330 27L149 -187Q149 -188 362 -188Q388 -188 436 -188T506 -189Q679 -189 778 -162T936 -43Q946 -27 959 6H999L913 -249L489 -250Q65 -250 62 -248Q56 -246 56 -239Q56 -234 118 -161Q186 -81 245 -11L428 206Q428 207 242 462L57 717L56 728Q56 744 61 748Z"></path></g><g data-mml-node="mi" transform="translate(1089,477.1) scale(0.707)"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(1089,-285.4) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="mo" transform="translate(345,0)"><path data-c="3D" d="M56 347Q56 360 70 367H707Q722 359 722 347Q722 336 708 328L390 327H72Q56 332 56 347ZM56 153Q56 168 72 173H708Q722 163 722 153Q722 140 707 133H70Q56 140 56 153Z"></path></g><g data-mml-node="mi" transform="translate(1123,0)"><path data-c="1D459" d="M117 59Q117 26 142 26Q179 26 205 131Q211 151 215 152Q217 153 225 153H229Q238 153 241 153T246 151T248 144Q247 138 245 128T234 90T214 43T183 6T137 -11Q101 -11 70 11T38 85Q38 97 39 102L104 360Q167 615 167 623Q167 626 166 628T162 632T157 634T149 635T141 636T132 637T122 637Q112 637 109 637T101 638T95 641T94 647Q94 649 96 661Q101 680 107 682T179 688Q194 689 213 690T243 693T254 694Q266 694 266 686Q266 675 193 386T118 83Q118 81 118 75T117 65V59Z"></path></g></g></g><g data-mml-node="msubsup" transform="translate(2310.5,0)"><g data-mml-node="mi"><path data-c="1D44E" d="M33 157Q33 258 109 349T280 441Q331 441 370 392Q386 422 416 422Q429 422 439 414T449 394Q449 381 412 234T374 68Q374 43 381 35T402 26Q411 27 422 35Q443 55 463 131Q469 151 473 152Q475 153 483 153H487Q506 153 506 144Q506 138 501 117T481 63T449 13Q436 0 417 -8Q409 -10 393 -10Q359 -10 336 5T306 36L300 51Q299 52 296 50Q294 48 292 46Q233 -10 172 -10Q117 -10 75 30T33 157ZM351 328Q351 334 346 350T323 385T277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q217 26 254 59T298 110Q300 114 325 217T351 328Z"></path></g><g data-mml-node="mi" transform="translate(562,363) scale(0.707)"><path data-c="1D465" d="M52 289Q59 331 106 386T222 442Q257 442 286 424T329 379Q371 442 430 442Q467 442 494 420T522 361Q522 332 508 314T481 292T458 288Q439 288 427 299T415 328Q415 374 465 391Q454 404 425 404Q412 404 406 402Q368 386 350 336Q290 115 290 78Q290 50 306 38T341 26Q378 26 414 59T463 140Q466 150 469 151T485 153H489Q504 153 504 145Q504 144 502 134Q486 77 440 33T333 -11Q263 -11 227 52Q186 -10 133 -10H127Q78 -10 57 16T35 71Q35 103 54 123T99 143Q142 143 142 101Q142 81 130 66T107 46T94 41L91 40Q91 39 97 36T113 29T132 26Q168 26 194 71Q203 87 217 139T245 247T261 313Q266 340 266 352Q266 380 251 392T217 404Q177 404 142 372T93 290Q91 281 88 280T72 278H58Q52 284 52 289Z"></path></g><g data-mml-node="mi" transform="translate(562,-292.2) scale(0.707)"><path data-c="1D456" d="M184 600Q184 624 203 642T247 661Q265 661 277 649T290 619Q290 596 270 577T226 557Q211 557 198 567T184 600ZM21 287Q21 295 30 318T54 369T98 420T158 442Q197 442 223 419T250 357Q250 340 236 301T196 196T154 83Q149 61 149 51Q149 26 166 26Q175 26 185 29T208 43T235 78T260 137Q263 149 265 151T282 153Q302 153 302 143Q302 135 293 112T268 61T223 11T161 -11Q129 -11 102 10T74 74Q74 91 79 106T122 220Q160 321 166 341T173 380Q173 404 156 404H154Q124 404 99 371T61 287Q60 286 59 284T58 281T56 279T53 278T49 278T41 278H27Q21 284 21 287Z"></path></g></g><g data-mml-node="mi" transform="translate(3326.9,0)"><path data-c="1D466" d="M21 287Q21 301 36 335T84 406T158 442Q199 442 224 419T250 355Q248 336 247 334Q247 331 231 288T198 191T182 105Q182 62 196 45T238 27Q261 27 281 38T312 61T339 94Q339 95 344 114T358 173T377 247Q415 397 419 404Q432 431 462 431Q475 431 483 424T494 412T496 403Q496 390 447 193T391 -23Q363 -106 294 -155T156 -205Q111 -205 77 -183T43 -117Q43 -95 50 -80T69 -58T89 -48T106 -45Q150 -45 150 -87Q150 -107 138 -122T115 -142T102 -147L99 -148Q101 -153 118 -160T152 -167H160Q177 -167 186 -165Q219 -156 247 -127T290 -65T313 -9T321 21L315 17Q309 13 296 6T270 -6Q250 -11 231 -11Q185 -11 150 11T104 82Q103 89 103 113Q103 170 138 262T173 379Q173 380 173 381Q173 390 173 393T169 400T158 404H154Q131 404 112 385T82 344T65 302T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g></g></g></svg></mjx-container> 的值。</li>
+<li>求$ ∑_{i=l}^r a_i^x\mod y $ 的值。</li>
 </ol>
 <p>题目保证数据随机。</p>
 <hr>
 <p>前三个操作都不算太难，使用常规的数据结构都可以圆满解决。</p>
 <p>问题在于第四个操作。为什么常规的数据结构在第四个操作面前无能为力呢？主要在于其并不能方便地分解为两个子区间的问题。</p>
 <p>这时候珂朵莉树就要出场了。</p>
-<h3 id="part-3-正文">Part 3 正文</h3>
-<h4 id="part-3.1-节点结构">Part 3.1 节点结构</h4>
-<p>我们这样定义一个珂朵莉树的节点：</p>
+<h3 id="Part-3-正文"><a href="#Part-3-正文" class="headerlink" title="Part 3 正文"></a>Part 3 正文</h3><h4 id="Part-3-1-节点结构"><a href="#Part-3-1-节点结构" class="headerlink" title="Part 3.1 节点结构"></a>Part 3.1 节点结构</h4><p> 我们这样定义一个珂朵莉树的节点： </p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">struct</span> <span class="token class-name">node</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">int</span> l<span class="token punctuation">,</span> r<span class="token punctuation">;</span>              <span class="token comment">//该节点对应的区间</span>
@@ -593,13 +474,10 @@ ODT），是一种非常暴力的维护序列信息的数据结构。</p>
         <span class="token keyword">return</span> l <span class="token operator">&lt;</span> a<span class="token punctuation">.</span>l<span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
 <span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>接下来，我们定义一个 <code>set&lt;node&gt; odt</code> 来维护一棵
-ODT。</p>
-<h4 id="part-3.2-分割区间操作split">Part 3.2 分割区间操作：split</h4>
-<p>给出一个区间 [l,r] 和一个位置 pos ，怎么把这个区间分割为 [l,pos−1] 和
-[pos,r] 两个区间呢？</p>
+<p> 接下来，我们定义一个 <code>set&lt;node&gt; odt</code> 来维护一棵 ODT。 </p>
+<h4 id="Part-3-2-分割区间操作：split"><a href="#Part-3-2-分割区间操作：split" class="headerlink" title="Part 3.2 分割区间操作：split"></a>Part 3.2 分割区间操作：split</h4><p>给出一个区间 [l,r] 和一个位置 pos ，怎么把这个区间分割为 [l,pos−1] 和 [pos,r] 两个区间呢？</p>
 <p>大致流程很简单：</p>
-<ol type="1">
+<ol>
 <li>先在 ODT 中找到含有 pos 位置的区间。</li>
 <li>如果 pos 已经是一个区间的左端点，则无需分割。</li>
 <li>否则我们把原来的区间删除，插入两个新区间。</li>
@@ -618,10 +496,8 @@ ODT。</p>
     <span class="token keyword">return</span> odt<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">node</span><span class="token punctuation">(</span>pos<span class="token punctuation">,</span> r<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>first<span class="token punctuation">;</span> <span class="token comment">//插入两个新区间</span>
                                                 <span class="token comment">//这里的返回值是后半段区间对应的迭代器</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>经过这样的分割操作后，容易发现任意两个区间没有相交的部分，这是保证我们接下来操作正确性的前提。</p>
-<h4 id="part-3.3-合并区间操作assign">Part 3.3 合并区间操作：assign</h4>
-<p>如果光分割区间而不合并的话，我们事实上就是对一堆长度为 1
-的区间进行操作，珂朵莉树也就会退化为普通暴力算法。</p>
+<p> 经过这样的分割操作后，容易发现任意两个区间没有相交的部分，这是保证我们接下来操作正确性的前提。 </p>
+<h4 id="Part-3-3-合并区间操作：assign"><a href="#Part-3-3-合并区间操作：assign" class="headerlink" title="Part 3.3 合并区间操作：assign"></a>Part 3.3 合并区间操作：assign</h4><p>如果光分割区间而不合并的话，我们事实上就是对一堆长度为 1 的区间进行操作，珂朵莉树也就会退化为普通暴力算法。</p>
 <p>通过合并操作，我们可以迅速降低珂朵莉树的大小，保证珂朵莉树的效率。</p>
 <p>这里先给出合并操作的代码：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">assign</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">long</span> <span class="token keyword">long</span> val<span class="token punctuation">)</span>
@@ -630,18 +506,12 @@ ODT。</p>
     odt<span class="token punctuation">.</span><span class="token function">erase</span><span class="token punctuation">(</span>itl<span class="token punctuation">,</span> itr<span class="token punctuation">)</span><span class="token punctuation">;</span>         <span class="token comment">//删除[itl,itr)区间内的所有元素（注意左闭右开区间）</span>
     odt<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token function">node</span><span class="token punctuation">(</span>l<span class="token punctuation">,</span> r<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//将原来的诸多小区间用一个大区间代替</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><strong>注意：在执行 <code>split</code> 操作时，应先
-<code>split</code> 右端点，再 <code>split</code>
-左端点，否则可能会RE。</strong></p>
-<p>通过两次 <code>split</code> 操作，[l,r]
-区间内一定都是整段区间。因此我们可以安全地删除原来的零散区间，用大区间代替。</p>
-<p>经过 <code>assign</code> 操作后，ODT 的规模会下降不少，从而保证 ODT
-的实际运行效率。</p>
-<h4 id="part-3.4-其他操作">Part 3.4 其他操作</h4>
-<p>所有区间操作都可以套这样的一个模板：</p>
-<ol type="1">
-<li>先 <code>split</code> 右端点，再 <code>split</code>
-左端点，获得两个端点（左闭右开）的迭代器。</li>
+<p><strong>注意：在执行 <code>split</code> 操作时，应先 <code>split</code> 右端点，再 <code>split</code> 左端点，否则可能会RE。</strong></p>
+<p>通过两次 <code>split</code> 操作，[l,r] 区间内一定都是整段区间。因此我们可以安全地删除原来的零散区间，用大区间代替。</p>
+<p>经过 <code>assign</code> 操作后，ODT 的规模会下降不少，从而保证 ODT 的实际运行效率。</p>
+<h4 id="Part-3-4-其他操作"><a href="#Part-3-4-其他操作" class="headerlink" title="Part 3.4 其他操作"></a>Part 3.4 其他操作</h4><p>所有区间操作都可以套这样的一个模板：</p>
+<ol>
+<li>先 <code>split</code> 右端点，再 <code>split</code> 左端点，获得两个端点（左闭右开）的迭代器。</li>
 <li>对两个端点之间的所有区间暴力更改。</li>
 </ol>
 <p>代码差不多长这样：</p>
@@ -659,7 +529,7 @@ ODT。</p>
     <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">auto</span> it <span class="token operator">=</span> itl<span class="token punctuation">;</span> it <span class="token operator">!=</span> itr<span class="token punctuation">;</span> it<span class="token operator">++</span><span class="token punctuation">)</span>
         it<span class="token operator">-&gt;</span>val <span class="token operator">+=</span> val<span class="token punctuation">;</span> <span class="token comment">//因为 val 被 mutable 关键字修饰，从而可以直接修改 set 里元素的值</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>接下来是区间第 k 小，暴力取出区间内所有段排序一遍即可：</p>
+<p> 接下来是区间第 k 小，暴力取出区间内所有段排序一遍即可： </p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">typedef</span> pair<span class="token operator">&lt;</span><span class="token keyword">long</span> <span class="token keyword">long</span><span class="token punctuation">,</span> <span class="token keyword">int</span><span class="token operator">&gt;</span> pii<span class="token punctuation">;</span>
 <span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">kth</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> k<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
@@ -676,7 +546,7 @@ ODT。</p>
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>然后是区间幂次和，还是暴力，取出区间内所有段累加求和：</p>
+<p> 然后是区间幂次和，还是暴力，取出区间内所有段累加求和： </p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">long</span> <span class="token keyword">long</span> <span class="token function">sum</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">,</span> <span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span>
 <span class="token punctuation">{</span>
     <span class="token keyword">long</span> <span class="token keyword">long</span> ans <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -805,8 +675,7 @@ set<span class="token operator">&lt;</span>node<span class="token operator">&gt;
     <span class="token punctuation">}</span>
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="part-4-总结">Part 4 总结</h3>
-<p><strong>在数据中区间赋值操作较多的时候，珂朵莉树的规模较小，实际运行效率较高。但特殊构造的数据往往并不具有这样的性质，导致其退化为普通暴力算法，因此要结合题目性质来考虑是否使用珂朵莉树来解题。</strong></p>
+<h3 id="Part-4-总结"><a href="#Part-4-总结" class="headerlink" title="Part 4 总结"></a>Part 4 总结</h3><p><strong>在数据中区间赋值操作较多的时候，珂朵莉树的规模较小，实际运行效率较高。但特殊构造的数据往往并不具有这样的性质，导致其退化为普通暴力算法，因此要结合题目性质来考虑是否使用珂朵莉树来解题。</strong></p>
 <p>虽然事实上珂朵莉树在很多题目中都可以用其他常规数据结构代替之，但其简单直接，易于调试的特点让它成为了一个解决不少题目的第二选择。</p>
 
                 
@@ -1518,7 +1387,7 @@ set<span class="token operator">&lt;</span>node<span class="token operator">&gt;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">164.3k</span>
+                        class="white-color">167.9k</span>
             
             
             

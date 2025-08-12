@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -526,10 +526,8 @@
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    Part 0 缘起
-近日整理笔记时发现，初学时的图论算法都是基于邻接矩阵储存的，使用时非常不方便。所以就写了这篇博文，聊作图论学习的回顾。
-Part 1 图的链式前向星表示
-链式前向星又称为邻接表的静态建表方式，其最开始确实是基于前向星，是
+                                    Part 0 缘起近日整理笔记时发现，初学时的图论算法都是基于邻接矩阵储存的，使用时非常不方便。所以就写了这篇博文，聊作图论学习的回顾。
+Part 1 图的链式前向星表示链式前向星又称为邻接表的静态建表方式，其最开始确实是基于前向星，是以提
                                 
                             </div>
                             <div class="publish-info">
@@ -588,12 +586,8 @@ Part 1 图的链式前向星表示
                         <div class="card-content article-content">
                             <div class="summary block-with-text">
                                 
-                                    Part 0
-时间复杂度常数优化的意义
-在科学研究意义上，时间复杂度的常数优化并不是十分重要的。
-但在信息学竞赛中，同样的复杂度为O(n2)的程序，对于一组
-n = 5000
-的数据，有的可能常数为20，需要运行1000ms，有的可能常数为
+                                    Part 0 时间复杂度常数优化的意义在科学研究意义上，时间复杂度的常数优化并不是十分重要的。
+但在信息学竞赛中，同样的复杂度为$O(n^2)$的程序，对于一组 $n=5000$ 的数据，有的可能常数为20，需要运行1000ms，有的可能常
                                 
                             </div>
                             <div class="publish-info">
@@ -659,16 +653,13 @@ n = 5000
                                 
                                     传送门
 30%的题解：
-
 这棵树是一个链，所以直接做一遍LIS和LDS，经典DP算法，不多赘述。
 
 60%的题解：
-
-N &lt;  = 1000,可以直接n2地做满分题解所说的DP。
+$N&lt;=1000$,可以直接$n^2$地做满分题解所说的DP。
 
 满分题解：
-
-F1[i]表示以从以i为根节点的子树中
+$F1[i]$表示以从以$i$为根节点的子
                                 
                             </div>
                             <div class="publish-info">
@@ -729,17 +720,15 @@ F1[i]表示以从以i为根节点的子树中
                                 
                                     传送门
 30%的题解：
-
 直接每次询问枚举所有点。
 
 60%的题解：
-
-坐标值很小，可以尝试用链表，可以做到O(n)的时间复杂度
+坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度
 
 100%的题解：
+$map$套$multiset$
 
-map套multiset
-X坐标开个mapx，里面存的是每个X坐标的不同Y坐标，这些Y坐
+$X$坐标开个$mapx$，里面存的是每个$X$坐标的
                                 
                             </div>
                             <div class="publish-info">
@@ -800,15 +789,14 @@ X坐标开个mapx，里面存的是每个X坐标的不同Y坐标，这些Y坐
                                 
                                     传送门
 30%的题解：
-
 是一棵树，所以只要枚举根，然后计算代价即可
 
 100%的题解：
+$vals[S]$表示集合$S$的权值和
 
-vals[S]表示集合S的权值和
-设计状态F[S][h],
-表示现在已经选择了的点的集合是S，h表示当前深度
-枚举S的补集的子集S2，只要满足S2中
+设计状态$F[S][h]$, 表示现在已经选择了的点的集合是$S$，$h$表示当前深度
+
+枚举S的补集的子集
                                 
                             </div>
                             <div class="publish-info">
@@ -869,16 +857,16 @@ vals[S]表示集合S的权值和
                                 
                                     传送门
 30%的做法
+floyd预处理出每两点间的最短路,每次询问$O(1)$回答
 
-floyd预处理出每两点间的最短路,每次询问O(1)回答
-复杂度O(n3+q)
+复杂度$O(n^3+q)$
+
 
 
 另外20%的做法
-
 树的情况
-对于u, v的最短路，求出他们的LCA为k，ans = d[u] + d[v] − 2 * d[k]
 
+对于$u,v$的最短路，求出他们的LCA为$k$，$ans=d[u]+d[v]-2*d[k
                                 
                             </div>
                             <div class="publish-info">
@@ -939,13 +927,10 @@ floyd预处理出每两点间的最短路,每次询问O(1)回答
                                 
                                     传送门
 30%的做法
-
-暴力枚举删掉哪些数即可，复杂度O(nlog(max(ai))×2n)
+暴力枚举删掉哪些数即可，复杂度$O(n \log (\max(a_i)) \times 2^n)$
 
 另外20%的做法
-
-枚举删掉一些数后的最大公因数g，那么不能被g整除的数的个数即为要删的数的个数，对结果取min 即可
-复杂度O(n×max(a
+枚举删掉一些数后的最大公因数$g$，那么不能被$g$整除的数的个数即为要删的数的个数，对结果取$\
                                 
                             </div>
                             <div class="publish-info">
@@ -1005,16 +990,11 @@ floyd预处理出每两点间的最短路,每次询问O(1)回答
                             <div class="summary block-with-text">
                                 
                                     传送门
-考虑如何将s中的每种数分到a和b集中
-假设一个数x有k个，可以对a和b集“好的”数的个数差产生什么影响？
-k = 1
-
+考虑如何将s中的每种数分到$a$和$b$集中假设一个数$x$有$k$个，可以对$a$和$b$集“好的”数的个数差产生什么影响？$k=1$
 让一个集合“好的”数个数++，另一集合的个数不变
 
-k = 2
-
+$k=2$
 让两个集合“好的”数个数都++
-让两个集合“好
                                 
                             </div>
                             <div class="publish-info">
@@ -1150,7 +1130,7 @@ k = 2
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">164.3k</span>
+                        class="white-color">167.9k</span>
             
             
             
