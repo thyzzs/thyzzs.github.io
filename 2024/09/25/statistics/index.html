@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -414,14 +414,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    25.4k
+                    3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    125 Min
+                    13 Min
                 </div>
                 
 
@@ -442,69 +442,72 @@
                 <blockquote>
 <p>网站渲染LaTeX存在严重失真，如有需要请Email联系我获取PDF版本笔记。</p>
 </blockquote>
-<p><font color="gray"><strong><em>什么是统计学？</em></strong></font></p>
-<p><font color="gray"><em>人生，是从不充分的证据开始，引出完美结论的一种艺术。——Samuel Bulter</em></font></p>
-<p><font color="gray"><em>如果我们不在同一时期，把理解了的科学知识变为我们日常生活的一部分，科学家降不可能提高他们互相拥有的知识。——J.D.Bernal</em></font></p>
-<p><font color="gray"><em>与人类有关的事实，可以由数量来表示，并且经过大量的积累重复可以导出一般规律。——英国皇家统计学会</em></font></p>
+<font color="gray">**_什么是统计学？_**</font>
+
+<font color="gray">_人生，是从不充分的证据开始，引出完美结论的一种艺术。——Samuel Bulter_</font>
+
+<font color="gray">_如果我们不在同一时期，把理解了的科学知识变为我们日常生活的一部分，科学家降不可能提高他们互相拥有的知识。——J.D.Bernal_</font>
+
+<font color="gray">_与人类有关的事实，可以由数量来表示，并且经过大量的积累重复可以导出一般规律。——英国皇家统计学会_</font>
+
 <h2 id="Chapter-1-事件与概率-Random-Events-and-Probability"><a href="#Chapter-1-事件与概率-Random-Events-and-Probability" class="headerlink" title="Chapter 1 事件与概率 Random Events and Probability"></a>Chapter 1 事件与概率 Random Events and Probability</h2><h3 id="1-1-随机试验和随机事件"><a href="#1-1-随机试验和随机事件" class="headerlink" title="1.1 随机试验和随机事件"></a>1.1 随机试验和随机事件</h3><ol>
-<li><p>**随机现象：**自然界中的客观现象，当人们观测它时，所得结果不能预先确定，而仅仅是多种可能结果之一。</p>
+<li><p><strong>随机现象：</strong>自然界中的客观现象，当人们观测它时，所得结果不能预先确定，而仅仅是多种可能结果之一。</p>
 </li>
-<li><p>**随机试验 random experiment：**随机现象的实现和对它某个特征的观测。</p>
+<li><p><strong>随机试验 random experiment：</strong>随机现象的实现和对它某个特征的观测。</p>
 </li>
-<li><p>**基本事件 elemental event：**随机试验中的每个单一结果，犹如分子中的原子，在化学反应中不可再分。</p>
+<li><p><strong>基本事件 elemental event：</strong>随机试验中的每个单一结果，犹如分子中的原子，在化学反应中不可再分。</p>
 <p><em>e.g. 硬币抛3次，有8种结果：正正正、正正反、正反正……这8种可能结果的每一个都是基本事件。</em></p>
 </li>
-<li><p>**随机事件 random event：**简称事件 event，在随机试验中我们所关心的可能出现的各种结果，它由一个或若干个基本事件组成。通常用英文大写字母表示或{一种叙述}来表示。</p>
+<li><p><strong>随机事件 random event：</strong>简称事件 event，在随机试验中我们所关心的可能出现的各种结果，它由一个或若干个基本事件组成。通常用英文大写字母表示或{一种叙述}来表示。</p>
 </li>
-<li><p>**样本空间 sample space：**随机试验中所有基本事件所构成的集合，通常用$\Omega$或$S$表示。Elemental event is the element of sample space, so it is also called sample point</p>
+<li><p><strong>样本空间 sample space：</strong>随机试验中所有基本事件所构成的集合，通常用$\Omega$或$S$表示。Elemental event is the element of sample space, so it is also called sample point</p>
 <p>e.g. 掷一枚骰子，观察出现的点数，则$\Omega={1,2,3,4,5,6}$.</p>
 </li>
-<li><p>**必然事件 certain event（$\Omega$）：**在试验中一定会发生的事件。</p>
+<li><p><strong>必然事件 certain event（$\Omega$）：</strong>在试验中一定会发生的事件。</p>
 </li>
-<li><p>**不可能事件 impossible event（$\emptyset$）：**在试验中不可能发生的事件。</p>
-</li>
+<li><strong>不可能事件 impossible event（$\emptyset$）：</strong>在试验中不可能发生的事件。</li>
 </ol>
 <h3 id="1-2-事件的运算"><a href="#1-2-事件的运算" class="headerlink" title="1.2 事件的运算"></a>1.2 事件的运算</h3><ol>
-<li><p>**子事件$A\subset B$：**事件$A$发生蕴含时间$B$一定发生，则时间$A$成为事件$B$的子事件。若$A\subset B$，且$B\subset A$，则称时间$A$与事件$B$相等，记为$A=B$.</p>
+<li><p><strong>子事件$A\subset B$：</strong>事件$A$发生蕴含时间$B$一定发生，则时间$A$成为事件$B$的子事件。若$A\subset B$，且$B\subset A$，则称时间$A$与事件$B$相等，记为$A=B$.</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/AsubsetB.png" alt="img"></p>
 </li>
-<li><p>**事件的和 the sum / union of events（$$A\cup B$$）：**事件$A$和事件$B$中至少有一个发生称为事件$A$和事件$B$的和。</p>
+<li><p><strong>事件的和 the sum / union of events（<script type="math/tex">A\cup B</script>）：</strong>事件$A$和事件$B$中至少有一个发生称为事件$A$和事件$B$的和。</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/AcapB.png" alt="img"></p>
 </li>
-<li><p>**事件的积 the product / intersection of events（$A\cap B$）：**事件$A$和事件$B$同时发生称为$A$和事件$B$的积。如果$A\cap B=\phi$，则称$A$和$B$不相容，即事件$A$和$B$不能同时发生。</p>
+<li><p><strong>事件的积 the product / intersection of events（$A\cap B$）：</strong>事件$A$和事件$B$同时发生称为$A$和事件$B$的积。如果$A\cap B=\phi$，则称$A$和$B$不相容，即事件$A$和$B$不能同时发生。</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/AcupB.png" alt="img"></p>
 </li>
 <li><p><strong>对立事件 the complementary / inverse event $A^c$（或$\overline{A}$）：</strong>$A$不发生这一事件称为事件$A$​的对立事件（或余事件）。</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/notA.png" alt="img"></p>
 </li>
-<li><p>**事件$A$和事件$B$的差 the difference of events（$A-B$）：**事件$A$发生而事件$B$不发生这一事件称为事件$A$和事件$B$的差，或等价于$AB^c$.</p>
+<li><p><strong>事件$A$和事件$B$的差 the difference of events（$A-B$）：</strong>事件$A$发生而事件$B$不发生这一事件称为事件$A$和事件$B$的差，或等价于$AB^c$.</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/AminusB.png" alt="img"></p>
 </li>
 <li><p><strong>De Morgan 对偶法则 De Morgan dualization law</strong></p>
 </li>
 </ol>
-<p>$$<br>\overline{A\cup B}=\overline{A}\cap \overline{B},<br>$$</p>
-<p>$$<br>\overline{A\cap B}=\overline{A}\cup \overline{B}<br>$$</p>
-<p>上式可推广到<em>n</em>个事件：</p>
-<p>$$<br>\overline{\bigcup_{i=1}^{n}A_i}=\bigcap_{i=1}^{n}\overline{A_i},<br>$$</p>
-<p>$$<br>\overline{\bigcap_{i=1}^{n}A_i}=\bigcup_{i=1}^{n}\overline{A_i},<br>$$</p>
-<h3 id="1-3-概率的定义-Event-Probability"><a href="#1-3-概率的定义-Event-Probability" class="headerlink" title="1.3 概率的定义 Event Probability"></a>1.3 概率的定义 Event Probability</h3><p>  概率是随机事件发生可能性大小的数字表征，其值在0和1之间，即概率是事件的函数。概率有以下定义：</p>
+<script type="math/tex; mode=display">
+\overline{A\cup B}=\overline{A}\cap \overline{B},</script><script type="math/tex; mode=display">
+\overline{A\cap B}=\overline{A}\cup \overline{B}</script><p>上式可推广到<em>n</em>个事件：</p>
+<script type="math/tex; mode=display">
+\overline{\bigcup_{i=1}^{n}A_i}=\bigcap_{i=1}^{n}\overline{A_i},</script><script type="math/tex; mode=display">
+\overline{\bigcap_{i=1}^{n}A_i}=\bigcup_{i=1}^{n}\overline{A_i},</script><h3 id="1-3-概率的定义-Event-Probability"><a href="#1-3-概率的定义-Event-Probability" class="headerlink" title="1.3 概率的定义 Event Probability"></a>1.3 概率的定义 Event Probability</h3><p>  概率是随机事件发生可能性大小的数字表征，其值在0和1之间，即概率是事件的函数。概率有以下定义：</p>
 <h4 id="1-3-1-古典概率-Classical-Probability-Model"><a href="#1-3-1-古典概率-Classical-Probability-Model" class="headerlink" title="1.3.1 古典概率 Classical Probability Model"></a>1.3.1 古典概率 Classical Probability Model</h4><p>  设一个试验有<em>N</em>个等可能的结果，而事件$E$恰包含其中的$M$个结果，则事件$E$的概率，记为$P(E)$，定义为</p>
-<p>$$<br>P(E)=M/N<br>$$</p>
-<p>或</p>
-<p>$$<br>P(E)=#(M) / #(N),<br>$$</p>
-<p>其中，$#(M)$为事件$M$中基本事件的个数。</p>
+<script type="math/tex; mode=display">
+P(E)=M/N</script><p>或</p>
+<script type="math/tex; mode=display">
+P(E)=\#(M) / \#(N),</script><p>其中，$#(M)$为事件$M$中基本事件的个数。</p>
 <p>  古典概型有<strong>两个条件</strong>：</p>
 <ul>
 <li>有限性，试验结果只有有限个（记为<em>n</em>），</li>
 <li>等可能性，每个基本时间发生的可能性相同。</li>
 </ul>
 <blockquote>
-<p>**注：**古典概率可引申出“几何概率”。</p>
+<p><strong>注：</strong>古典概率可引申出“几何概率”。</p>
 </blockquote>
 <h4 id="1-3-2-概率的统计定义-Statistical-Probability"><a href="#1-3-2-概率的统计定义-Statistical-Probability" class="headerlink" title="1.3.2 概率的统计定义 Statistical Probability"></a>1.3.2 概率的统计定义 Statistical Probability</h4><p>  古典概率的两个条件往往不能满足，但可以将事件的随机试验独立反复做<em>n</em>次（Bernouli试验），设事件$A$发生了$n_A$次，称比值$\frac{n_A}{n}$为事件$A$发生的频率，当<em>n</em>越来越大时，频率会在某个值<em>p</em>附近波动，且波动越来越小，这个值<em>p</em>就定义为事件$A$的概率。该学派为频率派。</p>
 <blockquote>
-<p>**注：*<em>不能写为$lim_{n\rightarrow{\infty}}\frac{n_A}{n}=p$，因为$\frac{n_A}{n}$不是</em>n*的函数。</p>
+<p><strong>注：</strong>不能写为$lim_{n\rightarrow{\infty}}\frac{n_A}{n}=p$，因为$\frac{n_A}{n}$不是<em>n</em>的函数。</p>
 </blockquote>
 <h4 id="1-3-3-主观概率-Subjective-Probability"><a href="#1-3-3-主观概率-Subjective-Probability" class="headerlink" title="1.3.3 主观概率 Subjective Probability"></a>1.3.3 主观概率 Subjective Probability</h4><p>  主观概率可以理解为一种心态或倾向性。究其根由，大抵有二：一是根据其经验和知识，二是根据其利害关系。该学派在金融和管理有大量的应用，这一学派成为<em>Bayes</em>学派。</p>
 <h4 id="1-3-4-概率的公理化定义-Axiomatic-Definition-of-Probability"><a href="#1-3-4-概率的公理化定义-Axiomatic-Definition-of-Probability" class="headerlink" title="1.3.4 概率的公理化定义 Axiomatic Definition of Probability"></a>1.3.4 概率的公理化定义 Axiomatic Definition of Probability</h4><p>  对概率运算规定一些简单的基本法则：</p>
@@ -514,7 +517,7 @@
 <li><p>规范性 normalization：设$\Omega$为必然事件，则$P(\Omega)=1$, 设$\emptyset$为不可能事件，则$P(\emptyset)=0$,</p>
 </li>
 <li><p>可列可加性 countable additivity：若事件$A$和$B$不相容，则$P(A\cup B)=P(A)+P(B)$,</p>
-<p>可推广至无穷：$$P(\bigcup_{i=1}^{n}A_i)=\sum_{i=1}^{\infty}P(A_i)$$. （加法定理 Addition Law of Exclusive Events）</p>
+<p>可推广至无穷：<script type="math/tex">P(\bigcup_{i=1}^{n}A_i)=\sum_{i=1}^{\infty}P(A_i)</script>. （加法定理 Addition Law of Exclusive Events）</p>
 </li>
 </ol>
 <blockquote>
@@ -526,33 +529,32 @@
 </ol>
 </blockquote>
 <h3 id="1-4-古典概率计算"><a href="#1-4-古典概率计算" class="headerlink" title="1.4 古典概率计算"></a>1.4 古典概率计算</h3><h4 id="1-4-1-排列组合"><a href="#1-4-1-排列组合" class="headerlink" title="1.4.1 排列组合"></a>1.4.1 排列组合</h4><ul>
-<li>*<em>选排列：*<em>从</em>n*个不同元素中取</em>r*个不同取法（$1\leq r\leq n$），$P^{n}_{r}=n(n-1)…(n-r+1)$.</li>
-<li>*<em>重复排列：*<em>从</em>n*个不同元素中可重复地取</em>r*个不同取法（$1\leq r\leq n$），$P^{n}_{r}=n^r$.</li>
-<li>**组合：**同选排列，但不考虑次序，$\binom{n}{r}=\frac{P^{n}_{r}}{r!}$.</li>
+<li><strong>选排列：</strong>从<em>n</em>个不同元素中取<em>r</em>个不同取法（$1\leq r\leq n$），$P^{n}_{r}=n(n-1)…(n-r+1)$.</li>
+<li><strong>重复排列：</strong>从<em>n</em>个不同元素中可重复地取<em>r</em>个不同取法（$1\leq r\leq n$），$P^{n}_{r}=n^r$.</li>
+<li><strong>组合：</strong>同选排列，但不考虑次序，$\binom{n}{r}=\frac{P^{n}_{r}}{r!}$.</li>
 </ul>
 <blockquote>
 <p><strong>注：</strong></p>
 <ol>
 <li>排列英文为 Permutation，组合英文为 Combination.</li>
 <li>$0!$为1。当<em>r</em>不是非负整数时，记号$r!$没有意义.</li>
-<li>一些书中将组合写成$C_{n}^{r}$或$C_{r}^{n}$，更通用的是$\binom{n}{r}$.</li>
+<li>一些书中将组合写成$C<em>{n}^{r}$或$C</em>{r}^{n}$，更通用的是$\binom{n}{r}$.</li>
 </ol>
 </blockquote>
 <h4 id="1-4-2-其他公式"><a href="#1-4-2-其他公式" class="headerlink" title="1.4.2 其他公式"></a>1.4.2 其他公式</h4><ul>
 <li>组合系数$\binom{n}{r}$又常称为二项式系数</li>
 </ul>
-<p>$$<br>(a+b)^n=\sum_{i=0}^{n}\binom{n}{r}a^i b^{n-1}<br>$$</p>
-<ul>
+<script type="math/tex; mode=display">
+(a+b)^n=\sum_{i=0}^{n}\binom{n}{r}a^i b^{n-1}</script><ul>
 <li><em>n</em>个相异物件分成<em>k</em>堆，各堆物件数分为$r_1, …, r_k$的方法是</li>
 </ul>
-<p>$$<br>n!/(r_1!…r_k!).<br>$$</p>
-<h3 id="1-5-条件概率-Conditional-Probability"><a href="#1-5-条件概率-Conditional-Probability" class="headerlink" title="1.5 条件概率 Conditional Probability"></a>1.5 条件概率 Conditional Probability</h3><p>  条件概率就是知道了<strong>一定信息</strong>下得到的随机事件的概率。设事件$A$和$B$是随机试验$\Omega$中的两个事件，$P(B)&gt;0$，称</p>
-<p>$$<br>P(A|B)=\frac{P(AB)}{P(B)}<br>$$</p>
-<p>为事件$B$发生条件下事件$A$发生的条件概率，可用图形表示：</p>
-<img src="https://raw.githubusercontent.com/thyzzs/Pic/main/con_prob.png" alt="img" style="zoom:33%;">
-
+<script type="math/tex; mode=display">
+n!/(r_1!...r_k!).</script><h3 id="1-5-条件概率-Conditional-Probability"><a href="#1-5-条件概率-Conditional-Probability" class="headerlink" title="1.5 条件概率 Conditional Probability"></a>1.5 条件概率 Conditional Probability</h3><p>  条件概率就是知道了<strong>一定信息</strong>下得到的随机事件的概率。设事件$A$和$B$是随机试验$\Omega$中的两个事件，$P(B)&gt;0$，称</p>
+<script type="math/tex; mode=display">
+P(A|B)=\frac{P(AB)}{P(B)}</script><p>为事件$B$发生条件下事件$A$发生的条件概率，可用图形表示：</p>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/con_prob.png" alt="img" style="zoom:33%;"></p>
 <blockquote>
-<p>**注：**事实上，我们所考虑的概率都是在一定条件下计算的，因为随机试验就是在一定条件下进行的。</p>
+<p><strong>注：</strong>事实上，我们所考虑的概率都是在一定条件下计算的，因为随机试验就是在一定条件下进行的。</p>
 </blockquote>
 <h4 id="1-5-1-条件概率性质"><a href="#1-5-1-条件概率性质" class="headerlink" title="1.5.1 条件概率性质"></a>1.5.1 条件概率性质</h4><p>  给定$A$发生，$P(A)&gt;0$：</p>
 <ul>
@@ -561,85 +563,100 @@
 <li>若$B_1 \cap B_2 = \phi _1$，则$P(B_1 \cup B_2 | A) = P(B_1|A) + P(B_2|A)$，可推广至无穷。</li>
 </ul>
 <h4 id="1-5-2-乘法定理-Multiplication-Theorem-of-Probability"><a href="#1-5-2-乘法定理-Multiplication-Theorem-of-Probability" class="headerlink" title="1.5.2 乘法定理 Multiplication Theorem of Probability"></a>1.5.2 乘法定理 Multiplication Theorem of Probability</h4><p>  由$P(A|B)=\frac{P(AB)}{P(B)} \Rightarrow P(AB)=P(A|B)P(B)$，可推广至</p>
-<p>$$<br>P(A_1 A_2 …A_n)=P(A_1)P(A_2|A_1)…P(A_n|A_1…A_{n-1})<br>$$</p>
-<blockquote>
+<script type="math/tex; mode=display">
+P(A_1 A_2 ...A_n)=P(A_1)P(A_2|A_1)...P(A_n|A_1...A_{n-1})</script><blockquote>
 <p><strong>注：</strong> 右边看似麻烦，其实容易算，左边看似简单，但是难算。</p>
 </blockquote>
-<h3 id="1-6-全概率-Total-Probability"><a href="#1-6-全概率-Total-Probability" class="headerlink" title="1.6 全概率 Total Probability"></a>1.6 全概率 Total Probability</h3><p>  设$B_1,B_2,…B_n$是样本空间$\Omega$中的<strong>两两不相容</strong>的一组事件，即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup_{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,…B_n$是样本空间$\Omega$​的一个分割 partition（又称为<strong>完备事件群</strong> Collectively exhaustive events）。</p>
+<h3 id="1-6-全概率-Total-Probability"><a href="#1-6-全概率-Total-Probability" class="headerlink" title="1.6 全概率 Total Probability"></a>1.6 全概率 Total Probability</h3><p>  设$B<em>1,B_2,…B_n$是样本空间$\Omega$中的<strong>两两不相容</strong>的一组事件，即$B_i B_j=\phi$，$i\neq j$，且满足$\bigcup</em>{i=1}^{n}B_i=\Omega$，则称$B_1,B_2,…B_n$是样本空间$\Omega$​的一个分割 partition（又称为<strong>完备事件群</strong> Collectively exhaustive events）。</p>
 <p>  $P(B_i)$ is also known as prior probability. Prior probability, in Bayesian statistics, is <strong>the probability of an event before new data is collected</strong>. $A$ is composed of the sum of all the exclusive events, and $P(A)$ is called total probability.</p>
 <p>  设${B_1,B_2,…B_n}$是样本空间$\Omega$的一个分割，$A$为$\Omega$的一个事件，则（全概率公式 Law of Total Probability）</p>
-<p>$$<br>P(A)=\sum_{i=1}^{n}P(A|B_i)P(B_i)<br>$$</p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/full_prob.png" alt="img"></p>
+<script type="math/tex; mode=display">
+P(A)=\sum_{i=1}^{n}P(A|B_i)P(B_i)</script><p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/full_prob.png" alt="img"></p>
 <p><strong>Proof</strong>：</p>
 <p>  Since $B_1,B_2,…B_n$ are mutually exclusive, $AB_1,AB_2,…AB_n$ are also mutually exclusive. Therefore, by addition theorem and multiplication theorem we can get</p>
-<p>$$<br>\begin{align}<br>P(A)&amp;=P(A \cap \Omega)\<br>&amp;=P(A \cap \sum_{i=1}^{n}B_i)\<br>&amp;=P(\sum_{i=1}^{n}AB_i)\<br>&amp;=\sum_{i=1}^{n}P(AB_i)\<br>&amp;=\sum_{i=1}^{n}P(A|B_i)P(B_i)\<br>&amp;=\sum_{i=1}^{n}P(A|B_i)P(B_i)<br>\end{align}<br>$$</p>
-<blockquote>
-<p>**注：**有时不易直接计算事件$A$的概率，但是在每个$B_i$上$A$的条件概率容易求出</p>
+<script type="math/tex; mode=display">
+\begin{align}
+P(A)&=P(A \cap \Omega)\\
+&=P(A \cap \sum_{i=1}^{n}B_i)\\
+&=P(\sum_{i=1}^{n}AB_i)\\
+&=\sum_{i=1}^{n}P(AB_i)\\
+&=\sum_{i=1}^{n}P(A|B_i)P(B_i)\\
+&=\sum_{i=1}^{n}P(A|B_i)P(B_i)
+\end{align}</script><blockquote>
+<p><strong>注：</strong>有时不易直接计算事件$A$的概率，但是在每个$B_i$上$A$的条件概率容易求出</p>
 </blockquote>
 <h3 id="1-7-Bayes公式-Bayes’-Theorem（逆概率公式）"><a href="#1-7-Bayes公式-Bayes’-Theorem（逆概率公式）" class="headerlink" title="1.7 Bayes公式 Bayes’ Theorem（逆概率公式）"></a>1.7 Bayes公式 Bayes’ Theorem（逆概率公式）</h3><p>  设${B_1, B_2, …B_n}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)&gt;0$，$i=1,2,…,n$，$P(A)&gt;0$，则</p>
-<p>$$<br>P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}<br>$$</p>
-<p><strong>Proof</strong>: From conditional probability formula, substitute law of total probability and multiplication theorem.</p>
+<script type="math/tex; mode=display">
+P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}</script><p><strong>Proof</strong>: From conditional probability formula, substitute law of total probability and multiplication theorem.</p>
 <blockquote>
-<p>**注：*<em>当有因果关系互换时必须用</em>Bayes*公式。</p>
+<p><strong>注：</strong>当有因果关系互换时必须用<em>Bayes</em>公式。</p>
 </blockquote>
 <h3 id="1-8-事件的独立性-Independence-of-Events"><a href="#1-8-事件的独立性-Independence-of-Events" class="headerlink" title="1.8 事件的独立性 Independence of Events"></a>1.8 事件的独立性 Independence of Events</h3><p>  设$A$，$B$是随机试验中的两个事件，若满足$P(AB)=P(A)P(B)$，则称事件$A$和$B$相互独立。判断事件的独立，应该是<strong>从实际出发</strong>，如果能够判断事件$B$的发生与否对事件$A$的发生与否不产生影响，则事件$A$，$B$​即为独立。</p>
 <p>  If events $A$ and $B$ are mutually independent, then $A$ and $\overline{B}$, $\overline{A}$ and $B$, $\overline{A}$ and $\overline{B}$ are all mutually independent.</p>
 <p>  设$\widetilde{A}$表示事件$A$发生和不发生之一，$\widetilde{B}$表示事件$B$发生和不发生之一。有独立性的定义可推至$P(\widetilde{A}\widetilde{B})=P(\widetilde{A})P(\widetilde{B})$（一共有四个等式 [if and only if (iff)]）。可推广至：</p>
-<p>$$<br>P(\widetilde{A}_1\widetilde{A}_2…\widetilde{A}_n)=P(\widetilde{A}_1)…P(\widetilde{A}_n)<br>$$</p>
-<p>上面有$2^n$个等式。</p>
+<script type="math/tex; mode=display">
+P(\widetilde{A}_1\widetilde{A}_2...\widetilde{A}_n)=P(\widetilde{A}_1)...P(\widetilde{A}_n)</script><p>上面有$2^n$个等式。</p>
 <blockquote>
-<p>**注：**独立（independent）和不相容（exclusive）是不同的两个概念，前者有公共部分，后者没有公共部分，独立一定相容。</p>
+<p><strong>注：</strong>独立（independent）和不相容（exclusive）是不同的两个概念，前者有公共部分，后者没有公共部分，独立一定相容。</p>
 </blockquote>
 <h4 id="1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events"><a href="#1-8-1-独立事件的条件概率-Conditional-Probability-of-Independent-events" class="headerlink" title="1.8.1 独立事件的条件概率 Conditional Probability of Independent events"></a>1.8.1 独立事件的条件概率 Conditional Probability of Independent events</h4><p>  If $P(A)&gt;0$, then the equivalent condition of events $A$ and $B$ being mutually independent</p>
-<p>$$<br>P(B)=P(B|A)<br>$$</p>
-<h3 id="1-9-重要公式与结论"><a href="#1-9-重要公式与结论" class="headerlink" title="1.9 重要公式与结论"></a>1.9 重要公式与结论</h3><p>$$<br>\begin{align}<br>&amp;(1)\ P(\overline{A})=1-P(A)\<br>\<br>&amp;(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\<br>\<br>&amp;(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\<br>\<br>&amp;(4)\ P(A-B)=P(A)-P(AB)\<br>\<br>&amp;(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\<br>&amp;\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\<br>\<br>&amp;(6)\ P(\overline{A}<em>1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\<br>&amp;\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\<br>\<br>&amp;(7)\ 若A_1,A_2,…A_n相独立，则P(\bigcap</em>{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))<br>\end{align}<br>$$</p>
-<h2 id="Chapter-2-随机变量及其分布-Random-Variables-and-Their-Distribution"><a href="#Chapter-2-随机变量及其分布-Random-Variables-and-Their-Distribution" class="headerlink" title="Chapter 2 随机变量及其分布 Random Variables and Their Distribution"></a>Chapter 2 随机变量及其分布 Random Variables and Their Distribution</h2><h3 id="2-1-随机变量的概念-Random-Variable"><a href="#2-1-随机变量的概念-Random-Variable" class="headerlink" title="2.1 随机变量的概念 Random Variable"></a>2.1 随机变量的概念 Random Variable</h3><ol>
-<li><strong>随机变量 Random variable：<strong>值随机会而定的变量，研究随机试验的一串事件。可按维数分为一维、二维至多维随机变量。按性质可分为</strong>离散型随机变量</strong>以及<strong>连续型随机变量</strong>。A random variable is a function that assigns numeric values to different events in a sample space.</li>
-<li>**分布 Distribution：**事件之间的联系，用来计算概率。</li>
+<script type="math/tex; mode=display">
+P(B)=P(B|A)</script><h3 id="1-9-重要公式与结论"><a href="#1-9-重要公式与结论" class="headerlink" title="1.9 重要公式与结论"></a>1.9 重要公式与结论</h3><script type="math/tex; mode=display">
+\begin{align}
+&(1)\ P(\overline{A})=1-P(A)\\
+\\
+&(2)\ P(A \cup B)=P(A)+P(B)-P(AB)\\
+\\
+&(3)\ P(A\cup B \cup C)=P(A)+P(B)+P(C)-P(AB)-P(AC)-P(BC)+P(ABC)\\
+\\
+&(4)\ P(A-B)=P(A)-P(AB)\\
+\\
+&(5)\ P(A\overline{B})=P(A)-P(AB),P(A)=P(AB)+P(A\overline{B}),\\
+&\ \ \ \ \ \ P(A\cup B)=P(A)+P(\overline{A}B)=P(AB)+P(A\overline{B})+P(\overline{A}B)\\
+\\
+&(6)\ P(\overline{A}_1|B)=1-P(A_1|B),P(A_1\cup A_2|B)=P(A_1|B)+P(A_2|B)-P(A_1A_2|B)\\
+&\ \ \ \ \ P(A_1A_2|B)=P(A_1|B)P(A_2|A_1B)\\
+\\
+&(7)\ 若A_1,A_2,...A_n相独立，则P(\bigcap_{i=1}^{n}A_i)=\prod_{i=1}^{n}P(A_i),P(\bigcup_{i=1}^{n}A_i)=\prod_{i=1}^{n}(1-P(A_i))
+\end{align}</script><h2 id="Chapter-2-随机变量及其分布-Random-Variables-and-Their-Distribution"><a href="#Chapter-2-随机变量及其分布-Random-Variables-and-Their-Distribution" class="headerlink" title="Chapter 2 随机变量及其分布 Random Variables and Their Distribution"></a>Chapter 2 随机变量及其分布 Random Variables and Their Distribution</h2><h3 id="2-1-随机变量的概念-Random-Variable"><a href="#2-1-随机变量的概念-Random-Variable" class="headerlink" title="2.1 随机变量的概念 Random Variable"></a>2.1 随机变量的概念 Random Variable</h3><ol>
+<li><strong>随机变量 Random variable：</strong>值随机会而定的变量，研究随机试验的一串事件。可按维数分为一维、二维至多维随机变量。按性质可分为<strong>离散型随机变量</strong>以及<strong>连续型随机变量</strong>。A random variable is a function that assigns numeric values to different events in a sample space.</li>
+<li><strong>分布 Distribution：</strong>事件之间的联系，用来计算概率。</li>
 <li><strong>示性函数 Indication function：</strong><br>$I_A(\omega)=\begin{cases}<br>1&amp; \omega \in A \<br>0&amp; \omega \notin A<br>\end{cases}$，事件$A$有随机变量$I_A$表示出来，$I_A$称为事件$A$的示性函数。</li>
 </ol>
 <h3 id="2-2-离散型随机变量及其分布-Discrete-Random-Variables"><a href="#2-2-离散型随机变量及其分布-Discrete-Random-Variables" class="headerlink" title="2.2 离散型随机变量及其分布 Discrete Random Variables"></a>2.2 离散型随机变量及其分布 Discrete Random Variables</h3><ol>
-<li><p>**离散型随机变量 discrete random variables：**设$X$为一随机变量，如果$X$<strong>只取有限个或可数个值</strong>，则称$X$为一个（一维）离散型随机变量。A random variable for which there exists a discrete set of numeric values is a discrete random variable.</p>
+<li><p><strong>离散型随机变量 discrete random variables：</strong>设$X$为一随机变量，如果$X$<strong>只取有限个或可数个值</strong>，则称$X$为一个（一维）离散型随机变量。A random variable for which there exists a discrete set of numeric values is a discrete random variable.</p>
 </li>
-<li><p>**概率函数：**设$X$为一随机变量，其全部可能值为${a_1, a_2,…}$，则$p_i=P(X=a_i),i=1,2,…$称为$X$的概率函数。</p>
+<li><p><strong>概率函数：</strong>设$X$为一随机变量，其全部可能值为${a_1, a_2,…}$，则$p_i=P(X=a_i),i=1,2,…$称为$X$的概率函数。</p>
 </li>
-<li><p>**概率分布：**离散型随机变量的概率分布可以用分布表来表示：</p>
-<table>
-<thead>
-<tr>
-<th align="center">可能值</th>
-<th align="center">$a_1$</th>
-<th align="center">$a_2$</th>
-<th align="center">…</th>
-<th align="center">$a_i$</th>
-<th align="center">…</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">概率</td>
-<td align="center">$p_1$</td>
-<td align="center">$p_2$</td>
-<td align="center">…</td>
-<td align="center">$p_i$</td>
-<td align="center">…</td>
-</tr>
-</tbody></table>
+<li><p><strong>概率分布：</strong>离散型随机变量的概率分布可以用分布表来表示：</p>
+<p>| 可能值 | $a_1$ | $a_2$ | … | $a_i$ | … |<br>| :——: | :—-: | :—-: | :-: | :—-: | :-: |<br>|  概率  | $p_1$ | $p_2$ | … | $p_i$ | … |</p>
 </li>
 <li><p><strong>概率分布函数 cumulative-distribution function：</strong></p>
 <ul>
-<li><p>**定义：**设$X$​为一随机变量，则函数</p>
-<p>$$<br>F(X)=P(X\leq x)\quad(-\infty&lt;x&lt;\infty)<br>$$</p>
-<p>称为$X$​的分布函数。（<strong>注：这里并未限定$X$​为离散型的，它对任何随机变量都有定义。</strong>）</p>
+<li><p><strong>定义：</strong>设$X$​为一随机变量，则函数</p>
+<script type="math/tex; mode=display">
+F(X)=P(X\leq x)\quad(-\infty<x<\infty)</script><p>称为$X$​的分布函数。（<strong>注：这里并未限定$X$​为离散型的，它对任何随机变量都有定义。</strong>）</p>
 </li>
 <li><p><strong>性质：</strong></p>
 <ul>
 <li>单调性：$F(x)$是单调非降的：$\forall x_1&lt;x_2$，有$F(x_1)\leq F(X_2)$.</li>
 <li>有界性：$0 \leq F(x) \leq 1$；当$x \rightarrow \infty$时，$F(x)\rightarrow1$；当$x \rightarrow-\infty$时，$F(x)\rightarrow0$.</li>
-<li>右连续性：$\forall x_0, \lim_{x\to x_0+0}F(x)=F(x_0)$, that is, $F(x)$ is a right continuous function. $F(x)$右连续非左连续。</li>
+<li>右连续性：$\forall x<em>0, \lim</em>{x\to x_0+0}F(x)=F(x_0)$, that is, $F(x)$ is a right continuous function. $F(x)$右连续非左连续。</li>
 </ul>
 </li>
-<li><p>Relationship between probability and distribution function:<br>$$<br>\begin{align}<br>&amp;(1)\ P{a&lt;X\leq b}=P{X\leq b}-P{X\leq a}=F(b)-F(a)\<br>\<br>&amp;(2) P{X&gt;a}=1-P{X\leq a}=1-F(a)\<br>\<br>&amp;(3) P{X&lt;a}=\lim_{x\to a-0}P{X\leq x}=\lim_{x\to a-0}F(x)\<br>\<br>&amp;(4) P{X\geq a}=1-P{X&lt;a}=1-\lim_{x\to a-0}F(x)\<br>\<br>&amp;(5) P{X=a}=P{X\leq a}-P{X&lt;a}=F(a)-\lim_{x\to a-0}F(x)\<br>\end{align}<br>$$</p>
-</li>
+<li><p>Relationship between probability and distribution function:</p>
+<script type="math/tex; mode=display">
+\begin{align}
+&(1)\ P\{a<X\leq b\}=P\{X\leq b\}-P\{X\leq a\}=F(b)-F(a)\\
+\\
+&(2) P\{X>a\}=1-P\{X\leq a\}=1-F(a)\\
+\\
+&(3) P\{X<a\}=\lim_{x\to a-0}P\{X\leq x\}=\lim_{x\to a-0}F(x)\\
+\\
+&(4) P\{X\geq a\}=1-P\{X<a\}=1-\lim_{x\to a-0}F(x)\\
+\\
+&(5) P\{X=a\}=P\{X\leq a\}-P\{X<a\}=F(a)-\lim_{x\to a-0}F(x)\\
+\end{align}</script></li>
 <li><p><strong>离散型随机变量分布函数：</strong></p>
 <p>对于离散型随机变量，$F(X)=P(X\leq x)=\sum_{(i|a_i\leq x)}p_i$​, $p_i=P(X=i)=F(i)-F(i-1)$​。</p>
 </li>
@@ -647,35 +664,40 @@
 </li>
 <li><p><strong>伯努利分布（Bernoulli’s distribution）</strong></p>
 <ul>
-<li><p>**定义：**A discrete random variable $X$ is said to follow the Bernoulli’s distribution, which is denoted by $X \sim B(1,p)$, if $P{X=1}=p,P{X=0}=1-p.\ (0&lt;P&lt;1)$</p>
+<li><p><strong>定义：</strong>A discrete random variable $X$ is said to follow the Bernoulli’s distribution, which is denoted by $X \sim B(1,p)$, if $P{X=1}=p,P{X=0}=1-p.\ (0&lt;P&lt;1)$</p>
 </li>
 <li><p>Bernoulli’s distribution is associated with the trial which has only two possible outcomes ($A$ and $\overline{A}$) that are not necessarily equally likely.</p>
 </li>
-<li><p>Let the random variable $X={ the\ number\ of\ outcome\ A\ occurs}$. Then<br>$$<br>X=\begin{cases}1 &amp; \text{if outcome A occurs} \0 &amp; \text{if outcome A does not occur}\end{cases}<br>$$</p>
-</li>
+<li><p>Let the random variable $X={ the\ number\ of\ outcome\ A\ occurs}$. Then</p>
+<script type="math/tex; mode=display">
+X=\begin{cases}1 & \text{if outcome A occurs} \\0 & \text{if outcome A does not occur}\end{cases}</script></li>
 </ul>
 </li>
 <li><p><strong>二项分布（Binomial distribution）</strong></p>
 <ul>
-<li><p>**定义：**设某事件$A$在一次试验中发生的概率为$p$，先把试验独立地重复n次，以$X$记$A$在这n次试验中发生的次数，则$X$取值$0,1,…,n$，且有</p>
-<p>$$<br>P(X=k)=\binom{n}{k}p^k(1-p)^{n-k},\quad k=0,1,…,n<br>$$</p>
-<p>称$X$服从二项分布，记为$X\sim B(n,p)$.</p>
+<li><p><strong>定义：</strong>设某事件$A$在一次试验中发生的概率为$p$，先把试验独立地重复n次，以$X$记$A$在这n次试验中发生的次数，则$X$取值$0,1,…,n$，且有</p>
+<script type="math/tex; mode=display">
+P(X=k)=\binom{n}{k}p^k(1-p)^{n-k},\quad k=0,1,...,n</script><p>称$X$服从二项分布，记为$X\sim B(n,p)$.</p>
 </li>
-<li><p>**服从二项分布的条件：**1. 各次试验的条件是稳定的，即事件$A$的概率$p$​在各次试验中保持不变；2. 各次试验的独立性</p>
+<li><p><strong>服从二项分布的条件：</strong>1. 各次试验的条件是稳定的，即事件$A$的概率$p$​在各次试验中保持不变；2. 各次试验的独立性</p>
 </li>
 <li><p>The most probable value 最可能值：</p>
-<p>$$<br>k_0=\begin{cases}(n+1)p-1\ or\ (n+1)p &amp; \text{when (n+1)p is an integer}\\ [(n+1)p] &amp; \text{when (n+1)p is not an integer} \end{cases}<br>$$</p>
-<ul>
-<li><strong>Proof</strong>:<br>$$<br>\begin{aligned}<br>&amp; C_n^{k_0} p^{k_0}(1-p)^{n-k_0} \geq C_n^{k_0-1} p^{k_0-1}(1-p)^{n-k_0+1} \Rightarrow p(n+1) \geq k_0 \<br>&amp; C_n^{k_0} p^{k_0}(1-p)^{n-k_0} \geq C_n^{k_0+1} p^{k_0+1}(1-p)^{n-k_0-1} \Rightarrow k_0 \geq p(n+1)-1<br>\end{aligned}<br>$$</li>
+<script type="math/tex; mode=display">
+k_0=\begin{cases}(n+1)p-1\ or\ (n+1)p & \text{when (n+1)p is an integer}\\\\ [(n+1)p] & \text{when (n+1)p is not an integer} \end{cases}</script><ul>
+<li><strong>Proof</strong>:<script type="math/tex; mode=display">
+\begin{aligned}
+& C_n^{k_0} p^{k_0}(1-p)^{n-k_0} \geq C_n^{k_0-1} p^{k_0-1}(1-p)^{n-k_0+1} \Rightarrow p(n+1) \geq k_0 \\
+& C_n^{k_0} p^{k_0}(1-p)^{n-k_0} \geq C_n^{k_0+1} p^{k_0+1}(1-p)^{n-k_0-1} \Rightarrow k_0 \geq p(n+1)-1
+\end{aligned}</script></li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p><strong>泊松分布（Poisson distribution）</strong></p>
 <ul>
-<li><p>**定义：**设随机变量$X$的概率分布为</p>
-<p>$$<br>P(X=i)=\frac{\lambda^i}{i!}e^{-\lambda},\quad i=0,1,2,…,\quad\lambda&gt;0<br>$$</p>
-<p>则称$X$服从参数为$\lambda$的Poisson分布，并记$X\sim P(\lambda)$.</p>
+<li><p><strong>定义：</strong>设随机变量$X$的概率分布为</p>
+<script type="math/tex; mode=display">
+P(X=i)=\frac{\lambda^i}{i!}e^{-\lambda},\quad i=0,1,2,...,\quad\lambda>0</script><p>则称$X$服从参数为$\lambda$的Poisson分布，并记$X\sim P(\lambda)$.</p>
 </li>
 <li><p><strong>特点：</strong></p>
 <ul>
@@ -684,26 +706,38 @@
 <li><p>作为二项分布的近似。若$X\sim B(n,p)$，其中$n$很大，$p$很小，而$np=\lambda$不太大时（一般$n&gt;30,np\leq5$），则$X$的分布接近泊松分布$P(\lambda)$. Binomial distribution: there are a finite number of trials n, and the number of events can be no larger than n. Poisson distribution: the number of trials is essentially infinite and the number of events can be indefinitely large.</p>
 </li>
 <li><p>Theorem: Let $\lambda &gt; 0$ be a constant. Suppose $n$ is any positive integer and $\lambda=n p_n$. Then for any nonnegative integer $k$, we have</p>
-<p>$$<br>\begin{gathered}<br>\lim _{n \rightarrow \infty} C_n^k p_n^k\left(1-p_n\right)^{n-k}=\frac{\lambda^k}{k!} e^{-\lambda} \<br>B(n, p) \rightarrow P(\lambda) \text { as } n \rightarrow \infty, p \rightarrow 0, np \rightarrow \lambda<br>\end{gathered}<br>$$</p>
-<p>The Poisson approximation theorem suggests: If $n$ is large and $p$ is small (generally $n \geq 30, p \leq 0.2$), we have</p>
-<p>$$<br>\begin{gathered}<br>C_n^k p^k(1-p)^{n-k} \approx \frac{\lambda^k}{k!} e^{-\lambda} \quad \text { with } \lambda=n p \<br>\text { i. } e ., \quad B(n, p) \approx P(\lambda)<br>\end{gathered}<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\begin{gathered}
+\lim _{n \rightarrow \infty} C_n^k p_n^k\left(1-p_n\right)^{n-k}=\frac{\lambda^k}{k!} e^{-\lambda} \\
+B(n, p) \rightarrow P(\lambda) \text { as } n \rightarrow \infty, p \rightarrow 0, np \rightarrow \lambda
+\end{gathered}</script><p>The Poisson approximation theorem suggests: If $n$ is large and $p$ is small (generally $n \geq 30, p \leq 0.2$), we have</p>
+<script type="math/tex; mode=display">
+\begin{gathered}
+C_n^k p^k(1-p)^{n-k} \approx \frac{\lambda^k}{k!} e^{-\lambda} \quad \text { with } \lambda=n p \\
+\text { i. } e ., \quad B(n, p) \approx P(\lambda)
+\end{gathered}</script></li>
 </ul>
 </li>
 <li><p><strong>推导：</strong></p>
 <p>若事件$A\sim B(n,p)$，且$n$很大，$p$很小，而$np=\lambda$不太大时，设$\lambda=np$，</p>
-<p>$$<br>\begin{align}<br>P(X=i)&amp;=\lim_{n\rightarrow \infty}\binom{n}{i}(\frac{\lambda}{n})^i(1-\frac{\lambda}{n})^{n-i}\<br>&amp;=\lambda^i\lim_{n\rightarrow \infty}\frac{\binom{n}{i}}{n^i}\lim_{n\rightarrow \infty}(1-\frac{\lambda}{n})^{n-i}\<br>&amp;=\lambda^i e^{-\lambda}\lim_{n\rightarrow \infty}\frac{n(n-1)(n-2)…(n-i+1)}{i!n^i}\<br>&amp;=\lambda^i e^{-\lambda}\lim_{n\rightarrow \infty}\frac{(1-\frac{1}{n})(1-\frac{2}{n})…(1-\frac{i-1}{n})}{i!}\<br>&amp;=\frac{\lambda^i}{i!}e^{-\lambda}<br>\end{align}<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\begin{align}
+P(X=i)&=\lim_{n\rightarrow \infty}\binom{n}{i}(\frac{\lambda}{n})^i(1-\frac{\lambda}{n})^{n-i}\\
+&=\lambda^i\lim_{n\rightarrow \infty}\frac{\binom{n}{i}}{n^i}\lim_{n\rightarrow \infty}(1-\frac{\lambda}{n})^{n-i}\\
+&=\lambda^i e^{-\lambda}\lim_{n\rightarrow \infty}\frac{n(n-1)(n-2)...(n-i+1)}{i!n^i}\\
+&=\lambda^i e^{-\lambda}\lim_{n\rightarrow \infty}\frac{(1-\frac{1}{n})(1-\frac{2}{n})...(1-\frac{i-1}{n})}{i!}\\
+&=\frac{\lambda^i}{i!}e^{-\lambda}
+\end{align}</script></li>
 </ul>
 </li>
 </ol>
 <h3 id="2-3-连续型随机变量及其分布-Continuous-Random-Variables"><a href="#2-3-连续型随机变量及其分布-Continuous-Random-Variables" class="headerlink" title="2.3 连续型随机变量及其分布 Continuous Random Variables"></a>2.3 连续型随机变量及其分布 Continuous Random Variables</h3><ol>
-<li><p>**连续型随机变量 continuous random variable：**设$X$为一随机变量，如果$X$<strong>不仅有无限个而且有不可数个值</strong>，则称$X$为一个连续型随机变量。A random variable whose possible values cannot be enumerated is a continuous random variable.</p>
+<li><p><strong>连续型随机变量 continuous random variable：</strong>设$X$为一随机变量，如果$X$<strong>不仅有无限个而且有不可数个值</strong>，则称$X$为一个连续型随机变量。A random variable whose possible values cannot be enumerated is a continuous random variable.</p>
 </li>
 <li><p><strong>概率密度函数 probability-density function：</strong></p>
 <ul>
-<li><p>**定义：**The probability density function $f(x)$ of the continuous random variable $X$ is a function whose integral from $x=a$ to $x=b$ $(\forall a,b\in R\ and\ b\geq a)$ gives the probability that $X$ takes a value in the interval $(a,b]$, i.e. 设连续型随机变量$X$有概率分布函数$F(x)$，则$F(x)$的导数$f(x)=F’(x)$称为$X$​的概率密度函数。</p>
-<p>$P{a&lt;X\leq b}=\int_{a}^{b}f(X),dx$</p>
+<li><p><strong>定义：</strong>The probability density function $f(x)$ of the continuous random variable $X$ is a function whose integral from $x=a$ to $x=b$ $(\forall a,b\in R\ and\ b\geq a)$ gives the probability that $X$ takes a value in the interval $(a,b]$, i.e. 设连续型随机变量$X$有概率分布函数$F(x)$，则$F(x)$的导数$f(x)=F’(x)$称为$X$​的概率密度函数。</p>
+<p>$P{a&lt;X\leq b}=\int_{a}^{b}f(X)\,dx$</p>
 </li>
 <li><p><strong>性质：</strong></p>
 <ul>
@@ -722,17 +756,18 @@
 </li>
 </ul>
 </li>
-<li><p>**概率分布函数 cumulative-distribution function：**设$X$为一连续型随机变量，则</p>
-<p>$$<br>F(x)=\int_{-\infty}^xf(u)du,\quad-\infty&lt;x&lt;+\infty<br>$$</p>
-</li>
+<li><p><strong>概率分布函数 cumulative-distribution function：</strong>设$X$为一连续型随机变量，则</p>
+<script type="math/tex; mode=display">
+F(x)=\int_{-\infty}^xf(u)du,\quad-\infty<x<+\infty</script></li>
 <li><p><strong>正态分布（Normal distribution）：</strong></p>
 <ul>
-<li><p>**定义：**如果一个随机变量具有概率密度函数</p>
-<p>$$<br>f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},\quad -\infty&lt;x&lt;+\infty<br>$$</p>
-<p>其中$-\infty&lt;\mu&lt;+\infty,\ \sigma^2&gt;0$，则称$X$为正态随机变量，并记为$X\sim N(\mu,\sigma^2)$.特别地，$\mu=0,\sigma=1$的正态分布成为标准正态分布。用$\Phi(x)$和$\phi(x)$表示标准正态分布$N(0,1)$的分布函数和密度函数。</p>
+<li><p><strong>定义：</strong>如果一个随机变量具有概率密度函数</p>
+<script type="math/tex; mode=display">
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},\quad -\infty<x<+\infty</script><p>其中$-\infty&lt;\mu&lt;+\infty,\ \sigma^2&gt;0$，则称$X$为正态随机变量，并记为$X\sim N(\mu,\sigma^2)$.特别地，$\mu=0,\sigma=1$的正态分布成为标准正态分布。用$\Phi(x)$和$\phi(x)$表示标准正态分布$N(0,1)$的分布函数和密度函数。</p>
 </li>
-<li><p>The distribution function of normal distribution is<br>$$<br>F(x)=\int_{-\infty}^x \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{(t-\mu)^2}{2 \sigma^2}} d t, \quad-\infty&lt;x&lt;+\infty<br>$$</p>
-<p>From the symmetry of density function of normal distribution, we know that $F(\mu)=0.5$ 2. We indicated that parameters $\mu, \sigma^2$ are, respectively, the expected value and variance of the normal distribution, i.e., if $X \sim N\left(\mu, \sigma^2\right)$, then $E(X)=\mu,\ D(X)=\sigma^2$ 3. A normal distribution with parameters $\mu, \sigma^2$ is completely determined by its expected value and variance.</p>
+<li><p>The distribution function of normal distribution is</p>
+<script type="math/tex; mode=display">
+F(x)=\int_{-\infty}^x \frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{(t-\mu)^2}{2 \sigma^2}} d t, \quad-\infty<x<+\infty</script><p>From the symmetry of density function of normal distribution, we know that $F(\mu)=0.5$ 2. We indicated that parameters $\mu, \sigma^2$ are, respectively, the expected value and variance of the normal distribution, i.e., if $X \sim N\left(\mu, \sigma^2\right)$, then $E(X)=\mu,\ D(X)=\sigma^2$ 3. A normal distribution with parameters $\mu, \sigma^2$ is completely determined by its expected value and variance.</p>
 </li>
 <li><p><strong>性质：</strong></p>
 <ul>
@@ -753,16 +788,16 @@
 </li>
 <li><p><strong>Standard normal distribution 标准正态分布</strong>:</p>
 <ul>
-<li><p><strong>定义</strong>：A normal distribution with mean 0 and variance 1 is called a standard normal distribution. This distribution is denoted by $N(0,1)$.</p>
-</li>
+<li><strong>定义</strong>：A normal distribution with mean 0 and variance 1 is called a standard normal distribution. This distribution is denoted by $N(0,1)$.</li>
 <li><p>In general, $\phi(x)$ and $\Phi(x)$​ are used to represent density function and distribution function of a standard normal distribution, respectively, that is,</p>
-<p>$$<br>\phi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}},&amp;-\infty&lt;x&lt;+\infty\<br>\Phi(x)=\int^{x}_{-\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}},dt&amp;-\infty&lt;x&lt;+\infty<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\phi(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}},&-\infty<x<+\infty\\
+\Phi(x)=\int^{x}_{-\infty}\frac{1}{\sqrt{2\pi}}e^{-\frac{t^2}{2}}\,dt&-\infty<x<+\infty</script></li>
 <li><p>The standard normal distribution is symmetric about $x = 0$​.</p>
 </li>
 <li><p>Thanks to the widespread use of normal distribution, values of normal distribution function $\Phi(x)=\int_{-\infty}^x \frac{1}{\sqrt{2 \pi}} e^{-\frac{t^2}{2}} dt$ are tabulate for positive values of $x$. The table is called normal table.</p>
-<p>$$<br>\Phi(x)=P{X \leq x}=\text { area to the left of } x<br>$$</p>
-<p>Obviously, $\Phi(0)=0.5$.</p>
+<script type="math/tex; mode=display">
+\Phi(x)=P\{X \leq x\}=\text { area to the left of } x</script><p>Obviously, $\Phi(0)=0.5$.</p>
 <p>If $X \sim N(0,1)$, then $P{a&lt;X \leq b}=\Phi(b)-\Phi(a)$</p>
 </li>
 <li><p>For the negative values of x, since symmetry properties of standard normal distribution and the area between the density curve and x-axis of equals 1, it follows that $\Phi(-x)=1-\Phi(x)$.</p>
@@ -772,58 +807,75 @@
 <li><p>Conversion from an $N(\mu,\sigma^2)$ distribution to an $N(0,1)$ distribution:</p>
 <ul>
 <li><p>We convert the normal variable $X$ to its standardized variable $U=\frac{X-\mu}{\sigma}$, then we have</p>
-<p>$$<br>U = \frac{X-\mu}{\sigma}\sim N(0,1)<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+U = \frac{X-\mu}{\sigma}\sim N(0,1)</script></li>
 <li><p><strong>Theorem</strong>: If $X \sim N\left(\mu, \sigma^2\right)$ and $F(x)$ is the distribution function of $X$, then</p>
-<p>$$<br>F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)<br>$$</p>
-<p><strong>Proof</strong>:</p>
+<script type="math/tex; mode=display">
+F(x)=\Phi\left(\frac{x-\mu}{\sigma}\right)</script><p><strong>Proof</strong>:</p>
 </li>
 </ul>
 </li>
 </ul>
-<p>$$<br>    F(x)=P(X \leq x)=P\left(\frac{X-\mu}{\sigma} \leq \frac{x-\mu}{\sigma}\right)=P\left(U \leq \frac{x-\mu}{\sigma}\right)=\Phi\left(\frac{x-\mu}{\sigma}\right) .<br>$$</p>
-<ul>
+<script type="math/tex; mode=display">
+    F(x)=P(X \leq x)=P\left(\frac{X-\mu}{\sigma} \leq \frac{x-\mu}{\sigma}\right)=P\left(U \leq \frac{x-\mu}{\sigma}\right)=\Phi\left(\frac{x-\mu}{\sigma}\right) .</script><ul>
 <li><ol>
 <li>If $X \sim N\left(\mu, \sigma^2\right)$, then</li>
 </ol>
-<p>$$<br>   \begin{gathered}<br>   P(a&lt;X \leq b)=F(b)-F(a)=\Phi\left(\frac{b-\mu}{\sigma}\right)-\Phi\left(\frac{a-\mu}{\sigma}\right) \<br>   P(X&gt;x)=1-F(x)=1-\Phi\left(\frac{x-\mu}{\sigma}\right)<br>   \end{gathered}<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+   \begin{gathered}
+   P(a<X \leq b)=F(b)-F(a)=\Phi\left(\frac{b-\mu}{\sigma}\right)-\Phi\left(\frac{a-\mu}{\sigma}\right) \\
+   P(X>x)=1-F(x)=1-\Phi\left(\frac{x-\mu}{\sigma}\right)
+   \end{gathered}</script><ol>
 <li>Probabilities for any normal distribution can now be evaluated using the normal table. 3. If $X \sim N\left(\mu, \sigma^2\right)$, then</li>
 </ol>
-<p>$$<br>   \begin{aligned}<br>   P{\mu-k \sigma \leq X \leq \mu+ k \sigma} &amp; =\Phi\left(\frac{\mu+k \sigma-\mu}{\sigma}\right)-\Phi\left(\frac{\mu-k \sigma-\mu}{\sigma}\right) \<br>   &amp; =\Phi(k)-\Phi(-k)=\Phi(k)-[1-\Phi(k)] \<br>   &amp; =2 \Phi(k)-1<br>   \end{aligned}<br>$$</p>
-<p>When $k=1,2,3$,</p>
-<p>$$<br>   \begin{gathered}<br>   P{\mu-\sigma \leq X \leq \mu+\sigma}=2 \Phi(1)-1=0.6827=68.27 % \<br>   P{\mu-2 \sigma \leq X \leq \mu+2 \sigma}=2 \Phi(2)-1=0.9545=95.45 % \<br>   P{\mu-3 \sigma \leq X \leq \mu+3 \sigma}=2 \Phi(3)-1=0.9973=99.73 %<br>   \end{gathered}<br>$$</p>
+<script type="math/tex; mode=display">
+   \begin{aligned}
+   P\{\mu-k \sigma \leq X \leq \mu+ k \sigma\} & =\Phi\left(\frac{\mu+k \sigma-\mu}{\sigma}\right)-\Phi\left(\frac{\mu-k \sigma-\mu}{\sigma}\right) \\
+   & =\Phi(k)-\Phi(-k)=\Phi(k)-[1-\Phi(k)] \\
+   & =2 \Phi(k)-1
+   \end{aligned}</script><p>When $k=1,2,3$,</p>
+<script type="math/tex; mode=display">
+   \begin{gathered}
+   P\{\mu-\sigma \leq X \leq \mu+\sigma\}=2 \Phi(1)-1=0.6827=68.27 \% \\
+   P\{\mu-2 \sigma \leq X \leq \mu+2 \sigma\}=2 \Phi(2)-1=0.9545=95.45 \% \\
+   P\{\mu-3 \sigma \leq X \leq \mu+3 \sigma\}=2 \Phi(3)-1=0.9973=99.73 \%
+   \end{gathered}</script></li>
+</ul>
 </li>
+</ol>
+<ul>
 <li><p>Upper percentile of standard normal distribution</p>
 <ul>
 <li><p>Definition: Given $\alpha$ and $X \sim N(0,1)$, if</p>
-<p>$$<br>   P\left{X&gt;u_\alpha\right}=\int_{u_\alpha}^{+\infty} \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}} d x=\alpha<br>$$</p>
-<p>then $u_\alpha$ is called the upper $100 \times \alpha$th percentile 上侧 $\alpha$ 分位数 or critical value 临界值 of a standard normal distribution $N(0,1)$.</p>
+<script type="math/tex; mode=display">
+   P\left\{X>u_\alpha\right\}=\int_{u_\alpha}^{+\infty} \frac{1}{\sqrt{2 \pi}} e^{-\frac{x^2}{2}} d x=\alpha</script><p>then $u_\alpha$ is called the upper $100 \times \alpha$th percentile 上侧 $\alpha$ 分位数 or critical value 临界值 of a standard normal distribution $N(0,1)$.</p>
 </li>
-<li><p>Given $\alpha$, it follows that $\Phi(u_\alpha)=P{X \leq u_\alpha}=1-P{X&gt;u_\alpha}=1-\alpha$. And $u_\alpha$ can be obtained from referring to normal table.</p>
-<p>For example, if $\alpha=0.05$, then $ Phi(u*\alpha)=1-0.05=0.95$. Refer to normal table, $u*\alpha=1.645$.</p>
+<li><p>Given $\alpha$, it follows that $\Phi(u<em>\alpha)=P{X \leq u</em>\alpha}=1-P{X&gt;u<em>\alpha}=1-\alpha$. And $u</em>\alpha$ can be obtained from referring to normal table.</p>
+<p>For example, if $\alpha=0.05$, then $ Phi(u<em>\alpha)=1-0.05=0.95$. Refer to normal table, $u</em>\alpha=1.645$.</p>
 </li>
-<li><p>Assume $X \sim N(\mu,\sigma^2 )$. If $P{X&gt;x_0}=\alpha$ then $x_0$ is the upper $100 \times \alpha$th percentile or critical value of a normal distribution $N(\mu,\sigma^2 )$<br>$$<br>\text{i.e.,}\ \Phi(\frac{x_0 - \mu}{\sigma})=1-\alpha,\ \frac{x_0 + \mu}{\sigma}=u_\alpha,\ x_0=\mu + u_\alpha \sigma<br>$$</p>
-</li>
+<li><p>Assume $X \sim N(\mu,\sigma^2 )$. If $P{X&gt;x_0}=\alpha$ then $x_0$ is the upper $100 \times \alpha$th percentile or critical value of a normal distribution $N(\mu,\sigma^2 )$</p>
+<script type="math/tex; mode=display">
+\text{i.e.,}\ \Phi(\frac{x_0 - \mu}{\sigma})=1-\alpha,\ \frac{x_0 + \mu}{\sigma}=u_\alpha,\ x_0=\mu + u_\alpha \sigma</script></li>
 </ul>
 </li>
 </ul>
-</li>
-</ol>
 <ul>
 <li><strong>图像（密度和分布函数图）：</strong></li>
 </ul>
-<img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dense.png" alt="img" style="zoom:67%;">
-
-<img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dist.png" alt="img" style="zoom:67%;">
-
-<ol start="5">
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dense.png" alt="img" style="zoom:67%;"></p>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/normal_dist.png" alt="img" style="zoom:67%;"></p>
+<ol>
 <li><strong>指数分布（Exponential distribution）：</strong></li>
 </ol>
 <ul>
-<li><p>**定义：**若随机变量$X$具有概率密度函数</p>
-<p>$$<br>f(x)=<br>\begin{cases}<br>\lambda e^{-\lambda x}&amp; x&gt;0 \<br>0&amp; x\leq 0<br>\end{cases}<br>=\lambda e^{-\lambda x}I_{(0,\infty)}(x)<br>$$</p>
-<p>其中$\lambda &gt;0$为常数，则称$X$服从参数为$\lambda$的指数分布，并记$X\sim E(\lambda)$。</p>
+<li><p><strong>定义：</strong>若随机变量$X$具有概率密度函数</p>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases}
+\lambda e^{-\lambda x}& x>0 \\
+0& x\leq 0
+\end{cases}
+=\lambda e^{-\lambda x}I_{(0,\infty)}(x)</script><p>其中$\lambda &gt;0$为常数，则称$X$服从参数为$\lambda$的指数分布，并记$X\sim E(\lambda)$。</p>
 </li>
 <li><p><strong>概率分布函数：</strong></p>
 <p>$F(x)=\begin{cases}<br>  1-e^{-\lambda x}&amp; x&gt;0 \<br>  0&amp; x\leq 0<br>  \end{cases}=(1-e^{-\lambda x})I_{(0,\infty)}(x)$</p>
@@ -835,8 +887,19 @@
 <li><p>无后效性（Memoryless Property），即无老化，要来描述寿命（如元件等）的分布。</p>
 <p><strong>证明：</strong></p>
 <p>“无老化”就是说在时刻$x$正常工作的条件下，其失效率总保持为某个常数$\lambda&gt;0$，与$x$无关，可表示</p>
-<p>$$<br>\begin{align}<br>&amp;P(x\leq X\leq x+h|X&gt;x)/h=\lambda\quad(h\rightarrow0)\<br>证：\<br>&amp;\lim_{h\rightarrow0}\frac{P(x\leq X\leq x+h|X&gt;x)}{h}\<br>=&amp;\lim_{h\rightarrow0}\frac{P(x\leq X\leq x+h,X&gt;x)}{P(X&gt;x)h}\<br>=&amp;\lim_{h\rightarrow0}\frac{P(x&lt; X\leq x+h)}{P(X&gt;x)h}\<br>=&amp;\lim_{h\rightarrow0}\frac{-e^{-\lambda t}|^{x+h}<em>{x}}{-e^{-\lambda t}|^{\infty}</em>{x}h}\<br>=&amp;\lim_{h\rightarrow0}\frac{e^{-\lambda x}-e^{-\lambda x-\lambda h}}{e^{-\lambda x}h}\<br>=&amp;\lim_{h\rightarrow0}\frac{1-\frac{1}{e^{xh}}}{h}\<br>=&amp;\lim_{h\rightarrow0}\lambda e^{-\lambda h}\<br>=&amp;\lambda<br>\end{align}<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\begin{align}
+&P(x\leq X\leq x+h|X>x)/h=\lambda\quad(h\rightarrow0)\\
+证：\\
+&\lim_{h\rightarrow0}\frac{P(x\leq X\leq x+h|X>x)}{h}\\
+=&\lim_{h\rightarrow0}\frac{P(x\leq X\leq x+h,X>x)}{P(X>x)h}\\
+=&\lim_{h\rightarrow0}\frac{P(x< X\leq x+h)}{P(X>x)h}\\
+=&\lim_{h\rightarrow0}\frac{-e^{-\lambda t}|^{x+h}_{x}}{-e^{-\lambda t}|^{\infty}_{x}h}\\
+=&\lim_{h\rightarrow0}\frac{e^{-\lambda x}-e^{-\lambda x-\lambda h}}{e^{-\lambda x}h}\\
+=&\lim_{h\rightarrow0}\frac{1-\frac{1}{e^{xh}}}{h}\\
+=&\lim_{h\rightarrow0}\lambda e^{-\lambda h}\\
+=&\lambda
+\end{align}</script></li>
 <li><p>$\lambda$为失效率，失效率越高，平均寿命就越小。</p>
 </li>
 </ul>
@@ -845,85 +908,97 @@
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/exponential_dense.png" alt="img"></p>
 </li>
 </ul>
-<ol start="6">
+<ol>
 <li><p><strong>均匀分布（Uniform distribution）：</strong></p>
 <ul>
-<li><p>**定义：**设$a&lt;b$，如果分布$F(x)$具有密度函数</p>
-<p>$$<br>f(x)=<br>\begin{cases}<br>\frac{1}{b-a}&amp; a\leq x\leq b \<br>0&amp; 其它<br>\end{cases}<br>=\frac{1}{b-a}I_{(a,b)}(x)<br>$$</p>
-<p>则该分布为区间$[a,b]$上的均匀分布，记$X\sim U[a,b]$。</p>
+<li><p><strong>定义：</strong>设$a&lt;b$，如果分布$F(x)$具有密度函数</p>
+<script type="math/tex; mode=display">
+f(x)=
+\begin{cases}
+\frac{1}{b-a}& a\leq x\leq b \\
+0& 其它
+\end{cases}
+=\frac{1}{b-a}I_{(a,b)}(x)</script><p>则该分布为区间$[a,b]$上的均匀分布，记$X\sim U[a,b]$。</p>
 </li>
-<li><p><strong>概率分布函数：</strong><br>$$<br>F(x)=\begin{cases}<br>0&amp; x\leq a \<br>\frac{x-a}{b-a}&amp; a&lt;x\leq b\<br>1 &amp;x&gt;b<br>\end{cases}<br>$$</p>
-</li>
-<li><p><strong>性质：</strong>$\forall R(c,d) \subset R(a,b),\ P(c&lt;X&lt;d)=\frac{d-c}{b-a}$​</p>
-</li>
-<li><p><strong>数学期望：</strong><br>$$<br>E(X)=\int_{-\infty}^{\infty}xf(x),dx=\int_{-a}^{b}x\times\frac{1}{b-a},dx=\frac{1}{b-a}\int_{a}^{b}x,dx=\frac{a+b}{2}<br>$$</p>
-</li>
+<li><p><strong>概率分布函数：</strong></p>
+<script type="math/tex; mode=display">
+F(x)=\begin{cases}
+0& x\leq a \\
+\frac{x-a}{b-a}& a<x\leq b\\
+1 &x>b
+\end{cases}</script></li>
+<li><strong>性质：</strong>$\forall R(c,d) \subset R(a,b),\ P(c&lt;X&lt;d)=\frac{d-c}{b-a}$​</li>
+<li><strong>数学期望：</strong><script type="math/tex; mode=display">
+E(X)=\int_{-\infty}^{\infty}xf(x)\,dx=\int_{-a}^{b}x\times\frac{1}{b-a}\,dx=\frac{1}{b-a}\int_{a}^{b}x\,dx=\frac{a+b}{2}</script></li>
 </ul>
 </li>
 </ol>
 <h3 id="2-4-多维随机变量（随机向量）"><a href="#2-4-多维随机变量（随机向量）" class="headerlink" title="2.4 多维随机变量（随机向量）"></a>2.4 多维随机变量（随机向量）</h3><ol>
-<li><p>**随机向量：**设$X={X_1,…,X_n}$.如果每个$X_i$都是一个随机变量，$i=1,…,n$，则称$X$为$n$维随机变量或者随机向量。</p>
+<li><p><strong>随机向量：</strong>设$X={X_1,…,X_n}$.如果每个$X_i$都是一个随机变量，$i=1,…,n$，则称$X$为$n$维随机变量或者随机向量。</p>
 </li>
-<li><p>**离散型随机向量的分布：**如果每一个$X_i$都是一个离散型随机变量，$i=1,…,n$，则称$X={X_1,…,X_n}$为一$n$维离散型随机变量。设$X_i$的所有可能取值为${a_{i1},a{i2},…},\quad i=1,…,n$，则称</p>
-<p>$$<br>p(j_1,…,j_n)=P(X_1=a_{1j_1},…,X_n=a_{nj_n}),\quad j_1,…,j_n=1,2,…<br>$$</p>
-<p>为$n$维随机变量$X$的概率函数，这也是其联合分布。</p>
+<li><p><strong>离散型随机向量的分布：</strong>如果每一个$X<em>i$都是一个离散型随机变量，$i=1,…,n$，则称$X={X_1,…,X_n}$为一$n$维离散型随机变量。设$X_i$的所有可能取值为${a</em>{i1},a{i2},…},\quad i=1,…,n$，则称</p>
+<script type="math/tex; mode=display">
+p(j_1,...,j_n)=P(X_1=a_{1j_1},...,X_n=a_{nj_n}),\quad j_1,...,j_n=1,2,...</script><p>为$n$维随机变量$X$的概率函数，这也是其联合分布。</p>
 <p>其具有下列性质：</p>
 <ul>
 <li>$p(j_1,…,j_n)\geq0,\quad j_i=1,2,…,\quad i=1,2,…,n;$</li>
 <li>$\sum_{j_1,…,j_n}p(j_1,…,j_n)=1.$</li>
 </ul>
 <blockquote>
-<p>**注：**对于高维离散型随机变量，一般不使用分布函数</p>
+<p><strong>注：</strong>对于高维离散型随机变量，一般不使用分布函数</p>
 </blockquote>
 </li>
 <li><p><strong>多项式分布</strong></p>
 <ul>
-<li><p>**定义：**设$A_1,A_2,…,A_n$是某一试验之下的完备事件群，分别以$p_1,p_2,…,p_n$记事件$A_1,A_2,…,A_n$的概率，则$p_i\geq 0,\quad p_1+…+p_n=1$.将试验独立地重复$N$次，以$X_i$记在这$N$次试验中事件$A_i$出现的次数$(i=1,…,n)$，则$X=(X_1,…,X_n)$为一个$n$维随机向量。该分布记作$M(N;p_1,…,p_n)$.</p>
+<li><p><strong>定义：</strong>设$A_1,A_2,…,A_n$是某一试验之下的完备事件群，分别以$p_1,p_2,…,p_n$记事件$A_1,A_2,…,A_n$的概率，则$p_i\geq 0,\quad p_1+…+p_n=1$.将试验独立地重复$N$次，以$X_i$记在这$N$次试验中事件$A_i$出现的次数$(i=1,…,n)$，则$X=(X_1,…,X_n)$为一个$n$维随机向量。该分布记作$M(N;p_1,…,p_n)$.</p>
 </li>
 <li><p><strong>概率分布函数：</strong>$P(X_1=k_1,X_2=k_2,…,X_n=k_n)=\frac{N!}{k_1!k_2!…k_n!}p_1^{k_1}p_2^{k_2}….p_n^{k_n}$</p>
 </li>
 </ul>
 </li>
 <li><p><strong>连续型随机向量的分布：</strong>$X={X_1,…,X_n}$为$n$维连续型随机变量，如果存在$\R^n$上的非负函数$f(x_1,…,x_n)$，使得对任意的$-\infty&lt;a_1\leq b_1&lt;+\infty,…,-\infty&lt;a_n\leq b_n &lt;+\infty$，有</p>
-<p>$$<br>P(a_1\leq X_1 \leq b_1,…,a_n\leq X_n\leq b_n)=\int_{a_n}^{b_n} …\int_{a_1}^{b_1}f(x_1,…,x_n)dx_1…dx_n<br>$$</p>
-<p>则称为$f$为$X$的概率密度函数。有</p>
-<p>$$<br>P(a_1\leq X_1 \leq b_1,…,a_n\leq X_n\leq b_n)=F(x_1,…,x_n)<br>$$</p>
-<p>则称为$F$为$X$的（联合）分布函数。其中分布函数$F(X_1,…,X_n)$具有下述性质：</p>
+<script type="math/tex; mode=display">
+P(a_1\leq X_1 \leq b_1,...,a_n\leq X_n\leq b_n)=\int_{a_n}^{b_n} ...\int_{a_1}^{b_1}f(x_1,...,x_n)dx_1...dx_n</script><p>则称为$f$为$X$的概率密度函数。有</p>
+<script type="math/tex; mode=display">
+P(a_1\leq X_1 \leq b_1,...,a_n\leq X_n\leq b_n)=F(x_1,...,x_n)</script><p>则称为$F$为$X$的（联合）分布函数。其中分布函数$F(X_1,…,X_n)$具有下述性质：</p>
 <ul>
 <li>$F(x_1,…,x_n)$单调非降；</li>
 <li>对任意的$1\leq j \leq n$，有$\lim_{x_j\rightarrow-\infty F(x_1,…,x_n)}=0$；</li>
 <li>$\lim_{x_1\rightarrow\infty,…,x_n\rightarrow\infty}F(x_1,…,x_n)=1$</li>
 </ul>
 </li>
-<li><p>**边缘分布：**因为$X$的每个分量$X_i$都是一维随机变量，故它们都有各自的分布$F_i\ (i=1,…,n)$，这些都是一维分布，称为随机向量$X$或其分布$F$的边缘分布。</p>
+<li><p><strong>边缘分布：</strong>因为$X$的每个分量$X_i$都是一维随机变量，故它们都有各自的分布$F_i\ (i=1,…,n)$，这些都是一维分布，称为随机向量$X$或其分布$F$的边缘分布。</p>
 <ul>
 <li><p><strong>离散型随机向量</strong></p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/partial_discrete.png" alt="img"></p>
 <p>行和与列和就是边缘分布。即固定某个$x_i$，即可计算边缘分布，故有</p>
-<p>$$<br>p_X(x_i)=P(X=x_i)=\sum_{j}^{m}P(X=x_i,Y=y_j)=\sum_{j}^{m}p_{ij}=p_{i\cdot},\quad i=1,2,…,n\<br>p_Y(y_i)=P(Y=y_i)=\sum_{i}^{m}P(X=x_i,Y=y_j)=\sum_{i}^{m}p_{ij}=p_{j\cdot},\quad j=1,2,…,n<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+p_X(x_i)=P(X=x_i)=\sum_{j}^{m}P(X=x_i,Y=y_j)=\sum_{j}^{m}p_{ij}=p_{i\cdot},\quad i=1,2,...,n\\
+p_Y(y_i)=P(Y=y_i)=\sum_{i}^{m}P(X=x_i,Y=y_j)=\sum_{i}^{m}p_{ij}=p_{j\cdot},\quad j=1,2,...,n</script></li>
 <li><p><strong>连续型随机向量</strong></p>
-<p>为求某分量$X_i$的概率密度函数，只需把$f(x_1,…,x_n)$中的$x_i$固定，然后对$x_1,…,x_{i-1},x_{i+1},…,x_n$在$-\infty$到$\infty$之间做定积分，如</p>
-<p>$$<br>(X,Y)\sim f(x, y)\<br>f_X(u)=\int^{+\infty}<em>{-\infty}f(u,v)dv\<br>f_Y(u)=\int^{+\infty}</em>{-\infty}f(u,v)du\<br>$$</p>
-</li>
+<p>为求某分量$X<em>i$的概率密度函数，只需把$f(x_1,…,x_n)$中的$x_i$固定，然后对$x_1,…,x</em>{i-1},x_{i+1},…,x_n$在$-\infty$到$\infty$之间做定积分，如</p>
+<script type="math/tex; mode=display">
+(X,Y)\sim f(x, y)\\
+f_X(u)=\int^{+\infty}_{-\infty}f(u,v)dv\\
+f_Y(u)=\int^{+\infty}_{-\infty}f(u,v)du\\</script></li>
 </ul>
 </li>
 </ol>
 <blockquote>
-<p>**注：**二维正态分布$N(a,b,\sigma_1^2,\sigma_2^2,\rho )$的边缘分布密度分别是一维正态分布$N(a,\sigma_1^2)$和$N(b,\sigma_2^2)$。因此联合分布可推边缘分布，而边缘分布不可推联合分布。</p>
+<p><strong>注：</strong>二维正态分布$N(a,b,\sigma_1^2,\sigma_2^2,\rho )$的边缘分布密度分别是一维正态分布$N(a,\sigma_1^2)$和$N(b,\sigma_2^2)$。因此联合分布可推边缘分布，而边缘分布不可推联合分布。</p>
 </blockquote>
 <h3 id="2-5-条件分布和随机变量的独立性"><a href="#2-5-条件分布和随机变量的独立性" class="headerlink" title="2.5 条件分布和随机变量的独立性"></a>2.5 条件分布和随机变量的独立性</h3><ol>
-<li><p>**离散型随机变量的条件分布：**设$(X,Y)$为二维离散型随机变量，对于给定的事件${Y=y_j}$，其概率$P(Y=y_j)&gt;0$，则称</p>
-<p>$$<br>P(X=x_i|Y=y_j)=\frac{P(X=x_i,Y=y_j)}{P(Y=y_j)}=\frac{p_{ij}}{p_{\cdot j}},\quad i=1,2,…<br>$$</p>
-<p>为在给定$Y=y_j$的条件下$X$的条件分布律。类似的，称</p>
-<p>$$<br>P(Y=y_i|X=x_j)=\frac{P(X=x_i,Y=y_j)}{P(X=x_j)}=\frac{p_{ij}}{p_{i\cdot}},\quad j=1,2,…<br>$$</p>
-<p>为在给定$X=x_j$的条件下$Y$的条件分布律。</p>
+<li><p><strong>离散型随机变量的条件分布：</strong>设$(X,Y)$为二维离散型随机变量，对于给定的事件${Y=y_j}$，其概率$P(Y=y_j)&gt;0$，则称</p>
+<script type="math/tex; mode=display">
+P(X=x_i|Y=y_j)=\frac{P(X=x_i,Y=y_j)}{P(Y=y_j)}=\frac{p_{ij}}{p_{\cdot j}},\quad i=1,2,...</script><p>为在给定$Y=y_j$的条件下$X$的条件分布律。类似的，称</p>
+<script type="math/tex; mode=display">
+P(Y=y_i|X=x_j)=\frac{P(X=x_i,Y=y_j)}{P(X=x_j)}=\frac{p_{ij}}{p_{i\cdot}},\quad j=1,2,...</script><p>为在给定$X=x_j$的条件下$Y$的条件分布律。</p>
 </li>
-<li><p>**连续型随机变量的条件分布：**设$(X,Y)$为二维连续型随机变量，对于给定条件$Y=y$下的条件概率密度为</p>
-<p>$$<br>f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}, \quad f_Y(y)&gt;0.\<br>$$</p>
-<p>类似的，在$X=x$下的条件概率密度为</p>
-<p>$$<br>f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}, \quad f_X(x)&gt;0.\<br>$$</p>
-<blockquote>
+<li><p><strong>连续型随机变量的条件分布：</strong>设$(X,Y)$为二维连续型随机变量，对于给定条件$Y=y$下的条件概率密度为</p>
+<script type="math/tex; mode=display">
+f_{X|Y}(x|y)=\frac{f(x,y)}{f_Y(y)}, \quad f_Y(y)>0.\\</script><p>类似的，在$X=x$下的条件概率密度为</p>
+<script type="math/tex; mode=display">
+f_{Y|X}(y|x)=\frac{f(x,y)}{f_X(x)}, \quad f_X(x)>0.\\</script><blockquote>
 <p>二维正态分布$\rho=0$时，其联合密度分布等于条件密度分布的乘积。</p>
 </blockquote>
 </li>
@@ -932,17 +1007,17 @@
 <ul>
 <li><p><strong>离散型随机变量</strong></p>
 <p>则联合分布律等于各自的边缘分布律的乘积，即</p>
-<p>$$<br>P(X_1=x_1,…,X_n=x_n)=P(X_1=x_1)…P(X_n=x_n)<br>$$</p>
-<p>其中$(x_1,…x_n)$为$(X_1,…,X_n)$的值域中的任意一点。</p>
+<script type="math/tex; mode=display">
+P(X_1=x_1,...,X_n=x_n)=P(X_1=x_1)...P(X_n=x_n)</script><p>其中$(x_1,…x_n)$为$(X_1,…,X_n)$的值域中的任意一点。</p>
 </li>
 <li><p><strong>连续型随机变量</strong></p>
 <p>则联合密度等于各自的边缘密度的乘积，即</p>
-<p>$$<br>f(x_1,…,x_n)=f_1(x_1)…f_n(x_n),\quad \forall(x_1,…,x_n)\in \R ^n<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+f(x_1,...,x_n)=f_1(x_1)...f_n(x_n),\quad \forall(x_1,...,x_n)\in \R ^n</script></li>
 <li><p><strong>更具一般地</strong></p>
 <p>设$X_1,…,X_n$为$n$个随机变量，如果它们的联合分布函数等于各自边缘分布函数的乘积，即</p>
-<p>$$<br>F(X_1, …,x_n)=F_1(x_1)…F_n(x_n),\quad \forall (x_1,…,x_n)\in \R^n<br>$$</p>
-<p>则称随机变量$X_1, …,X_n$相互独立。</p>
+<script type="math/tex; mode=display">
+F(X_1, ...,x_n)=F_1(x_1)...F_n(x_n),\quad \forall (x_1,...,x_n)\in \R^n</script><p>则称随机变量$X_1, …,X_n$相互独立。</p>
 </li>
 </ul>
 <blockquote>
@@ -953,32 +1028,36 @@
 </ol>
 <h3 id="2-6-随机变量的函数的概率分布"><a href="#2-6-随机变量的函数的概率分布" class="headerlink" title="2.6 随机变量的函数的概率分布"></a>2.6 随机变量的函数的概率分布</h3><p>  最简单的情形，是由一维随机变量$X$的概率分布去求其一给定函数$Y=g(X)$的分布。较为常见的，是由$(X_1,X_2,…,X_n)$的分布去求$Y=g(X_1,X_2,…,X_n)$的分布。更一般地，由$(X_1,X_2,…,X_n)$的分布去求$(Y_1,Y_2,…,Y_m)$的分布，其中$Y_i=g_i(X_1,X_2,…,X_n),\quad i=1,2,…,m$.</p>
 <ol>
-<li><p>**离散型分布的情形：**设$X$的分布律为$P(X=x_i)=p_i,\quad i=1,2,…$</p>
+<li><p><strong>离散型分布的情形：</strong>设$X$的分布律为$P(X=x_i)=p_i,\quad i=1,2,…$</p>
 <p>$g:R\rightarrow R$，令$Y=g(X)$，则$Y$的分布律为</p>
-<p>$$<br>P(Y=y_j)=P(g(X)=y_j)=\sum_{x_i:g(x_i)=y_j}P(X=x_i)=\sum_{i:g(x_i)=y_j}p_i<br>$$</p>
-<p>即把$Y=g(X_1,…,X_n)$可以取的不同值找出来，把与某个值相应的全部$(X_1,…,X_n)$值的概率加起来，即得$Y$取这个值的概率。</p>
+<script type="math/tex; mode=display">
+P(Y=y_j)=P(g(X)=y_j)=\sum_{x_i:g(x_i)=y_j}P(X=x_i)=\sum_{i:g(x_i)=y_j}p_i</script><p>即把$Y=g(X_1,…,X_n)$可以取的不同值找出来，把与某个值相应的全部$(X_1,…,X_n)$值的概率加起来，即得$Y$取这个值的概率。</p>
 </li>
 <li><p><strong>连续型分布的情形</strong></p>
 <ul>
 <li><p><strong>一个变量的情况</strong></p>
-<p>设$X$有密度函数$f(x)$.设$Y=g(x)$，$g$是一个严格单调的函数，即当$x_1&lt;x_2$时，必有$g(x_1)&lt;g(x_2)$或当$x_1&gt;x_2$时，必有$g(x_1)&gt;g(x_2)$.又设$g$的导数$g’$存在。由于$g$的严格单调性，其反函数$X=h(Y)$存在，且$h$的导数$h’$也存在。有$g(X)$的密度函数$l(y)$为</p>
-<p>$$<br>l(y)=f(h(y))|h’(y)|.<br>$$</p>
-</li>
+<p>设$X$有密度函数$f(x)$.设$Y=g(x)$，$g$是一个严格单调的函数，即当$x_1<x_2$时，必有$g(x_1)<g(x_2)$或当$x_1>x_2$时，必有$g(x_1)&gt;g(x_2)$.又设$g$的导数$g’$存在。由于$g$的严格单调性，其反函数$X=h(Y)$存在，且$h$的导数$h’$也存在。有$g(X)$的密度函数$l(y)$为</x_2$时，必有$g(x_1)<g(x_2)$或当$x_1></p>
+<script type="math/tex; mode=display">
+l(y)=f(h(y))|h'(y)|.</script></li>
 <li><p><strong>多个变量的情形</strong></p>
 <p>以两个为例，设$(X_1,X_2)$的密度函数$f(x_1,x_2)$，$Y_1,Y_2$都是$(X_1,X_2)$的函数：</p>
-<p>$$<br>Y_1=g_1(X_1,X_2),\quad Y_2=g_2(X_1,X_2),<br>$$</p>
-<p>要求$(Y_1,Y_2)$的概率密度函数$l(y_1,y_2)$.假定$(X_1,X_2)$到$(Y_1,Y_2)$的一一对应变换有逆变换：</p>
-<p>$$<br>X_1=h_1(Y_1,Y_2),\quad X_2=h_2(Y_1,Y_2)<br>$$</p>
-<p>即雅可比行列式</p>
-<p>$$<br>J(y_1,y_2)=\begin{vmatrix}<br> \partial h_1/\partial y_1&amp;\partial h_1/\partial y_2 \<br> \partial h_2/\partial y_1&amp;\partial h_2/ \partial y_2<br>\end{vmatrix}<br>$$</p>
-<p>不为0.在$(Y1,Y2)$的平面上任取一个区域$A$，变换后到$(X_1,X_2)$平面的区域$B$，则有</p>
-<p>$$<br>P((Y_1,Y_2)\in A)=P((X_1,X_2)\in B)=\iint_Bf(x_1,x_2)dx_1dx_2\<br>P((Y_1,Y_2)\in A)=\iint_Af(h_1(y_1,y_2),h_2(y_1,y_2))|J(y_1,y_2)|dy_1dy_2<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+Y_1=g_1(X_1,X_2),\quad Y_2=g_2(X_1,X_2),</script><p>要求$(Y_1,Y_2)$的概率密度函数$l(y_1,y_2)$.假定$(X_1,X_2)$到$(Y_1,Y_2)$的一一对应变换有逆变换：</p>
+<script type="math/tex; mode=display">
+X_1=h_1(Y_1,Y_2),\quad X_2=h_2(Y_1,Y_2)</script><p>即雅可比行列式</p>
+<script type="math/tex; mode=display">
+J(y_1,y_2)=\begin{vmatrix}
+ \partial h_1/\partial y_1&\partial h_1/\partial y_2 \\
+ \partial h_2/\partial y_1&\partial h_2/ \partial y_2
+\end{vmatrix}</script><p>不为0.在$(Y1,Y2)$的平面上任取一个区域$A$，变换后到$(X_1,X_2)$平面的区域$B$，则有</p>
+<script type="math/tex; mode=display">
+P((Y_1,Y_2)\in A)=P((X_1,X_2)\in B)=\iint_Bf(x_1,x_2)dx_1dx_2\\
+P((Y_1,Y_2)\in A)=\iint_Af(h_1(y_1,y_2),h_2(y_1,y_2))|J(y_1,y_2)|dy_1dy_2</script></li>
 <li><p><strong>随机变量和的密度函数</strong></p>
 <p>设$(X_1,X_2)$的联合密度函数为$f(x_1,x_2)$，$Y=X_1+X_2$的密度函数：</p>
 <ul>
-<li>一般的，$l(y)=\int_{-\infty}^\infty f(x_1,y-x_1)dx_1=\int_{-\infty}^\infty f(x,y-x)dx$.</li>
-<li>若$X_1,X_2$独立，则$l(y)=\int_{-\infty}^\infty f_1(x)f_2(y-x)dx=\int_{-\infty}^\infty f_1(y-x)f_2(x)dx$.</li>
+<li>一般的，$l(y)=\int<em>{-\infty}^\infty f(x_1,y-x_1)dx_1=\int</em>{-\infty}^\infty f(x,y-x)dx$.</li>
+<li>若$X<em>1,X_2$独立，则$l(y)=\int</em>{-\infty}^\infty f<em>1(x)f_2(y-x)dx=\int</em>{-\infty}^\infty f_1(y-x)f_2(x)dx$.</li>
 </ul>
 <blockquote>
 <p>两个独立的正态变量的和仍服从正态分布，且有关的参数相加，其逆命题也成立。</p>
@@ -987,7 +1066,7 @@
 <li><p><strong>随机变量商的密度函数</strong><br>设$(X_1,X_2)$的联合密度函数为$f(x_1,x_2)$，$Y=X_1/X_2$的密度函数：</p>
 <ul>
 <li>一般的，$l(y)=\int_{0}^\infty x_1f(x_1,x_1y)dx_1$.</li>
-<li>若$X_1,X_2$独立，则$l(y)=\int_{0}^\infty x_1f_1(x_1)f_2(x_1y)dx_1$.</li>
+<li>若$X<em>1,X_2$独立，则$l(y)=\int</em>{0}^\infty x_1f_1(x_1)f_2(x_1y)dx_1$.</li>
 </ul>
 </li>
 </ul>
@@ -1003,28 +1082,30 @@
 </blockquote>
 <ul>
 <li><p><strong>卡方分布，记作$\chi_n^2$</strong></p>
-<p><strong>密度函数：</strong>$k_n(x)=\frac{1}{\Gamma(\frac{n}{2}2^{n/2})}e^{-x/2}x^{(n-2)/2}I_{(0,\infty)}(x)$</p>
-<p>**性质：**1. 设$X_1,X_2$独立，$X_1\sim\chi_m^2,X_2\sim\chi_n^2$，则$X_1+X_2\sim\chi_{m+n}^2$</p>
-<ol start="2">
-<li>若$X_1,…,X_n$独立，且都服从指数分布，则$X=2\lambda(X_1+…+X_n)\sim\chi_{2n}^2$</li>
+<p><strong>密度函数：</strong>$k<em>n(x)=\frac{1}{\Gamma(\frac{n}{2}2^{n/2})}e^{-x/2}x^{(n-2)/2}I</em>{(0,\infty)}(x)$</p>
+<p><strong>性质：</strong>1. 设$X<em>1,X_2$独立，$X_1\sim\chi_m^2,X_2\sim\chi_n^2$，则$X_1+X_2\sim\chi</em>{m+n}^2$</p>
+<ol>
+<li>若$X<em>1,…,X_n$独立，且都服从指数分布，则$X=2\lambda(X_1+…+X_n)\sim\chi</em>{2n}^2$</li>
 </ol>
 </li>
 <li><p><strong>$t$分布，记作$t_n$</strong></p>
 <p>设$X_1，X_2$独立，$X_1\sim\chi_n^2,X_2\sim N(0,1)$，而$Y=X_2/\sqrt{X_1/n}$，则$Y\sim t_n$.</p>
 <p><strong>密度函数：</strong>$t_n(y)=\frac{\Gamma((n+1)/2)}{\sqrt{n\pi}\Gamma(n/2)}(1+\frac{y^2}{n})^{(\frac{n+1}{2})}$</p>
-<p>**性质：**密度函数关于原点对称，其图形与正态分布$N(0,1)$的密度函数的图形相似。</p>
+<p><strong>性质：</strong>密度函数关于原点对称，其图形与正态分布$N(0,1)$的密度函数的图形相似。</p>
 </li>
 <li><p><strong>$F$分布，记作$F_{mn}$</strong></p>
-<p>设$X_1,X_2$独立，$X_1\sim\chi_n^2,X_2\sim\chi_m^2$，而$Y=m^{-1}X_2/(n^{-1}X_1)$，则$Y\sim F_{mn}$</p>
+<p>设$X<em>1,X_2$独立，$X_1\sim\chi_n^2,X_2\sim\chi_m^2$，而$Y=m^{-1}X_2/(n^{-1}X_1)$，则$Y\sim F</em>{mn}$</p>
 <p><strong>密度函数：</strong>$f_{mn}(y)=m^{m/2}n^{n/2}\frac{\Gamma(\frac{m+n}{2})}{\Gamma(\frac{m}{2})\Gamma(\frac{n}{2})}y^{m/2-1}(my+n)^{-(m+n)/2}\quad (y&gt;0)$</p>
 </li>
 </ul>
 <blockquote>
 <p><strong>三大分布的几个重要性质</strong></p>
 <ol>
-<li>设$X_1,…,X_n$独立同分布，有公共的正态分布$N(\mu,\sigma^2)$.记$\bar{X}=(X_1+…+X_n),S^2=\sum_{i=1}^{n}(X_i-\bar(X))^2/(n-1)$.则$(n-1)S^2/\sigma^2=\sum_{i=1}^{n}(X_i-\bar{X})^2/\sigma^2\sim\chi_{n-1}^{2}$.</li>
-<li>设$X_1,…,X_n$的假定同1，则$\sqrt{n}(\bar{X}-\mu)/S\sim t_{n-1}$</li>
-<li>设$X_1,…,X_n,Y_1,…,Y_m$独立，$X_i$各有分布$N(\mu1,\sigma_1^2)$，$Y_j$各有分布$N(\mu_2,\sigma_2^2)$，则<br>$$<br>[\sum_{j=1}^m(Y_j-\bar{Y})^2/(\sigma_2^2(m-1))]/[\sum_{i=1}^n(X_i-\bar{X})^2/(\sigma_1^2(n-1))]\sim F_{m-1,n-1}<br>$$<br>若$\sigma_1^2=\sigma_2^2$，则<br>$$<br>\sqrt{\frac{nm(n+m-2)}{n+m}}[(\bar{X}-\bar{Y})-(\mu_1-\mu_2)]/[\sum_{i=1}^{n}(X_i-\bar{X})^2+\sum_{j=1}^m(Y_j-\bar{Y})^2]^{1/2}\sim t_{n+m-2}<br>$$</li>
+<li>设$X<em>1,…,X_n$独立同分布，有公共的正态分布$N(\mu,\sigma^2)$.记$\bar{X}=(X_1+…+X_n),S^2=\sum</em>{i=1}^{n}(X<em>i-\bar(X))^2/(n-1)$.则$(n-1)S^2/\sigma^2=\sum</em>{i=1}^{n}(X<em>i-\bar{X})^2/\sigma^2\sim\chi</em>{n-1}^{2}$.</li>
+<li>设$X<em>1,…,X_n$的假定同1，则$\sqrt{n}(\bar{X}-\mu)/S\sim t</em>{n-1}$</li>
+<li>设$X_1,…,X_n,Y_1,…,Y_m$独立，$X_i$各有分布$N(\mu1,\sigma_1^2)$，$Y_j$各有分布$N(\mu_2,\sigma_2^2)$，则<script type="math/tex; mode=display">
+[\sum_{j=1}^m(Y_j-\bar{Y})^2/(\sigma_2^2(m-1))]/[\sum_{i=1}^n(X_i-\bar{X})^2/(\sigma_1^2(n-1))]\sim F_{m-1,n-1}</script>若$\sigma_1^2=\sigma_2^2$，则<script type="math/tex; mode=display">
+\sqrt{\frac{nm(n+m-2)}{n+m}}[(\bar{X}-\bar{Y})-(\mu_1-\mu_2)]/[\sum_{i=1}^{n}(X_i-\bar{X})^2+\sum_{j=1}^m(Y_j-\bar{Y})^2]^{1/2}\sim t_{n+m-2}</script></li>
 </ol>
 </blockquote>
 </li>
@@ -1032,20 +1113,23 @@
 <h2 id="Chapter-3-随机变量的数字特征-Numerical-Features-of-Random-Variables"><a href="#Chapter-3-随机变量的数字特征-Numerical-Features-of-Random-Variables" class="headerlink" title="Chapter 3 随机变量的数字特征 Numerical Features of Random Variables"></a>Chapter 3 随机变量的数字特征 Numerical Features of Random Variables</h2><h3 id="3-1-数学期望-Expected-Value"><a href="#3-1-数学期望-Expected-Value" class="headerlink" title="3.1 数学期望 Expected Value"></a>3.1 数学期望 Expected Value</h3><ol>
 <li><p><strong>数学期望 Expected Value</strong></p>
 <ul>
-<li><p>**定义：*<em>设随机变量$X$只取有限个可能值$a_1,…,a_m$，其概率分布为$P(X=a_i)=p_i\ (i=1,…,m)$. 则$X$的数学期望记作$E(X)^</em>$或$E(X)$，定义为$E(X)=a_1p_1+a_2p_2+…+a_mp_m$. 数学期望也常称为”均值“，即指以概率为权的加权平均。</p>
+<li><p><strong>定义：</strong>设随机变量$X$只取有限个可能值$a_1,…,a_m$，其概率分布为$P(X=a_i)=p_i\ (i=1,…,m)$. 则$X$的数学期望记作$E(X)^*$或$E(X)$，定义为$E(X)=a_1p_1+a_2p_2+…+a_mp_m$. 数学期望也常称为”均值“，即指以概率为权的加权平均。</p>
 </li>
-<li><p><strong>离散型变量的数学期望：</strong>$E(X)=\sum^\infty_{i=1}a_ip_i.$（当级数绝对收敛，即$\sum_{i=1}^\infty|a_i|p_i&lt;\infty$）</p>
+<li><p><strong>离散型变量的数学期望：</strong>$E(X)=\sum^\infty<em>{i=1}a_ip_i.$（当级数绝对收敛，即$\sum</em>{i=1}^\infty|a_i|p_i&lt;\infty$）</p>
 </li>
-<li><p><strong>连续型变量的数学期望：</strong>$E(X)=\int_{-\infty}^\infty xf(x)dx$.（当$\int_{-\infty}^\infty |x|f(x)dx&lt;\infty$）</p>
+<li><p><strong>连续型变量的数学期望：</strong>$E(X)=\int<em>{-\infty}^\infty xf(x)dx$.（当$\int</em>{-\infty}^\infty |x|f(x)dx&lt;\infty$）</p>
 </li>
 <li><p><strong>常见分布的数学期望：</strong></p>
 <ul>
 <li><p><strong>泊松分布：</strong>$E(X)=\lambda$.</p>
-<p>$$<br>E(X)=\sum_{k=0}^{+\infty} k \frac{\lambda^k}{k!} e^{-\lambda}=\sum_{k=1}^{+\infty} \frac{\lambda^k}{(k-1)!} e^{-\lambda}=\lambda e^{-\lambda} \sum_{k=1}^{+\infty} \frac{\lambda^{k-1}}{(k-1)!}=\lambda e^{-\lambda} e^\lambda=\lambda .<br>$$</p>
-<p>i.e., $E(X)=\lambda$.</p>
+<script type="math/tex; mode=display">
+E(X)=\sum_{k=0}^{+\infty} k \frac{\lambda^k}{k!} e^{-\lambda}=\sum_{k=1}^{+\infty} \frac{\lambda^k}{(k-1)!} e^{-\lambda}=\lambda e^{-\lambda} \sum_{k=1}^{+\infty} \frac{\lambda^{k-1}}{(k-1)!}=\lambda e^{-\lambda} e^\lambda=\lambda .</script><p>i.e., $E(X)=\lambda$.</p>
 <p>注: $e^\lambda$ 的幂级数展开式:</p>
-<p>$$<br>\begin{array}{ll}<br>e^\lambda=1+\lambda+\frac{\lambda^2}{2!}+\frac{\lambda^3}{3!}+\cdots+\frac{\lambda^k}{k!}+\cdots=\sum_{k=0}^{+\infty} \frac{\lambda^k}{k!}, &amp; \lambda \in(-\infty,+\infty) \<br>e^\lambda=\sum_{k=0}^{+\infty} \frac{\lambda^k}{k!}=\sum_{k=1}^{+\infty} \frac{\lambda^{k-1}}{(k-1)!}=\sum_{k=2}^{+\infty} \frac{\lambda^{k-2}}{(k-2)!}, &amp; \lambda \in(-\infty,+\infty)<br>\end{array}<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\begin{array}{ll}
+e^\lambda=1+\lambda+\frac{\lambda^2}{2!}+\frac{\lambda^3}{3!}+\cdots+\frac{\lambda^k}{k!}+\cdots=\sum_{k=0}^{+\infty} \frac{\lambda^k}{k!}, & \lambda \in(-\infty,+\infty) \\
+e^\lambda=\sum_{k=0}^{+\infty} \frac{\lambda^k}{k!}=\sum_{k=1}^{+\infty} \frac{\lambda^{k-1}}{(k-1)!}=\sum_{k=2}^{+\infty} \frac{\lambda^{k-2}}{(k-2)!}, & \lambda \in(-\infty,+\infty)
+\end{array}</script></li>
 <li><p><strong>二项分布：</strong>$E(X)=np$.</p>
 </li>
 <li><p><strong>均匀分布：</strong>$E(X)=\frac{1}{2}(a+b)$.</p>
@@ -1064,13 +1148,17 @@
 </li>
 <li><p><strong>性质：</strong></p>
 <ul>
-<li>若干个随机变量之和的期望等于各变量的期望值和，即<br>$$<br>E(X_1+X_2+…+X_n)=E(X_1)+E(X_2)+…+E(X_n).<br>$$</li>
-<li>若干个<strong>独立</strong>随机变量之积的期望等于各变量的期望之积，即<br>$$<br>E(X_1X_2…X_n)=E(X_1)E(X_2)…E(X_n).<br>$$</li>
-<li>$E(aX+b)=\int_{-\infty}^{\infty}(ax+b)f(x),d(x)=aE(x)+b$.</li>
+<li>若干个随机变量之和的期望等于各变量的期望值和，即<script type="math/tex; mode=display">
+E(X_1+X_2+...+X_n)=E(X_1)+E(X_2)+...+E(X_n).</script></li>
+<li>若干个<strong>独立</strong>随机变量之积的期望等于各变量的期望之积，即<script type="math/tex; mode=display">
+E(X_1X_2...X_n)=E(X_1)E(X_2)...E(X_n).</script></li>
+<li>$E(aX+b)=\int_{-\infty}^{\infty}(ax+b)f(x)\,d(x)=aE(x)+b$.</li>
 <li>设随机变量$X$为离散型，有分布$P(X=a_i)=p_i(i=1,2,…)$；或者为连续型，有概率密度函数$f(x)$. 则</li>
 </ul>
-<p>$$<br>E(g(x))=\sum_ig(a_i)p_i\quad (当\sum_i|g(a_i)|p_i&lt;\infty时) \<br>或\<br>E(g(x))=\int_{-\infty}^\infty g(x)f(x)dx \quad (当\int_{-\infty}^{\infty}|g(x)|f(x)dx&lt;\infty时)<br>$$</p>
-<ul>
+<script type="math/tex; mode=display">
+E(g(x))=\sum_ig(a_i)p_i\quad (当\sum_i|g(a_i)|p_i<\infty时) \\
+或\\
+E(g(x))=\int_{-\infty}^\infty g(x)f(x)dx \quad (当\int_{-\infty}^{\infty}|g(x)|f(x)dx<\infty时)</script><ul>
 <li>若$c$为常数，则$E(cX)=cE(X)$​.</li>
 <li>若$c$为常数，则$E(c)=c$.</li>
 </ul>
@@ -1079,7 +1167,7 @@
 </li>
 <li><p><strong>条件数学期望</strong></p>
 <ul>
-<li>**定义：**随机变量Y的条件期望就是它在给定的某种附加条件下的数学期望。$E(Y|x)=\int_{-\infty}^{\infty}yf(y|x)dy$.它反映了随着$X$取值$x$的变化$Y$的平均变化的情况如何。在统计上，常把条件期望$E(Y|x)$作为$x$的函数，称为$Y$对$X$的回归函数。</li>
+<li><strong>定义：</strong>随机变量Y的条件期望就是它在给定的某种附加条件下的数学期望。$E(Y|x)=\int_{-\infty}^{\infty}yf(y|x)dy$.它反映了随着$X$取值$x$的变化$Y$的平均变化的情况如何。在统计上，常把条件期望$E(Y|x)$作为$x$的函数，称为$Y$对$X$的回归函数。</li>
 <li><strong>性质：</strong><ul>
 <li>$E(Y)=\int_{-\infty}^{\infty}E(Y|x)f_X(x)dx$.</li>
 <li>$E(Y)=E[E(Y|X)]$.</li>
@@ -1089,7 +1177,7 @@
 </li>
 <li><p><strong>中位数</strong></p>
 <ul>
-<li>**定义：**设连续型随机变量$X$的分布函数为$F(x)$，则满足条件$P(X\leq m)=F(m)=1/2$的数$m$称为$X$或分布$F$的中位数。即$m$这个点把$X$的分布从概率上一切两半。</li>
+<li><strong>定义：</strong>设连续型随机变量$X$的分布函数为$F(x)$，则满足条件$P(X\leq m)=F(m)=1/2$的数$m$称为$X$或分布$F$的中位数。即$m$这个点把$X$的分布从概率上一切两半。</li>
 <li><strong>性质：</strong><ul>
 <li>与期望值相比，中位数受特大值或特小值影响很小，而期望不然。</li>
 <li>中位数可能不唯一，且在某些离散型情况下，中位数不能达到一分两半的效果。</li>
@@ -1101,13 +1189,22 @@
 <h3 id="3-2-方差与矩"><a href="#3-2-方差与矩" class="headerlink" title="3.2 方差与矩"></a>3.2 方差与矩</h3><ol>
 <li><p><strong>方差与标准差</strong></p>
 <ul>
-<li><p>**定义：**设$X$为随机变量，分布为$F$，则$D(X)\ or\ Var(X)=E(X-E(X))^2$称为$X$（或分布$F$）的方差，其平方根$\sqrt{Var(X)}$（取正值）称为$X$（或分布$F$​）的标准差。<br>$$<br>E(X-E(X))^2=E(X^2-2XE(X)+(E(X))^2)<br>\=E(X^2)-2E(X)E(X)+E^2(X)=E(X^2)-(E(X))^2<br>$$</p>
-</li>
+<li><strong>定义：</strong>设$X$为随机变量，分布为$F$，则$D(X)\ or\ Var(X)=E(X-E(X))^2$称为$X$（或分布$F$）的方差，其平方根$\sqrt{Var(X)}$（取正值）称为$X$（或分布$F$​）的标准差。<script type="math/tex; mode=display">
+E(X-E(X))^2=E(X^2-2XE(X)+(E(X))^2)
+\\=E(X^2)-2E(X)E(X)+E^2(X)=E(X^2)-(E(X))^2</script></li>
 <li><p><strong>常见分布的方差：</strong></p>
 <ul>
 <li><p><strong>泊松分布：</strong>$Var(X)=\lambda$.</p>
-<p>$$<br>\begin{aligned}<br>&amp; \begin{aligned}<br>E\left(X^2\right) &amp; =\sum_{k=0}^{+\infty} k^2 \frac{\lambda^k}{k!} e^{-\lambda} \<br>&amp; =\sum_{k=1}^{+\infty} k \frac{\lambda^k}{(k-1)!} e^{-\lambda}=e^{-\lambda} \sum_{k=1}^{+\infty}(k-1+1) \frac{\lambda^k}{(k-1)!} \<br>&amp; =\lambda^2 e^{-\lambda} \sum_{k=2}^{+\infty} \frac{\lambda^{k-2}}{(k-2)!}+\lambda e^{-\lambda} \sum_{k=1}^{+\infty} \frac{\lambda^{k-1}}{(k-1)!} \<br>&amp; =\lambda^2 e^{-\lambda} e^\lambda+\lambda e^{-\lambda} e^\lambda=\lambda^2+\lambda<br>\end{aligned} \<br>&amp; Var(X)=E\left(X^2\right)-[E(X)]^2=\lambda^2+\lambda-\lambda^2=\lambda<br>\end{aligned}<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\begin{aligned}
+& \begin{aligned}
+E\left(X^2\right) & =\sum_{k=0}^{+\infty} k^2 \frac{\lambda^k}{k!} e^{-\lambda} \\
+& =\sum_{k=1}^{+\infty} k \frac{\lambda^k}{(k-1)!} e^{-\lambda}=e^{-\lambda} \sum_{k=1}^{+\infty}(k-1+1) \frac{\lambda^k}{(k-1)!} \\
+& =\lambda^2 e^{-\lambda} \sum_{k=2}^{+\infty} \frac{\lambda^{k-2}}{(k-2)!}+\lambda e^{-\lambda} \sum_{k=1}^{+\infty} \frac{\lambda^{k-1}}{(k-1)!} \\
+& =\lambda^2 e^{-\lambda} e^\lambda+\lambda e^{-\lambda} e^\lambda=\lambda^2+\lambda
+\end{aligned} \\
+& Var(X)=E\left(X^2\right)-[E(X)]^2=\lambda^2+\lambda-\lambda^2=\lambda
+\end{aligned}</script></li>
 <li><p><strong>二项分布：</strong>$Var(X)=np(1-p)$.</p>
 </li>
 <li><p><strong>正态分布：</strong>$Var(X)=\sigma^2$.</p>
@@ -1131,15 +1228,15 @@
 <li>若$c$为常数，则$Var(X+c)=Var(X)$.</li>
 <li>若$c$为常数，则$Var(cX)=c^2Var(X)$.</li>
 <li><strong>独立</strong>随机变量和的方差等于各变量方差和，即$Var(X_1+…+X_n)=Var(X_1)+…+Var(X_n)$​.</li>
-<li>If $X$ is discrete random variable, which has probability distribution $P{X=x_k}=p_k$, $k=1,2,…$, then $E(X^2)=\sum_{i=1}^{\infty}x_k^2p_k$.</li>
-<li>If $X$ is continuous random variable, which has probability density function $f(x)$, then $E(X^2)=\int_{-\infty}^{\infty}x^2f(x),dx$.</li>
+<li>If $X$ is discrete random variable, which has probability distribution $P{X=x<em>k}=p_k$, $k=1,2,…$, then $E(X^2)=\sum</em>{i=1}^{\infty}x_k^2p_k$.</li>
+<li>If $X$ is continuous random variable, which has probability density function $f(x)$, then $E(X^2)=\int_{-\infty}^{\infty}x^2f(x)\,dx$.</li>
 </ul>
 </li>
 </ul>
 </li>
 <li><p><strong>矩</strong></p>
 <ul>
-<li><p>**定义：**设$X$为随机变量，$c$为常数，$k$为正整数。则量$E[(X-c)^k]$称为$X$关于$c$点的$k$阶矩。特别地，有两种重要的情况：</p>
+<li><p><strong>定义：</strong>设$X$为随机变量，$c$为常数，$k$为正整数。则量$E[(X-c)^k]$称为$X$关于$c$点的$k$阶矩。特别地，有两种重要的情况：</p>
 <p>(1) $c=0$ .这时$a_k=E(X^k)$称为$X$的$k$阶原点矩。</p>
 <p>(2)$c=E(X)$.这时$\mu_k=E[(X-EX)^k]$称为$X$的$k$阶中心矩。</p>
 <p>一阶原点矩就是期望，一阶中心距$\mu_1=0$，二阶中心距$\mu_2$就是$X$的方差$Var(X)$.</p>
@@ -1157,7 +1254,7 @@
 <ol>
 <li><p><strong>协方差（Covariance）</strong></p>
 <ul>
-<li>**定义：**称$E[(X-m_1)(Y-m_2)]$为$X$，$Y$的协方差，并记为$Cov(X,Y)$.</li>
+<li><strong>定义：</strong>称$E[(X-m_1)(Y-m_2)]$为$X$，$Y$的协方差，并记为$Cov(X,Y)$.</li>
 <li><strong>性质：</strong><ul>
 <li>$Cov(X,Y)$与$X,Y$的次序无关，即$Cov(X,Y)=Cov(Y,X)$.</li>
 <li>$Cov(c_1X+c_2,c_3Y+c_4)=c_1c_3Cov(X,Y)$.</li>
@@ -1168,12 +1265,12 @@
 </li>
 </ul>
 <blockquote>
-<p>**注：**协方差的结果受随机变量量纲影响。</p>
+<p><strong>注：</strong>协方差的结果受随机变量量纲影响。</p>
 </blockquote>
 </li>
 <li><p><strong>相关系数（Correlation coefficient）</strong></p>
 <ul>
-<li>**定义：**称$Cov(X,Y)/(\sigma_1\sigma_2)$为$X,Y$的相关系数，并记为$Corr(X,Y)$.</li>
+<li><strong>定义：</strong>称$Cov(X,Y)/(\sigma_1\sigma_2)$为$X,Y$的相关系数，并记为$Corr(X,Y)$.</li>
 <li><strong>性质：</strong><ul>
 <li>若$X,Y$独立，则$Corr(X,Y)=0$.</li>
 <li>$-1\leq Corr(X,Y)\leq 1$，或$|Corr(X,Y)\leq 1|$，等号当且仅当$X$和$Y$有严格线性关系时达到。当$Corr(X,Y)=0$时，推出$X,Y$不线性相关。</li>
@@ -1181,7 +1278,7 @@
 </li>
 </ul>
 <blockquote>
-<p><strong>注：<strong>相关系数常称为“<strong>线性相关系数</strong>”，实际上相关系数并不是刻画了$X,Y$之间</strong>消除量纲后</strong>“一般”关系的程度，而只是“线性关系的程度”。即使$X$与$Y$有某种严格的函数关系但非线性关系，$|Corr(X,Y)|$不仅不必为1，还可以为0.</p>
+<p><strong>注：</strong>相关系数常称为“<strong>线性相关系数</strong>”，实际上相关系数并不是刻画了$X,Y$之间<strong>消除量纲后</strong>“一般”关系的程度，而只是“线性关系的程度”。即使$X$与$Y$有某种严格的函数关系但非线性关系，$|Corr(X,Y)|$不仅不必为1，还可以为0.</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/correlation.png" alt="img"></p>
 </blockquote>
 </li>
@@ -1190,23 +1287,24 @@
 <li><p><strong>大数定理</strong></p>
 <p>“大数”的意思，就是指涉及大量数目的观察值$X_i$，它表明这种定理中指出的现象只有在大量次数的试验和观察之下才能成立。</p>
 <ul>
-<li>**定义：**设$X_1,X_2,…,X_n,…$是独立同分布的随机变量，记它们的公共均值为$a$.又设它们的方差存在并记为$\sigma^2$.则对任意给定的$\varepsilon &gt;0$，有$lim_{n\rightarrow\infty}P(|\bar{X}_n-a|\geq \varepsilon )=0$.（该式表明，当$n$很大时，$\bar{X}_n$接近$a$）</li>
+<li><strong>定义：</strong>设$X<em>1,X_2,…,X_n,…$是独立同分布的随机变量，记它们的公共均值为$a$.又设它们的方差存在并记为$\sigma^2$.则对任意给定的$\varepsilon &gt;0$，有$lim</em>{n\rightarrow\infty}P(|\bar{X}_n-a|\geq \varepsilon )=0$.（该式表明，当$n$很大时，$\bar{X}_n$接近$a$）</li>
 </ul>
 </li>
 <li><p><strong>中心极限定理</strong></p>
 <p>即和的分布收敛于正态分布。</p>
 <ul>
-<li><p>**定义：**设$X_1,X_2,…,X_n$为独立同分布的随机变量，$E(X_i)=a,Var(X_i)=\sigma^2(0&lt;\sigma^2&lt;\infty)$.则对任何实数$x$，有$lim_{n\rightarrow\infty}P(\frac{1}{\sqrt{n}\sigma}(X_1+…+X_n-na)\leq x)=\Phi(x)$.（$\Phi(x)$为标准正态分布$N(0,1)$的分布函数）</p>
+<li><p><strong>定义：</strong>设$X<em>1,X_2,…,X_n$为独立同分布的随机变量，$E(X_i)=a,Var(X_i)=\sigma^2(0&lt;\sigma^2&lt;\infty)$.则对任何实数$x$，有$lim</em>{n\rightarrow\infty}P(\frac{1}{\sqrt{n}\sigma}(X_1+…+X_n-na)\leq x)=\Phi(x)$.（$\Phi(x)$为标准正态分布$N(0,1)$的分布函数）</p>
 </li>
-<li><p>**特例：**设$X_1,X_2,…,X_n$独立同分布，$X_i$分布是$P(X_i=1)=p$，$P(X_i=0)=1-p\ (0&lt;p&lt;1)$.则对任何实数$x$，有$lim_{n\rightarrow \infty}P(\frac{1}{\sqrt{np(1-p)}}(X_1+…+X_n-np)\leq x)=\Phi(x)$.</p>
+<li><p><strong>特例：</strong>设$X<em>1,X_2,…,X_n$独立同分布，$X_i$分布是$P(X_i=1)=p$，$P(X_i=0)=1-p\ (0&lt;p&lt;1)$.则对任何实数$x$，有$lim</em>{n\rightarrow \infty}P(\frac{1}{\sqrt{np(1-p)}}(X_1+…+X_n-np)\leq x)=\Phi(x)$.</p>
 <blockquote>
-<p>**注：**如果$t_1,t_2$是两个正整数，$t_1&lt;t_2$.则当$n$相当大时，近似地有</p>
-<p>$$<br>P(t_1\leq X_1+…+X_n\leq t_2)\approx \Phi(y_2)-\Phi(y_1),<br>$$</p>
-<p>其中</p>
-<p>$$<br>y_i=(t_i-np)\sqrt{np(1-p)}\quad (i=1,2).<br>$$</p>
-<p>若把$y_1,y_2$修正为</p>
-<p>$$<br>y_1=(t_1-\frac{1}{2}-np)/\sqrt{np(1-p)},\<br>y_2=(t_2-\frac{1}{2}-np)/\sqrt{np(1-p)}<br>$$</p>
-<p>在应用上式，则一般可提高精度。</p>
+<p><strong>注：</strong>如果$t_1,t_2$是两个正整数，$t_1&lt;t_2$.则当$n$相当大时，近似地有</p>
+<script type="math/tex; mode=display">
+P(t_1\leq X_1+...+X_n\leq t_2)\approx \Phi(y_2)-\Phi(y_1),</script><p>其中</p>
+<script type="math/tex; mode=display">
+y_i=(t_i-np)\sqrt{np(1-p)}\quad (i=1,2).</script><p>若把$y_1,y_2$修正为</p>
+<script type="math/tex; mode=display">
+y_1=(t_1-\frac{1}{2}-np)/\sqrt{np(1-p)},\\
+y_2=(t_2-\frac{1}{2}-np)/\sqrt{np(1-p)}</script><p>在应用上式，则一般可提高精度。</p>
 </blockquote>
 </li>
 </ul>
@@ -1219,7 +1317,7 @@
 <ul>
 <li><strong>参数 parameter</strong>: 总体X的数字特征即总体的特征指标。</li>
 </ul>
-<ol start="2">
+<ol>
 <li><p><strong>样本</strong></p>
 <ul>
 <li><strong>定义：</strong></li>
@@ -1228,16 +1326,18 @@
 <ul>
 <li><p><strong>性质：</strong></p>
 <ul>
-<li><p>**二重性：**抽取前随机，是随机变量；抽取后确定，是一组数值。</p>
+<li><p><strong>二重性：</strong>抽取前随机，是随机变量；抽取后确定，是一组数值。</p>
 </li>
-<li><p>**随机性：**每个个体都有同等的机会被选入样本。</p>
+<li><p><strong>随机性：</strong>每个个体都有同等的机会被选入样本。</p>
 </li>
 </ul>
 </li>
-<li><p>**独立性：**每个样本的取值不影响其他样本取值，即分部独立。</p>
+<li><p><strong>独立性：</strong>每个样本的取值不影响其他样本取值，即分部独立。</p>
 <p>满足后面两个性质称为<strong>简单随机样本</strong>，则</p>
-<p>$$<br>F(x_1,x_2,…,x_n)=\prod^n_{i=1}F(x_i),\<br>f(x_1,x_2,…,x_n)=\prod^n_{i=1}f(x_i),\<br>p(x_1,x_2,…,x_n)=\prod^n_{i=1}p(x_i)<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+F(x_1,x_2,...,x_n)=\prod^n_{i=1}F(x_i),\\
+f(x_1,x_2,...,x_n)=\prod^n_{i=1}f(x_i),\\
+p(x_1,x_2,...,x_n)=\prod^n_{i=1}p(x_i)</script></li>
 <li><p><strong>样本容量 sample size</strong>: 样本中所含的个体数。当$n≥30$时，称为大样本，否则称为小样本。</p>
 </li>
 <li><p><strong>简单随机样本 simple random sample</strong>: If carry out a trial repeatly and independently for n times and obtain n observations: $X_1,X_2,…,X_n$, Then these n observations $X_1,X_2,…,X_n$ can be regarded as $n$ random variables and is called a simple random sample 简单随机样本 of the population $X$, which has two properties:</p>
@@ -1252,20 +1352,24 @@
 </ul>
 </li>
 <li><p><strong>分组样本</strong></p>
-<p>  只知样本观测值所在区间，而不知具体值的样本称为分组样本。**缺点：**与完全样本相比损失部分信息。**优点：**在样本量较大时，用分组样本既简明扼要，又能帮助人们更好地认识总体。</p>
+<p>  只知样本观测值所在区间，而不知具体值的样本称为分组样本。<strong>缺点：</strong>与完全样本相比损失部分信息。<strong>优点：</strong>在样本量较大时，用分组样本既简明扼要，又能帮助人们更好地认识总体。</p>
 </li>
 </ol>
 <h3 id="4-2-样本数据的整理与显示"><a href="#4-2-样本数据的整理与显示" class="headerlink" title="4.2 样本数据的整理与显示"></a>4.2 样本数据的整理与显示</h3><ol>
 <li><p><strong>经验分布函数</strong></p>
-<p>  若将样本观测值$x_1,x_2,…,x_n$由小到大进行排列，得到有序样本$x_{(1)}\leq x_{(2)}\leq…\leq x_{(n)}$，用有序样本定义如下函数</p>
-<p>$$<br>F_n(x)=\left{\begin{matrix}<br>0 &amp; 当x&lt;x_{(1)}\<br>k/n &amp; 当x_{(k)}\leq x&lt;x_{(k+1)},k=1,2,…,n-1\<br>1 &amp; 当x\geq x_{(n)}<br>\end{matrix}\right.<br>$$</p>
-<p>则称为$F_n(x)$为该样本的经验分布函数。</p>
+<p>  若将样本观测值$x<em>1,x_2,…,x_n$由小到大进行排列，得到有序样本$x</em>{(1)}\leq x<em>{(2)}\leq…\leq x</em>{(n)}$，用有序样本定义如下函数</p>
+<script type="math/tex; mode=display">
+F_n(x)=\left\{\begin{matrix}
+0 & 当x<x_{(1)}\\
+k/n & 当x_{(k)}\leq x<x_{(k+1)},k=1,2,...,n-1\\
+1 & 当x\geq x_{(n)}
+\end{matrix}\right.</script><p>则称为$F_n(x)$为该样本的经验分布函数。</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/ex_distribution.png" alt="img"></p>
 </li>
 <li><p><strong>格里纹科定理</strong></p>
 <p>  设$x_1,x_2,…,x_n$是取自总体分布函数为$F(x)$的样本，$F_n(x)$是该样本的经验分布函数，则当$n\rightarrow+\infty$时，有</p>
-<p>$$<br>P(sup_{-\infty&lt;x&lt;+\infty}|F_n(x)-F(x)|\rightarrow0)=1<br>$$</p>
-<p>表明当n相当大时，经验分布函数$F_n(x)$是总体分布函数$F(x)$的一个良好的近似。它是经典统计学的一块基石。</p>
+<script type="math/tex; mode=display">
+P(sup_{-\infty<x<+\infty}|F_n(x)-F(x)|\rightarrow0)=1</script><p>表明当n相当大时，经验分布函数$F_n(x)$是总体分布函数$F(x)$的一个良好的近似。它是经典统计学的一块基石。</p>
 </li>
 <li><p><strong>频数频率分布表</strong></p>
 <p>  有样本$x_1,x_2,…,x_n$制作频数频率分布表的操作步骤如下：</p>
@@ -1297,7 +1401,7 @@
 <p>  不含未知参数的样本函数称为统计量。统计量的分布称为抽样分布。</p>
 <p>  To perform statistical inference, we construct appropriate functions of the sample to draw conclusions rather than random sample itself. Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$. Then $\phi(X_1,X_2,…,X_n)$ is called a statistic 统计量, if $\phi(X_1,X_2,…,X_n)$ is just a function of $X_1,X_2,…,X_n$ without any unknown parameters 未知参数.</p>
 <blockquote>
-<p>For example: Assume $X\sim N(\mu,\sigma^2)$ with parameter $\mu$ unknown and $\sigma$ known. Then $\sum_{i=1}^{n}(X_i-\bar{X})^2$ is a statistic but $\sum_{i=1}^{n}(X_i-\mu)$ is not a statistic.</p>
+<p>For example: Assume $X\sim N(\mu,\sigma^2)$ with parameter $\mu$ unknown and $\sigma$ known. Then $\sum<em>{i=1}^{n}(X_i-\bar{X})^2$ is a statistic but $\sum</em>{i=1}^{n}(X_i-\mu)$ is not a statistic.</p>
 </blockquote>
 <ul>
 <li>As $X_1,X_2,…,X_n$ are random variables, the statistic $\phi(X_1,X_2,…,X_n)$ is also a random variable.</li>
@@ -1305,7 +1409,7 @@
 <li>When generally referring to a sampling results,sample $X_1,X_2,…,X_n$ are n random variables,and then $X$ and $S^2$ are also random variables. 当泛指一次抽样结果时，样本$X_1,X_2,…,X_n$是n个随机变量，则样本均值、样本方差等统计量也是随机变量；</li>
 <li>When specifically referring to a specific sampling results, observations $X_1,X_2,…,X_n$ are n specific numbers, and then $X$ and $S^2$ are also specific numbers.当特指一次具体的抽样结果时，样本值$X_1,X_2,…,X_n$是n个具体数值，从而样本均值$\bar{X}$、样本方差$S^2$等统计量也是具体的数值所以，后面不引起混淆的情况下，对样本和统计量赋予双重意义：泛指时为随机变量，特指时为相应数值。</li>
 </ul>
-<ol start="2">
+<ol>
 <li><p><strong>抽样分布</strong></p>
 <p>  Sampling distribution of a statistic: the distribution of the statistic. 统计量作为随机变量所服从的分布.</p>
 </li>
@@ -1314,13 +1418,13 @@
 </ol>
 <ul>
 <li><p><strong>定义：</strong></p>
-<p>  样本$x_1,x_2,…,x_n$的算数平均值称为样本均值，记为$\bar{x}$.分组样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^{k}x_if_i$，其中n为样本量，k为组数，<strong>$x_i$与$f_i$为第i组的组中值和频率</strong>，<strong>分组样本均值是完全样本均值的一种较好的近似</strong>。</p>
+<p>  样本$x<em>1,x_2,…,x_n$的算数平均值称为样本均值，记为$\bar{x}$.分组样本均值$\bar{x}=\frac{1}{n}\sum</em>{i=1}^{k}x_if_i$，其中n为样本量，k为组数，<strong>$x_i$与$f_i$为第i组的组中值和频率</strong>，<strong>分组样本均值是完全样本均值的一种较好的近似</strong>。</p>
 <p>  样本均值是样本的位置特征，样本中大多数值位于$\bar{x}$左右。平均可消除一些随机干扰，等价交换也是在平均数中实现的。</p>
 </li>
 <li><p><strong>性质：</strong></p>
 <ul>
 <li>$\sum_{i=1}^n (x_i-\bar{x})=0$，<strong>样本数据$x_i$对样本均值$\bar{x}$的偏差之和为零</strong>；</li>
-<li><strong>样本数据$x_i$与样本均值$\bar{x}$的偏差平方和最小</strong>，即对任意的实数c有$\sum_{i=1}^n(x_i-\bar{x})^2\leq \sum_{i=1}^n(x_i-c)^2$;</li>
+<li><strong>样本数据$x_i$与样本均值$\bar{x}$的偏差平方和最小</strong>，即对任意的实数c有$\sum<em>{i=1}^n(x_i-\bar{x})^2\leq \sum</em>{i=1}^n(x_i-c)^2$;</li>
 <li>若总体分布为$N(\mu,\sigma^2)$，则$\bar{x}$的精确分布为$N(\mu,\sigma^2/n)$；</li>
 <li>若总体分布未知，但其期望$\mu$与方差$\sigma^2$存在，则当n较大时，$\bar{x}$的渐进分布为$N(\mu,\sigma^2/n)$，这里渐进分布是指n较大时的近似分布。</li>
 </ul>
@@ -1329,61 +1433,69 @@
 <blockquote>
 <p>The sampling distribution of sample mean (If population variance $\sigma^2$ is known)</p>
 <p>Let $X_1, X_2, \ldots, X_n$ be a random sample from some population $X$ with mean $E(X)=\mu$ and variance $D(X)=\sigma^2$. Then</p>
-<p>$$<br>E(\bar{X})=\mu \quad D(\bar{X})=\frac{\sigma^2}{n}<br>$$</p>
-<p>Because normal distribution is one of the most common distributions, we consider the sampling distribution of sample mean $\bar{X}$ with samples drawn from normal population.</p>
+<script type="math/tex; mode=display">
+E(\bar{X})=\mu \quad D(\bar{X})=\frac{\sigma^2}{n}</script><p>Because normal distribution is one of the most common distributions, we consider the sampling distribution of sample mean $\bar{X}$ with samples drawn from normal population.</p>
 <p>Theorem: If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ and are independent, then</p>
-<p>$$<br>\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)<br>$$</p>
-<p>If we standardize $\bar{X}$, then creating a new random variable</p>
-<p>$$<br>U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)<br>$$</p>
-</blockquote>
-<ol start="4">
+<script type="math/tex; mode=display">
+\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right)</script><p>If we standardize $\bar{X}$, then creating a new random variable</p>
+<script type="math/tex; mode=display">
+U=\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)</script></blockquote>
+<ol>
 <li><strong>样本方差与样本标准差</strong></li>
 </ol>
-<p>  样本方差有两种，$s_*^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$与$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$，后者为无偏方差，也是最常用的。（这是因为当$\sigma^2$为总体方差时，总有$E(s_*^2)=\frac{n-1}{n}\sigma^2$,$E(s^2)=\sigma^2$，表明$s_*^2$有系统偏小的误差，$s^2$无此系统偏差。）称$\sqrt{s^2}$为样本标准差。</p>
+<p>  样本方差有两种，$s<em>*^2=\frac{1}{n}\sum</em>{i=1}^n(x<em>i-\bar{x})^2$与$s^2=\frac{1}{n-1}\sum</em>{i=1}^n(x<em>i-\bar{x})^2$，后者为无偏方差，也是最常用的。（这是因为当$\sigma^2$为总体方差时，总有$E(s</em><em>^2)=\frac{n-1}{n}\sigma^2$,$E(s^2)=\sigma^2$，表明$s_</em>^2$有系统偏小的误差，$s^2$无此系统偏差。）称$\sqrt{s^2}$为样本标准差。</p>
 <p>  样本方差是样本的散布特征，$s^2$<strong>越大样本越分散，$s^2$越小分布越集中</strong>，样本标准差比样本方差使用更频繁，因为前者和样本均值有着相同的单位。</p>
 <p>  $s^2$的计算有如下<strong>三个公式</strong>可供选用：</p>
-<p>$$<br>  s^2=\frac{1}{n-1}\sum(x_i-\bar{x})^2=\frac{1}{n-1}[\sum x_i^2-\frac{(\sum x_i)^2}{n}]=\frac{1}{n-1}(\sum x_i^2-n\bar{x}^2)<br>$$</p>
-<p>在分组样本场合，样本方差的近似计算公式为</p>
-<p>$$<br>  s^2=\frac{1}{n-1}\sum_{i=1}^kf_i(x_i-\bar{x})^2=\frac{1}{n-1}(\sum_{i=1}^k f_ix_i^2-n\bar{x}^2)<br>$$</p>
-<p>其中k为组数，$x_i,f_i$分别为第i个区间的组中值与频数，$\bar{x}$为分组样本的均值。</p>
-<ol start="5">
+<script type="math/tex; mode=display">
+  s^2=\frac{1}{n-1}\sum(x_i-\bar{x})^2=\frac{1}{n-1}[\sum x_i^2-\frac{(\sum x_i)^2}{n}]=\frac{1}{n-1}(\sum x_i^2-n\bar{x}^2)</script><p>在分组样本场合，样本方差的近似计算公式为</p>
+<script type="math/tex; mode=display">
+  s^2=\frac{1}{n-1}\sum_{i=1}^kf_i(x_i-\bar{x})^2=\frac{1}{n-1}(\sum_{i=1}^k f_ix_i^2-n\bar{x}^2)</script><p>其中k为组数，$x_i,f_i$分别为第i个区间的组中值与频数，$\bar{x}$为分组样本的均值。</p>
+<ol>
 <li><strong>样本矩及其函数</strong></li>
 </ol>
 <ul>
-<li>样本的k阶原点矩$a_k=\frac{1}{n}\sum_{i=1}^{n}x_i^k$，样本均值$\bar{x}$为样本的一阶原点矩；</li>
-<li>样本的k阶中心距$b_k=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^k$，样本方差$s^2$和$s_*^2$都为样本的二阶中心矩；</li>
+<li>样本的k阶原点矩$a<em>k=\frac{1}{n}\sum</em>{i=1}^{n}x_i^k$，样本均值$\bar{x}$为样本的一阶原点矩；</li>
+<li>样本的k阶中心距$b<em>k=\frac{1}{n}\sum</em>{i=1}^n(x<em>i-\bar{x})^k$，样本方差$s^2$和$s</em>*^2$都为样本的二阶中心矩；</li>
 <li>样本变异系数$C_r=s/\bar{x}$；</li>
 <li>样本的偏度$\hat{\beta_s}=b_3/b_2^{3/2}$，反映样本数据与对称性偏离程度和偏离方向；</li>
 <li>样本的峰度$\hat{\beta_k}=\frac{b_4}{b_2^2}-3$，反映总体分布密度曲线在其峰值附近的陡峭程度和尾部粗细.</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/skewness.png" alt="img"></p>
-<ol start="5">
+<ol>
 <li><p><strong>次序统计量及其分布</strong></p>
-<p>  设$x_1,…,x_n$是取自某总体的一个样本，$x_{(i)}$称为该样本的第i个次序统计量（升序排序后，第i个样本）。</p>
+<p>  设$x<em>1,…,x_n$是取自某总体的一个样本，$x</em>{(i)}$称为该样本的第i个次序统计量（升序排序后，第i个样本）。</p>
 <ul>
 <li><p>$x_{(1)}=min{x_1,…,x_n}$称为该样本的<strong>最小次序统计量</strong>；</p>
 </li>
 <li><p>$x_{(n)}=max{x_1,…,x_n}$称为该样本的<strong>最大次序统计量</strong>；</p>
 </li>
-<li><p>$(x_{(1)},x_{(2)},…,x_{(n)}}$称为该样本的次序统计量，即<strong>不独立也不同分布</strong>；</p>
+<li><p>$(x<em>{(1)},x</em>{(2)},…,x_{(n)}}$称为该样本的次序统计量，即<strong>不独立也不同分布</strong>；</p>
 </li>
-<li><p>$R=x_{(n)}-x_{(1)}$称为样本极差。<br>设总体$X$的密度函数为$f(x)$，分布函数为$F(x)$，$x_1,…,x_n$为样本，则有</p>
+<li><p>$R=x<em>{(n)}-x</em>{(1)}$称为样本极差。<br>设总体$X$的密度函数为$f(x)$，分布函数为$F(x)$，$x_1,…,x_n$为样本，则有</p>
 </li>
 <li><p>样本第k个次序统计量$x_{(k)}$的密度函数为</p>
-<p>$$<br>f_k(x)=\frac{n!}{(k-1)!(n-k)!}(F(x))^{k-1}(1-F(x))^{n-k}f(x);<br>$$</p>
-</li>
-<li><p>样本第i个与第j个次序统计量的联合密度函数为<br>$$<br>f_{ij}(y,z)=\frac{n!}{(i-1)!(j-i-1)!(n-j)!}(F(y))^{i-1}(F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}f(xy)f(z),\quad y\leq z, 1\leq i&lt;j\leq n<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+f_k(x)=\frac{n!}{(k-1)!(n-k)!}(F(x))^{k-1}(1-F(x))^{n-k}f(x);</script></li>
+<li><p>样本第i个与第j个次序统计量的联合密度函数为</p>
+<script type="math/tex; mode=display">
+f_{ij}(y,z)=\frac{n!}{(i-1)!(j-i-1)!(n-j)!}(F(y))^{i-1}(F(z)-F(y))^{j-i-1}(1-F(z))^{n-j}f(xy)f(z),\quad y\leq z, 1\leq i<j\leq n</script></li>
 </ul>
 </li>
 <li><p><strong>样本中位数与样本分位数</strong></p>
-<p>设$x_1,…,x_n$是取自某总体的样本，$x_{(1)}\leq x_{(2)}\leq …\leq x_{(n)}$为该样本的次序统计量，则样本中位数$m_{0.5}$定义为</p>
-<p>$$<br>m_{0.5}=\left{\begin{matrix}<br>x_{(\frac{n+1}{2})} &amp; n为奇数\<br>\frac{1}{2}(x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}) &amp; n为偶数<br>\end{matrix}\right.<br>$$</p>
-<p>样本的p分位数$m_p$定义为</p>
-<p>$$<br>m_{p}=\left{\begin{matrix}<br>x_{[np+1]} &amp; np不是整数\<br>\frac{1}{2}(x_{(np)} + x_{(np+1)}) &amp; np是整数<br>\end{matrix}\right.<br>$$</p>
-<p>其中[x]表示向下取整。<strong>中位数对样本的极端值有抗干扰性，或称有稳健性</strong>。<br>**样本分位数的渐近分布：**设总体的密度函数为$f(x)$，$x_p$为总体的p分位数。若$p(x)$在$x_p$处连续且$p(x_p)&gt;0$，则当n充分大时，有</p>
-<p>$$<br>m_p\sim N(x_p,\frac{p(1-p)}{n\cdot p^2(x_p)}),\<br>m_{0.5}\sim N(x_{0.5},\frac{1}{4n\cdot p^2(x_{0.5})})<br>$$</p>
-</li>
+<p>设$x<em>1,…,x_n$是取自某总体的样本，$x</em>{(1)}\leq x<em>{(2)}\leq …\leq x</em>{(n)}$为该样本的次序统计量，则样本中位数$m_{0.5}$定义为</p>
+<script type="math/tex; mode=display">
+m_{0.5}=\left\{\begin{matrix}
+x_{(\frac{n+1}{2})} & n为奇数\\
+\frac{1}{2}(x_{(\frac{n}{2})} + x_{(\frac{n}{2}+1)}) & n为偶数
+\end{matrix}\right.</script><p>样本的p分位数$m_p$定义为</p>
+<script type="math/tex; mode=display">
+m_{p}=\left\{\begin{matrix}
+x_{[np+1]} & np不是整数\\
+\frac{1}{2}(x_{(np)} + x_{(np+1)}) & np是整数
+\end{matrix}\right.</script><p>其中[x]表示向下取整。<strong>中位数对样本的极端值有抗干扰性，或称有稳健性</strong>。<br><strong>样本分位数的渐近分布：</strong>设总体的密度函数为$f(x)$，$x_p$为总体的p分位数。若$p(x)$在$x_p$处连续且$p(x_p)&gt;0$，则当n充分大时，有</p>
+<script type="math/tex; mode=display">
+m_p\sim N(x_p,\frac{p(1-p)}{n\cdot p^2(x_p)}),\\
+m_{0.5}\sim N(x_{0.5},\frac{1}{4n\cdot p^2(x_{0.5})})</script></li>
 <li><p><strong>五数概括与箱线图</strong></p>
 <p>  五数指用样本的五个次序统计量，即最小观测值，最大观测值，中位数，第一4分位数和第三4分位数。其图形为箱线图，可描述样本分布形状。</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/box.png" alt="img"></p>
@@ -1394,11 +1506,11 @@
 <li><p>Definition: if $\chi^2=X_1^2+X_2^2+…+X_n^2$, where $X_1,X_2,…,X_n \sim N(0,1)$ and the $X_i$‘s are independent, then the statistic $\chi^2$ is said to follow a $\chi^2$ distribution with $n$ degrees of freedom, which is denoted by $\chi^2 \sim \chi^2(n)$.</p>
 </li>
 <li><p>The degree of freedom is the number of independent random variables in a statistic. It is often denoted by $d f$ and defined as follows:</p>
-<p>$$<br>d f=n-r<br>$$</p>
-<p>Where $n$ is the number of random variables in a statistic, $r$ is the number of constraint conditions 约束条件 of these random variables.</p>
+<script type="math/tex; mode=display">
+d f=n-r</script><p>Where $n$ is the number of random variables in a statistic, $r$ is the number of constraint conditions 约束条件 of these random variables.</p>
 <p>For example: $\quad S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2$<br>There are $n$ random variables $X_i-\bar{X}, \mathrm{i}=1, \ldots, \mathrm{n}$, and these random variables satisfy a constraint condition:</p>
-<p>$$<br>\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n-n \bar{X}=0<br>$$</p>
-<p>Thus, the degrees of freedom of $S^2$ is $d f=n-1$.</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n-n \bar{X}=0</script><p>Thus, the degrees of freedom of $S^2$ is $d f=n-1$.</p>
 </li>
 <li><p>If $X \sim N(0,1)$, then $X^2 \sim \chi^2(1)$ 。</p>
 </li>
@@ -1412,8 +1524,9 @@
 </li>
 <li><p>When $n \rightarrow+\infty$, the distribution of $\chi^2(n)$ approaches a normal distribution.</p>
 </li>
-<li><p>If $\chi_1^2 \sim \chi^2\left(n_1\right), \chi_2^2 \sim \chi^2\left(n_2\right)$ and $\chi_1^2$ and $\chi_2^2$ are independent, then<br>$$<br>\chi_1^2+\chi_2^2 \sim \chi^2\left(n_1+n_2\right)<br>$$</p>
-</li>
+<li><p>If $\chi_1^2 \sim \chi^2\left(n_1\right), \chi_2^2 \sim \chi^2\left(n_2\right)$ and $\chi_1^2$ and $\chi_2^2$ are independent, then</p>
+<script type="math/tex; mode=display">
+\chi_1^2+\chi_2^2 \sim \chi^2\left(n_1+n_2\right)</script></li>
 </ol>
 </li>
 <li><p>$E\left(\chi^2\right)=n, \quad D\left(\chi^2\right)=2 n$</p>
@@ -1424,7 +1537,11 @@
 <li>$\bar{X}$ and $S^2$ are independent.</li>
 </ol>
 <ul>
-<li><strong>Remark</strong>: Standardize $X_i$, then $\frac{X_i-\mu}{\sigma} \sim N(0,1)$ and<br>$$<br>\sum_{\underline{i}=1}^n \frac{\left(X_i-\mu\right)^2}{\sigma^2} \sim \chi^2(n)<br>$$<br>However, if we substitute $\bar{X}$ for $\mu$ in the above equation, then we lose 1 degree of freedom (constraint condition: $\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n - n \bar{X}=0$).<br>i.e.,<br>$$<br>\sum_{i=1}^n \frac{\left(X_i-\bar{X}\right)^2}{\sigma^2} \sim \chi^2(n-1)<br>$$<br>Recall<br>$$<br>S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2<br>$$<br>Thus<br>$$<br>\frac{(n-1) S^2}{\sigma^2}=\sum_{i=1}^n \frac{\left(X_i-\bar{X}\right)^2}{\sigma^2} \sim \chi^2(n-1)<br>$$</li>
+<li><strong>Remark</strong>: Standardize $X_i$, then $\frac{X_i-\mu}{\sigma} \sim N(0,1)$ and<script type="math/tex; mode=display">
+\sum_{\underline{i}=1}^n \frac{\left(X_i-\mu\right)^2}{\sigma^2} \sim \chi^2(n)</script>However, if we substitute $\bar{X}$ for $\mu$ in the above equation, then we lose 1 degree of freedom (constraint condition: $\sum_{i=1}^n\left(X_i-\bar{X}\right)=X_1+\cdots X_n - n \bar{X}=0$).<br>i.e.,<script type="math/tex; mode=display">
+\sum_{i=1}^n \frac{\left(X_i-\bar{X}\right)^2}{\sigma^2} \sim \chi^2(n-1)</script>Recall<script type="math/tex; mode=display">
+S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2</script>Thus<script type="math/tex; mode=display">
+\frac{(n-1) S^2}{\sigma^2}=\sum_{i=1}^n \frac{\left(X_i-\bar{X}\right)^2}{\sigma^2} \sim \chi^2(n-1)</script></li>
 </ul>
 </li>
 <li><p>Upper percentile of a $\chi^2(n)$ distribution</p>
@@ -1432,8 +1549,8 @@
 <ul>
 <li>Definition: The upper $100\times \alpha$th percentiles of a $\chi^(n)$ distribution (i.e., a chi-square distribution with $n\ df$) is denoted by $\chi^2_\alpha(n)$ where</li>
 </ul>
-<p>$$<br>P{\chi^2&gt;\chi^2_\alpha(n)}=\alpha<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+P\{\chi^2>\chi^2_\alpha(n)\}=\alpha</script></li>
 </ol>
 <h3 id="4-5-t-分布"><a href="#4-5-t-分布" class="headerlink" title="4.5 $t$ 分布"></a>4.5 $t$ 分布</h3><blockquote>
 <p>If normal population variance $\sigma^2$ is known, then the sample mean $\bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) \quad \text { i.e., } \quad \frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1)$</p>
@@ -1442,8 +1559,8 @@
 <ol>
 <li><p>Definition</p>
 <p>If</p>
-<p>$$<br>t=\frac{X}{\sqrt{Y / n}}<br>$$</p>
-<p>Where $X \sim N(0,1), Y \sim \chi^2(n)$ and $X$ and $Y$ are independent, then statistic $t$ is said to follow a $t$ distribution with $n$ degrees of freedom, which is denoted by $t \sim t(n)$.</p>
+<script type="math/tex; mode=display">
+t=\frac{X}{\sqrt{Y / n}}</script><p>Where $X \sim N(0,1), Y \sim \chi^2(n)$ and $X$ and $Y$ are independent, then statistic $t$ is said to follow a $t$ distribution with $n$ degrees of freedom, which is denoted by $t \sim t(n)$.</p>
 </li>
 <li><p>Properties</p>
 <ol>
@@ -1456,32 +1573,36 @@
 <ol>
 <li><p>If population variance $\sigma^2$ is unknown, we replace population variance $\sigma^2$ with sample variance $S^2$, and we have the following theorem:</p>
 <p>Theorem : If $X_1, X_2, \ldots, X_n \sim N\left(\mu, \sigma^2\right)$ with unknown $\sigma^2$ and they are independent, then</p>
-<p>$$<br>\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\frac{\bar{X}-\mu}{S / \sqrt{n}} \sim t(n-1)</script></li>
 <li><p>Proof:<br>First</p>
-<p>$$<br>\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1), \quad \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1)<br>$$</p>
-<p>and $\bar{X}$ and $S^2$ are independent.<br>Then by the definition of $t$ distribution,</p>
-<p>$$<br>\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}} / \sqrt{\frac{(n-1) S^2}{\sigma^2(n-1)}} \sim t(n-1)<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\frac{\bar{X}-\mu}{\sigma / \sqrt{n}} \sim N(0,1), \quad \frac{(n-1) S^2}{\sigma^2} \sim \chi^2(n-1)</script><p>and $\bar{X}$ and $S^2$ are independent.<br>Then by the definition of $t$ distribution,</p>
+<script type="math/tex; mode=display">
+\frac{\bar{X}-\mu}{\frac{\sigma}{\sqrt{n}}} / \sqrt{\frac{(n-1) S^2}{\sigma^2(n-1)}} \sim t(n-1)</script></li>
 </ol>
 </li>
 <li><p>The sampling distribution of difference between two sample means</p>
 <p>When studying the statistical inference of the means $\left(\mu_1, \mu_2\right)$ of two normal populations, it is necessary to investigate the distribution of the difference between the sample means $(\bar{X}, \bar{Y})$ of the two normal populations.</p>
-<p><strong>Theorem</strong>:<br>Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are <strong>independent</strong>. The means and variances in these two samples are denoted by $\bar{X}$. $\bar{Y}$ and $S_x^2, S_y^2$ respectively.</p>
+<p><strong>Theorem</strong>:<br>Suppose $X<em>1, X_2, \ldots, X</em>{n<em>1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y</em>{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are <strong>independent</strong>. The means and variances in these two samples are denoted by $\bar{X}$. $\bar{Y}$ and $S_x^2, S_y^2$ respectively.</p>
 <ol>
 <li><p>Assume variances $\sigma_1^2,\sigma_2^2$ are known. Then</p>
-<p>$$<br>\frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}\sim N(0,1)<br>$$</p>
-</li>
-<li><p>Assume variances $\sigma_1^2, \sigma_2^2$ are unknown but $\sigma_1^2=\sigma_2^2=\sigma^2$. Then<br>$$<br>\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)<br>$$<br>where<br>$$<br>S^2=\frac{\left(n_1-1\right) S_x^2+\left(n_2-1\right) S_y^2}{n_1+n_2-2}<br>$$<br>In particular, when $n_1=n_2$, we get $S^2=\frac{S_x^2+S_y^2}{2}$.</p>
+<script type="math/tex; mode=display">
+\frac{(\bar{X}-\bar{Y})-(\mu_1-\mu_2)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}\sim N(0,1)</script></li>
+<li><p>Assume variances $\sigma_1^2, \sigma_2^2$ are unknown but $\sigma_1^2=\sigma_2^2=\sigma^2$. Then</p>
+<script type="math/tex; mode=display">
+\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)</script><p>where</p>
+<script type="math/tex; mode=display">
+S^2=\frac{\left(n_1-1\right) S_x^2+\left(n_2-1\right) S_y^2}{n_1+n_2-2}</script><p>In particular, when $n_1=n_2$, we get $S^2=\frac{S_x^2+S_y^2}{2}$.</p>
 </li>
 <li><p><strong>Proof</strong>:<br>Assume $\sigma_1^2=\sigma_2^2=\sigma^2$. Then $U=\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{\sigma \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim N(0,1)$.<br>Besides,</p>
-<p>$$<br>\frac{\left(n_1-1\right) S_x^2}{\sigma^2} \sim \chi^2\left(n_1-1\right), \quad \frac{\left(n_2-1\right) S_y^2}{\sigma^2} \sim \chi^2\left(n_2-1\right)<br>$$</p>
-<p>and $S_x^2$ and $S_y^2$ are independent.</p>
+<script type="math/tex; mode=display">
+\frac{\left(n_1-1\right) S_x^2}{\sigma^2} \sim \chi^2\left(n_1-1\right), \quad \frac{\left(n_2-1\right) S_y^2}{\sigma^2} \sim \chi^2\left(n_2-1\right)</script><p>and $S_x^2$ and $S_y^2$ are independent.</p>
 <p>By the property of $\chi^2$ distribution, we obtain</p>
-<p>$$<br>V=\frac{\left(n_1-1\right) S_x^2}{\sigma^2}+\frac{\left(n_2-1\right) S_y^2}{\sigma^2} \sim \chi^2\left(n_1+n_2-2\right)<br>$$</p>
-<p>Also $U 、 V$ are independent, then</p>
-<p>$$<br>\frac{U}{\sqrt{V / n_1+n_2-2}}=\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)<br>$$</p>
-<p>where $S^2=\frac{\left(n_1-1\right) S_x^2+\left(n_2-1\right) S_y^2}{n_1+n_2-2}$</p>
+<script type="math/tex; mode=display">
+V=\frac{\left(n_1-1\right) S_x^2}{\sigma^2}+\frac{\left(n_2-1\right) S_y^2}{\sigma^2} \sim \chi^2\left(n_1+n_2-2\right)</script><p>Also $U 、 V$ are independent, then</p>
+<script type="math/tex; mode=display">
+\frac{U}{\sqrt{V / n_1+n_2-2}}=\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)</script><p>where $S^2=\frac{\left(n_1-1\right) S_x^2+\left(n_2-1\right) S_y^2}{n_1+n_2-2}$</p>
 </li>
 </ol>
 </li>
@@ -1489,18 +1610,18 @@
 <p><img src="C:\Users\thyzz\AppData\Roaming\Typora\typora-user-images\image-20241218180759435.png" alt="image-20241218180759435"></p>
 <ul>
 <li><p>Definition: The $100 \times \alpha$ th percentile of a $t$ distribution with $n$ degrees of freedom is denoted by $t_\alpha(n)$, where</p>
-<p>$$<br>P\left{t&gt;t_\alpha(n)\right}=\alpha<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+P\left\{t>t_\alpha(n)\right\}=\alpha</script></li>
 <li><ol>
 <li>When $n \leq 45$ and $\alpha$ is small, we can refer to the value of $t_\alpha(n)$ from $t$ distribution table.</li>
 <li>When $\alpha$ is larger, it follows from the definition of upper percentile and the symmetry property of $t$ distribution that</li>
 </ol>
-<p>$$<br>t_{1-\alpha}(n)=-t_\alpha(n)<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+t_{1-\alpha}(n)=-t_\alpha(n)</script><ol>
 <li>When $n&gt;45, t_\alpha(n)$ can be approximated by the upper percentile of $N(0,1)$, that is,</li>
 </ol>
-<p>$$<br>t_\alpha(n) \approx u_\alpha<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+t_\alpha(n) \approx u_\alpha</script></li>
 </ul>
 </li>
 </ol>
@@ -1520,38 +1641,40 @@
 <li>Assume $T{\sim}t(n).$ Then $T^2{\sim}F(1,n)$. Recall: If $X\sim N(0,1)$, then $X^2\sim\chi^{2}(1).$</li>
 </ol>
 <ul>
-<li>Proof: If $T{\sim}t(n)$, then there exist $X{\sim}N(0,1),Y{\sim}\chi^{2}(n)$,and $X{、}Y$ are<br>independent such that<br>$$<br>T=\frac X{\sqrt{Y/n}}<br>$$<br>which gives<br>$$<br>T^2=\frac{X^2}{Y/n}<br>$$<br>here $X^2{\sim}\chi^2(1),Y{\sim}\chi^2(n)$, and $X^2,Y$ are independent, thus we get $T^2{\sim}F(1,n).$</li>
+<li>Proof: If $T{\sim}t(n)$, then there exist $X{\sim}N(0,1),Y{\sim}\chi^{2}(n)$,and $X{、}Y$ are<br>independent such that<script type="math/tex; mode=display">
+T=\frac X{\sqrt{Y/n}}</script>which gives<script type="math/tex; mode=display">
+T^2=\frac{X^2}{Y/n}</script>here $X^2{\sim}\chi^2(1),Y{\sim}\chi^2(n)$, and $X^2,Y$ are independent, thus we get $T^2{\sim}F(1,n).$</li>
 </ul>
 </li>
 <li><p>The sampling distribution of two-sample variances ratio</p>
 <ul>
-<li><p>Theorem:<br>Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent.<br>Also suppose the variances in these two samples are denoted by $S_x^2$, $S_y^2$ respectively. Then</p>
-<p>$$<br>F=\frac{S_x^2 / \sigma_1^2}{S_y^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>$$</p>
-<p>In particular, when $\sigma_1^2=\sigma_2^2$, we get $F=\frac{s_x^2}{s_y^2} \sim F\left(n_1-1, n_2-1\right)$</p>
+<li><p>Theorem:<br>Suppose $X<em>1, X_2, \ldots, X</em>{n<em>1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y</em>{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent.<br>Also suppose the variances in these two samples are denoted by $S_x^2$, $S_y^2$ respectively. Then</p>
+<script type="math/tex; mode=display">
+F=\frac{S_x^2 / \sigma_1^2}{S_y^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)</script><p>In particular, when $\sigma_1^2=\sigma_2^2$, we get $F=\frac{s_x^2}{s_y^2} \sim F\left(n_1-1, n_2-1\right)$</p>
 </li>
 <li><p>Proof:<br>First $\frac{\left(n_1-1\right) S_x^2}{\sigma_1^2} \sim \chi^2\left(n_1-1\right), \quad \frac{\left(n_2-1\right) S_y^2}{\sigma_2^2} \sim \chi^2\left(n_2-1\right)$, and $S_x^2$ and $S_y^2$ are independent.</p>
 <p>Using the definition of F distribution,</p>
-<p>$$<br>\frac{\left(n_1-1\right) S_x^2}{\left(n_1-1\right) \sigma_1^2} / \frac{\left(n_2-1\right) S_y^2}{\left(n_2-1\right) \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>$$</p>
-<p>i.e.,</p>
-<p>$$<br>\frac{S_x^2 / \sigma_1^2}{S_y^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\frac{\left(n_1-1\right) S_x^2}{\left(n_1-1\right) \sigma_1^2} / \frac{\left(n_2-1\right) S_y^2}{\left(n_2-1\right) \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)</script><p>i.e.,</p>
+<script type="math/tex; mode=display">
+\frac{S_x^2 / \sigma_1^2}{S_y^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)</script></li>
 </ul>
 </li>
 <li><p>Upper percentile of F distribution</p>
 <ul>
-<li><p>Definition: The $100 \times \alpha$ th percentile of an $F$ distribution with $n_1, n_2$ degrees of freedom is denoted by $F_\alpha\left(n_1, n_2\right)$, where</p>
-<p>$$<br>P\left{F&gt;F_\alpha\left(n_1, n_2\right)\right}=\alpha<br>$$</p>
-</li>
+<li><p>Definition: The $100 \times \alpha$ th percentile of an $F$ distribution with $n<em>1, n_2$ degrees of freedom is denoted by $F</em>\alpha\left(n_1, n_2\right)$, where</p>
+<script type="math/tex; mode=display">
+P\left\{F>F_\alpha\left(n_1, n_2\right)\right\}=\alpha</script></li>
 <li><p>Remark:</p>
-<p>$$<br>F_{1-\alpha}\left(n_1, n_2\right)=\frac{1}{F_\alpha\left(n_2, n_1\right)}<br>$$</p>
-<ul>
+<script type="math/tex; mode=display">
+F_{1-\alpha}\left(n_1, n_2\right)=\frac{1}{F_\alpha\left(n_2, n_1\right)}</script><ul>
 <li>If $\alpha(=0.1,0.05,0.025,0.01)$ is small, then refer to $F$ table to get upper percentile of $F$ distribution.</li>
-<li>If $\alpha(=0.9,0.95,0.975,0.99)$ is larger, then use $F_{1-\alpha}\left(n_1, n_2\right)=$ $\frac{1}{F_\alpha\left(n_2, n_1\right)}$.</li>
+<li>If $\alpha(=0.9,0.95,0.975,0.99)$ is larger, then use $F<em>{1-\alpha}\left(n_1, n_2\right)=$ $\frac{1}{F</em>\alpha\left(n_2, n_1\right)}$.</li>
 </ul>
 </li>
 <li><p>Proof: Using the definition of upper percentile of $F$ distribution, $P\left{F&gt;F_{1-\alpha}\left(n_1, n_2\right)\right}=1-\alpha$, which derives</p>
-<p>$$<br>P\left{\frac{1}{F}&lt;\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right}=1-\alpha .<br>$$</p>
-<p>Then $P\left{\frac{1}{F}&gt;\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right}=P\left{\frac{1}{F} \geq \frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right}=\alpha$<br>Since $\frac{1}{F} \sim F\left(n_2, n_1\right)$, it follows that $F_\alpha\left(n_2, n_1\right)=\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}$<br>i.e., $F_{1-\alpha}\left(n_1, n_2\right)=\frac{1}{F_\alpha\left(n_2, n_1\right)}$.</p>
+<script type="math/tex; mode=display">
+P\left\{\frac{1}{F}<\frac{1}{F_{1-\alpha}\left(n_1, n_2\right)}\right\}=1-\alpha .</script><p>Then $P\left{\frac{1}{F}&gt;\frac{1}{F<em>{1-\alpha}\left(n_1, n_2\right)}\right}=P\left{\frac{1}{F} \geq \frac{1}{F</em>{1-\alpha}\left(n<em>1, n_2\right)}\right}=\alpha$<br>Since $\frac{1}{F} \sim F\left(n_2, n_1\right)$, it follows that $F</em>\alpha\left(n<em>2, n_1\right)=\frac{1}{F</em>{1-\alpha}\left(n<em>1, n_2\right)}$<br>i.e., $F</em>{1-\alpha}\left(n<em>1, n_2\right)=\frac{1}{F</em>\alpha\left(n_2, n_1\right)}$.</p>
 </li>
 </ul>
 </li>
@@ -1561,7 +1684,7 @@
 <li>Point estimation 点估计： specify a values as the estimates of population unknown parameters. i.e., sample mean of a certain sampling can be the estimate of population mean.</li>
 <li>Interval estimation 区间估计：specify a range within which the true population parameter are likely to fall. This type of problem involves interval estimation.</li>
 </ul>
-<h3 id="5-1-点估计-Point-Estimation"><a href="#5-1-点估计-Point-Estimation" class="headerlink" title="5.1 点估计 Point Estimation"></a>5.1 点估计 Point Estimation</h3><h4 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h4><p>**点估计（Point estimation）：**设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
+<h3 id="5-1-点估计-Point-Estimation"><a href="#5-1-点估计-Point-Estimation" class="headerlink" title="5.1 点估计 Point Estimation"></a>5.1 点估计 Point Estimation</h3><h4 id="5-1-1-点估计的概念"><a href="#5-1-1-点估计的概念" class="headerlink" title="5.1.1 点估计的概念"></a>5.1.1 点估计的概念</h4><p><strong>点估计（Point estimation）：</strong>设$x_1, …, x_n$是来自总体的一个样本，用于估计未知参数$\theta$的统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$成为$\theta$的估计量，或称为$\theta$的点估计。</p>
 <p>Definition: Suppose $\theta$ is an unknown parameter of some population $X.$ Let $X_1,X_2,…,X_n$ be a random sample drawn from population $X$, and $x_1,x_2,…,x_n$ be a set of corresponding observations.</p>
 <p>Now construct an appropriate statistic $\hat{\theta}(X_1,X_2,…,X_n)$ to estimate $\theta$ with its value $\hat{\theta}(x_1,x_2,…,x_n).$ Then the function $\hat{\theta}(X_1,X_2,…,X_n)$ is called an estimator 估计量 of $\theta$ and the value $\hat{\theta}(x_1,x_2,…,x_n)$ is called an estimate 估计值 of $\theta.$</p>
 <ul>
@@ -1573,10 +1696,11 @@
 <blockquote>
 <p>Let $X_1, X_2, \ldots, X_n$ be a random sample drawn from some population which follows a uniform distribution over interval $[0, \theta]$. Find the estimator of unknown parameter $\boldsymbol{\theta}$.</p>
 <p>To solve this problem, we need to introduce the method of moments 矩估计法.</p>
-<img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241225141613691.png" alt="image-20241225141613691" style="zoom:67%;"></blockquote>
-<p>**定义：**设总体概率函数已知，为$p(x;\theta_1,…,\theta_k)$，$(\theta_1,…,\theta_k)\in\Theta$是未知参数或参数向量，$x_1,…,x_n$是样本，假定总体的$k$阶原点矩$\mu_k$存在，则对所有的$j$，$o&lt;j&lt;k$，$\mu_j$都存在，若假设$\theta_1,…,\theta_k$能够表示成$\mu_1,…,\mu_k$的函数$\theta_j=\theta_j(\mu_1,…,\mu_k)$，则可给出诸$\theta_j$的矩估计：</p>
-<p>$$<br>   \hat{\theta_j}=\theta_j(a_1,…,a_k),\quad j=1,…,k<br>$$</p>
-<p>其中$a_1,…,a_k$是前$k$阶样本原点矩$a_j=\frac{1}{n}\sum_{i=1}^{n}x_i^j$.</p>
+<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241225141613691.png" alt="image-20241225141613691" style="zoom:67%;"></p>
+</blockquote>
+<p><strong>定义：</strong>设总体概率函数已知，为$p(x;\theta_1,…,\theta_k)$，$(\theta_1,…,\theta_k)\in\Theta$是未知参数或参数向量，$x_1,…,x_n$是样本，假定总体的$k$阶原点矩$\mu_k$存在，则对所有的$j$，$o&lt;j&lt;k$，$\mu_j$都存在，若假设$\theta_1,…,\theta_k$能够表示成$\mu_1,…,\mu_k$的函数$\theta_j=\theta_j(\mu_1,…,\mu_k)$，则可给出诸$\theta_j$的矩估计：</p>
+<script type="math/tex; mode=display">
+   \hat{\theta_j}=\theta_j(a_1,...,a_k),\quad j=1,...,k</script><p>其中$a<em>1,…,a_k$是前$k$阶样本原点矩$a_j=\frac{1}{n}\sum</em>{i=1}^{n}x_i^j$.</p>
 <p>矩估计基于大数定律（格里纹科定理），实质是用经验分布函数去替换总体分布，矩估计可以概括为：</p>
 </li>
 </ol>
@@ -1584,41 +1708,44 @@
 <li><p>用样本矩代替总体矩（可以是原点矩也可以是中心矩）；</p>
 <ul>
 <li>用样本矩的函数去替换相应的总体矩的函数。</li>
-<li>$$\begin{aligned}&amp;\textbf{Definition: }\text{The }k\text{th uncorrected moment k阶原点矩 of a random variable }X\mathrm{<del>is</del>}E(X^{k}).\&amp;\textbf{Definition: }\text{The }k\text{th corrected moment k阶中心矩 of a random variable }X\mathrm{<del>is</del>}E[(X-E(X))^{k}].\end{aligned}$$</li>
+<li><script type="math/tex; mode=display">\begin{aligned}&\textbf{Definition: }\text{The }k\text{th uncorrected moment k阶原点矩 of a random variable }X\mathrm{~is~}E(X^{k}).\\&\textbf{Definition: }\text{The }k\text{th corrected moment k阶中心矩 of a random variable }X\mathrm{~is~}E[(X-E(X))^{k}].\end{aligned}</script></li>
 <li>The first uncorrected moment $E(X)$ is simply the expected value. The second corrected moment $E\left[(X-E(X))^2\right]$ is the variance. The second uncorrected moment $E\left(X^2\right)=D(X)+[E(X)]^2$.</li>
 </ul>
 </li>
 <li><p>The idea of the method of moments:</p>
 <ul>
 <li>The sample moment 样本矩 $\sum_{i=1}^nX_i^s/n,s=1,2,…$ is used <strong>as the estimator</strong> of the corresponding population moment 总体矩 $E(X^s).$<ul>
-<li>$\begin{array}{lll}\text{Sample moment:}&amp;\frac1n\sum_{i=1}^nX_i:,\frac1n\sum_{i=1}^nX_i^2:,\frac1n\sum_{i=1}^nX_i^3:,\ldots\\text{Population moment:}&amp;E(X),E(X^2),E(X^3),\ldots\end{array}$</li>
+<li>$\begin{array}{lll}\text{Sample moment:}&amp;\frac1n\sum<em>{i=1}^nX_i\:,\frac1n\sum</em>{i=1}^nX<em>i^2\:,\frac1n\sum</em>{i=1}^nX_i^3\:,\ldots\\text{Population moment:}&amp;E(X),E(X^2),E(X^3),\ldots\end{array}$</li>
 </ul>
 </li>
 <li>Assume $F(x;\theta_1,\theta_2,…,\theta_r)$ is the distribution function of population $X$, where parameters $\theta_1,\theta_2,…,\theta_r$ are unknown. Also assume $E(X^k)(k=1,2,…,r)$ exist。</li>
 </ul>
 </li>
 <li><p>Using the method of moments, the moment estimators $\widehat{\theta}_1,\widehat{\theta}_2,…,\widehat{\theta}_r$ are obtained by equating the first r sample moments to the corresponding first r population moments and solving for $\theta_1,\theta_2,…,\theta_r$</p>
-<p>$$<br>\left{\begin{aligned}<br>E(X)= &amp; \frac{1}{n} \sum_{i=1}^n X_i \<br>E\left(X^2\right)= &amp; \frac{1}{n} \sum_{i=1}^n X_i^2 \<br>&amp; \ldots \<br>E\left(X^r\right)= &amp; \frac{1}{n} \sum_{i=1}^n X_i^r<br>\end{aligned}\right.<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+\left\{\begin{aligned}
+E(X)= & \frac{1}{n} \sum_{i=1}^n X_i \\
+E\left(X^2\right)= & \frac{1}{n} \sum_{i=1}^n X_i^2 \\
+& \ldots \\
+E\left(X^r\right)= & \frac{1}{n} \sum_{i=1}^n X_i^r
+\end{aligned}\right.</script></li>
 <li><p>More precisely,</p>
 <p>when estimating single parameter, it is suffice to solve the following single equation: </p>
-<p>$$E(X)=\sum_{i=1}^nX_i/n=\bar{X}$$</p>
-<p>When estimating two parameters, two estimating equations will be needed:</p>
-<p>$$\begin{cases}E(X)=\dfrac{1}{n}\sum_{i=1}^nX_i\E(X^2)=\dfrac{1}{n}\sum_{i=1}^nX_i^2\end{cases}$$</p>
-</li>
+<script type="math/tex; mode=display">E(X)=\sum_{i=1}^nX_i/n=\bar{X}</script><p>When estimating two parameters, two estimating equations will be needed:</p>
+<script type="math/tex; mode=display">\begin{cases}E(X)=\dfrac{1}{n}\sum_{i=1}^nX_i\\E(X^2)=\dfrac{1}{n}\sum_{i=1}^nX_i^2\end{cases}</script></li>
 <li><blockquote>
-<p>**注：**矩估计可能是不唯一的，尽量使用低阶矩给出未知参数的估计 。</p>
+<p><strong>注：</strong>矩估计可能是不唯一的，尽量使用低阶矩给出未知参数的估计 。</p>
 </blockquote>
 </li>
 </ul>
-<ol start="2">
+<ol>
 <li><p><strong>最大似然估计</strong></p>
-<p>**定义：**设总体的概率函数为$p(x;\theta),\ \theta\in\Theta$，其中$\theta$是一个未知参数或几个未知参数组成的参数向量，$\Theta$是参数空间，$x_1,…,x_n$是来自该总体的样本，将样本的联合概率函数看成$\theta$的函数，用$L(\theta;x_1,…,x_n)$表示，简记为$L(\theta)$，</p>
-<p>$$<br>L(\theta)=L(\theta;x_1,…,x_n)=p(x_1;\theta)p(x_2;\theta)…p(x_n;\theta)<br>$$</p>
-<p>$L(\theta)$称为样本的<strong>似然函数</strong>。若统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$满足</p>
-<p>$$<br>L(\hat{\theta})=\max_{\theta\in\Theta}L(\theta)<br>$$</p>
-<p>则称$\hat{\theta}$是$\theta$的<strong>最大似然估计</strong>，简称<strong>MLE（maximum likelihood estimate）.</strong></p>
-<p><strong>注：<strong>最大似然估计基于样本观测数据，根据概率论思想进行参数估计，首先抽取一定样本，默认这些样本的出现概率是符合原始分布的，即恰好抽到这些样本是因为这些样本出现的概率极大，然后根据概率密度计算联合概率，形成似然函数，似然函数极值位置即为参数的估计值。</strong><u>最大似然估计的前提是已知数据的分布。</u></strong></p>
+<p><strong>定义：</strong>设总体的概率函数为$p(x;\theta),\ \theta\in\Theta$，其中$\theta$是一个未知参数或几个未知参数组成的参数向量，$\Theta$是参数空间，$x_1,…,x_n$是来自该总体的样本，将样本的联合概率函数看成$\theta$的函数，用$L(\theta;x_1,…,x_n)$表示，简记为$L(\theta)$，</p>
+<script type="math/tex; mode=display">
+L(\theta)=L(\theta;x_1,...,x_n)=p(x_1;\theta)p(x_2;\theta)...p(x_n;\theta)</script><p>$L(\theta)$称为样本的<strong>似然函数</strong>。若统计量$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$满足</p>
+<script type="math/tex; mode=display">
+L(\hat{\theta})=\max_{\theta\in\Theta}L(\theta)</script><p>则称$\hat{\theta}$是$\theta$的<strong>最大似然估计</strong>，简称<strong>MLE（maximum likelihood estimate）.</strong></p>
+<p><strong>注：</strong>最大似然估计基于样本观测数据，根据概率论思想进行参数估计，首先抽取一定样本，默认这些样本的出现概率是符合原始分布的，即恰好抽到这些样本是因为这些样本出现的概率极大，然后根据概率密度计算联合概率，形成似然函数，似然函数极值位置即为参数的估计值。<strong><u>最大似然估计的前提是已知数据的分布。</u></strong></p>
 <p><strong>最大似然估计步骤：</strong></p>
 <ul>
 <li>写出似然函数；</li>
@@ -1629,15 +1756,20 @@
 </li>
 <li><p><strong>最小均方误差估计</strong></p>
 <p>在样本量一定时，评价一个点估计好坏的度量指标可使用估计值$\hat{\theta}$与参数真值$\theta$的距离函数，最常用的是距离平方，由于$\hat{\theta}$具有随机性，对该函数求期望即得<strong>均方误差</strong>：</p>
-<p>$$<br>\begin{align}<br>MSE(\hat{\theta})&amp;=E(\hat{\theta}-\theta)^2\<br>&amp;=E[(\hat{\theta}-E\hat{\theta})+(E\hat{\theta}-\theta)]^2\<br>&amp;=E(\hat{\theta}-E\hat{\theta})^2+(E\hat{\theta}-\theta)^2+\underbrace{2E[(\hat{\theta}-E\hat{\theta})(E\hat{\theta}-\theta)]}<em>{E(\hat{\theta}-E\hat{\theta})=0}\<br>&amp;=\underbrace{Var(\hat{\theta})}</em>{点估计的方差}+\underbrace{(E\hat{\theta}-\theta)^2}_{偏差的平方}<br>\end{align}<br>$$</p>
-<p>其中，<strong>如果$\hat{\theta}$是$\theta$的无偏估计，则$MSE(\hat{\theta})=Var(\hat{\theta})$，此时用均方误差评价点估计与用方差是完全一样的</strong>。如果如果$\hat{\theta}$不是$\theta$的无偏估计，就要看其均方误差$MSE(\hat{\theta})$，即不仅要看其方差大小，还要看其偏差大小。</p>
-<p>**定义：**设有样本$x_1,…,x_n$，对待估参数$\theta$，设有一个估计类，如果对该估计类中另外任意一个$\theta$的估计$\widetilde{\theta}$，在参数空间$\Theta$上都有$MSE_\theta(\hat{\theta})\leq MSE_\theta(\widetilde{\theta})$，称$\hat{\theta}(x_1,…,x_n)$是该估计类中$\theta$的一致最小均方误差估计。</p>
+<script type="math/tex; mode=display">
+\begin{align}
+MSE(\hat{\theta})&=E(\hat{\theta}-\theta)^2\\
+&=E[(\hat{\theta}-E\hat{\theta})+(E\hat{\theta}-\theta)]^2\\
+&=E(\hat{\theta}-E\hat{\theta})^2+(E\hat{\theta}-\theta)^2+\underbrace{2E[(\hat{\theta}-E\hat{\theta})(E\hat{\theta}-\theta)]}_{E(\hat{\theta}-E\hat{\theta})=0}\\
+&=\underbrace{Var(\hat{\theta})}_{点估计的方差}+\underbrace{(E\hat{\theta}-\theta)^2}_{偏差的平方}
+\end{align}</script><p>其中，<strong>如果$\hat{\theta}$是$\theta$的无偏估计，则$MSE(\hat{\theta})=Var(\hat{\theta})$，此时用均方误差评价点估计与用方差是完全一样的</strong>。如果如果$\hat{\theta}$不是$\theta$的无偏估计，就要看其均方误差$MSE(\hat{\theta})$，即不仅要看其方差大小，还要看其偏差大小。</p>
+<p><strong>定义：</strong>设有样本$x<em>1,…,x_n$，对待估参数$\theta$，设有一个估计类，如果对该估计类中另外任意一个$\theta$的估计$\widetilde{\theta}$，在参数空间$\Theta$上都有$MSE</em>\theta(\hat{\theta})\leq MSE_\theta(\widetilde{\theta})$，称$\hat{\theta}(x_1,…,x_n)$是该估计类中$\theta$的一致最小均方误差估计。</p>
 </li>
 <li><p><strong>最小方差无偏估计</strong></p>
-<p><strong>定义：<strong>设$\hat{\theta}$是$\theta$的一个无偏估计，如果对另外任意一个$\theta$的无偏估计$\widetilde{\theta}$，在参数空间$\Theta={\theta}$上都有$Var_{\theta}(\hat{\theta})\leq Var_{\theta}(\widetilde{\theta})$，则称$\hat{\theta}$是$\theta$的一致最小方差无偏估计，简记为</strong>UMVUE</strong>。</p>
-<p>**判断准则：**设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个无偏估计，$Var(\hat{\theta})&lt;+\infty$.如果对任意一个满足$E(\varphi(x_1,…,x_n))=0$的$\varphi$，都有</p>
-<p>$$<br>Cov_\theta(\hat{\theta},\varphi)=0,\quad\forall\theta\in\Theta,<br>$$</p>
-<p>则$\hat{\theta}$是$\theta$的UMVUE.</p>
+<p><strong>定义：</strong>设$\hat{\theta}$是$\theta$的一个无偏估计，如果对另外任意一个$\theta$的无偏估计$\widetilde{\theta}$，在参数空间$\Theta={\theta}$上都有$Var<em>{\theta}(\hat{\theta})\leq Var</em>{\theta}(\widetilde{\theta})$，则称$\hat{\theta}$是$\theta$的一致最小方差无偏估计，简记为<strong>UMVUE</strong>。</p>
+<p><strong>判断准则：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个无偏估计，$Var(\hat{\theta})&lt;+\infty$.如果对任意一个满足$E(\varphi(x_1,…,x_n))=0$的$\varphi$，都有</p>
+<script type="math/tex; mode=display">
+Cov_\theta(\hat{\theta},\varphi)=0,\quad\forall\theta\in\Theta,</script><p>则$\hat{\theta}$是$\theta$的UMVUE.</p>
 </li>
 <li><p><strong>贝叶斯估计</strong></p>
 <p>区别于频率学派，在统计推断中贝叶斯用到了三种信息：<strong>总体信息、样本信息和先验信息</strong>（频率学派只用了前两种），其中：</p>
@@ -1647,8 +1779,8 @@
 <li>先验信息：若把抽取样本看作做一次试验，则样本信息就是试验中得到的信息，如，在一次抽样后，这第一次的抽样就是先验信息。先验信息来源于经验和历史资料。</li>
 </ul>
 <p><strong>回顾贝叶斯公式</strong>：设${B_1, B_2, …B_n}$是样本空间的一个分割，$A$为$\Omega$中的一个事件，$P(B_i)&gt;0$，$i=1,2,…,n$，$P(A)&gt;0$，则</p>
-<p>$$<br>P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}<br>$$</p>
-<p><strong>贝叶斯密度函数形式：</strong></p>
+<script type="math/tex; mode=display">
+P(B_i|A)=\frac{P(A|B_i)P(B_i)}{\sum_{j=1}^{n}P(A|B_j)P(B_j)}</script><p><strong>贝叶斯密度函数形式：</strong></p>
 <ul>
 <li><p>在参数$\theta$分布已知（已假设）的情况下，$p(x|\theta)$表示随机变量$\theta$取某个给定值时总体的<strong>条件概率函数</strong>，（参考$P(A|B)$）；</p>
 </li>
@@ -1658,50 +1790,72 @@
 </li>
 <li><p>从先验分布$\pi(\theta)$产生一个样本$\theta_0$；</p>
 </li>
-<li><p>从$p(X|\theta_0)$中产生一组样本。</p>
-</li>
+<li>从$p(X|\theta_0)$中产生一组样本。</li>
 </ul>
-<p>此时，样本$X=(x_1,…,x_n)$的<strong>联合条件概率函数</strong>（参考$\sum_{j=1}^{n}P(A|B_j)$）为</p>
-<p>$$<br>p(X|\theta_0)=p(x_1,…,x_n|\theta_0)=\prod^{n}_{i=1}p(x_i|\theta_0)<br>$$</p>
-<ul>
-<li><p>因为$\theta_0$未知，是从先验分布$\pi(\theta)$中产生的，所以需要考虑它的发生概率，样本$X$和参数$\theta$的<strong>联合分布</strong>（参考$\sum_{j=1}^{n}P(A|B_j)P(B_j)$）为</p>
-<p>$$<br>h(X,\theta)=p(X|\theta)\pi(\theta)<br>$$</p>
-</li>
+<p>此时，样本$X=(x<em>1,…,x_n)$的<strong>联合条件概率函数</strong>（参考$\sum</em>{j=1}^{n}P(A|B_j)$）为</p>
+<script type="math/tex; mode=display">
+p(X|\theta_0)=p(x_1,...,x_n|\theta_0)=\prod^{n}_{i=1}p(x_i|\theta_0)</script><ul>
+<li><p>因为$\theta<em>0$未知，是从先验分布$\pi(\theta)$中产生的，所以需要考虑它的发生概率，样本$X$和参数$\theta$的<strong>联合分布</strong>（参考$\sum</em>{j=1}^{n}P(A|B_j)P(B_j)$）为</p>
+<script type="math/tex; mode=display">
+h(X,\theta)=p(X|\theta)\pi(\theta)</script></li>
 <li><p>因为目的是对$\theta$进行推断，所以在有样本观测值$X=(x_1,…,x_n)$之后，可依据$h(X,\theta)$对$\theta$作出推断，按照乘法公式（参考1.5.2节），$h(X,\theta)$可分解为</p>
-<p>$$<br>h(X,\theta)=\pi(\theta|X)m(X)<br>$$</p>
-<p>其中，$m(X)$是$X$的边际概率函数，类比$\pi(\theta)$，</p>
-<p>$$<br>m(X)=\int_\Theta h(X,\theta)d\theta=\int_\Theta p(X|\theta)\pi(\theta)d\theta<br>$$</p>
-<p>所以可通过条件概率$\pi(\theta|X)$推断$\theta$的分布</p>
-<p>$$<br>\pi(\theta|X)=\frac{h(X,\theta)}{m(X)}=\frac{p(X|\theta)\pi(\theta)}{\int_{\Theta}p(X|\theta)\pi(\theta)d\theta}<br>$$</p>
-<p>该分布成为$\theta$的<strong>后验分布</strong>。<strong>它其实是利用总体和样本对先验分布$\pi(\theta)$调整的结果，比$\pi(\theta)$更接近$\theta$的实际情况（机器学习里的贝叶斯模型就是基于这样的原理）</strong>。</p>
+<script type="math/tex; mode=display">
+h(X,\theta)=\pi(\theta|X)m(X)</script><p>其中，$m(X)$是$X$的边际概率函数，类比$\pi(\theta)$，</p>
+<script type="math/tex; mode=display">
+m(X)=\int_\Theta h(X,\theta)d\theta=\int_\Theta p(X|\theta)\pi(\theta)d\theta</script><p>所以可通过条件概率$\pi(\theta|X)$推断$\theta$的分布</p>
+<script type="math/tex; mode=display">
+\pi(\theta|X)=\frac{h(X,\theta)}{m(X)}=\frac{p(X|\theta)\pi(\theta)}{\int_{\Theta}p(X|\theta)\pi(\theta)d\theta}</script><p>该分布成为$\theta$的<strong>后验分布</strong>。<strong>它其实是利用总体和样本对先验分布$\pi(\theta)$调整的结果，比$\pi(\theta)$更接近$\theta$的实际情况（机器学习里的贝叶斯模型就是基于这样的原理）</strong>。</p>
 <blockquote>
-<p>**Flag：**感觉贝叶斯定理很有意思，今后也会学习相关的贝叶斯分析数据，敬请期待～</p>
+<p><strong>Flag：</strong>感觉贝叶斯定理很有意思，今后也会学习相关的贝叶斯分析数据，敬请期待～</p>
 </blockquote>
 </li>
 </ul>
 </li>
 </ol>
 <h4 id="5-1-3-点估计的优良性准则"><a href="#5-1-3-点估计的优良性准则" class="headerlink" title="5.1.3 点估计的优良性准则"></a>5.1.3 点估计的优良性准则</h4><ol>
-<li><p>**无偏性 Unbiasedness：**设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有</p>
-<p>$$<br>E_{\theta}(\hat{\theta})=\theta<br>$$</p>
-<p>则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，否则称为<strong>有偏估计</strong>。无偏性的要求也可以改写为$E_{\theta}(\hat{\theta}-\theta)=0$，无偏性表示表示估计参数与真实参数没有系统偏差。<strong>Definition</strong>: An estimator $\hat{\theta}$ of a parameter $\theta$ is unbiased if $E(\hat{\theta})=\theta$. This means that the average value of $\hat{\theta}$ over a large number of repeated samples of size $n$ is $\theta$.</p>
+<li><p><strong>无偏性 Unbiasedness：</strong>设$\hat{\theta}=\hat{\theta}(x_1,…,x_n)$是$\theta$的一个估计，$\theta$的参数空间为$\Theta$，若对任意的$\theta \in \Theta$，有</p>
+<script type="math/tex; mode=display">
+E_{\theta}(\hat{\theta})=\theta</script><p>则称$\hat{\theta}$是$\theta$的<strong>无偏估计</strong>，否则称为<strong>有偏估计</strong>。无偏性的要求也可以改写为$E_{\theta}(\hat{\theta}-\theta)=0$，无偏性表示表示估计参数与真实参数没有系统偏差。<strong>Definition</strong>: An estimator $\hat{\theta}$ of a parameter $\theta$ is unbiased if $E(\hat{\theta})=\theta$. This means that the average value of $\hat{\theta}$ over a large number of repeated samples of size $n$ is $\theta$.</p>
 <ul>
 <li><p>Sample mean $\bar{X}=\frac{1}{n} \sum_{i=1}^n X_i$ is an unbiased estimator of population mean $\mu$, i.e., $E(\bar{X})=\mu$.</p>
 </li>
 <li><p>Sample variance $S^2=\frac{1}{n-1} \sum_{i=1}^n\left(X_i-\bar{X}\right)^2$ is an unbiased estimator of population variance $\sigma^2$, i.e., $E\left(S^2\right)=\sigma^2$</p>
 </li>
 <li><p>Therefore in practice, we normally choose to use sample mean $\bar{X}$ 、 sample variance $S^2$ as the estimators of population mean $\mu$, population variance $\sigma^2$ respectively, i.e.,</p>
-<p>  $$<br>  \hat{\mu}=\bar{X}, \quad \hat{\sigma}^2=S^2<br>  $$</p>
-</li>
+<script type="math/tex; mode=display">
+  \hat{\mu}=\bar{X}, \quad \hat{\sigma}^2=S^2</script></li>
 </ul>
 <blockquote>
-<p>**一个重要的结论：**样本均值$\bar{x}=\frac{1}{n}\sum_{i=1}^nx_i$是总体均值$\mu$的无偏估计。样本方差$s_n^2=\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2$不是总体方差$\sigma^2$的无偏估计（而是渐进无偏估计），因此需要对样本方差进行修正，$s^2=\frac{1}{n-1}\sum_{i=1}^n(x_i-\bar{x})^2$.</p>
+<p><strong>一个重要的结论：</strong>样本均值$\bar{x}=\frac{1}{n}\sum<em>{i=1}^nx_i$是总体均值$\mu$的无偏估计。样本方差$s_n^2=\frac{1}{n}\sum</em>{i=1}^n(x<em>i-\bar{x})^2$不是总体方差$\sigma^2$的无偏估计（而是渐进无偏估计），因此需要对样本方差进行修正，$s^2=\frac{1}{n-1}\sum</em>{i=1}^n(x_i-\bar{x})^2$.</p>
 <ul>
 <li>样本均值的无偏性推导</li>
 </ul>
-<p>$$<br>\begin{align}<br>E(\bar{x})=&amp;E(\frac{1}{n}\sum_{i=1}^nx_i)\<br>=&amp;\frac{1}{n}\sum_{i=1}^nE(x_i),\ x_i为iid\<br>=&amp;\frac{1}{n}\sum_{i=1}^n\mu\<br>=&amp;\mu<br>\end{align}<br>$$</p>
-<ul>
-<li>样本方差的有偏性推导<br>$$<br>\begin{align}<br>E(s_n^2)=&amp;E[\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2]\<br>=&amp;E[\frac{1}{n}\sum_{i=1}^n((x_i-\mu)-\frac{1}{n}(\bar{x}-\mu))^2]\<br>=&amp;E[\frac{1}{n}\sum_{i=1}^n((x_i-\mu)^2-\frac{2}{n}(x_i-\mu)(\bar{x}-\mu)+\frac{1}{n}(\bar{x}-\mu)^2)]\<br>=&amp;E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2-\frac{2}{n}\sum_{i=1}^n(x_i-\mu)(\bar{x}-\mu)+(\bar{x}-\mu)^2],\ 其中,\bar{X}-\mu=\frac{1}{n}\sum_{i=1}^n(x_i-\mu)\<br>=&amp;E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2-2(\bar{x}-\mu)^2+(\bar{x}-\mu)^2]\<br>=&amp;E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2-(\bar{x}-\mu)^2]\<br>=&amp;E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2]-E[(\bar{x}-\mu)^2]\<br>=&amp;\sigma^2-E[(\bar{x}-\mu)^2]\ …(1)\<br>=&amp;\sigma^2-\frac{\sigma^2}{n}\<br>=&amp;\frac{n-1}{n}\sigma^2,\quad 当n\rightarrow \infty时, E(s_n^2)\rightarrow \sigma^2\<br>\<br>E[(\bar{x}-\mu)^2]=&amp;E(\bar{x}^2)-2\mu E(\bar{x})+\mu^2\<br>=&amp;E(\bar{x}^2)-\mu^2\<br>=&amp;Var(\bar{x})+E^2(\bar{x})-\mu^2\<br>=&amp;Var(x)\<br>=&amp;\frac{\sigma^2}{n}\ …代入(1)式<br>\end{align}<br>$$</li>
+<script type="math/tex; mode=display">
+\begin{align}
+E(\bar{x})=&E(\frac{1}{n}\sum_{i=1}^nx_i)\\
+=&\frac{1}{n}\sum_{i=1}^nE(x_i),\ x_i为iid\\
+=&\frac{1}{n}\sum_{i=1}^n\mu\\
+=&\mu
+\end{align}</script><ul>
+<li>样本方差的有偏性推导<script type="math/tex; mode=display">
+\begin{align}
+E(s_n^2)=&E[\frac{1}{n}\sum_{i=1}^n(x_i-\bar{x})^2]\\
+=&E[\frac{1}{n}\sum_{i=1}^n((x_i-\mu)-\frac{1}{n}(\bar{x}-\mu))^2]\\
+=&E[\frac{1}{n}\sum_{i=1}^n((x_i-\mu)^2-\frac{2}{n}(x_i-\mu)(\bar{x}-\mu)+\frac{1}{n}(\bar{x}-\mu)^2)]\\
+=&E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2-\frac{2}{n}\sum_{i=1}^n(x_i-\mu)(\bar{x}-\mu)+(\bar{x}-\mu)^2],\ 其中,\bar{X}-\mu=\frac{1}{n}\sum_{i=1}^n(x_i-\mu)\\
+=&E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2-2(\bar{x}-\mu)^2+(\bar{x}-\mu)^2]\\
+=&E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2-(\bar{x}-\mu)^2]\\
+=&E[\frac{1}{n}\sum_{i=1}^n(x_i-\mu)^2]-E[(\bar{x}-\mu)^2]\\
+=&\sigma^2-E[(\bar{x}-\mu)^2]\ ...(1)\\
+=&\sigma^2-\frac{\sigma^2}{n}\\
+=&\frac{n-1}{n}\sigma^2,\quad 当n\rightarrow \infty时, E(s_n^2)\rightarrow \sigma^2\\
+\\
+E[(\bar{x}-\mu)^2]=&E(\bar{x}^2)-2\mu E(\bar{x})+\mu^2\\
+=&E(\bar{x}^2)-\mu^2\\
+=&Var(\bar{x})+E^2(\bar{x})-\mu^2\\
+=&Var(x)\\
+=&\frac{\sigma^2}{n}\ ...代入(1)式
+\end{align}</script></li>
 </ul>
 </blockquote>
 </li>
@@ -1709,33 +1863,35 @@
 <blockquote>
 <p>In practice, it is desirable that not only the estimator is unbiased, but also the deviation between $\hat{\theta}$ and $\theta$ as small as possible.</p>
 <p>If $\hat{\theta}$ is the unbiased estimator of $\theta$, that is $E(\hat{\theta})=\theta$, then</p>
-<p>$$<br>E\left((\hat{\theta}-\theta)^2\right)=E\left((\hat{\theta}-E(\hat{\theta}))^2\right)=D(\hat{\theta})<br>$$</p>
-<p>This suggests the smaller the variance $D(\hat{\theta})$, the closer $\hat{\theta}$ is to $\theta$, the more effective $\hat{\theta}$ is.</p>
+<script type="math/tex; mode=display">
+E\left((\hat{\theta}-\theta)^2\right)=E\left((\hat{\theta}-E(\hat{\theta}))^2\right)=D(\hat{\theta})</script><p>This suggests the smaller the variance $D(\hat{\theta})$, the closer $\hat{\theta}$ is to $\theta$, the more effective $\hat{\theta}$ is.</p>
 <p>In other words, smaller $D(\hat{\theta})$ implies the estimator $\hat{\theta}$ is more precise when estimating parameter $\theta$.</p>
 </blockquote>
 <p>无偏估计往往有很多种，以总体均值为例，$x_1,…,x_n$是取自某总体的样本，样本均值$\mu$和样本$x_i$都是总体均值的无偏估计，对于两个估计参数的选取需要基于一个度量无偏估计优劣的准则。有效性作为这样的准则，反映了<strong>参数估计值和参数真值的波动</strong>，波动大小可用方差来衡量，波动越小表示参数的估计越有效。</p>
 <p>设$\hat{\theta_1}$，$\hat{\theta_2}$是$\theta$的两个无偏估计，如果对任意的$\theta\in\Theta$有</p>
-<p>$$<br>Var(\hat{\theta}_1)\leq Var(\hat{\theta}_2)<br>$$</p>
-<p>且至少有一个$\theta\in\Theta$使得上述不等号严格成立，则称$\hat{\theta}_1$比$\hat{\theta}_2$有效。</p>
+<script type="math/tex; mode=display">
+Var(\hat{\theta}_1)\leq Var(\hat{\theta}_2)</script><p>且至少有一个$\theta\in\Theta$使得上述不等号严格成立，则称$\hat{\theta}_1$比$\hat{\theta}_2$有效。</p>
 <blockquote>
-<p><strong>Definition</strong>: Suppose $\hat{\theta}_1 、 \hat{\theta}_2$ are two unbiased estimators of unknown population parameter $\theta$. If<br>$$<br>D\left(\hat{\theta}_1\right)&lt;D\left(\hat{\theta}_2\right)<br>$$</p>
-<p>then $\hat{\theta}_1$ is said to be more effective than $\hat{\theta}_2$.</p>
+<p><strong>Definition</strong>: Suppose $\hat{\theta}_1 、 \hat{\theta}_2$ are two unbiased estimators of unknown population parameter $\theta$. If</p>
+<script type="math/tex; mode=display">
+D\left(\hat{\theta}_1\right)<D\left(\hat{\theta}_2\right)</script><p>then $\hat{\theta}_1$ is said to be more effective than $\hat{\theta}_2$.</p>
 </blockquote>
 <p>Conclusion:</p>
 <p>In the unbiased estimators of the population mean $\mu$ expressed as</p>
-<p>$$<br>\sum_{i=1}^n c_i X_i \text { (where } c_i \geq 0, \quad \sum_{i=1}^n c_i=1<br>$$</p>
-<p>the variance of the sample mean $\bar{X}$ is the smallest, so $\bar{X}$ is the most effective unbiased estimator for $\mu$.</p>
+<script type="math/tex; mode=display">
+\sum_{i=1}^n c_i X_i \text { (where } c_i \geq 0, \quad \sum_{i=1}^n c_i=1</script><p>the variance of the sample mean $\bar{X}$ is the smallest, so $\bar{X}$ is the most effective unbiased estimator for $\mu$.</p>
 <blockquote>
-<p>Proof: 显然当 $c_i \geq 0, \sum_{i=1}^n c_i=1$ 时，有$\mathrm{E}\left(\sum_{i=1}^n c_i X_i\right)=E(X)=\mu$ ，即 $\sum_{i=1}^n c_i X_i$ 是 $\mu$ 的无偏估计。<br>又 $D\left(\sum_{i=1}^n c_i X_i\right)=\sum_{i=1}^n c_i^2 D\left(X_i\right)=\sigma^2 \sum_{i=1}^n c_i^2$<br>由均值不等式 $\sqrt{\frac{1}{n} \sum_{i=1}^n c_i^2} \geq \frac{1}{n} \sum_{i=1}^n c_i=\frac{1}{n^{\prime}} \quad$ 即 $\sum_{i=1}^n c_i^2 \geq \frac{1}{n}$<br>从而， $D\left(\sum_{i=1}^n c_i X_i\right)=\sigma^2 \sum_{i=1}^n c_i^2 \geq \frac{\sigma^2}{n}=D(\bar{X})$<br>其中在 $c_1=c_2=\cdots=c_n=\frac{1}{n^{\prime}}$ ，不等式取等号，即 $\sum_{i=1}^n c_i X_i$ 其中 $c_i \geq 0$ ，<br>$\sum_{i=1}^n c_i=1$ 中样本均值 $\bar{x}$ 的方差最小， $\bar{X}$ 是 $\mu$ 的最有效的无偏估计量。</p>
+<p>Proof: 显然当 $c<em>i \geq 0, \sum</em>{i=1}^n c<em>i=1$ 时，有$\mathrm{E}\left(\sum</em>{i=1}^n c<em>i X_i\right)=E(X)=\mu$ ，即 $\sum</em>{i=1}^n c<em>i X_i$ 是 $\mu$ 的无偏估计。<br>又 $D\left(\sum</em>{i=1}^n c<em>i X_i\right)=\sum</em>{i=1}^n c<em>i^2 D\left(X_i\right)=\sigma^2 \sum</em>{i=1}^n c<em>i^2$<br>由均值不等式 $\sqrt{\frac{1}{n} \sum</em>{i=1}^n c<em>i^2} \geq \frac{1}{n} \sum</em>{i=1}^n c<em>i=\frac{1}{n^{\prime}} \quad$ 即 $\sum</em>{i=1}^n c<em>i^2 \geq \frac{1}{n}$<br>从而， $D\left(\sum</em>{i=1}^n c<em>i X_i\right)=\sigma^2 \sum</em>{i=1}^n c<em>i^2 \geq \frac{\sigma^2}{n}=D(\bar{X})$<br>其中在 $c_1=c_2=\cdots=c_n=\frac{1}{n^{\prime}}$ ，不等式取等号，即 $\sum</em>{i=1}^n c<em>i X_i$ 其中 $c_i \geq 0$ ，<br>$\sum</em>{i=1}^n c_i=1$ 中样本均值 $\bar{x}$ 的方差最小， $\bar{X}$ 是 $\mu$ 的最有效的无偏估计量。</p>
 </blockquote>
 </li>
 <li><p><strong>相合性</strong></p>
 <p>根据格里纹科定理，随着样本量不断增大，经验分布函数逼近真实分布函数，即设$\theta\in\Theta$为未知参数，$\hat{\theta}_n=\hat{\theta}_n(x_1,…,x_n)$是$\theta$的一个估计量，$n$是样本容量，若对任何一个$\epsilon&gt;0$，有</p>
-<p>$$<br>\lim_{n\rightarrow\infty}P(|\hat{\theta}_n-\theta|\geq\epsilon)=0<br>$$</p>
-<p>则称$\hat{\theta}_n$为参数$\theta$的相合估计。</p>
-<p>**定理1：**设$\hat{\theta}_n=\hat{\theta}<em>n(x_1,…,x_n)$是$\theta$的一个估计量，若<br>$$<br>\lim</em>{n\rightarrow\infty}E(\hat{\theta}<em>n)=\theta,\quad\lim</em>{n\rightarrow\infty}Var(\hat{\theta}_n)=0<br>$$</p>
-<p>则$\hat{\theta}_n$是$\theta$的相合估计。</p>
-<p>**定理2：**若$\hat{\theta}<em>{n1},…,\hat{\theta}</em>{nk}$分别是$\theta_1,…,\theta_k$的相合估计，$\eta=g(\theta_1,…,\theta_k)$是$\theta_1,…,\theta_k$的连续函数，则$\hat{\eta}<em>n=g(\hat{\theta}</em>{n1},…,\hat{\theta}_{nk})$是$\eta$的相合估计。</p>
+<script type="math/tex; mode=display">
+\lim_{n\rightarrow\infty}P(|\hat{\theta}_n-\theta|\geq\epsilon)=0</script><p>则称$\hat{\theta}_n$为参数$\theta$的相合估计。</p>
+<p><strong>定理1：</strong>设$\hat{\theta}_n=\hat{\theta}_n(x_1,…,x_n)$是$\theta$的一个估计量，若</p>
+<script type="math/tex; mode=display">
+\lim_{n\rightarrow\infty}E(\hat{\theta}_n)=\theta,\quad\lim_{n\rightarrow\infty}Var(\hat{\theta}_n)=0</script><p>则$\hat{\theta}_n$是$\theta$的相合估计。</p>
+<p><strong>定理2：</strong>若$\hat{\theta}<em>{n1},…,\hat{\theta}</em>{nk}$分别是$\theta<em>1,…,\theta_k$的相合估计，$\eta=g(\theta_1,…,\theta_k)$是$\theta_1,…,\theta_k$的连续函数，则$\hat{\eta}_n=g(\hat{\theta}</em>{n1},…,\hat{\theta}_{nk})$是$\eta$的相合估计。</p>
 <blockquote>
 <p>矩估计一般都具有相合性：</p>
 <ul>
@@ -1746,7 +1902,7 @@
 </blockquote>
 </li>
 <li><p><strong>渐进正态性</strong>（MLE）</p>
-<p>在很一般条件下，总体分布$p(x;\theta)$中的$\theta$的MLE$\hat{\theta}_n$具有相合性和渐进正态性，即$\hat{\theta}<em>n\sim AN(\theta,\frac{1}{nI(\theta)})$，其中$n$为样本容量，$I(\theta)=\int</em>{-\infty}^{\infty}(\frac{\part{lnp}}{\part\theta})^2p(x;\theta)dx$为费希尔信息量。</p>
+<p>在很一般条件下，总体分布$p(x;\theta)$中的$\theta$的MLE$\hat{\theta}<em>n$具有相合性和渐进正态性，即$\hat{\theta}_n\sim AN(\theta,\frac{1}{nI(\theta)})$，其中$n$为样本容量，$I(\theta)=\int</em>{-\infty}^{\infty}(\frac{\part{lnp}}{\part\theta})^2p(x;\theta)dx$为费希尔信息量。</p>
 </li>
 <li><p><strong>充分性</strong>（UMVUE）</p>
 <ul>
@@ -1759,10 +1915,11 @@
 <h3 id="5-2-区间估计-Interval-Estimation"><a href="#5-2-区间估计-Interval-Estimation" class="headerlink" title="5.2 区间估计 Interval Estimation"></a>5.2 区间估计 Interval Estimation</h3><h4 id="5-2-1-区间估计的概念"><a href="#5-2-1-区间估计的概念" class="headerlink" title="5.2.1 区间估计的概念"></a>5.2.1 区间估计的概念</h4><ol>
 <li><p><strong>双侧区间</strong></p>
 <p>设$\theta$是总体的一个参数，其参数空间为$\Theta$，$x_1,…,x_n$是来自该总体的样本，对给定的一个$\alpha\quad(0&lt;\alpha&lt;1)$，假设有两个统计量$\hat{\theta}_L=\hat{\theta}_L(x_1,…,x_n)$和$\hat{\theta}_U=\hat{\theta}_U(x_1,…,x_n)$，若对任意的$\theta\in\Theta$，有</p>
-<p>$$<br>P_\theta(\hat{\theta}_L\leq\theta\leq\hat{\theta}_U)\geq(=)1-\alpha<br>$$</p>
-<p>其中，总体为连续分布时取等号，表示用足了置信水平。称随机区间$[\hat{\theta}_L,\hat{\theta}_U]$为$\theta$的<strong>置信水平为$1-\alpha$的置信区间</strong>，或简称$[\hat{\theta}_L,\hat{\theta}_U]$是$\theta$的**$1-\alpha$置信区间**，$\hat{\theta}_L$和$\hat{\theta}_U$分别称为$\theta$的<strong>置信下限</strong>和<strong>置信上限</strong>。</p>
-<p><strong>Definition</strong>: Assume the population parameter $\theta$ is unknown. If there are two statistics $\hat{\theta}_1=\hat{\theta}_1\left(X_1, X_2, \ldots, X_n\right), \hat{\theta}_2=\hat{\theta}_2\left(X_1, X_2, \ldots, X_n\right)$ and $\hat{\theta}_1&lt;$ $\hat{\theta}_2$ such that for any given $\alpha(0&lt;\alpha&lt;1)$,<br>$$<br>P\left{\hat{\theta}_1&lt;\theta&lt;\hat{\theta}_2\right}=1-\alpha<br>$$</p>
-<p>Then $\left(\hat{\theta}_1, \hat{\theta}_2\right)$ is called a $100 % \times(1-\alpha)$ or $1-\alpha$ confidence interval 置信区间 for $\theta$. Here $100 % \times(1-\alpha)$ or $1-\alpha$ is referred to as confidence level 置信水平.</p>
+<script type="math/tex; mode=display">
+P_\theta(\hat{\theta}_L\leq\theta\leq\hat{\theta}_U)\geq(=)1-\alpha</script><p>其中，总体为连续分布时取等号，表示用足了置信水平。称随机区间$[\hat{\theta}_L,\hat{\theta}_U]$为$\theta$的<strong>置信水平为$1-\alpha$的置信区间</strong>，或简称$[\hat{\theta}_L,\hat{\theta}_U]$是$\theta$的<strong>$1-\alpha$置信区间</strong>，$\hat{\theta}_L$和$\hat{\theta}_U$分别称为$\theta$的<strong>置信下限</strong>和<strong>置信上限</strong>。</p>
+<p><strong>Definition</strong>: Assume the population parameter $\theta$ is unknown. If there are two statistics $\hat{\theta}_1=\hat{\theta}_1\left(X_1, X_2, \ldots, X_n\right), \hat{\theta}_2=\hat{\theta}_2\left(X_1, X_2, \ldots, X_n\right)$ and $\hat{\theta}_1&lt;$ $\hat{\theta}_2$ such that for any given $\alpha(0&lt;\alpha&lt;1)$,</p>
+<script type="math/tex; mode=display">
+P\left\{\hat{\theta}_1<\theta<\hat{\theta}_2\right\}=1-\alpha</script><p>Then $\left(\hat{\theta}_1, \hat{\theta}_2\right)$ is called a $100 \% \times(1-\alpha)$ or $1-\alpha$ confidence interval 置信区间 for $\theta$. Here $100 \% \times(1-\alpha)$ or $1-\alpha$ is referred to as confidence level 置信水平.</p>
 <ul>
 <li>$\theta$ is some determinate number, $\hat{\theta}_1, \hat{\theta}_2$ are random variables, $\left(\hat{\theta}_1, \hat{\theta}_2\right)$ is random interval随机区间。</li>
 <li>$\left(\hat{\theta}_1, \hat{\theta}_2\right)$ contains $\theta$ with a probability of $1-\alpha$, or the probability of $\left(\hat{\theta}_1, \hat{\theta}_2\right)$ containing $\theta$ is $1-\alpha$.</li>
@@ -1770,39 +1927,39 @@
 <li>Therefore, we can say over the collection of all 95% Cls that could be constructed from repeated random samples of size $n$, 95 of all these intervals will contain the parameter $\theta$. The remaining 5 % of all Cls will not contain the the parameter $\theta$.</li>
 </ul>
 <blockquote>
-<p>置信水平$1-\alpha$的频率解释：在大量的区间估计观测值中，至少有$100(1-\alpha)%$包含$\theta$，如下图所示，其置信度为0.95.</p>
+<p>置信水平$1-\alpha$的频率解释：在大量的区间估计观测值中，至少有$100(1-\alpha)\%$包含$\theta$，如下图所示，其置信度为0.95.</p>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/confidence_interval.gif" alt="confidence_interval.gif"></p>
 </blockquote>
 </li>
 <li><p><strong>单侧区间</strong></p>
 <p>设$\hat{\theta}_L=\hat{\theta}_L(x_1,…,x_n)$是统计量，对给定的$\alpha\in(0,1)$和任意的$\theta\in\Theta$，有</p>
-<p>$$<br>P_\theta(\hat{\theta}_L\leq\theta)\geq1-\alpha,\quad\forall\theta\in\Theta<br>$$</p>
-<p>则称$\hat{\theta}_L$为$\theta$的置信水平为$1-\alpha$的<strong>置信下限</strong>。同理，设$\hat{\theta}_U=\hat{\theta}_U(x_1,…,x_n)$是统计量，对给定的$\alpha\in(0,1)$和任意的$\theta\in\Theta$，有</p>
-<p>$$<br>P_\theta(\hat{\theta}_L\geq\theta)\geq1-\alpha,\quad\forall\theta\in\Theta<br>$$</p>
-<p>则称$\hat{\theta}_L$为$\theta$的置信水平为$1-\alpha$的<strong>置信上限</strong>。</p>
+<script type="math/tex; mode=display">
+P_\theta(\hat{\theta}_L\leq\theta)\geq1-\alpha,\quad\forall\theta\in\Theta</script><p>则称$\hat{\theta}_L$为$\theta$的置信水平为$1-\alpha$的<strong>置信下限</strong>。同理，设$\hat{\theta}_U=\hat{\theta}_U(x_1,…,x_n)$是统计量，对给定的$\alpha\in(0,1)$和任意的$\theta\in\Theta$，有</p>
+<script type="math/tex; mode=display">
+P_\theta(\hat{\theta}_L\geq\theta)\geq1-\alpha,\quad\forall\theta\in\Theta</script><p>则称$\hat{\theta}_L$为$\theta$的置信水平为$1-\alpha$的<strong>置信上限</strong>。</p>
 </li>
 </ol>
 <h4 id="5-2-2-区间估计的方法"><a href="#5-2-2-区间估计的方法" class="headerlink" title="5.2.2 区间估计的方法"></a>5.2.2 区间估计的方法</h4><ol>
 <li><p><strong>枢轴量法</strong></p>
-<p><strong><em>Step 1</em></strong>：设法构造一个样本和$\theta$的函数$G=G(x_1,…,x_n,\theta)$使得**$G$的分布不依赖于未知参数**，称具有这种性质的$G$为枢轴量。</p>
+<p><strong><em>Step 1</em></strong>：设法构造一个样本和$\theta$的函数$G=G(x_1,…,x_n,\theta)$使得<strong>$G$的分布不依赖于未知参数</strong>，称具有这种性质的$G$为枢轴量。</p>
 <p><strong><em>Step 2</em></strong>：适当地选择两个常数c，d，使对给定的$\alpha\quad(0&lt;\alpha&lt;1)$，有</p>
-<p>$$<br>P(c\leq G\leq d)=1-\alpha<br>$$</p>
-<p>（在离散场合，将上式等号改为$\geq$）</p>
+<script type="math/tex; mode=display">
+P(c\leq G\leq d)=1-\alpha</script><p>（在离散场合，将上式等号改为$\geq$）</p>
 <p><strong><em>Step 3</em></strong>：假如能将$c\leq G\leq d$进行不等式等价变形化为$\hat{\theta}_L\leq\theta\leq\hat{\theta}_U$，则有</p>
-<p>$$<br>P_\theta(\hat{\theta}_L\leq\theta\leq\hat{\theta}_U)=1-\alpha<br>$$</p>
-<p>表明$[\hat{\theta}_L,\hat{\theta}_U]$是$\theta$的$1-\alpha$同等置信区间。</p>
+<script type="math/tex; mode=display">
+P_\theta(\hat{\theta}_L\leq\theta\leq\hat{\theta}_U)=1-\alpha</script><p>表明$[\hat{\theta}_L,\hat{\theta}_U]$是$\theta$的$1-\alpha$同等置信区间。</p>
 <blockquote>
-<p>**注：**满足条件的c和d有很多，最终选择的目的是希望平均长度$E_\theta(\hat{\theta}_U)-\hat{\theta}_L$尽可能短，但在一些场合中很难做到这一点，因此可以选择c和d，使得两个尾部概率各为$\alpha/2$，即</p>
-<p>$$<br>P_\theta(G&lt;c)=P_\theta(G&gt;d)=\alpha/2<br>$$</p>
-<p>得到<strong>等尾置信区间</strong>。</p>
-</blockquote>
-<blockquote>
+<p><strong>注：</strong>满足条件的c和d有很多，最终选择的目的是希望平均长度$E_\theta(\hat{\theta}_U)-\hat{\theta}_L$尽可能短，但在一些场合中很难做到这一点，因此可以选择c和d，使得两个尾部概率各为$\alpha/2$，即</p>
+<script type="math/tex; mode=display">
+P_\theta(G<c)=P_\theta(G>d)=\alpha/2</script><p>得到<strong>等尾置信区间</strong>。</p>
 <p>例：设$x_1,…,x_n$是来自均匀总体$U(0,\theta)$的一个样本，试对设定的$\alpha\ (0&lt;\alpha&lt;1)$给出$\theta$的$1-\alpha$同等置信区间。</p>
 <p>解：三步法：</p>
 <ul>
-<li>已知$\theta$的最大似然估计为样本的最大次序统计量$x_{(n)}$，而$x_{(n)}/\theta$的密度函数为<br>$$<br> p(y;\theta)=ny^{n-1},\quad 0&lt;y&lt;1<br>$$<br>它与参数$\theta$无关，故可取$x_{(n)}/\theta$作为枢轴量$G$。</li>
-<li>由于$x_{(n)}/\theta$的分布函数为$F(y)=y^n$，$0&lt;y&lt;1$，故$P(c\leq x_{(n)}/\theta\leq d=d^n-c^n)$，因此可以选择适当的c和d满足<br>$$<br> d^n-c^n=1-\alpha<br>$$</li>
-<li>在$0\leq c&lt;d\leq 1$及$d^n-c^n=1-\alpha$的条件下，当$d=1, c=\sqrt[n]{\alpha}$时，$E_\theta(\hat{\theta}<em>U)-\hat{\theta}<em>L$取最小值，所以$[x</em>{(n)},x</em>{(n)}/\sqrt[n]{\alpha}]$是$1-\alpha$置信区间</li>
+<li>已知$\theta$的最大似然估计为样本的最大次序统计量$x<em>{(n)}$，而$x</em>{(n)}/\theta$的密度函数为<script type="math/tex; mode=display">
+ p(y;\theta)=ny^{n-1},\quad 0<y<1</script>它与参数$\theta$无关，故可取$x_{(n)}/\theta$作为枢轴量$G$。</li>
+<li>由于$x<em>{(n)}/\theta$的分布函数为$F(y)=y^n$，$0&lt;y&lt;1$，故$P(c\leq x</em>{(n)}/\theta\leq d=d^n-c^n)$，因此可以选择适当的c和d满足<script type="math/tex; mode=display">
+ d^n-c^n=1-\alpha</script></li>
+<li>在$0\leq c&lt;d\leq 1$及$d^n-c^n=1-\alpha$的条件下，当$d=1, c=\sqrt[n]{\alpha}$时，$E<em>\theta(\hat{\theta}_U)-\hat{\theta}_L$取最小值，所以$[x</em>{(n)},x_{(n)}/\sqrt[n]{\alpha}]$是$1-\alpha$置信区间</li>
 </ul>
 </blockquote>
 </li>
@@ -1810,32 +1967,34 @@
 <h4 id="5-2-3-一些情况下的区间估计"><a href="#5-2-3-一些情况下的区间估计" class="headerlink" title="5.2.3 一些情况下的区间估计"></a>5.2.3 一些情况下的区间估计</h4><ol>
 <li><p><strong>单个正态总体参数的置信区间</strong></p>
 <ul>
-<li><strong>$\sigma$已知时$\mu$的置信区间</strong>：$[\bar{x}-u_{\alpha/2}\sigma/\sqrt{n},\quad\bar{x}+u_{\alpha/2}\sigma/\sqrt{n}]$</li>
-<li><strong>$\sigma$未知时$\mu$的置信区间</strong>：$[\bar{x}-t_{\alpha/2}(n-1)s/\sqrt{n},\quad\bar{x}+t_{\alpha/2}(n-1)s/\sqrt{n}]$</li>
-<li><strong>$\sigma^2$的置信区间（$\mu,\sigma$未知）</strong>：$[(n-1)s^2/\chi^2_{\alpha/2}(n-1),\quad(n-1)s^2/\chi^2_{1-\alpha/2}(n-1)]$</li>
+<li><strong>$\sigma$已知时$\mu$的置信区间</strong>：$[\bar{x}-u<em>{\alpha/2}\sigma/\sqrt{n},\quad\bar{x}+u</em>{\alpha/2}\sigma/\sqrt{n}]$</li>
+<li><strong>$\sigma$未知时$\mu$的置信区间</strong>：$[\bar{x}-t<em>{\alpha/2}(n-1)s/\sqrt{n},\quad\bar{x}+t</em>{\alpha/2}(n-1)s/\sqrt{n}]$</li>
+<li><strong>$\sigma^2$的置信区间（$\mu,\sigma$未知）</strong>：$[(n-1)s^2/\chi^2<em>{\alpha/2}(n-1),\quad(n-1)s^2/\chi^2</em>{1-\alpha/2}(n-1)]$</li>
 </ul>
 </li>
-<li><p><strong>大样本置信区间</strong>：$[\bar{x}-u_{1-\alpha/2}\sqrt{\frac{\bar{x}(1-\bar{x})}{n}},\quad \bar{x}+u_{1-\alpha/2}\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}]$</p>
+<li><p><strong>大样本置信区间</strong>：$[\bar{x}-u<em>{1-\alpha/2}\sqrt{\frac{\bar{x}(1-\bar{x})}{n}},\quad \bar{x}+u</em>{1-\alpha/2}\sqrt{\frac{\bar{x}(1-\bar{x})}{n}}]$</p>
 </li>
 <li><p><strong>两个正态总体下的置信区间</strong></p>
 <ul>
 <li><p><strong>$\mu_1-\mu_2$的置信区间</strong></p>
 <ul>
-<li><strong>$\sigma^2_1$和$\sigma^2_2$已知时</strong>：$[\bar{x}-\bar{y}-u_{1-\alpha/2}\sqrt{\frac{\sigma^2_1}{m}+\frac{\sigma^2_2}{n}},\quad \bar{x}-\bar{y}+u_{1-\alpha/2}\sqrt{\frac{\sigma^2_1}{m}+\frac{\sigma^2_2}{n}}]$</li>
-<li><strong>$\sigma^2_1=\sigma^2_2=\sigma^2$未知时</strong>：<br>$$<br>[\bar{x}-\bar{y}-\sqrt{\frac{m+n}{mn}}s_wt_{1-\alpha/2}(m+n-2),\quad \bar{x}-\bar{y}+\sqrt{\frac{m+n}{mn}}s_wt_{1-\alpha/2}(m+n-2)]<br>$$</li>
-<li><strong>$\sigma^2_2/\sigma^2_1=c$已知时</strong>：$[\bar{x}-\bar{y}-\sqrt{\frac{mc+n}{mn}}s_wt_{1-\alpha/2}(m+n-2),\quad \bar{x}-\bar{y}+\sqrt{\frac{mc+n}{mn}}s_wt_{1-\alpha/2}(m+n-2)]$</li>
-<li><strong>当m和n都很大时的近似置信区间</strong>：$[\bar{x}-\bar{y}-u_{1-\alpha/2}\sqrt{\frac{s^2_x}{m}+\frac{s^2_y}{n}},\quad \bar{x}-\bar{y}+u_{1-\alpha/2}\sqrt{\frac{s^2_x}{m}+\frac{s^2_y}{n}}]$</li>
-<li><strong>一般情况下的近似置信区间</strong>：$[\bar{x}-\bar{y}-s_0t_{1-\alpha/2}(l),\quad \bar{x}-\bar{y}+s_0t_{1-\alpha/2}(l)]$</li>
+<li><strong>$\sigma^2_1$和$\sigma^2_2$已知时</strong>：$[\bar{x}-\bar{y}-u<em>{1-\alpha/2}\sqrt{\frac{\sigma^2_1}{m}+\frac{\sigma^2_2}{n}},\quad \bar{x}-\bar{y}+u</em>{1-\alpha/2}\sqrt{\frac{\sigma^2_1}{m}+\frac{\sigma^2_2}{n}}]$</li>
+<li><strong>$\sigma^2_1=\sigma^2_2=\sigma^2$未知时</strong>：<script type="math/tex; mode=display">
+[\bar{x}-\bar{y}-\sqrt{\frac{m+n}{mn}}s_wt_{1-\alpha/2}(m+n-2),\quad \bar{x}-\bar{y}+\sqrt{\frac{m+n}{mn}}s_wt_{1-\alpha/2}(m+n-2)]</script></li>
+<li><strong>$\sigma^2_2/\sigma^2_1=c$已知时</strong>：$[\bar{x}-\bar{y}-\sqrt{\frac{mc+n}{mn}}s<em>wt</em>{1-\alpha/2}(m+n-2),\quad \bar{x}-\bar{y}+\sqrt{\frac{mc+n}{mn}}s<em>wt</em>{1-\alpha/2}(m+n-2)]$</li>
+<li><strong>当m和n都很大时的近似置信区间</strong>：$[\bar{x}-\bar{y}-u<em>{1-\alpha/2}\sqrt{\frac{s^2_x}{m}+\frac{s^2_y}{n}},\quad \bar{x}-\bar{y}+u</em>{1-\alpha/2}\sqrt{\frac{s^2_x}{m}+\frac{s^2_y}{n}}]$</li>
+<li><strong>一般情况下的近似置信区间</strong>：$[\bar{x}-\bar{y}-s<em>0t</em>{1-\alpha/2}(l),\quad \bar{x}-\bar{y}+s<em>0t</em>{1-\alpha/2}(l)]$</li>
 </ul>
 </li>
-<li><p><strong>$\sigma^2_1/\sigma^2_2$的置信区间</strong>：<br>$$<br>[\frac{s_x^2}{s_y^2}\cdot\frac{1}{F_{1-\alpha/2(m-1,n-1)}},\quad \frac{s_x^2}{s_y^2}\cdot\frac{1}{F_{\alpha/2(m-1,n-1)}}]<br>$$</p>
-</li>
+<li><p><strong>$\sigma^2_1/\sigma^2_2$的置信区间</strong>：</p>
+<script type="math/tex; mode=display">
+[\frac{s_x^2}{s_y^2}\cdot\frac{1}{F_{1-\alpha/2(m-1,n-1)}},\quad \frac{s_x^2}{s_y^2}\cdot\frac{1}{F_{\alpha/2(m-1,n-1)}}]</script></li>
 </ul>
 </li>
 </ol>
 <h2 id="Chapter-6-假设检验-Hypothesis-Testing"><a href="#Chapter-6-假设检验-Hypothesis-Testing" class="headerlink" title="Chapter 6 假设检验 Hypothesis Testing"></a>Chapter 6 假设检验 Hypothesis Testing</h2><h3 id="6-1-假设检验的基本思想和概念"><a href="#6-1-假设检验的基本思想和概念" class="headerlink" title="6.1 假设检验的基本思想和概念"></a>6.1 假设检验的基本思想和概念</h3><ol>
 <li><p><strong>基本思想</strong></p>
-<p>以“女士品茶”为例，对于该女士有没有品茶的能力，有两种假设：该女士没有品茶能力和该女士有品茶能力。在统计上这两个非空不相交参数集合称作<strong>统计假设</strong>，简称<strong>假设</strong>。通过样本对一个假设作出对与不对的判断，则称为该假设的一个<strong>检验</strong>。若检验结果否定该命题，则称<strong>拒绝</strong>这个假设，否则就**接受（不拒绝）**这个假设。</p>
+<p>以“女士品茶”为例，对于该女士有没有品茶的能力，有两种假设：该女士没有品茶能力和该女士有品茶能力。在统计上这两个非空不相交参数集合称作<strong>统计假设</strong>，简称<strong>假设</strong>。通过样本对一个假设作出对与不对的判断，则称为该假设的一个<strong>检验</strong>。若检验结果否定该命题，则称<strong>拒绝</strong>这个假设，否则就<strong>接受（不拒绝）</strong>这个假设。</p>
 <p>Test whether $H_0: \quad \mu=\mu_0$ is correct or not by contradiction 反证法:</p>
 <ul>
 <li>first assume that the null hypothesis $H_0:\mu=\mu_0$ is true.</li>
@@ -1854,59 +2013,40 @@
 <p>The null hypothesis 零假设，denoted by $H_0$, is the hypothesis that is to be tested. The null hypothesis is a statement of no change, no effect or no difference and is assumed true until evidence indicates otherwise.</p>
 <p>The alternative hypothesis 备择假设，denoted by $H_1$, is the hypothesis that in some sense contradicts the null hypothesis and is a statement that we are trying to find evidence to support.</p>
 <p>In general, the null hypothesis is represented by the value of the unknown population parameter is equal to some specific value, i.e.,</p>
-<p>$$<br>H_0 \text { : parameter }=\text { some value } \quad\left(H_0: \quad \mu=\mu_0\right)<br>$$</p>
-<p>The alternative hypothesis is allowed to be either greater than or less than some specific value.<br>$H_1$ : parameter $\neq$ some value two-tailed test 双侧检验<br>$H_1$ : parameter $&gt;$ some value right(upper)-tailed test 单侧检验<br>$H_1$ : parameter $&lt;$ some value left(lower)-tailed test 单侧检验</p>
+<script type="math/tex; mode=display">
+H_0 \text { : parameter }=\text { some value } \quad\left(H_0: \quad \mu=\mu_0\right)</script><p>The alternative hypothesis is allowed to be either greater than or less than some specific value.<br>$H_1$ : parameter $\neq$ some value two-tailed test 双侧检验<br>$H_1$ : parameter $&gt;$ some value right(upper)-tailed test 单侧检验<br>$H_1$ : parameter $&lt;$ some value left(lower)-tailed test 单侧检验</p>
 </blockquote>
 <p><strong><em>Step 2</em>：选择检验统计量，给出拒绝域形式</strong></p>
 <blockquote>
 <p>根据样本计算统计量$Z$（如样本均值、标准差等，称为<strong>检验统计量</strong>），并基于某个法则既可以决定接受$H_0$还是拒绝$H_0$，具体地，当统计量在拒绝域$W$ (rejection region) 中即拒绝$H_0$，在接受域$\overline{W}$ (acceptance region) 中即接受$H_0$。由此可见，<strong>一个拒绝域$W$唯一确定一个检验法则，反之，一个检验法则也唯一确定一个拒绝域。</strong></p>
-<p>**注：**不能用一个样本（例子）证明一个命题（假设成立），但是可以用一个样本（例子）去推翻一个命题。此外，拒绝域与接受域之间有一个模糊域，即统计量恰好符合法则，通常将模糊域归为接受域，因此接受域是复杂的。</p>
+<p><strong>注：</strong>不能用一个样本（例子）证明一个命题（假设成立），但是可以用一个样本（例子）去推翻一个命题。此外，拒绝域与接受域之间有一个模糊域，即统计量恰好符合法则，通常将模糊域归为接受域，因此接受域是复杂的。</p>
 </blockquote>
 <p><strong><em>Step 3</em>：选择显著性水平</strong></p>
 <blockquote>
 <p>假设检验基于<strong>小概率事件</strong>，即小概率事件在一次试验中几乎不会发生，因此选择一个很小的概率值$\alpha$，令$p(拒绝H_0|H_0为真)\leq\alpha$，表示$Z\in W$是一个小概率事件，在一次试验中不应该发生。如果通过样本得到的统计量$z\in W$，即不该发生的小概率事件竟然发生了，那么应该拒绝$H_0$。</p>
 <p>由于向本是随机的，通常做检验时可能做出错误判断，由此引入了两个错误，分别为<strong>第一类错误</strong>和<strong>第二类错误</strong>，如下表所示。</p>
-<table>
-<thead>
-<tr>
-<th align="center">观测数据情况</th>
-<th align="center">总体情况</th>
-<th align="center">总体情况</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center"></td>
-<td align="center">$H_0$为真</td>
-<td align="center">$H_1$为真</td>
-</tr>
-<tr>
-<td align="center">拒绝$H_0$</td>
-<td align="center">第一类错误（拒真）</td>
-<td align="center">正确</td>
-</tr>
-<tr>
-<td align="center">接受$H_0$</td>
-<td align="center">正确</td>
-<td align="center">犯第二类错误（取伪）</td>
-</tr>
-</tbody></table>
+<p>| 观测数据情况 |      总体情况      |       总体情况       |<br>| :—————: | :————————: | :—————————: |<br>|              |     $H_0$为真      |      $H_1$为真       |<br>|  拒绝$H_0$   | 第一类错误（拒真） |         正确         |<br>|  接受$H_0$   |        正确        | 犯第二类错误（取伪） |</p>
 <p>犯第一类错误概率：$\alpha=P(X\in W|H_0)$，即$\alpha=P(拒绝H_0|H_0为真)$；</p>
 <p>犯第二类错误概率：$\beta=P(X\in \overline{W}|H_1)$，即$\beta=P(接受H_0|H_0为假)$。</p>
 <p>Definition: The probability of a type I error 第一类错误，which is usually denoted by $\alpha$, is the probability of rejecting $H_0$ when $H_0$ is true, (“reject the true” 拒真)</p>
-<p>$$<br>\alpha=P{\text { type I error }}=P\left{\text { reject } H_0 \text { when } H_0 \text { true }\right}<br>$$</p>
-<p>Definition: The probability of a type II error 第二类错误, which is usually denoted by $\beta$, is the probability of accepting $H_0$ when $H_1$ is true, (“accept the false” 取伪)</p>
-<p>$$<br>\beta=P{\text { type II error }}=P\left{\text { accept } H_0 \text { when } H_1 \text { true }\right}<br>$$</p>
-<p>可以证明的，在一定样本量下，两类错误概率无法共同减小，但是当样本增加时，可以同时减小。A common practice is to limit $\alpha$ first and then to determine sample size to make $\beta$ as small as possible. 通常限制犯第一类错误的概率，然后适当确定样本容量使犯第二类错误的概率尽可能小。</p>
+<script type="math/tex; mode=display">
+\alpha=P\{\text { type I error }\}=P\left\{\text { reject } H_0 \text { when } H_0 \text { true }\right\}</script><p>Definition: The probability of a type II error 第二类错误, which is usually denoted by $\beta$, is the probability of accepting $H_0$ when $H_1$ is true, (“accept the false” 取伪)</p>
+<script type="math/tex; mode=display">
+\beta=P\{\text { type II error }\}=P\left\{\text { accept } H_0 \text { when } H_1 \text { true }\right\}</script><p>可以证明的，在一定样本量下，两类错误概率无法共同减小，但是当样本增加时，可以同时减小。A common practice is to limit $\alpha$ first and then to determine sample size to make $\beta$ as small as possible. 通常限制犯第一类错误的概率，然后适当确定样本容量使犯第二类错误的概率尽可能小。</p>
 <blockquote>
 <p>证明该问题需要引入是函数，下面将简单介绍势函数，但不对上述结论证明。</p>
 <p>定义：设检验问题$H_0:\theta\in\Theta_0\quad vs\quad H_1:\theta \in \Theta_1$的拒绝域为$W$，则样本观测值$\mathbf{X}$落在拒绝域$W$内的概率称为该检验的<strong>势函数</strong>，记为</p>
-<p>$$<br>g(\theta)=P_\theta(\mathbf{X}\in W),\ \theta\in\Theta=\Theta_0\cup\Theta_1\<br>g(\theta)=\left{\begin{matrix}<br>\alpha(\theta) &amp; \theta\in\Theta_0\<br>1-\beta(\theta) &amp;\theta\in\Theta_1<br>\end{matrix}\right.<br>$$</p>
-</blockquote>
+<script type="math/tex; mode=display">
+g(\theta)=P_\theta(\mathbf{X}\in W),\ \theta\in\Theta=\Theta_0\cup\Theta_1\\
+g(\theta)=\left\{\begin{matrix}
+\alpha(\theta) & \theta\in\Theta_0\\
+1-\beta(\theta) &\theta\in\Theta_1
+\end{matrix}\right.</script></blockquote>
 <p>第一类错误概率$\alpha$即为初始设定的很小的概率，称为<strong>置信水平 significance level</strong>，称该检验时<strong>显著性水平为$\alpha$的显著性检验</strong>，简称<strong>水平为$\alpha$的检验</strong>。为了尽量减少两类错误，可简单的将其简化为减小第一类错误概率（第二类错误概率难求）。常用的$\alpha=0.05$有时也选择0.1或0.01。</p>
 </blockquote>
 <p><strong><em>Step 4</em>：给出拒绝域</strong></p>
 <blockquote>
-<p>为了使得第一类错误的概率尽可能小，给定一个较小的$\alpha$，并选择一个数$k$，设定若$Z\geq k$拒绝$H_0$，使得$P(u=|\frac{z-\mu}{\sigma/\sqrt{n}}|\geq k)\leq \alpha$，所以$k=u_{\alpha/2}$。</p>
+<p>为了使得第一类错误的概率尽可能小，给定一个较小的$\alpha$，并选择一个数$k$，设定若$Z\geq k$拒绝$H<em>0$，使得$P(u=|\frac{z-\mu}{\sigma/\sqrt{n}}|\geq k)\leq \alpha$，所以$k=u</em>{\alpha/2}$。</p>
 <p>注：算拒绝域时，需基于标准正态分布。</p>
 </blockquote>
 <p><strong><em>Step 5</em>：做出判断</strong></p>
@@ -1921,7 +2061,7 @@
 <li>若$\alpha&lt;p$，则在显著性水平$\alpha$下接受$H_0$.</li>
 </ul>
 <blockquote>
-<p>**注：**一般以$p&lt;0.05$ 为有统计学差异， $p&lt;0.01$ 为有显著统计学差异，$p&lt;0.001$为有极其显著的统计学差异。</p>
+<p><strong>注：</strong>一般以$p&lt;0.05$ 为有统计学差异， $p&lt;0.01$ 为有显著统计学差异，$p&lt;0.001$为有极其显著的统计学差异。</p>
 </blockquote>
 </li>
 </ol>
@@ -1955,54 +2095,54 @@
 <ol>
 <li>Establish hypothesis</li>
 </ol>
-<p>$$<br>H_0: \mu=\mu_0 \text { vs. } H_1: \mu&gt;\mu_0\left(\text { or } H_1: \mu&lt;\mu_0\right)<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+H_0: \mu=\mu_0 \text { vs. } H_1: \mu>\mu_0\left(\text { or } H_1: \mu<\mu_0\right)</script><ol>
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
-<p>$$<br>u=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+u=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}</script><ol>
 <li><p>Find $u_\alpha$ for a given significance level of $\alpha$</p>
 </li>
 <li><p>Make statistical inference:</p>
-<p>If $u&gt;u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $u \leq u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$;<br>or<br>(If $u&lt;-u_\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $u \geq-u_\alpha$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
+<p>If $u&gt;u<em>\alpha$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $u \leq u</em>\alpha$, then $H<em>0$ is accepted at a significance level of $\alpha$;<br>or<br>(If $u&lt;-u</em>\alpha$, then $H<em>0$ is rejected at a significance level of $\alpha$.<br>If $u \geq-u</em>\alpha$, then $H_0$ is accepted at a significance level of $\alpha$.)</p>
 </li>
 </ol>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190021954.png" alt="image-20241218190021954"></p>
 <p><strong>One-sample t test for the mean of a normal distribution with unknown variance</strong></p>
 <p>We want to test</p>
-<p>$$<br>H_0:\mu=\mu_0 \text { vs. } H_1: \mu \neq \mu_0<br>$$</p>
-<p>If the variance $\sigma^2$ is unknown, we just replace $\sigma^2$ by sample variance $S^2$. Under $H_0: \quad \mu=\mu_0$, we have</p>
-<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br>$$</p>
-<p>Then the steps for two-tailed $t$ test, which is similar to one-sample $u$ test, is given below:</p>
+<script type="math/tex; mode=display">
+H_0:\mu=\mu_0 \text { vs. } H_1: \mu \neq \mu_0</script><p>If the variance $\sigma^2$ is unknown, we just replace $\sigma^2$ by sample variance $S^2$. Under $H_0: \quad \mu=\mu_0$, we have</p>
+<script type="math/tex; mode=display">
+t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)</script><p>Then the steps for two-tailed $t$ test, which is similar to one-sample $u$ test, is given below:</p>
 <ol>
 <li>Establish hypothesis $H_0: \mu=\mu_0$ vs. $\quad H_1: \mu \neq \mu_0$</li>
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
-<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}</script><ol>
 <li><p>Find $t_{\frac{\alpha}{2}}(n-1)$ for a given significance level of $\alpha$</p>
 </li>
 <li><p>Make statistical inference:</p>
-<p>If $|t|&gt;t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $|t| \leq t_{\frac{\alpha}{2}}(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.</p>
+<p>If $|t|&gt;t<em>{\frac{\alpha}{2}}(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $|t| \leq t</em>{\frac{\alpha}{2}}(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.</p>
 <p>Remark: The above test procedure is called a $\boldsymbol{t}$ test because the test statistic</p>
-<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)<br>$$</p>
-<p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190503280.png" alt="image-20241218190503280"></p>
+<script type="math/tex; mode=display">
+t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}} \sim t(n-1)</script><p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190503280.png" alt="image-20241218190503280"></p>
 </li>
 <li><p>The steps for one-sample t test in one-tailed case</p>
 <ol>
 <li>Establish hypothesis</li>
 </ol>
-<p>$$<br>H_0: \mu=\mu_0 \text { vs. } H_1: \mu&gt;\mu_0\left(\text { or } H_1: \mu&lt;\mu_0\right)<br>$$</p>
-<ol start="2">
+<script type="math/tex; mode=display">
+H_0: \mu=\mu_0 \text { vs. } H_1: \mu>\mu_0\left(\text { or } H_1: \mu<\mu_0\right)</script><ol>
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
-<p>$$<br>t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}<br>$$</p>
-<ol start="3">
+<script type="math/tex; mode=display">
+t=\frac{\bar{x}-\mu_0}{S / \sqrt{n}}</script><ol>
 <li><p>Find $t_\alpha$ for a given significance level of $\alpha$.</p>
 </li>
 <li><p>Make statistical inference:</p>
 <ul>
-<li>If $t&gt;t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $t \leq t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$;<br>or<br>If $t&lt;-t_\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $t \geq-t_\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.)</li>
+<li>If $t&gt;t<em>\alpha(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.<br>If $t \leq t</em>\alpha(n-1)$, then $H<em>0$ is accepted at a significance level of $\alpha$;<br>or<br>If $t&lt;-t</em>\alpha(n-1)$, then $H<em>0$ is rejected at a significance level of $\alpha$.<br>If $t \geq-t</em>\alpha(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.)</li>
 </ul>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218190646691.png" alt="image-20241218190646691"></p>
 </li>
@@ -2012,23 +2152,23 @@
 <p><strong>One-sample $\chi^2$ test for the variance of a normal distribution</strong></p>
 <p>If $X_1, X_2, \ldots, X_n$ are random sample from an $N\left(\mu, \sigma^2\right)$ distribution with unknown $\mu$ and $\sigma^2$.</p>
 <p>We want to test the hypothesis</p>
-<p>$$<br>H_0: \sigma^2=\sigma_0^2 \quad \text { vs. } \quad H_1: \sigma^2 \neq \sigma_0^2<br>$$</p>
-<p>Here $\sigma_0^2$ is known.</p>
+<script type="math/tex; mode=display">
+H_0: \sigma^2=\sigma_0^2 \quad \text { vs. } \quad H_1: \sigma^2 \neq \sigma_0^2</script><p>Here $\sigma_0^2$ is known.</p>
 <p>Under $H_0: \sigma^2=\sigma_0^2$, consider $S^2$ is unbiased estimator of $\sigma^2$, we known that</p>
-<p>$$<br>\chi^2=\frac{(n-1) S^2}{\sigma_0^2} \sim \chi^2(n-1)<br>$$</p>
-<p>Two-tailed test $H_0: \sigma^2=\sigma_0^2 ; \quad H_1: \sigma^2 \neq \sigma_0^2$</p>
+<script type="math/tex; mode=display">
+\chi^2=\frac{(n-1) S^2}{\sigma_0^2} \sim \chi^2(n-1)</script><p>Two-tailed test $H_0: \sigma^2=\sigma_0^2 ; \quad H_1: \sigma^2 \neq \sigma_0^2$</p>
 <p>Steps:</p>
 <ol>
 <li>Establish hypothesis $H_0: \sigma^2=\sigma_0^2$ vs. $H_1: \sigma^2 \neq \sigma_0^2$</li>
 <li>Calculate the value of test statistic according to observations</li>
 </ol>
-<p>$$<br>\chi^2=\frac{(n-1) S^2}{\sigma_0^2}<br>$$</p>
-<ol start="3">
-<li><p>Find $\chi_{\alpha / 2}^2(n-1)$ and $\chi_{1-\frac{\alpha}{2}}^2(n-1)$ for a given significance level of $\alpha$.</p>
+<script type="math/tex; mode=display">
+\chi^2=\frac{(n-1) S^2}{\sigma_0^2}</script><ol>
+<li><p>Find $\chi<em>{\alpha / 2}^2(n-1)$ and $\chi</em>{1-\frac{\alpha}{2}}^2(n-1)$ for a given significance level of $\alpha$.</p>
 </li>
 <li><p>Make statistical inference</p>
-<p>If $\chi^2&gt;\chi_{\frac{\alpha}{2}}^2(n-1)$ or $\chi^2&lt;\chi_{1-\frac{\alpha}{2}}^2(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.</p>
-<p>If $\chi_{1-\frac{\alpha}{2}}^2(n-1)&lt;\chi^2&lt;\chi_{\alpha / 2}^2(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.</p>
+<p>If $\chi^2&gt;\chi<em>{\frac{\alpha}{2}}^2(n-1)$ or $\chi^2&lt;\chi</em>{1-\frac{\alpha}{2}}^2(n-1)$, then $H_0$ is rejected at a significance level of $\alpha$.</p>
+<p>If $\chi<em>{1-\frac{\alpha}{2}}^2(n-1)&lt;\chi^2&lt;\chi</em>{\alpha / 2}^2(n-1)$, then $H_0$ is accepted at a significance level of $\alpha$.</p>
 </li>
 </ol>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20241218134633679.png" alt="image-20241218134633679"></p>
@@ -2058,69 +2198,69 @@
 <li><p>The new population (i.e., all the possible differences) can be understood as a result caused by many minute independent random factors, and be regarded to follow a normal distribution $N\left(\mu_d, \sigma_d^2\right)$, here $\mu_d, \sigma_d^2$ are the population mean and population variance respectively.</p>
 </li>
 <li><p>To test whether there is a significant difference between th-5321`2is two samples implies to test the whether population mean</p>
-<p>$$<br>\mu_d=0<br>$$</p>
-<p>Hence,</p>
-<p>$$<br>H_0: \mu_d=0 \quad \text { vs. } \quad H_1: \mu_d \neq 0<br>$$</p>
-<p>The hypothesis testing problem is reduced to one-sample $t$ test for mean with unknown variance $\sigma_d^2$ based on differences $d_i(i=1,2, \ldots, n)$.</p>
+<script type="math/tex; mode=display">
+\mu_d=0</script><p>Hence,</p>
+<script type="math/tex; mode=display">
+H_0: \mu_d=0 \quad \text { vs. } \quad H_1: \mu_d \neq 0</script><p>The hypothesis testing problem is reduced to one-sample $t$ test for mean with unknown variance $\sigma_d^2$ based on differences $d_i(i=1,2, \ldots, n)$.</p>
 <p>The test statistic is</p>
-<p>$$<br>t=\frac{\bar{d}-\mu_d}{S_d / \sqrt{n}}=\frac{\bar{d}}{S_d / \sqrt{n}}<br>$$</p>
-<p>Where:<br>$\bar{d}$ is the sample mean of differences $d_i(i=1,2, \ldots, n)$<br>$S_d$ is the sample standard deviation of differences $d_i(i=1,2, \ldots, n)$ $n$ is the number of matched pairs.</p>
+<script type="math/tex; mode=display">
+t=\frac{\bar{d}-\mu_d}{S_d / \sqrt{n}}=\frac{\bar{d}}{S_d / \sqrt{n}}</script><p>Where:<br>$\bar{d}$ is the sample mean of differences $d_i(i=1,2, \ldots, n)$<br>$S_d$ is the sample standard deviation of differences $d_i(i=1,2, \ldots, n)$ $n$ is the number of matched pairs.</p>
 </li>
 </ol>
 </li>
 <li><p>Two-sample t test for independent samples</p>
-<p>Now we test the equality of two means of two independent samples. Suppose $X_1, X_2, \ldots, X_{n_1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y_{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent. The means and variances in these two samples are denoted by $\bar{x}, \bar{y}, S_1^2, S_2^2$ respectively.</p>
+<p>Now we test the equality of two means of two independent samples. Suppose $X<em>1, X_2, \ldots, X</em>{n<em>1} \sim N\left(\mu_1, \sigma_1^2\right), Y_1, Y_2, \ldots, Y</em>{n_2} \sim N\left(\mu_2, \sigma_2^2\right)$ and these two random samples are independent. The means and variances in these two samples are denoted by $\bar{x}, \bar{y}, S_1^2, S_2^2$ respectively.</p>
 <p>We want to test the hypothesis</p>
-<p>$$<br>H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2<br>$$</p>
-<p>We will base the significance test on the difference between the two sample means, $\bar{x}-\bar{y}$.</p>
+<script type="math/tex; mode=display">
+    H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2</script><p>We will base the significance test on the difference between the two sample means, $\bar{x}-\bar{y}$.</p>
 <p>Assume variances $\sigma_1^2, \sigma_2^2$ are known.</p>
 <p>Frist from the sampling distribution of $\bar{x}-\bar{y}$, we have</p>
-<p>$$<br>u=\frac{\bar{x}-\bar{y}-\left(\mu_1-\mu_2\right)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}} \sim N(0,1)<br>$$</p>
-<p>Under $H_0: \quad \mu_1=\mu_2$,</p>
-<p>$$<br>u=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}} \sim N(0,1)<br>$$</p>
-<p>Then the test</p>
-<p>$$<br>H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2<br>$$</p>
-<p>can be performed similarly to one-sample $\boldsymbol{u}$ test using test statistic</p>
-<p>$$<br>u=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}<br>$$</p>
-<p>Assume variances $\sigma_1^L, \sigma_2^L$ are unknown and the variances are the same, i.e., $\sigma_1^2=\sigma_2^2=\sigma^2$.</p>
+<script type="math/tex; mode=display">
+u=\frac{\bar{x}-\bar{y}-\left(\mu_1-\mu_2\right)}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}} \sim N(0,1)</script><p>Under $H_0: \quad \mu_1=\mu_2$,</p>
+<script type="math/tex; mode=display">
+    u=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}} \sim N(0,1)</script><p>Then the test</p>
+<script type="math/tex; mode=display">
+    H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2</script><p>can be performed similarly to one-sample $\boldsymbol{u}$ test using test statistic</p>
+<script type="math/tex; mode=display">
+    u=\frac{\bar{x}-\bar{y}}{\sqrt{\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}}}</script><p>Assume variances $\sigma_1^L, \sigma_2^L$ are unknown and the variances are the same, i.e., $\sigma_1^2=\sigma_2^2=\sigma^2$.</p>
 <p>Similarly, to test $H_0: \mu_1=\mu_2$, we first consider the sampling distribution $\bar{X}-\bar{Y}$. From chapter 4 , we know</p>
-<p>$$<br>\frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)<br>$$</p>
-<p>where</p>
-<p>$$<br>\left.S^2=\frac{\left(n_1-1\right) S_1^2+\left(n_2-1\right) S_2^2}{n_1+n_2-2} \quad \text { (if } n_1=n_2, \quad S^2=\frac{S_1^2+S_2^2}{2}\right)<br>$$</p>
-<p>Then the test</p>
-<p>$$<br>H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2<br>$$</p>
-<p>with equal variances can be performed similarly to one-sample $t$ test using test statistic</p>
-<p>$$<br>t=\frac{\bar{x}-\bar{y}}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}<br>$$</p>
-<p>with</p>
-<p>$$<br>S^2=\frac{\left(n_1-1\right) S_1^2+\left(n_2-1\right) S_2^2}{n_1+n_2-2} .<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+    \frac{(\bar{X}-\bar{Y})-\left(\mu_1-\mu_2\right)}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}} \sim t\left(n_1+n_2-2\right)</script><p>where</p>
+<script type="math/tex; mode=display">
+    \left.S^2=\frac{\left(n_1-1\right) S_1^2+\left(n_2-1\right) S_2^2}{n_1+n_2-2} \quad \text { (if } n_1=n_2, \quad S^2=\frac{S_1^2+S_2^2}{2}\right)</script><p>Then the test</p>
+<script type="math/tex; mode=display">
+    H_0: \quad \mu_1=\mu_2 \quad \text { vs. } \quad H_1: \mu_1 \neq \mu_2</script><p>with equal variances can be performed similarly to one-sample $t$ test using test statistic</p>
+<script type="math/tex; mode=display">
+    t=\frac{\bar{x}-\bar{y}}{S \sqrt{\frac{1}{n_1}+\frac{1}{n_2}}}</script><p>with</p>
+<script type="math/tex; mode=display">
+S^2=\frac{\left(n_1-1\right) S_1^2+\left(n_2-1\right) S_2^2}{n_1+n_2-2} .</script></li>
 <li><p>Testing for the equality of two variances</p>
 <p>In the following sections, we shall test</p>
 <blockquote>
 <p>The equality of two variances 方差齐性检验</p>
 </blockquote>
 <p>We want to test</p>
-<p>$$<br> H_0: \sigma_1^2=\sigma_2^2 \quad \text { vs. } \quad H_1: \sigma_1^2 \neq \sigma_2^2<br>$$</p>
-<p>Similar to the idea of one-sample $\chi^2$ test for variance, this test is also based on the ratio of sample variance $\frac{S_1^2}{S_2^2}$ rather than the difference $S_1^2-$ $S_2^2$</p>
+<script type="math/tex; mode=display">
+ H_0: \sigma_1^2=\sigma_2^2 \quad \text { vs. } \quad H_1: \sigma_1^2 \neq \sigma_2^2</script><p>Similar to the idea of one-sample $\chi^2$ test for variance, this test is also based on the ratio of sample variance $\frac{S_1^2}{S_2^2}$ rather than the difference $S_1^2-$ $S_2^2$</p>
 <p>From the sampling distribution of $\frac{S_1^2}{S_2^2}$ in chapter 4 , we have</p>
-<p>$$<br>F=\frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)<br>$$</p>
-<p>Under $H_0: \sigma_1^2=\sigma_2^2$, it follows that</p>
-<p>$$<br>F=\frac{S_1^2}{S_2^2} \sim F\left(n_1-1, n_2-1\right)<br>$$</p>
-<p>Now steps for the equality of two variances is given below.</p>
+<script type="math/tex; mode=display">
+F=\frac{S_1^2 / \sigma_1^2}{S_2^2 / \sigma_2^2} \sim F\left(n_1-1, n_2-1\right)</script><p>Under $H_0: \sigma_1^2=\sigma_2^2$, it follows that</p>
+<script type="math/tex; mode=display">
+F=\frac{S_1^2}{S_2^2} \sim F\left(n_1-1, n_2-1\right)</script><p>Now steps for the equality of two variances is given below.</p>
 </li>
 <li><p>Steps for F test</p>
 <ol>
 <li><p>Establish hypothesis</p>
-<p>$$<br>H_0: \sigma_1^2=\sigma_2^2 \quad \text { vs. } \quad H_1: \sigma_1^2 \neq \sigma_2^2<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+H_0: \sigma_1^2=\sigma_2^2 \quad \text { vs. } \quad H_1: \sigma_1^2 \neq \sigma_2^2</script></li>
 <li><p>Calculate the value of test statistic according to observations</p>
-<p>$$<br>F=\frac{S_1^2}{S_2^2}<br>$$</p>
-<p>(To simplify the calculation, we normally choose the larger variance as numerator, such that $F=\frac{s_1^2}{s_2^2}&gt;1$).</p>
+<script type="math/tex; mode=display">
+F=\frac{S_1^2}{S_2^2}</script><p>(To simplify the calculation, we normally choose the larger variance as numerator, such that $F=\frac{s_1^2}{s_2^2}&gt;1$).</p>
 </li>
 <li><p>Find $F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)$ for a given significance level $\alpha$.</p>
 <p>Also, according to the property $F$ distribution, we have</p>
-<p>$$<br>F_{1-\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)=\frac{1}{F_{\frac{\alpha}{2}}\left(n_2-1, n_1-1\right)}&lt;1&lt;F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right) .<br>$$</p>
-<p>Then it suffices to find the critical value $F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)$.</p>
+<script type="math/tex; mode=display">
+F_{1-\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)=\frac{1}{F_{\frac{\alpha}{2}}\left(n_2-1, n_1-1\right)}<1<F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right) .</script><p>Then it suffices to find the critical value $F_{\frac{\alpha}{2}}\left(n_1-1, n_2-1\right)$.</p>
 </li>
 </ol>
 </li>
@@ -2835,7 +2975,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">167.9k</span>
             
             
             
