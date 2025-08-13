@@ -345,6 +345,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -445,18 +458,15 @@
 <p>如果对这种表示顺序关系的DAG进行拓扑排序， 我们便能得到一个恰当的工作顺序。</p>
 <p>拓扑排序不是用于将n个数从小到大排序，而是对于一个DAG，对图上的点进行排序，使得对于图上的任意一条有向边(u, v)，在排序后的序列中，u出现在v之前。</p>
 <p>如何进行拓扑排序：</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>用边表存下边，记录下每个点的入度 (即有多少条边以该点为终点)</p>
-</li>
-<li class="lvl-2">
-<p>先将所有入度为0的点加入操作队列<br>
+<ul>
+<li>用边表存下边，记录下每个点的入度 (即有多少条边以该点为终点)</li>
+<li>先将所有入度为0的点加入操作队列<br>
 • 在操作队列中<br>
 • 将队头设为操作点，并弹出队头<br>
-• 将操作点相连的边从图中删除（实际实现中我们只需要将该点能到达的点的入度减一）<br>
+• 将操作点相连的边从图中删除<br>
+（实际实现中我们只需要将该点能到达的点的入度减一）<br>
 • 查看该点能到达的点是否有入度为0的点，有的话将其加入队列<br>
-• 此时点进入队列时的标号就是一种可行的拓扑排序</p>
-</li>
+• 此时点进入队列时的标号就是一种可行的拓扑排序</li>
 </ul>
 
                 
@@ -1168,7 +1178,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

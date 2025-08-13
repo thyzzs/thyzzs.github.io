@@ -343,6 +343,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -441,19 +454,11 @@
             <div id="articleContent">
                 <h2 id="技术栈">技术栈</h2>
 <h3 id="程序设计">程序设计</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>C++ 基本语法</p>
-</li>
-<li class="lvl-2">
-<p>Python 基本语法</p>
-</li>
-<li class="lvl-2">
-<p>常用算法</p>
-</li>
-<li class="lvl-2">
-<p>数据结构</p>
-</li>
+<ul>
+<li>C++ 基本语法</li>
+<li>Python 基本语法</li>
+<li>常用算法</li>
+<li>数据结构</li>
 </ul>
 <blockquote>
 <p>算法与数据结构大纲参照 Luogu-Problem-List</p>
@@ -1162,7 +1167,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

@@ -343,6 +343,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -452,18 +465,10 @@
 <p>下面是题面部分：</p>
 <p>你需要维护一个序列，并支持如下几种操作：</p>
 <ol>
-<li class="lvl-3">
-<p>给区间 [l,r] 内的所有数字加上 x。</p>
-</li>
-<li class="lvl-3">
-<p>将区间 [l,r] 内的所有数字赋值为 x。</p>
-</li>
-<li class="lvl-3">
-<p>求区间 [l,r] 内所有数字中第 x 小的数字（重复数字多次计算）。</p>
-</li>
-<li class="lvl-3">
-<p>求$ ∑_{i=l}^r a_i^x\mod y $ 的值。</p>
-</li>
+<li>给区间 [l,r] 内的所有数字加上 x。</li>
+<li>将区间 [l,r] 内的所有数字赋值为 x。</li>
+<li>求区间 [l,r] 内所有数字中第 x 小的数字（重复数字多次计算）。</li>
+<li>求$ ∑_{i=l}^r a_i^x\mod y $ 的值。</li>
 </ol>
 <p>题目保证数据随机。</p>
 <hr>
@@ -491,15 +496,9 @@
 <p>给出一个区间 [l,r] 和一个位置 pos ，怎么把这个区间分割为 [l,pos−1] 和 [pos,r] 两个区间呢？</p>
 <p>大致流程很简单：</p>
 <ol>
-<li class="lvl-3">
-<p>先在 ODT 中找到含有 pos 位置的区间。</p>
-</li>
-<li class="lvl-3">
-<p>如果 pos 已经是一个区间的左端点，则无需分割。</p>
-</li>
-<li class="lvl-3">
-<p>否则我们把原来的区间删除，插入两个新区间。</p>
-</li>
+<li>先在 ODT 中找到含有 pos 位置的区间。</li>
+<li>如果 pos 已经是一个区间的左端点，则无需分割。</li>
+<li>否则我们把原来的区间删除，插入两个新区间。</li>
 </ol>
 <p>详细代码如下：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">auto</span> <span class="token function">split</span><span class="token punctuation">(</span><span class="token keyword">int</span> pos<span class="token punctuation">)</span>
@@ -532,12 +531,8 @@
 <h4 id="Part-3-4-其他操作">Part 3.4 其他操作</h4>
 <p>所有区间操作都可以套这样的一个模板：</p>
 <ol>
-<li class="lvl-3">
-<p>先 <code>split</code> 右端点，再 <code>split</code> 左端点，获得两个端点（左闭右开）的迭代器。</p>
-</li>
-<li class="lvl-3">
-<p>对两个端点之间的所有区间暴力更改。</p>
-</li>
+<li>先 <code>split</code> 右端点，再 <code>split</code> 左端点，获得两个端点（左闭右开）的迭代器。</li>
+<li>对两个端点之间的所有区间暴力更改。</li>
 </ol>
 <p>代码差不多长这样：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">update</span><span class="token punctuation">(</span><span class="token keyword">int</span> l<span class="token punctuation">,</span> <span class="token keyword">int</span> r<span class="token punctuation">)</span>
@@ -1413,7 +1408,7 @@ set<span class="token operator">&lt;</span>node<span class="token operator">&gt;
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

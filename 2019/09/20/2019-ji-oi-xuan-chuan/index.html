@@ -347,6 +347,19 @@ OI学什么？">
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -453,26 +466,26 @@ OI学什么？">
 <p>在义务教育阶段任何一所学校都<strong>不会</strong>涉及到有关OI的知识。</p>
 <p>正因为如此，无论是计算机小白，还是理科大佬，都可以成为一名OIer，<strong>从零起步</strong>学习OI。</p>
 <h3 id="OI竞赛有哪些活动？">OI竞赛有哪些活动？</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p><s>全国青少年信息学奥林匹克联赛(NOIP, National Olympiad in Informatics in Provinces)，即省级联赛，分为10月举办的初赛和11月举办的复赛。</s></p>
-<ul class="lvl-2">
-<li class="lvl-4">已替代为非专业级软件能力认证(CSP, Certified Software Professional)，分为10月举办的第一轮和11月举办的第二轮。</li>
+<ul>
+<li>已替代为非专业级软件能力认证(CSP, Certified Software Professional)，分为10月举办的第一轮和11月举办的第二轮。</li>
 </ul>
 </li>
-<li class="lvl-2">
+<li>
 <p>全国青少年信息学奥林匹克冬令营(NOIWC, National Olympiad in Informatics Winter Camp)，一般于次年2月举办。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>亚洲与太平洋地区信息学奥赛(APIO, Asia Pacific Informatics Olympiad)，5月举办。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>IOI中国代表队选拔赛(CTS<s>C</s>, China Team Selection <s>Competition</s>)，5月举办。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>全国青少年信息学奥林匹克竞赛(NOI, National Olympiad in Informatics)，即全国决赛，一般于7月举办。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>国际信息学奥林匹克(IOI)，中国是世界公认的信息学奥林匹克竞赛大国，在IOI中奖牌数及金牌数位居世界第一。</p>
 </li>
 </ul>
@@ -1230,7 +1243,7 @@ kkksc03: 信息学竞赛全攻略2：为什么要参加竞赛</p>
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

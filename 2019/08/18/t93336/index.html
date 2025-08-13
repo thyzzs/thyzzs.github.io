@@ -8,14 +8,12 @@
     <meta name="description" content="传送门
 30%的做法
 
-
 暴力枚举删掉哪些数即可，复杂度$O(n \log (\max(a_i)) \times 2^n)$
-
 
 另外20%的做法
 
 
-枚举删掉一些数后的最大公因数$g$，那么不能被$g$整除的数的个数即为要删的数的个数，对">
+枚举删掉一些数后的最大公因数$g$，那么不能被$g$整除的数的个数即为要删的数的个数，对结果">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -353,6 +351,19 @@
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -451,44 +462,42 @@
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93284">传送门</a></p>
 <h3 id="30-的做法">30%的做法</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>暴力枚举删掉哪些数即可，复杂度$O(n \log (\max(a_i)) \times 2^n)$</p>
-</li>
+<ul>
+<li>暴力枚举删掉哪些数即可，复杂度$O(n \log (\max(a_i)) \times 2^n)$</li>
 </ul>
 <h3 id="另外20-的做法">另外20%的做法</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>枚举删掉一些数后的最大公因数$g$，那么不能被$g$整除的数的个数即为要删的数的个数，对结果取$\min$即可</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>复杂度$O(n \times \max(a_i))$</p>
 </li>
 </ul>
 <h3 id="100-的做法">100%的做法</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>首先，用这个序列的$\gcd$去除每个$a_i$，得到一个序列$b_i$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>序列$b_i$的$\gcd=1$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>问题转化为最少删掉多少个数使得$b_i$的$\gcd&gt;1$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>我们删掉一些数以后使得存在一个质数$p$，能整除剩下的所有$b$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>我们可以统计$b_i$在$[1,10^6]$每个值有多少个点</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>做一次埃筛，在筛的过程中可以顺便统计出每个素数能整除多少个$b_i$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>我们取能整除最多$b_i$的那个素数即可</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>复杂度与埃筛相同，$O(m \log \log m)$ , $m=\max(a_i)$</p>
 </li>
 </ul>
@@ -1253,7 +1262,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

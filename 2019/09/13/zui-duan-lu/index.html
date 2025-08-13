@@ -347,6 +347,19 @@ Dijkstra只能用于无负权边的图。
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -449,18 +462,18 @@ Dijkstra只能用于无负权边的图。
 <p>设图$G=(V,E)$所有顶点的集合为$V$，起点为$s$,最短路径树中包含的顶点集合为$S$。</p>
 <p>在各计算步骤中，我们将选岀最短路径树的边和顶点并将其添加至$S$。</p>
 <p>对于各顶点$i$，设仅经由$S$内顶点的$s$到$i$的最短路径成本为$d[i]$，$i$在最短路径树中的父结点为$p[i]$。</p>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>初始状态下将$S$置空。</p>
 <p>初始化$S$的$d[s] = 0$；除s以外，所有属于V的顶点i的$d[i]=\infty$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>循环进行下述处理，直至$S=F$为止。</p>
-<ul class="lvl-2">
-<li class="lvl-4">
+<ul>
+<li>
 <p>从$V-S$中选岀$d[u]$最小的顶点$u$</p>
 </li>
-<li class="lvl-4">
+<li>
 <p>将$u$添加$S$至，同时将与$u$相邻且属于$V-S$的所有顶点$v$的值按下述方式更新：</p>
 </li>
 </ul>
@@ -493,15 +506,14 @@ Dijkstra只能用于无负权边的图。
                     d<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> d<span class="token punctuation">[</span>u<span class="token punctuation">]</span> <span class="token operator">+</span> M<span class="token punctuation">[</span>u<span class="token punctuation">]</span><span class="token punctuation">[</span>v<span class="token punctuation">]</span>
                     p<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> u
                     color<span class="token punctuation">[</span>v<span class="token punctuation">]</span> <span class="token operator">=</span> GRAY<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>邻接矩阵实现的Dijkstra算法复杂度为$O(|V|^2)$。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为$O(|E|)$。但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是$O(|V|^2)$。</p>
+<p>邻接矩阵实现的Dijkstra算法复杂度为$O(|V|^2)$。使用邻接表时，更新最短距离只需访问每条边一次，因此更新最短距离复杂度为$O(|E|)$。<br>
+但是要枚举所有顶点来查找下一个使用的顶点，因此最终复杂度还是$O(|V|^2)$。</p>
 <h4 id="Dijkstra堆优化">Dijkstra堆优化</h4>
 <p>把每个顶点当前的最短距离用堆维护，可以省去松弛和查找操作，直接把节点和数据丢进优先队列。</p>
 <p>更新最短距离时，每次从堆中取出的最小值就是下一次要使用的顶点。</p>
 <p>在使用堆优化时，加入堆的应为当前将要被更新的点的编号和当前距离；而当距离被更新时，应新加入一个包含当前点的编号和当前距离的节点。</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>在单源最短路的题目中，Dijkstra是最好用的算法。</p>
-</li>
+<ul>
+<li>在单源最短路的题目中，Dijkstra是最好用的算法。</li>
 </ul>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token comment">/*
  * @Author: thyzzs
@@ -579,17 +591,17 @@ vector<span class="token operator">&lt;</span>edge<span class="token operator">&
 <h4 id="Bellman-Ford">Bellman-Ford</h4>
 <p>Bellman-Ford算法基于动态规划的思想，即反复用已有的边来更新最短距离。即如果$d[u] + cost(u, v) &lt; d[v]$则更新d[v]。</p>
 <p>因为最短路经过的边数量不超过n − 1，所以至多n − 1次更新后d[x]即为源点S到地图上其余每个点的最短距离。</p>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>d[S] = 0，其余d[x] = INF</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>对于每条边$(u, v)$，如果$d[u] &lt; INF$且$d[u] + cost(u, v) &lt; d[v]$，则$d[v] = d[u] + cost(u, v) &lt; d[v]$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>循环上一步至多n − 1次</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>对于每条边$(u, v)$，如果$d[u] &lt; INF$且$d[u] + cost(u, v) &lt; d[v]$，则图中存在负权回路</p>
 </li>
 </ul>
@@ -665,11 +677,11 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
 <p><code>f[k][i][j] = min(f[k − 1][i][j], f[k − 1][i][k] + f[k − 1][k][j])</code></p>
 <p>而实际我们可以去掉k这一维</p>
 <p><code>f[i][j] = min(f[i][j], f[i][k] + f[k][j])</code></p>
-<ul class="lvl-0">
-<li class="lvl-4">
+<ul>
+<li>
 <p>值f[i][j]不变就对应<code>f[k][i][j] = f[k − 1][i][j]</code></p>
 </li>
-<li class="lvl-4">
+<li>
 <p>值改变就对应<code>f[k][i][j] = f[k − 1][i][k] + f[k − 1][k][j]</code></p>
 </li>
 </ul>
@@ -1383,7 +1395,7 @@ edge es<span class="token punctuation">[</span>MAX_E<span class="token punctuati
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

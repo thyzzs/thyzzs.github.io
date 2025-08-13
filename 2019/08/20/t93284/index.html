@@ -360,6 +360,19 @@ floyd预处理出每两点间的最短路,每次询问$O(1)$回答
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -458,74 +471,74 @@ floyd预处理出每两点间的最短路,每次询问$O(1)$回答
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93336">传送门</a></p>
 <h3 id="30-的做法">30%的做法</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>floyd预处理出每两点间的最短路,每次询问$O(1)$回答</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>复杂度$O(n^3+q)$</p>
 </li>
 </ul>
 <hr>
 <h3 id="另外20-的做法">另外20%的做法</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>树的情况</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>对于$u,v$的最短路，求出他们的LCA为$k$，$ans=d[u]+d[v]-2*d[k]$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>可以用tarjan算法离线求LCA，那么总复杂度$O(n+q)$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>也可以倍增 / 转化为RMQ在线求，复杂度$O(n+q \log n)$ / $O(n \log n+q)$</p>
 </li>
 </ul>
 <hr>
 <h3 id="100-的做法">100%的做法</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>$M&lt;=N+20$，因此考虑沿用树的做法</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>我们可以从任一点为根开始，将整个图当成树做一个dfs（随便取一棵生成树）</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>那么整个图就是在这棵生成树$T$的基础上，多加了最多21条边。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>考虑两个点的最短路，有两种情况：</p>
 </li>
-<li class="lvl-2">
-<ul class="lvl-2">
-<li class="lvl-4">1.不经过这多出来的21条边，那么可以用树的方法在$O(1)$或者$O(\log n)$的做法求出</li>
+<li>
+<ul>
+<li>1.不经过这多出来的21条边，那么可以用树的方法在$O(1)$或者$O(\log n)$的做法求出</li>
 </ul>
 </li>
-<li class="lvl-2">
-<ul class="lvl-2">
-<li class="lvl-4">2.经过这多出来的21条边。这种情况如何处理？</li>
+<li>
+<ul>
+<li>2.经过这多出来的21条边。这种情况如何处理？</li>
 </ul>
 </li>
 </ul>
 <h3 id=""></h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>21条多出来的边最多涉及到42个图中的点，如果最短路经过这21条多出的边，那么一定经过这些点之一。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>我们可以预处理出多出来的边涉及到的点为源点，到其它各点的最短路。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>那么对于第2种情况，我们只需要枚举这些点作为中转点，取$\min$即可。两种情况取一个$\min$，即为他们实际的最短路。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>例：设多出来的边涉及到的点为$k_1,k_2,…k_s$，我们要求$u,v$间的最短路。先求生成树T中他们间的路径长度，然后分别尝试以$k_1,k_2…k_s$中转的最短路，对这$s+1$个值取$\min$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>单源最短路用dijkstra算法求出</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>复杂度$O(n \log n+q)$</p>
 </li>
 </ul>
@@ -1366,7 +1379,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

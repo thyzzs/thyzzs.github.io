@@ -346,6 +346,19 @@ Part 1 图的链式前向星表示
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -479,27 +492,23 @@ G<span class="token punctuation">[</span>u<span class="token punctuation">]</spa
 <p>设仍存在未搜索邻接边的顶点中最后一个被发现的顶点为v，那么深度优先搜索就是对顶点v的邻接边递归地进行搜索, 当v的边全部搜索完毕后，程序沿发现v时所经过的边回归，继续搜索前一顶点。</p>
 <p>搜索一直持续到发现当前起点可到达的所有顶点为止。如果仍有顶点未被发现，则选择其中编号最小的一个作为新起点继续搜索。</p>
 <p>深度优先搜索中，对各顶点记录以下两个时间戳：</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>时间戳d[v]: 记录第一次访问v的时刻（发现时刻）</p>
-</li>
-<li class="lvl-2">
-<p>时间戳f[v]: 记录调查完v的相邻顶点的时刻（结束时刻）</p>
-</li>
+<ul>
+<li>时间戳d[v]: 记录第一次访问v的时刻（发现时刻）</li>
+<li>时间戳f[v]: 记录调查完v的相邻顶点的时刻（结束时刻）</li>
 </ul>
 <p>该算法通常的时间复杂度为$O(|V| + |E|)$</p>
 <h4 id="使用栈的深度优先搜索">使用栈的深度优先搜索</h4>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>将最初访问的顶点压入栈。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>只要栈中仍有顶点，就循环进行下述操作：</p>
-<ul class="lvl-2">
-<li class="lvl-4">
+<ul>
+<li>
 <p>访问栈顶部的顶点u</p>
 </li>
-<li class="lvl-4">
+<li>
 <p>从当前访问的顶点u移动至顶点v时，将v压入栈。如果当前顶点不存在末访问的相邻顶点，则将u从栈中删除</p>
 </li>
 </ul>
@@ -596,17 +605,17 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
 <p>在某些语言或环境下，对规模较大的图使用递归思路的深度优先搜索算法会导致栈溢出。</p>
 <p>目前大部分算法竞赛（包括CSP<s>NOIP</s>、大部分省选以及 CCF 举办的各项赛事）都支持无限栈空间 ，即：栈空间不单独限制，但总内存空间仍然受题面限制。</p>
 <h3 id="Part-3-图的广度优先搜索">Part 3 图的广度优先搜索</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>将最初访问的顶点压入队列。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>只要队列中仍有顶点，就循环进行下述操作：</p>
-<ul class="lvl-2">
-<li class="lvl-4">
+<ul>
+<li>
 <p>访问队首的顶点u</p>
 </li>
-<li class="lvl-4">
+<li>
 <p>从当前访问的顶点u移动至顶点v时，将v压入队列</p>
 </li>
 </ul>
@@ -1396,7 +1405,7 @@ vector<span class="token operator">&lt;</span><span class="token keyword">int</s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

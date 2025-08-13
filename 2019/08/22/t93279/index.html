@@ -8,20 +8,16 @@
     <meta name="description" content="传送门
 30%的题解：
 
-
 这棵树是一个链，所以直接做一遍LIS和LDS，经典DP算法，不多赘述。
-
 
 60%的题解：
 
-
 $N&amp;lt;=1000$,可以直接$n^2$地做满分题解所说的DP。
-
 
 满分题解：
 
 
-$F1[i]$表示以从以$">
+$F1[i]$表示以从以$i$为根">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -359,6 +355,19 @@ $F1[i]$表示以从以$">
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -457,29 +466,25 @@ $F1[i]$表示以从以$">
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93279">传送门</a></p>
 <h3 id="30-的题解：">30%的题解：</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>这棵树是一个链，所以直接做一遍LIS和LDS，经典DP算法，不多赘述。</p>
-</li>
+<ul>
+<li>这棵树是一个链，所以直接做一遍LIS和LDS，经典DP算法，不多赘述。</li>
 </ul>
 <h3 id="60-的题解：">60%的题解：</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>$N&lt;=1000$,可以直接$n^2$地做满分题解所说的DP。</p>
-</li>
+<ul>
+<li>$N&lt;=1000$,可以直接$n^2$地做满分题解所说的DP。</li>
 </ul>
 <h3 id="满分题解：">满分题解：</h3>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>$F1[i]$表示以从以$i$为根节点的子树中出发，以$i$为结束点的LIS，同样设计一个$F2[i]$表示相同意思的LDS。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>用动态开点的线段树维护，以权值为下标，记录$F1$、$F2$的值。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>计算$u$节点的$F$值时，如果是计算$F1$,那么在子树中的$0 - (val[u]-1)$中找最大值，如果是计算$F2$，那么找$val[u] - inf$中的最大值。</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>答案就是找最大的$F1[u]+F2[u]-1$。注意子树的线段树最后要合并到父亲。时间复杂度$O(n \log n)$</p>
 </li>
 </ul>
@@ -1301,7 +1306,7 @@ $F1[i]$表示以从以$">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

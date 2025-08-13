@@ -9,33 +9,19 @@
 封面页
 突出信息：
 
-
 标题
-
-
 作者（注意角标）
-
-
 机构
-
-
 通讯作者
-
-
 联系方式
-
-
 利益冲突（首页可不写）
-
 
 Abstract
 需要写出的信息：
 
-
 整篇文章做了一件什么事情（1句话)
-
-
-创新点、过程或者怎么做的（2">
+创新点、过程或者怎么做的（2-3句话)
+可以得到什么结果（">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -373,6 +359,19 @@ Abstract
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -472,174 +471,90 @@ Abstract
                 <h2 id="论文结构">论文结构</h2>
 <h3 id="封面页">封面页</h3>
 <p>突出信息：</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>标题</p>
-</li>
-<li class="lvl-2">
-<p>作者（注意角标）</p>
-</li>
-<li class="lvl-2">
-<p>机构</p>
-</li>
-<li class="lvl-2">
-<p>通讯作者</p>
-</li>
-<li class="lvl-2">
-<p>联系方式</p>
-</li>
-<li class="lvl-2">
-<p>利益冲突（首页可不写）</p>
-</li>
+<ul>
+<li>标题</li>
+<li>作者（注意角标）</li>
+<li>机构</li>
+<li>通讯作者</li>
+<li>联系方式</li>
+<li>利益冲突（首页可不写）</li>
 </ul>
 <h3 id="Abstract">Abstract</h3>
 <p>需要写出的信息：</p>
 <ol>
-<li class="lvl-3">
-<p>整篇文章做了一件什么事情（1句话)</p>
-</li>
-<li class="lvl-3">
-<p>创新点、过程或者怎么做的（2-3句话)</p>
-</li>
-<li class="lvl-3">
-<p>可以得到什么结果（选出重要的结论，可以只定性，尽量定量讲解，2-3句)</p>
-</li>
-<li class="lvl-3">
-<p>可以写出该项研究的意义（吹吹牛，1句话）</p>
-</li>
-<li class="lvl-3">
-<p>关键词（可能有些文章不需要，但是需要写出）</p>
-</li>
+<li>整篇文章做了一件什么事情（1句话)</li>
+<li>创新点、过程或者怎么做的（2-3句话)</li>
+<li>可以得到什么结果（选出重要的结论，可以只定性，尽量定量讲解，2-3句)</li>
+<li>可以写出该项研究的意义（吹吹牛，1句话）</li>
+<li>关键词（可能有些文章不需要，但是需要写出）</li>
 </ol>
 <blockquote>
 <p>TOC:</p>
-<p>平衡图像和描述吸引人的颜色和图形的使用质量和可读性</p>
+<p>平衡图像和描述<br>
+吸引人的颜色和图形的使用<br>
+质量和可读性</p>
 </blockquote>
 <h3 id="Introduction">Introduction</h3>
 <h4 id="第一段">第一段</h4>
 <p>需要写出的信息：</p>
 <ol>
-<li class="lvl-3">
-<p>给出背景信息，一般由广泛到具体来引出所研究的对象。</p>
-</li>
-<li class="lvl-3">
-<p>背景信息可以从现象、政策、大的全球背景、公认的某些问题等。</p>
-</li>
-<li class="lvl-3">
-<p>参考文献的引用是必要的 (CO2 is the largest source of greenhouse gases,accounting for approximately 90% of all greenhouse gases (Moraes, et al., 2020).)</p>
-</li>
-<li class="lvl-3">
-<p>避免一个普遍观点的文献引用超过3篇，最好只引1~2篇。</p>
-</li>
+<li>给出背景信息，一般由广泛到具体来引出所研究的对象。</li>
+<li>背景信息可以从现象、政策、大的全球背景、公认的某些问题等。</li>
+<li>参考文献的引用是必要的 (CO2 is the largest source of greenhouse gases,accounting for approximately 90% of all greenhouse gases (Moraes, et al., 2020).)</li>
+<li>避免一个普遍观点的文献引用超过3篇，最好只引1~2篇。</li>
 </ol>
 <h4 id="引出">引出</h4>
 <p>需要写出的信息：</p>
 <ol>
-<li class="lvl-3">
-<p>如果第一段写的面太宽，最后一句无法引出具体研究对象，可以考虑添加引出段。</p>
-</li>
-<li class="lvl-3">
-<p>该段的背景可以具体化，并深入引出你所研究内容的迫切性（千万不要太具体）。</p>
-</li>
-<li class="lvl-3">
-<p>可以发现如果没有第一段，直接使用该两段作为首段也是可行的（须添加一句大方向的话）。</p>
-</li>
-<li class="lvl-3">
-<p>个人习惯是先往大了扯，然后再慢慢收。</p>
-</li>
+<li>如果第一段写的面太宽，最后一句无法引出具体研究对象，可以考虑添加引出段。</li>
+<li>该段的背景可以具体化，并深入引出你所研究内容的迫切性（千万不要太具体）。</li>
+<li>可以发现如果没有第一段，直接使用该两段作为首段也是可行的（须添加一句大方向的话）。</li>
+<li>个人习惯是先往大了扯，然后再慢慢收。</li>
 </ol>
 <h4 id="综述段">综述段</h4>
 <p>需要写出的信息：</p>
 <ol>
-<li class="lvl-3">
-<p>这一部分是重点，关系到审稿人了解到你所掌握的知识背景有多少（如果综述文献较少，且不深入，很有可能被要求对综述部分进行提高)。</p>
-</li>
-<li class="lvl-3">
-<p>你想综述的方面决定着这部分有几段。</p>
-</li>
-<li class="lvl-3">
-<p>逐步推进的方法依旧适用。</p>
-</li>
-<li class="lvl-3">
-<p>对文献要有深刻的理解，避免写出xxx使用xxx做了xxx；xxx又使用xxx研究了xxx。点评要到位，优缺点写出，并且可以前后关联引出自己想研究的主题。</p>
-</li>
+<li>这一部分是重点，关系到审稿人了解到你所掌握的知识背景有多少（如果综述文献较少，且不深入，很有可能被要求对综述部分进行提高)。</li>
+<li>你想综述的方面决定着这部分有几段。</li>
+<li>逐步推进的方法依旧适用。</li>
+<li>对文献要有深刻的理解，避免写出xxx使用xxx做了xxx；xxx又使用xxx研究了xxx。点评要到位，优缺点写出，并且可以前后关联引出自己想研究的主题。</li>
 </ol>
 <h4 id="结论段">结论段</h4>
 <p>需要写出的信息：</p>
 <ol>
-<li class="lvl-3">
-<p>对上面进行总结，给出gap</p>
-</li>
-<li class="lvl-3">
-<p>说出你将要如何进行解决</p>
-</li>
-<li class="lvl-3">
-<p>可以将你的创新点进行总结，分点列出</p>
-</li>
+<li>对上面进行总结，给出gap</li>
+<li>说出你将要如何进行解决</li>
+<li>可以将你的创新点进行总结，分点列出</li>
 </ol>
 <h3 id="Results-and-Discussion">Results and Discussion</h3>
 <ol>
-<li class="lvl-3">
-<p>避免完全看图说话</p>
-</li>
-<li class="lvl-3">
-<p>多以自己的结果和实验结果进行对此分析</p>
-</li>
-<li class="lvl-3">
-<p>可以多使用一些文献的观点来支撑你的观点</p>
-</li>
-<li class="lvl-3">
-<p>避免一张图一解释，可以做大图标号a、b、c综合讨论</p>
-</li>
-<li class="lvl-3">
-<p>图片控制在8-9以内</p>
-</li>
+<li>避免完全看图说话</li>
+<li>多以自己的结果和实验结果进行对此分析</li>
+<li>可以多使用一些文献的观点来支撑你的观点</li>
+<li>避免一张图一解释，可以做大图标号a、b、c综合讨论</li>
+<li>图片控制在8-9以内</li>
 </ol>
 <h3 id="Conclusion">Conclusion</h3>
 <ol>
-<li class="lvl-3">
-<p>对自己的工作总结一遍</p>
-</li>
-<li class="lvl-3">
-<p>给出一些规律或者一些有意义的数据</p>
-</li>
-<li class="lvl-3">
-<p>说明该项研究的意义和价值</p>
-</li>
-<li class="lvl-3">
-<p>给该方向或该领域提出一些展望（谈谈该工作的不足以及以后需要提高的点)</p>
-</li>
+<li>对自己的工作总结一遍</li>
+<li>给出一些规律或者一些有意义的数据</li>
+<li>说明该项研究的意义和价值</li>
+<li>给该方向或该领域提出一些展望（谈谈该工作的不足以及以后需要提高的点)</li>
 </ol>
 <h2 id="投稿">投稿</h2>
 <p>清单：</p>
 <ol>
-<li class="lvl-3">
-<p>Manuscript (main document)</p>
-</li>
-<li class="lvl-3">
-<p>Cover Letter(必须)</p>
-</li>
-<li class="lvl-3">
-<p>High Light(非必须）</p>
-</li>
-<li class="lvl-3">
-<p>Support Information(非必须)</p>
-</li>
-<li class="lvl-3">
-<p>利益说明（样式颇多，看具体期刊）</p>
-</li>
+<li>Manuscript (main document)</li>
+<li>Cover Letter(必须)</li>
+<li>High Light(非必须）</li>
+<li>Support Information(非必须)</li>
+<li>利益说明（样式颇多，看具体期刊）</li>
 </ol>
 <p>期刊选择：</p>
 <ol>
-<li class="lvl-3">
-<p>根据参考文献选择期刊</p>
-</li>
-<li class="lvl-3">
-<p>导师推荐</p>
-</li>
-<li class="lvl-3">
-<p>学科筛选选择期刊</p>
-</li>
+<li>根据参考文献选择期刊</li>
+<li>导师推荐</li>
+<li>学科筛选选择期刊</li>
 </ol>
 <h4 id="水刊">水刊</h4>
 <p><img src="https://raw.githubusercontent.com/thyzzs/Pic/main/image-20250210202720905.png" alt="image-20250210202816170"></p>
@@ -1354,7 +1269,7 @@ Abstract
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             

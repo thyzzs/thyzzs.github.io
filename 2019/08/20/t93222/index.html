@@ -8,9 +8,7 @@
     <meta name="description" content="传送门
 30%的题解：
 
-
 是一棵树，所以只要枚举根，然后计算代价即可
-
 
 100%的题解：
 
@@ -21,7 +19,7 @@ $vals[S]$表示集合$S$的权值和
 设计状态$F[S][h]$, 表示现在已经选择了的点的集合是$S$，$h$表示当前深度
 
 
-枚举">
+枚举S的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -359,6 +357,19 @@ $vals[S]$表示集合$S$的权值和
 </header>
 
     
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
 
 
 
@@ -457,26 +468,24 @@ $vals[S]$表示集合$S$的权值和
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93222">传送门</a></p>
 <h4 id="30-的题解：">30%的题解：</h4>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>是一棵树，所以只要枚举根，然后计算代价即可</p>
-</li>
+<ul>
+<li>是一棵树，所以只要枚举根，然后计算代价即可</li>
 </ul>
 <h4 id="100-的题解：">100%的题解：</h4>
-<ul class="lvl-0">
-<li class="lvl-2">
+<ul>
+<li>
 <p>$vals[S]$表示集合$S$的权值和</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>设计状态$F[S][h]$, 表示现在已经选择了的点的集合是$S$，$h$表示当前深度</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>枚举S的补集的子集$S_2$，只要满足$S_2$中每个点都有和$S$集合中某个点相连的话，就可以转移到$F[S|S_2][h+1]$,转移费用是$(h+1)*vals[S_2]$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>时间复杂度$O（n \times 3n）$</p>
 </li>
-<li class="lvl-2">
+<li>
 <p>这题修改自NOIP2017宝藏</p>
 </li>
 </ul>
@@ -1190,7 +1199,7 @@ $vals[S]$表示集合$S$的权值和
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.1k</span>
+                        class="white-color">190.5k</span>
             
             
             
