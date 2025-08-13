@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0">
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
+
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
-<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -407,7 +407,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2025-08-12
+                    2025-08-13
                 </div>
                 
 
@@ -509,7 +509,7 @@ rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-ro
 <p>参数估计是用样本统计量估计总体参数值，$\bar{\theta}$称为估计量。</p>
 <ul>
 <li><strong>点估计(矩估计法，极大似然估计)</strong></li>
-<li><strong>区间估计：</strong> 置信区间、置信水平、显著水平</li>
+<li>**区间估计：**置信区间、置信水平、显著水平</li>
 </ul>
 <p><strong>1. 极大似然估计</strong></p>
 <p>总体含有待估参数$\theta$，可以取很多值，要在$\theta$的一切可能取值中选出一个是样本观测值出现的概率最大的$\theta$值，记为$\hat{\theta}$，并称$\hat{\theta}$为$\theta$的极大似然估计。</p>
@@ -518,87 +518,87 @@ rfunc(x, ... ,) # 随机数函数<span aria-hidden="true" class="line-numbers-ro
 <strong>对于不同的分布形式而言，其似然函数的形式也是各式各样的。</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 单参数情况，使用optimize()/maxLik()函数求解
 # e.g.(optimize()) 指数分布求解参数lamda
- f &lt;- function(lamda){
-   logL = n*log(lamda) - lamda*sum(x) # 对数似然函数
-   return(logL)
- }
+f &lt;- function(lamda) {
+  logL = n * log(lamda) - lamda * sum(x) # 对数似然函数
+  return(logL)
+}
 
- x = c(518,612,713,388,434)
- n = length(x)
- duration &lt;- optimize(f, c(0,1), maximum = TRUE)
- 1/duration$maximum # 指数分布的期望为lamda的倒数
+x = c(518, 612, 713, 388, 434)
+n = length(x)
+duration &lt;- optimize(f, c(0, 1), maximum = TRUE)
+1 / duration$maximum # 指数分布的期望为lamda的倒数
 
 # e.g.(maxLik())
- library(MASS)
- attach(geyser)
+library(MASS)
+attach(geyser)
 
- hist(waiting, freq = F, col = 'wheat')
- lines(density(waiting), col = 'red', lwd = 2, lty = 1)
- # 由结果推断为两个正态分布相叠加
+hist(waiting, freq = F, col = 'wheat')
+lines(density(waiting), col = 'red', lwd = 2, lty = 1)
+# 由结果推断为两个正态分布相叠加
 
- LL &lt;- function(params, data){
-   t1 &lt;- suppressWarnings(dnorm(data, params[2], params[3]))
-   t2 &lt;- suppressWarnings(dnorm(data, params[4], params[5]))
-   ll &lt;- sum(log(params[1]*t1+(1-params[1])*t2))
-   # 两个叠加的正态分布的对数似然函数
-   return &lt;- ll
- }
+LL &lt;- function(params, data) {
+  t1 &lt;- suppressWarnings(dnorm(data, params[2], params[3]))
+  t2 &lt;- suppressWarnings(dnorm(data, params[4], params[5]))
+  ll &lt;- sum(log(params[1] * t1 + (1 - params[1]) * t2))
+  # 两个叠加的正态分布的对数似然函数
+  return &lt;- ll
+}
 
- library('maxLik')
- # 参数method可以选择不同的数值求解方法：NR/BHHH/BFGS/NM/SANN
- mle &lt;- maxLik(logLik = LL, start = c(0.5,50,10,80,10), data = waiting)
+library('maxLik')
+# 参数method可以选择不同的数值求解方法：NR/BHHH/BFGS/NM/SANN
+mle &lt;- maxLik(logLik = LL, start = c(0.5, 50, 10, 80, 10), data = waiting)
 
- a &lt;- mle$estimate[1]
- mu1 &lt;- mle$estimate[2]; s1 &lt;- mle$estimate[3]
- mu2 &lt;- mle$estimate[4]; s2 &lt;- mle$estimate[5]
+a &lt;- mle$estimate[1]
+mu1 &lt;- mle$estimate[2]; s1 &lt;- mle$estimate[3]
+mu2 &lt;- mle$estimate[4]; s2 &lt;- mle$estimate[5]
 
- X &lt;- seq(40,120,length = 100)
- f &lt;- a*dnorm(X,mu1,s1) + (1-a)*dnorm(X,mu2,s2)
+X &lt;- seq(40, 120, length = 100)
+f &lt;- a * dnorm(X, mu1, s1) + (1 - a) * dnorm(X, mu2, s2)
 
- lines(X, f, col ='blue', lwd = 2, lty = 2)
- legend('topright', legend = c('Density Line', 'Max Likelihood'), lwd = c(2,2), lty = c(1,2), col = c('red', 'blue'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+lines(X, f, col = 'blue', lwd = 2, lty = 2)
+legend('topright', legend = c('Density Line', 'Max Likelihood'), lwd = c(2, 2), lty = c(1, 2), col = c('red', 'blue'))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>2. 单总体参数区间估计</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 总体比例的区间估计
- # Wald方法：正态分布对二项分布进行估计
- # Clopper-Person方法：基于二项分布估计
- binom.test()
+# Wald方法：正态分布对二项分布进行估计
+# Clopper-Person方法：基于二项分布估计
+binom.test()
 
 # 总体均值的区间估计
- # 情况一：总体正态分布且方差已知/
- # 或者，总体非正态分布但为大样本(&gt;=30)，样本均值的抽样分布均为正态分布
- conf.int &lt;- function(x,n,sigma,alpha){
-   options(digits = 5) # 五位有效数字
-   mean &lt;- mean(x)
-   low &lt;- mean - sigma*qnorm(1-alpha/2,mean=0,sd=1,lower.tail=T)/sqrt(n)
-   up &lt;- mean + sigma*qnorm(1-alpha/2,mean=0,sd=1,lower.tail=T)/sqrt(n)
-   return(c(low,up))
- }
+# 情况一：总体正态分布且方差已知/
+# 或者，总体非正态分布但为大样本(&gt;=30)，样本均值的抽样分布均为正态分布
+conf.int &lt;- function(x, n, sigma, alpha) {
+  options(digits = 5) # 五位有效数字
+  mean &lt;- mean(x)
+  low &lt;- mean - sigma * qnorm(1 - alpha / 2, mean = 0, sd = 1, lower.tail = T) / sqrt(n)
+  up &lt;- mean + sigma * qnorm(1 - alpha / 2, mean = 0, sd = 1, lower.tail = T) / sqrt(n)
+  return(c(low, up))
+}
 
- # 情况二：总体正态分布但方差未知/
- # 或者，总体不服从正态分布，大样本情况下用样本方差代替总体方差
+# 情况二：总体正态分布但方差未知/
+# 或者，总体不服从正态分布，大样本情况下用样本方差代替总体方差
 
- # 情况三：总体正态分布，但方差未知且小样本，样本方差代替总体方差，样本均值服从(n-1)自由度的t分布。
- pH &lt;- c(......)
- n &lt;- length(pH)
- mean &lt;- mean(pH)
- sd &lt;- sd(pH)
- results &lt;- mean + qt(c(0.025,0.975),n-1) * sd /sqrt(n)
+# 情况三：总体正态分布，但方差未知且小样本，样本方差代替总体方差，样本均值服从(n-1)自由度的t分布。
+pH &lt;- c(......)
+n &lt;- length(pH)
+mean &lt;- mean(pH)
+sd &lt;- sd(pH)
+results &lt;- mean + qt(c(0.025, 0.975), n - 1) * sd / sqrt(n)
 
- t.test(pH, mu=7)
+t.test(pH, mu = 7)
 
 # 总体方差的区间估计
- # 样本方差服从自由度为n-1的卡方分布
- chisq.var.test &lt;- function(x, alpha){
-   options(digits = 4)
-   result&lt;-list( )
-   n&lt;-length(x)
-   v&lt;-var(x)
-   result$conf.int.var &lt;- c(
-     (n-1)*v/qchisq(alpha/2, df=n-1, lower.tail=F),
-     (n-1)*v/qchisq(alpha/2, df=n-1, lower.tail=T))
-   result$conf.int.se &lt;- sqrt(result$conf.int.var)
-   result
- }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# 样本方差服从自由度为n-1的卡方分布
+chisq.var.test &lt;- function(x, alpha) {
+  options(digits = 4)
+  result &lt;- list()
+  n &lt;- length(x)
+  v &lt;- var(x)
+  result$conf.int.var &lt;- c(
+    (n - 1) * v / qchisq(alpha / 2, df = n - 1, lower.tail = F),
+    (n - 1) * v / qchisq(alpha / 2, df = n - 1, lower.tail = T))
+  result$conf.int.se &lt;- sqrt(result$conf.int.var)
+  result
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>3. 双总体均值差的区间估计</strong></p>
 <p><strong>3.1 独立样本</strong></p>
 <p><strong>总体方差已知</strong></p>
@@ -609,24 +609,24 @@ $t=\frac{\bar{x_1}-\bar{x_2}-(\mu_1-\mu_2)}{\sqrt{s_1^2/n_1+s_2^2/n_2}}$ ~ $t(v)
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">t.test()
 # 情况一：两总体方差已知
 # 情况二：两总体方差未知但相同，用两个样本方差代替
- chicks &lt;- data.frame(feed = rep(c(1,2), times=c(3,6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
- n1 &lt;- sum(chicks$feed == 1)
- n2 &lt;- sum(chicks$feed == 2)
- n &lt;- n1+n2
- mean &lt;- tapply(chicks$weight_gain, chicks$feed, mean)
- sd &lt;- tapply(chicks$weight_gain, chicks$feed, sd)
- sd2 &lt;- sqrt(((n1-1)*sd[1]^2+(n2-1)*sd[2]^2)/(n-2))
- alpha &lt;- 0.05
- diff = mean[1]-mean[2]
- results_diff = diff+qt(c(alpha/2,1-alpha/2),n-2)*sd2*sqrt(1/n1+1/n2)
+chicks &lt;- data.frame(feed = rep(c(1, 2), times = c(3, 6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
+n1 &lt;- sum(chicks$feed == 1)
+n2 &lt;- sum(chicks$feed == 2)
+n &lt;- n1 + n2
+mean &lt;- tapply(chicks$weight_gain, chicks$feed, mean)
+sd &lt;- tapply(chicks$weight_gain, chicks$feed, sd)
+sd2 &lt;- sqrt(((n1 - 1) * sd[1]^2 + (n2 - 1) * sd[2]^2) / (n - 2))
+alpha &lt;- 0.05
+diff = mean[1] - mean[2]
+results_diff = diff + qt(c(alpha / 2, 1 - alpha / 2), n - 2) * sd2 * sqrt(1 / n1 + 1 / n2)
 
 t.test(weight_gain ~ feed, data = chicks, var.equal = TRUE)
 
 # 情况三：两总体方差未知但不相同，用两个样本方差代替
- v &lt;- (sd[1]^2/n1+sd[2]^2/n2)^2/(sd[1]^4/n1^2/(n1-1)+sd[2]^4/n2^2/(n2-1))
- results_diff = diff+qt(c(alpha/2,1-alpha/2),v)*sqrt(sd[1]^2/n1+sd[2]^2/n2)
+v &lt;- (sd[1]^2 / n1 + sd[2]^2 / n2)^2 / (sd[1]^4 / n1^2 / (n1 - 1) + sd[2]^4 / n2^2 / (n2 - 1))
+results_diff = diff + qt(c(alpha / 2, 1 - alpha / 2), v) * sqrt(sd[1]^2 / n1 + sd[2]^2 / n2)
 
- t.test(weight_gain ~ feed, data = chicks, var.equal = FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+t.test(weight_gain ~ feed, data = chicks, var.equal = FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>3.2 配对样本</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 情况一：大样本
 # 情况二：小样本
@@ -634,18 +634,18 @@ Feed.1 &lt;- c(44, 55, 68, 85, 90, 97)
 Feed.2 &lt;- c(42, 61, 81, 95, 97, 103)
 n = length(Feed.1)
 alpha = 0.05
-diff = Feed.1-Feed.2
+diff = Feed.1 - Feed.2
 mean = mean(diff)
 sd = sd(diff)
-(results_diff = mean+qt(c(alpha/2,1-alpha/2),n-1)*sd/sqrt(n))
+(results_diff = mean + qt(c(alpha / 2, 1 - alpha / 2), n - 1) * sd / sqrt(n))
 
 t.test(Feed.1, Feed.2, paired = T)
 
 t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>4. 双总体比例差的区间估计</strong></p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">prop.test()
- prop.test(x=c(225,128),n=c(500,400), correct=F)
- prop.test(x=c(225,128),n=c(500,400)) # 使用连续性修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+prop.test(x = c(225, 128), n = c(500, 400), correct = F)
+prop.test(x = c(225, 128), n = c(500, 400)) # 使用连续性修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <h3 id="参数假设检验">参数假设检验</h3>
 <p>假设检验的基本思想为小概率反证法思想。</p>
 <ul>
@@ -691,45 +691,45 @@ n &lt;- length(pH)
 mean &lt;- mean(pH)
 sd &lt;- sd(pH)
 alpha &lt;- 0.05
-t.value &lt;- (mean-7) * sd /sqrt(n)
+t.value &lt;- (mean - 7) * sd / sqrt(n)
 
 # 双尾检验
-2*pt(t.value, n-1, lower.tail = T)
-qt(alpha/2,n-1);qt(1-alpha/2,n-1)
-t.test(pH, mu=7)
+2 * pt(t.value, n - 1, lower.tail = T)
+qt(alpha / 2, n - 1); qt(1 - alpha / 2, n - 1)
+t.test(pH, mu = 7)
 
 # 单尾检验（左端）
-pt(t.value, n-1)
-t.test(pH, mu=7, alternative = 'less')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+pt(t.value, n - 1)
+t.test(pH, mu = 7, alternative = 'less')<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 双总体均值差的假设检验(独立样本，总体方差相同)
-chicks &lt;- data.frame(feed = rep(c(1,2), times=c(3,6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
+chicks &lt;- data.frame(feed = rep(c(1, 2), times = c(3, 6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
 n1 &lt;- sum(chicks$feed == 1)
 n2 &lt;- sum(chicks$feed == 2)
-n &lt;- n1+n2
+n &lt;- n1 + n2
 mean &lt;- tapply(chicks$weight_gain, chicks$feed, mean)
 sd &lt;- tapply(chicks$weight_gain, chicks$feed, sd)
-sd2 &lt;- sqrt(((n1-1)*sd[1]^2+(n2-1)*sd[2]^2)/(n-2))
-t.value &lt;- (mean[1]-mean[2])/sd2/sqrt(1/n1+1/n2)
+sd2 &lt;- sqrt(((n1 - 1) * sd[1]^2 + (n2 - 1) * sd[2]^2) / (n - 2))
+t.value &lt;- (mean[1] - mean[2]) / sd2 / sqrt(1 / n1 + 1 / n2)
 alpha &lt;- 0.05
 
 # 双尾检验
-qt(alpha/2,n-2);qt(1-alpha/2,n-2)
-2*pt(t.value, n-2, lower.tail = T)
+qt(alpha / 2, n - 2); qt(1 - alpha / 2, n - 2)
+2 * pt(t.value, n - 2, lower.tail = T)
 
 t.test(weight_gain ~ feed, data = chicks, var.equal = TRUE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 双总体均值差的假设检验(独立样本，总体方差不同)
-chicks &lt;- data.frame(feed = rep(c(1,2), times=c(3,6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
+chicks &lt;- data.frame(feed = rep(c(1, 2), times = c(3, 6)), weight_gain = c(42, 68, 85, 42, 97, 81, 95, 61, 103))
 n1 &lt;- sum(chicks$feed == 1)
 n2 &lt;- sum(chicks$feed == 2)
-v &lt;- (sd[1]^2/n1+sd[2]^2/n2)^2/(sd[1]^4/n1^2/(n1-1)+sd[2]^4/n2^2/(n2-1))
+v &lt;- (sd[1]^2 / n1 + sd[2]^2 / n2)^2 / (sd[1]^4 / n1^2 / (n1 - 1) + sd[2]^4 / n2^2 / (n2 - 1))
 mean &lt;- tapply(chicks$weight_gain, chicks$feed, mean)
 sd &lt;- tapply(chicks$weight_gain, chicks$feed, sd)
-t.value &lt;- (mean[1]-mean[2])/sqrt(sd[1]^2/n1+sd[2]^2/n2)
+t.value &lt;- (mean[1] - mean[2]) / sqrt(sd[1]^2 / n1 + sd[2]^2 / n2)
 alpha &lt;- 0.05
 
 # 双尾检验
-qt(alpha/2,v);qt(1-alpha/2,v)
-2*pt(t.value, v, lower.tail = T)
+qt(alpha / 2, v); qt(1 - alpha / 2, v)
+2 * pt(t.value, v, lower.tail = T)
 
 t.test(weight_gain ~ feed, data = chicks, var.equal = FALSE)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 双总体均值差的假设检验(配对样本)
@@ -738,14 +738,14 @@ Feed.2 &lt;- c(42, 61, 81, 95, 97, 103)
 n = length(Feed.1)
 mean &lt;- mean()
 alpha = 0.05
-diff = Feed.1-Feed.2
+diff = Feed.1 - Feed.2
 mean = mean(diff)
 sd = sd(diff)
-t.value = mean/sd*sqrt(n)
+t.value = mean / sd * sqrt(n)
 
 # 双尾检验
-qt(alpha/2,n-1);qt(1-alpha/2,n-1)
-2*pt(t.value, n-1, lower.tail = T)
+qt(alpha / 2, n - 1); qt(1 - alpha / 2, n - 1)
+2 * pt(t.value, n - 1, lower.tail = T)
 
 t.test(Feed.2, Feed.1, paired = T)
 
@@ -801,19 +801,19 @@ t.test(diff)<span aria-hidden="true" class="line-numbers-rows"><span></span><spa
 </li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 骰子是否有偏
- chisq.test(c(25, 18, 28, 20, 16, 13))
+chisq.test(c(25, 18, 28, 20, 16, 13))
 
 # 已知卡方统计值和自由度
- pchisq(42.252,6,lower.tail=F)
+pchisq(42.252, 6, lower.tail = F)
 
 # 原始数据输入
- alcohol.by.nicotine &lt;- matrix(c(105, 7, 11, 58, 5, 13, 84, 37, 42, 57, 16, 17), nrow = 4, byrow = TRUE)
- chisq.test(alcohol.by.nicotine)
+alcohol.by.nicotine &lt;- matrix(c(105, 7, 11, 58, 5, 13, 84, 37, 42, 57, 16, 17), nrow = 4, byrow = TRUE)
+chisq.test(alcohol.by.nicotine)
 
 # 不满足条件的情况
- aluminium.by.alzheimers &lt;- matrix(c(112, 3, 5, 8, 114, 9, 3, 2), nrow=2, byrow = TRUE)
- chisq.test(aluminium.by.alzheimers, simulate.p.value = TRUE)
- # 蒙特卡洛模拟法计算P值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+aluminium.by.alzheimers &lt;- matrix(c(112, 3, 5, 8, 114, 9, 3, 2), nrow = 2, byrow = TRUE)
+chisq.test(aluminium.by.alzheimers, simulate.p.value = TRUE)
+# 蒙特卡洛模拟法计算P值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 左利手与性别是否有关
 handedness &lt;- matrix(c(1, 30, 4, 12), nrow = 2, byrow = TRUE)
 fisher.test(handedness)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
@@ -868,8 +868,8 @@ fisher.test(handedness)<span aria-hidden="true" class="line-numbers-rows"><span>
 pnorm(z) # 正态分布近似
 
 x &lt;- c(......)
-binom.test(sum(x&gt;99), length(x), alternative = 'less') # 二项分布
-pbinom(sum(x&gt;99), length(x), prob=0.5, lower.tail = T) * 2 # 双尾<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+binom.test(sum(x &gt; 99), length(x), alternative = 'less') # 二项分布
+pbinom(sum(x &gt; 99), length(x), prob = 0.5, lower.tail = T) * 2 # 双尾<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>4. 威尔科克森符号秩检验</strong></p>
 <p>利用观察值和原假设中心位置的差的正负，以及差值的大小的信息。</p>
 <ul>
@@ -878,8 +878,8 @@ pbinom(sum(x&gt;99), length(x), prob=0.5, lower.tail = T) * 2 # 双尾<span aria
 <li><strong>检测方法：</strong> $T_+$为正号的秩和，$T_-$为负号的秩和，$T$为两者中较小者。<strong>当T不大于30时，T为统计量；当T小于30时，$z=\frac{T-n(n+1)/4}{\sqrt{n(n+1)(2n+1)/24}}$，<em>证明略</em></strong>。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># 原假设中位数为8
-x=c(4.12,5.81,7.63,9.74,10.39,11.92,12.32,12.89,13.54,14.45)
-wilcox.test(x-8, alternative = "greater")
+x = c(4.12, 5.81, 7.63, 9.74, 10.39, 11.92, 12.32, 12.89, 13.54, 14.45)
+wilcox.test(x - 8, alternative = "greater")
 
 # 配对数据
 x &lt;- c(1.83, 0.50, 1.62, 2.48, 1.68, 1.88, 1.55, 3.06, 1.30)
@@ -889,8 +889,8 @@ wilcox.test(y - x, alternative = "less")
 wilcox.test(x, y, paired = TRUE, alternative = "greater")
 
 # 数据较多，计算近似P值
-wilcox.test(y - x, alternative = "less",exact = FALSE, correct = FALSE)
- # exact = F, correct表示是否进行连续型修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+wilcox.test(y - x, alternative = "less", exact = FALSE, correct = FALSE)
+# exact = F, correct表示是否进行连续型修正<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>5. 威尔科克森的秩和检验</strong></p>
 <p>两个样本所代表的总体是否有相同的分布或是否来自同一个分布。</p>
 <ul>
@@ -920,9 +920,9 @@ wilcox.test(before, after, alternative = "greater", exact = FALSE, correct = FAL
 <strong>当样本观察值的秩有大量存在时，</strong> $H’ = H / (1-\sum_{j}\frac{t_{i}^{3}-t_j}{n_{T}^{3}-n_T})$，其中$t_j$是第j个相等秩组中的观察值数量。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R"># e.g.
-x &lt;-c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3)
-y &lt;-c(4.5, 4.4, 3.5, 4.2, 4.6, 4.2)
-z &lt;-c(5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
+x &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3)
+y &lt;- c(4.5, 4.4, 3.5, 4.2, 4.6, 4.2)
+z &lt;- c(5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
 kruskal.test(list(x, y, z))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="方差分析方法">方差分析方法</h2>
 <h3 id="基本概念">基本概念</h3>
@@ -943,9 +943,9 @@ kruskal.test(list(x, y, z))<span aria-hidden="true" class="line-numbers-rows"><s
 <li><strong>关系强度：</strong> $R^2 = \frac{SS_R}{SS_T}$，用于测量因子（自变量）与观察值（因变量）之间的关系强度。</li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
-A &lt;- factor(rep(1:3, each=6))
+A &lt;- factor(rep(1:3, each = 6))
 my.data &lt;- data.frame(X, A)
-my.aov &lt;- aov(X~A, data = my.data)
+my.aov &lt;- aov(X ~ A, data = my.data)
 summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="双因素方差分析">双因素方差分析</h3>
 <p><strong>1. 无交互作用的分析</strong></p>
@@ -971,23 +971,23 @@ summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <li><strong>随机误差平方和：</strong> $SS_E = \sum_{i=1}^{a}\sum_{j=1}^{b}\sum_{k=1}^{c}(x_{ijk}-\bar{x_{ij}})^2,df_E=ab(c-1)$</li>
 <li><strong>F统计量：</strong> $F_A = \frac{MS_A}{MS_E} = \frac{SS_A/(a-1)}{SS_E/[ab(c-1)]} \sim F(a-1,ab(c-1)),\ F_B = \frac{MS_B}{MS_E} = \frac{SS_B/(b-1)}{SS_E/[ab(c-1)]} \sim F(b-1,ab(c-1)),\ F_{AB} = \frac{MS_{AB}}{MS_E} = \frac{SS_{AB}/(a-1)(b-1)}{SS_E/[ab(c-1)]} \sim F((a-1)(b-1),ab(c-1))$</li>
 </ul>
-<pre class="line-numbers language-R" data-language="R"><code class="language-R">#e.g. 是否添加增味剂和乳清用量对蛋糕口感的影响
- # 输入数据
- pancakes &lt;- data.frame(supp=rep(c("no supplement","supplement"),each=12), whey=rep(rep(c("0%","10%","20%","30%"),each=3),each=2))
- pancakes$quality &lt;- c(4.4,4.5,4.3,4.6,4.5,4.8,4.5,4.8,4.8,4.6,4.7,5.1,3.3,3.2,3.1,3.8,3.7,3.6,5,5.3,4.8,5.4,5.6,5.3)
- # 制成表格
- round(tapply(pancakes$quality, pancakes[, 1:2], mean), 2)
+<pre class="line-numbers language-R" data-language="R"><code class="language-R"># e.g. 是否添加增味剂和乳清用量对蛋糕口感的影响
+# 输入数据
+pancakes &lt;- data.frame(supp = rep(c("no supplement", "supplement"), each = 12), whey = rep(rep(c("0%", "10%", "20%", "30%"), each = 3), each = 2))
+pancakes$quality &lt;- c(4.4, 4.5, 4.3, 4.6, 4.5, 4.8, 4.5, 4.8, 4.8, 4.6, 4.7, 5.1, 3.3, 3.2, 3.1, 3.8, 3.7, 3.6, 5, 5.3, 4.8, 5.4, 5.6, 5.3)
+# 制成表格
+round(tapply(pancakes$quality, pancakes[, 1:2], mean), 2)
 
- # 绘制交互作用图
- library(stats)
- interaction.plot(pancakes$whey, pancakes$supp, pancakes$quality)
+# 绘制交互作用图
+library(stats)
+interaction.plot(pancakes$whey, pancakes$supp, pancakes$quality)
 
- # 借助lm()执行有交互的双因素方差分析
- pancakes.lm &lt;- lm(quality ~ supp * whey, data = pancakes)
- anova(pancakes.lm)
+# 借助lm()执行有交互的双因素方差分析
+pancakes.lm &lt;- lm(quality ~ supp * whey, data = pancakes)
+anova(pancakes.lm)
 
- my.aov &lt;- aov(quality ~ supp * whey, data = pancakes)
- summary(my.aov) # 与上述的代码功能一致<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+my.aov &lt;- aov(quality ~ supp * whey, data = pancakes)
+summary(my.aov) # 与上述的代码功能一致<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="多重比较">多重比较</h3>
 <p>要得到各组均值间更详细的信息，需要在方差分析的基础上进行多个样本均值的两两比较，此方法称为<strong>多重比较法</strong>。</p>
 <p><strong>1. 多重t检验</strong></p>
@@ -995,15 +995,15 @@ summary(my.aov)<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <strong>Bonferroni修正法的思路</strong>：如果在同一数据集同时进行n个独立的假设检验，那么用于每一个假设的统计显著水平应该为仅检验一个假设时显著水平的1/n，<strong>即$\alpha’ = \alpha/n$, n是多重t检验的次数</strong>。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">p.adjust.method # 输出P修正的方法
 pairwise.t.test() # 执行均值的多重t检验
- -x # 响应向量
- -g # 因子向量
- -p.adjust.method # P值修正方法
- -alternative
- -paired
+-x # 响应向量
+-g # 因子向量
+-p.adjust.method # P值修正方法
+-alternative
+-paired
 
- X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
- A &lt;- factor(rep(1:3, each=6))
- pairwise.t.test(X,A,p.adjust.method = "bonferroni")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
+A &lt;- factor(rep(1:3, each = 6))
+pairwise.t.test(X, A, p.adjust.method = "bonferroni")<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>2. Dunnett-t检验/LSD-t检验</strong></p>
 <p>Dunnett-t检验法又称新复极差法检验，一种方差分析中多个实验组与对照组均值比较的方法。LSD-t检验(least significant difference，最小显著差异方法)与Dunnett-t统计量的计算公式完全相同。</p>
 <ul>
@@ -1018,50 +1018,50 @@ pairwise.t.test() # 执行均值的多重t检验
 </li>
 </ul>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
-group &lt;- factor(rep(LETTERS[1:3], each=6))
+group &lt;- factor(rep(LETTERS[1:3], each = 6))
 mice.data &lt;- data.frame(X, group)
-mice.aov &lt;- aov(X~group, data = mice.data)
-mice.mean &lt;- round(tapply(mice.data[,1], mice.data[,2], mean), 3)
+mice.aov &lt;- aov(X ~ group, data = mice.data)
+mice.mean &lt;- round(tapply(mice.data[, 1], mice.data[, 2], mean), 3)
 mice.MSE = summary(mice.aov)[[1]]$`Mean Sq`[2]
-(tBD = abs(mice.mean['A']-mice.mean['B'])/sqrt(mice.MSE*(1/6+1/6)))
-(tCD = abs(mice.mean['A']-mice.mean['C'])/sqrt(mice.MSE*(1/6+1/6)))
+(tBD = abs(mice.mean['A'] - mice.mean['B']) / sqrt(mice.MSE * (1 / 6 + 1 / 6)))
+(tCD = abs(mice.mean['A'] - mice.mean['C']) / sqrt(mice.MSE * (1 / 6 + 1 / 6)))
 
 glht() # 用该函数完成Dunnett检验
 library(multcomp)
-mice.Dunnett &lt;- glht(mice.aov, linfct=mcp(group = "Dunnett"))
+mice.Dunnett &lt;- glht(mice.aov, linfct = mcp(group = "Dunnett"))
 summary(mice.Dunnett)
 
 # 可视化
-windows(width=5,height=3,pointsize=10)
-plot(mice.Dunnett,sub="Mice Data")
-mtext("Dunnet's Method",side=3,line=0.5)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+windows(width = 5, height = 3, pointsize = 10)
+plot(mice.Dunnett, sub = "Mice Data")
+mtext("Dunnet's Method", side = 3, line = 0.5)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><strong>3. Tukey的HSD检验</strong></p>
 <p>该方法为了控制每一对比较的错误率。</p>
 <p>在进行检验时，首先对g个样本均值进行排序。如果$|\bar{X_i}-\bar{X_j}| \ge W$，则连个总体均值$\mu_i$和$\mu_j$不相等，其中：$W = q_\alpha(g,v)\sqrt{MSE/n}$。<br>
 MSE是自由度为v的样本组内均方差，$q_\alpha(g,v)$是比较g个不同总体是学生化极差的上侧尾部临界值，n是每个样本的观察值个数。</p>
 <pre class="line-numbers language-R" data-language="R"><code class="language-R">X &lt;- c(4.2, 3.3, 3.7, 4.3, 4.1, 3.3, 4.5, 4.4, 3.5, 4.2, 4.6, 4.2, 5.6, 3.6, 4.5, 5.1, 4.9, 4.7)
-group &lt;- factor(rep(LETTERS[1:3], each=6))
+group &lt;- factor(rep(LETTERS[1:3], each = 6))
 mice.data &lt;- data.frame(X, group)
-mice.aov &lt;- aov(X~group, data = mice.data)
+mice.aov &lt;- aov(X ~ group, data = mice.data)
 
-mice.mean &lt;- round(tapply(mice.data[,1], mice.data[,2], mean), 3)
+mice.mean &lt;- round(tapply(mice.data[, 1], mice.data[, 2], mean), 3)
 n &lt;- length(mice.mean)
-mice.diff &lt;- matrix(rep(mice.mean,times = n), nrow = n, byrow = T)
+mice.diff &lt;- matrix(rep(mice.mean, times = n), nrow = n, byrow = T)
 colnames(mice.diff) &lt;- LETTERS[1:n]
 rownames(mice.diff) &lt;- LETTERS[1:n]
-for (i in c(1:n)){
+for (i in c(1:n)) {
   mice.diff[i,] &lt;- mice.diff[i,] - mice.mean[i]
 }
 
 mice.MSE = summary(mice.aov)[[1]]$`Mean Sq`[2]
 q &lt;- qtukey(0.05, 3, 15, lower.tail = F)
-W &lt;- q*sqrt(mice.MSE/6)
+W &lt;- q * sqrt(mice.MSE / 6)
 mice.which &lt;- which(mice.diff &gt; W, arr.ind = T)
 
 result &lt;- data.frame(NULL)
-for (i in c(1,dim(mice.which)[1])){
-  result[i,1] &lt;- paste(LETTERS[mice.which[i,1]],LETTERS[mice.which[i,2]], sep = '-')
-  result[i,2] &lt;- mice.diff[mice.which[i,1],mice.which[i,2]]
+for (i in c(1, dim(mice.which)[1])) {
+  result[i, 1] &lt;- paste(LETTERS[mice.which[i, 1]], LETTERS[mice.which[i, 2]], sep = '-')
+  result[i, 2] &lt;- mice.diff[mice.which[i, 1], mice.which[i, 2]]
 }
 colnames(result) &lt;- c('groups', 'value')
 result
