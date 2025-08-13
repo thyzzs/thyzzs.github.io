@@ -443,20 +443,20 @@
 <p>CDQ分治，即基于时间的分治算法，最早被陈丹琦引入国内而得名。</p>
 <h3 id="Part-2-点对问题">Part 2 点对问题</h3>
 <ol>
-<li>
+<li class="lvl-3">
 <p>找到这个序列的中点</p>
 </li>
-<li>
+<li class="lvl-3">
 <p>将所有点对$(i, j)$ 划分为 3 类</p>
 <p>第一种是$1 ≤ i ≤ mid, 1 ≤ j ≤ mid$ 的点对</p>
 <p>第二种是$1 ≤ i ≤ mid, mid + 1 ≤ j ≤ n$ 的点对</p>
 <p>第三种是$mid + 1 ≤ i ≤ n, mid + 1 ≤ j ≤ n$ 的点对</p>
 </li>
-<li>
+<li class="lvl-3">
 <p>将$(1, n)$ 这个序列拆成两个序列$(1, mid)$ 和$(mid + 1, n)$</p>
 <p>会发现第一类点对和第三类点对都在这两个序列之中，递归的去解决这两类点对</p>
 </li>
-<li>
+<li class="lvl-3">
 <p>想方设法处理一下第二类点对的信息</p>
 </li>
 </ol>
@@ -1184,7 +1184,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.5k</span>
+                        class="white-color">190k</span>
             
             
             

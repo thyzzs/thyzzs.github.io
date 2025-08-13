@@ -30,7 +30,7 @@
         
     <summary type="html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;
+&lt;li class=&quot;lvl-3&quot;&gt;
 &lt;p&gt;&lt;strong&gt;随机变量X&lt;/strong&gt; - &lt;strong&gt;累积分布函数(CDF)&lt;/strong&gt; -</summary>
         
       
@@ -110,7 +110,13 @@ system.time() #</summary>
         
         
     <summary type="html">&lt;h2 id=&quot;论文结构&quot;&gt;论文结构&lt;/h2&gt;
-&lt;h3</summary>
+&lt;h3 id=&quot;封面页&quot;&gt;封面页&lt;/h3&gt;
+&lt;p&gt;突出信息：&lt;/p&gt;
+&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;标题&lt;/p&gt;
+&lt;/li&gt;
+&lt;li</summary>
         
       
     
@@ -138,9 +144,11 @@ system.time() #</summary>
     <summary type="html">&lt;h3 id=&quot;检索技术&quot;&gt;检索技术&lt;/h3&gt;
 &lt;h4 id=&quot;布尔逻辑运算&quot;&gt;布尔逻辑运算&lt;/h4&gt;
 &lt;ol&gt;
-&lt;li&gt;逻辑与：缩小范围 (AND, *)&lt;/li&gt;
-&lt;li&gt;逻辑或：扩大范围 (OR, +)&lt;/li&gt;
-&lt;li&gt;逻辑非：排除 (NOT,</summary>
+&lt;li class=&quot;lvl-3&quot;&gt;
+&lt;p&gt;逻辑与：缩小范围 (AND, *)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li class=&quot;lvl-3&quot;&gt;
+&lt;p&gt;逻辑或：扩大范围</summary>
         
       
     
@@ -167,8 +175,8 @@ system.time() #</summary>
         
     <summary type="html">&lt;h2 id=&quot;Transition-Checklist&quot;&gt;Transition Checklist&lt;/h2&gt;
 &lt;h3 id=&quot;To-Complete&quot;&gt;To Complete&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;[x] &lt;strong&gt;Pass IELTS Academic</summary>
+&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li</summary>
         
       
     
@@ -269,9 +277,12 @@ system.time() #</summary>
         
     <summary type="html">&lt;h2 id=&quot;技术栈&quot;&gt;技术栈&lt;/h2&gt;
 &lt;h3 id=&quot;程序设计&quot;&gt;程序设计&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;C++ 基本语法&lt;/li&gt;
-&lt;li&gt;Python</summary>
+&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;C++ 基本语法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;Python</summary>
         
       
     
@@ -349,8 +360,9 @@ system.time() #</summary>
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
+    <summary type="html">&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a</summary>
         
       
     
@@ -375,8 +387,9 @@ system.time() #</summary>
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
+    <summary type="html">&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a</summary>
         
       
     
@@ -426,9 +439,9 @@ system.time() #</summary>
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
+    <summary type="html">&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a</summary>
         
       
     
@@ -478,8 +491,9 @@ system.time() #</summary>
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
+    <summary type="html">&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a</summary>
         
       
     
@@ -504,8 +518,9 @@ system.time() #</summary>
       
         
         
-    <summary type="html">&lt;ul&gt;
-&lt;li&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/4.0/&quot;&gt;知识共享署名-非商业性使用-相同方式共享 4.0</summary>
+    <summary type="html">&lt;ul class=&quot;lvl-0&quot;&gt;
+&lt;li class=&quot;lvl-2&quot;&gt;
+&lt;p&gt;本文除图片外，放弃采用 CC BY-NC-SA 4.0（&lt;a</summary>
         
       
     

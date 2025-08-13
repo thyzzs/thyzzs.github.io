@@ -516,8 +516,7 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
 <h4 id="对于取模的优化：">对于取模的优化：</h4>
 <p>可以将其优化为：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;</span> Mod <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>而对于某些题目，仅需要对答案取模。这类题目要边运算边取模的目的一般是防止溢出。<br>
-故我们甚至可以写成这样：</p>
+<p>而对于某些题目，仅需要对答案取模。这类题目要边运算边取模的目的一般是防止溢出。故我们甚至可以写成这样：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;=</span> <span class="token number">0x3f3f3f3f</span> <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>如果是乘法，我们相应地可以写成：</p>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">MOD</span><span class="token punctuation">(</span><span class="token keyword">int</span> x<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token keyword">return</span> x <span class="token operator">&lt;=</span> <span class="token number">45000</span> <span class="token operator">?</span> x <span class="token operator">:</span> x <span class="token operator">%</span> Mod<span class="token punctuation">;</span> <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
@@ -536,39 +535,38 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
 <p>cache即高速缓存，一般分为3级（有些电脑为2级），访问速度逐级递减。访问变量时，CPU会优先在cache而不是内存中查找，如果cache中不存在此变量，则会进入内存查找，这称为cache miss。</p>
 <p>与register一样，cache的大小同样有限。一些过大的内存是不可以进入cache的。</p>
 <p>基数排序时，以256为基数会比256*256更快。因为256大小的四个数组可以轻松进入cache。</p>
-<ul>
-<li>
+<ul class="lvl-0">
+<li class="lvl-2">
 <p>保证时空局部性</p>
-<ul>
-<li>
+<ul class="lvl-2">
+<li class="lvl-4">
 <p>时间局部性：当一个变量被使用时，它会在短时间内再次被使用。</p>
 </li>
-<li>
+<li class="lvl-4">
 <p>空间局部性：当一个变量被使用时，它的内存附近的变量会再次被使用。</p>
 </li>
 </ul>
 </li>
 </ul>
 <p>保证这两样东西的良好有益于减少cache miss。</p>
-<ul>
-<li>
+<ul class="lvl-0">
+<li class="lvl-2">
 <p>怎样优化空间局部性？</p>
-<ul>
-<li>将一些关系密切，例如经常连着使用的变量尽量定义在一起，或用结构体封装起来。</li>
-<li>适当调整变量定义顺序</li>
-<li>保证内存连续访问。例如：Floyd和矩阵乘法的程序中，将第三层循环作为第一层会大大提高速度。</li>
+<ul class="lvl-2">
+<li class="lvl-4">将一些关系密切，例如经常连着使用的变量尽量定义在一起，或用结构体封装起来。</li>
+<li class="lvl-4">适当调整变量定义顺序</li>
+<li class="lvl-4">保证内存连续访问。例如：Floyd和矩阵乘法的程序中，将第三层循环作为第一层会大大提高速度。</li>
 </ul>
 </li>
-<li>
+<li class="lvl-2">
 <p>怎样优化时间局部性？</p>
-<ul>
-<li>尽量使用局部变量。因为堆栈的数据访问十分频繁。</li>
+<ul class="lvl-2">
+<li class="lvl-4">尽量使用局部变量。因为堆栈的数据访问十分频繁。</li>
 </ul>
 </li>
 </ul>
 <h3 id="Part-3-I-O优化">Part 3 I\O优化</h3>
-<p>C++为了兼容性导致<code>cin</code>、<code>cout</code>极慢，对于大量数据的读入和输出往往不堪重负。这个时候使用读入优化、输出优化可以节省数倍的时间。<br>
-简单使用可以用<code>scanf</code>和<code>printf</code>代替<code>cin</code>和<code>cout</code>。</p>
+<p>C++为了兼容性导致<code>cin</code>、<code>cout</code>极慢，对于大量数据的读入和输出往往不堪重负。这个时候使用读入优化、输出优化可以节省数倍的时间。简单使用可以用<code>scanf</code>和<code>printf</code>代替<code>cin</code>和<code>cout</code>。</p>
 <h4 id="基本读入优化">基本读入优化</h4>
 <pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp"><span class="token keyword">inline</span> <span class="token keyword">int</span> <span class="token function">read</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
 	<span class="token keyword">int</span> x <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> f <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
@@ -1315,7 +1313,7 @@ x<span class="token operator">%</span><span class="token punctuation">(</span><s
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.5k</span>
+                        class="white-color">190k</span>
             
             
             

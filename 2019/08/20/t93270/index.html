@@ -8,11 +8,15 @@
     <meta name="description" content="传送门
 30%的题解：
 
+
 直接每次询问枚举所有点。
+
 
 60%的题解：
 
+
 坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度
+
 
 100%的题解：
 
@@ -20,7 +24,7 @@
 $map$套$multiset$
 
 
-$X$坐标开个$mapx$，里面存的是每个$">
+$X$坐标开个$mapx$，里面存的">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -456,31 +460,35 @@ $X$坐标开个$mapx$，里面存的是每个$">
             <div id="articleContent">
                 <p><a target="_blank" rel="noopener" href="https://www.luogu.org/problem/T93270">传送门</a></p>
 <h4 id="30-的题解：">30%的题解：</h4>
-<ul>
-<li>直接每次询问枚举所有点。</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>直接每次询问枚举所有点。</p>
+</li>
 </ul>
 <h4 id="60-的题解：">60%的题解：</h4>
-<ul>
-<li>坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度</li>
+<ul class="lvl-0">
+<li class="lvl-2">
+<p>坐标值很小，可以尝试用链表，可以做到$O(n)$的时间复杂度</p>
+</li>
 </ul>
 <h4 id="100-的题解：">100%的题解：</h4>
-<ul>
-<li>
+<ul class="lvl-0">
+<li class="lvl-2">
 <p>$map$套$multiset$</p>
 </li>
-<li>
+<li class="lvl-2">
 <p>$X$坐标开个$mapx$，里面存的是每个$X$坐标的不同$Y$坐标，这些$Y$坐标用$multiset$保存。</p>
 </li>
-<li>
+<li class="lvl-2">
 <p>$Y$坐标也同理开一个$mapy$。</p>
 </li>
-<li>
+<li class="lvl-2">
 <p>统计点的时候，以平行于$y$轴的轰炸带为例，在$X$坐标的$mapx$中，枚举所有在$n1-n2$范围内的$x$，然后统计每个x里面所有的$y$，同时删去在$mapy$中对应的点，最后把$mapx$中$n1-n2$范围的所有元素都删掉。</p>
 </li>
-<li>
+<li class="lvl-2">
 <p>时间复杂度$O(n \log n)$</p>
 </li>
-<li>
+<li class="lvl-2">
 <p>也可以使用珂朵莉树。</p>
 </li>
 </ul>
@@ -1260,7 +1268,7 @@ map<span class="token operator">&lt;</span><span class="token keyword">int</span
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">190.5k</span>
+                        class="white-color">190k</span>
             
             
             
