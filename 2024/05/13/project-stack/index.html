@@ -61,9 +61,9 @@
 
     <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
 
-<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
-
+<meta name="generator" content="Hexo 6.3.0">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/atom.xml" title="天何言哉" type="application/atom+xml">
 </head>
 
 
@@ -420,21 +420,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>Update Date:&nbsp;&nbsp;
-                    2025-05-15
+                    2025-08-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    42
+                    3.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    1 Min
+                    11 Min
                 </div>
                 
 
@@ -453,7 +453,463 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="技术栈">技术栈</h2>
-<h3 id="程序设计">程序设计</h3>
+<h3 id="湿实验">湿实验</h3>
+<h4 id="分子">分子</h4>
+<h5 id="分子生物学技术">分子生物学技术</h5>
+<ol>
+<li><strong>核酸提取与纯化：</strong>
+<ul>
+<li>DNA提取（基因组DNA、质粒DNA）</li>
+<li>RNA提取（总RNA、mRNA）</li>
+<li>酚-氯仿抽提法</li>
+<li>离心柱纯化法</li>
+<li>磁珠纯化法</li>
+</ul>
+</li>
+<li><strong>核酸定量与质量分析：</strong>
+<ul>
+<li>紫外分光光度法（NanoDrop）</li>
+<li>荧光定量法（Qubit）</li>
+<li>琼脂糖凝胶电泳</li>
+</ul>
+</li>
+<li><strong>聚合酶链式反应：</strong>
+<ul>
+<li>常规PCR</li>
+<li>逆转录PCR</li>
+<li>实时荧光定量PCR</li>
+<li>数字PCR</li>
+<li>长片段PCR / 高保真PCR</li>
+<li>巢式PCR / 多重PCR</li>
+</ul>
+</li>
+<li><strong>核酸电泳：</strong>
+<ul>
+<li>琼脂糖凝胶电泳（DNA/RNA分离、大小分析）</li>
+<li>聚丙烯酰胺凝胶电泳（小片段DNA、蛋白质、高分辨率）</li>
+<li>脉冲场凝胶电泳（超大DNA片段分离）</li>
+</ul>
+</li>
+<li><strong>核酸杂交：</strong>
+<ul>
+<li>Southern Blotting (DNA)</li>
+<li>Northern Blotting (RNA)</li>
+<li>Dot Blot / Slot Blot</li>
+<li><em>In Situ</em> Hybridization (ISH)</li>
+<li>荧光<em>In Situ</em> Hybridization (FISH)</li>
+</ul>
+</li>
+<li><strong>克隆与载体构建：</strong>
+<ul>
+<li>限制性内切酶酶切</li>
+<li>DNA连接（连接酶）</li>
+<li>感受态细胞制备</li>
+<li>转化（化学法、电穿孔法）</li>
+<li>蓝白斑筛选 / 抗生素筛选</li>
+<li>克隆鉴定（菌落PCR、酶切鉴定、测序）</li>
+</ul>
+</li>
+<li><strong>DNA测序：</strong>
+<ul>
+<li>Sanger测序（传统毛细管电泳）</li>
+<li>下一代测序文库构建（样品制备、片段化、末端修复、加接头、PCR扩增等湿实验步骤）</li>
+</ul>
+</li>
+<li><strong>基因编辑：</strong>
+<ul>
+<li>CRISPR/Cas9系统操作（gRNA设计合成、Cas9蛋白/质粒使用、转染/电转、筛选鉴定）</li>
+<li>TALEN / ZFN操作（虽然较少用，但原理类似）</li>
+</ul>
+</li>
+<li><strong>基因表达分析：</strong>
+<ul>
+<li>RT-qPCR (mRNA水平)</li>
+<li>RNA-Seq文库构建（湿实验部分）</li>
+<li>Microarray样品标记与杂交（湿实验部分）</li>
+</ul>
+</li>
+</ol>
+<h5 id="蛋白质技术">蛋白质技术</h5>
+<ol>
+<li><strong>蛋白质提取与纯化：</strong>
+<ul>
+<li>细胞裂解（机械法、化学法、酶解法）</li>
+<li>离心分离（差速离心、密度梯度离心）</li>
+<li>层析技术：
+<ul>
+<li>亲和层析（如His-tag, GST-tag, 抗体）</li>
+<li>离子交换层析</li>
+<li>尺寸排阻层析（凝胶过滤）</li>
+<li>疏水相互作用层析</li>
+</ul>
+</li>
+<li>沉淀法（硫酸铵沉淀、有机溶剂沉淀）</li>
+<li>透析与超滤（脱盐、浓缩、换液）</li>
+</ul>
+</li>
+<li><strong>蛋白质定量：</strong>
+<ul>
+<li>Bradford法</li>
+<li>BCA法</li>
+<li>Lowry法</li>
+<li>紫外吸收法（A280）</li>
+</ul>
+</li>
+<li><strong>蛋白质电泳：</strong>
+<ul>
+<li>SDS-聚丙烯酰胺凝胶电泳</li>
+<li>非变性PAGE（Native PAGE）</li>
+<li>等电聚焦</li>
+<li>双向电泳</li>
+</ul>
+</li>
+<li><strong>蛋白质印迹：</strong>
+<ul>
+<li>转膜（湿转、半干转）</li>
+<li>封闭</li>
+<li>抗体孵育（一抗、二抗）</li>
+<li>化学发光/荧光/显色法检测</li>
+</ul>
+</li>
+<li><strong>酶联免疫吸附试验：</strong>
+<ul>
+<li>包被</li>
+<li>封闭</li>
+<li>加样（抗原/抗体）</li>
+<li>加酶标二抗</li>
+<li>加底物显色/发光</li>
+<li>终止反应</li>
+<li>读板（酶标仪）</li>
+</ul>
+</li>
+<li><strong>免疫沉淀与免疫共沉淀：</strong>
+<ul>
+<li>抗体-抗原复合物形成</li>
+<li>使用Protein A/G磁珠或琼脂糖珠沉淀复合物</li>
+<li>洗涤与洗脱</li>
+</ul>
+</li>
+<li><strong>酶活性测定：</strong> 设计特定底物反应体系，通过分光光度计、荧光计等检测产物生成或底物消耗速率。</li>
+<li><strong>蛋白质相互作用分析：</strong>
+<ul>
+<li>酵母双杂交（培养基配制、转化、表型筛选、β-半乳糖苷酶活性测定等湿实验）</li>
+<li>表面等离子共振样品处理</li>
+<li>荧光共振能量转移样品制备</li>
+<li>共聚焦显微镜观察蛋白质共定位</li>
+</ul>
+</li>
+</ol>
+<h4 id="细胞">细胞</h4>
+<ol>
+<li><strong>细胞培养：</strong>
+<ul>
+<li>无菌操作技术（超净台）</li>
+<li>培养基配制与灭菌</li>
+<li>细胞复苏</li>
+<li>细胞传代（胰酶消化、离心、重悬、计数、接种）</li>
+<li>细胞冻存</li>
+<li>原代细胞分离培养</li>
+<li>细胞系维持</li>
+</ul>
+</li>
+<li><strong>细胞计数与活力检测：</strong>
+<ul>
+<li>血球计数板手动计数</li>
+<li>自动细胞计数仪</li>
+<li>台盼蓝染色排除法</li>
+<li>MTT/XTT/CCK-8/WST-1等代谢活性检测</li>
+</ul>
+</li>
+<li><strong>细胞转染与转导：</strong>
+<ul>
+<li>脂质体转染</li>
+<li>磷酸钙转染</li>
+<li>电穿孔转染</li>
+<li>病毒感染（慢病毒、腺病毒等）</li>
+</ul>
+</li>
+<li><strong>细胞显微技术：</strong>
+<ul>
+<li>相差显微镜观察活细胞</li>
+<li>荧光显微镜观察（固定或活细胞）</li>
+<li>共聚焦激光扫描显微镜样品制备与观察</li>
+<li>免疫荧光染色（固定、透化、封闭、抗体孵育、封片）</li>
+<li>细胞化学染色（如DAPI, Hoechst染核）</li>
+</ul>
+</li>
+<li><strong>细胞分离：</strong>
+<ul>
+<li>流式细胞术分选（FACS）样品制备（染色、过滤）</li>
+<li>免疫磁珠分选</li>
+<li>密度梯度离心法（如分离外周血单个核细胞）</li>
+</ul>
+</li>
+<li><strong>细胞功能分析：</strong>
+<ul>
+<li>细胞增殖检测（BrdU/EdU掺入法）</li>
+<li>细胞周期分析（PI染色+流式）</li>
+<li>细胞凋亡检测（Annexin V/PI染色+流式，TUNEL染色，Caspase活性测定）</li>
+<li>细胞迁移/侵袭实验（Transwell, 伤口愈合）</li>
+<li>细胞粘附实验</li>
+</ul>
+</li>
+</ol>
+<h4 id="动物">动物</h4>
+<h5 id="动物模型建立与管理">动物模型建立与管理</h5>
+<ol>
+<li><strong>动物品系选择与繁殖</strong>
+<ul>
+<li>近交系、封闭群、基因工程动物（转基因、基因敲除/敲入）的繁育与鉴定</li>
+<li>基因型鉴定（PCR、Southern blot等）</li>
+</ul>
+</li>
+<li><strong>动物饲养与环境控制</strong>
+<ul>
+<li>无菌/SPF级动物房管理</li>
+<li>饲料、垫料、温湿度、光照周期的标准化控制</li>
+</ul>
+</li>
+</ol>
+<h5 id="基础操作技术">基础操作技术</h5>
+<ol>
+<li><strong>动物标记与识别</strong>
+<ul>
+<li>耳标、趾环、皮下芯片植入、体表染色</li>
+</ul>
+</li>
+<li><strong>动物抓取与保定</strong>
+<ul>
+<li>小鼠/大鼠抓取（颈背部、尾部）</li>
+<li>兔、豚鼠等大型动物的保定技术</li>
+</ul>
+</li>
+<li><strong>给药与干预</strong>
+<ul>
+<li><strong>注射技术</strong>：
+<ul>
+<li>皮下（SC）、腹腔（IP）、静脉（IV，尾静脉/眶后静脉）、肌肉（IM）、颅内（ICV）注射</li>
+</ul>
+</li>
+<li><strong>灌胃（Oral Gavage）</strong>： 胃管插入食道给药</li>
+<li><strong>局部给药</strong>： 皮肤涂药、滴眼、鼻腔给药</li>
+<li><strong>植入技术</strong>： 药物缓释泵、肿瘤细胞皮下/原位植入</li>
+</ul>
+</li>
+</ol>
+<h5 id="样本采集技术">样本采集技术</h5>
+<ol>
+<li><strong>体液采集</strong>
+<ul>
+<li><strong>血液采集</strong>：
+<ul>
+<li>尾静脉采血（小鼠）</li>
+<li>眼眶后静脉丛采血</li>
+<li>心脏穿刺（终末采血）</li>
+<li>颈动脉/股动脉插管采血（大动物）</li>
+</ul>
+</li>
+<li><strong>尿液/粪便采集</strong>： 代谢笼收集、膀胱穿刺</li>
+<li><strong>脑脊液采集</strong>： 小脑延髓池穿刺</li>
+<li><strong>腹腔灌洗液采集</strong></li>
+</ul>
+</li>
+<li><strong>组织器官取材</strong>
+<ul>
+<li>处死后快速解剖（心、肝、脾、肺、肾、脑等）</li>
+<li>活体组织活检（皮肤、肝脏、肿瘤等）</li>
+</ul>
+</li>
+</ol>
+<h5 id="组织学与病理学技术">组织学与病理学技术</h5>
+<ol>
+<li><strong>组织处理：</strong> 固定（福尔马林等）、脱水、透明、浸蜡。</li>
+<li><strong>石蜡切片：</strong> 包埋、切片（切片机）。</li>
+<li><strong>冰冻切片：</strong> 快速冷冻、切片（冰冻切片机）。</li>
+<li><strong>染色：</strong>
+<ul>
+<li>苏木精-伊红染色</li>
+<li>特殊染色（如Masson三色、PAS、油红O等）</li>
+<li>免疫组织化学染色（抗原修复、封闭、抗体孵育、显色、复染）</li>
+<li>免疫荧光染色</li>
+</ul>
+</li>
+<li><strong>封片：</strong> 使用封片剂封固切片。</li>
+</ol>
+<h3 id="干实验">干实验</h3>
+<h4 id="生物信息学核心分析">生物信息学核心分析</h4>
+<ol>
+<li><strong>序列分析：</strong>
+<ul>
+<li><strong>序列比对：</strong> BLAST, BLAT, ClustalW/O (多序列比对), MUSCLE, MAFFT。</li>
+<li><strong>序列组装：</strong> 基因组组装 (SOAPdenovo, SPAdes, Canu)，转录组组装 (Trinity, StringTie)。</li>
+<li><strong>序列注释：</strong> 基因预测 (Glimmer, Augustus)，功能注释 (基于同源性的GO/KEGG注释)。</li>
+<li><strong>引物/探针设计：</strong> Primer3, Primer-BLAST。</li>
+</ul>
+</li>
+<li><strong>基因组学：</strong>
+<ul>
+<li><strong>变异检测：</strong> SNP/InDel/CNV/SV 识别 (GATK, Samtools, FreeBayes, Delly, CNVkit)。</li>
+<li><strong>群体遗传学：</strong> 群体结构分析 (STRUCTURE, ADMIXTURE)，选择压力分析 (Tajima’s D, Fst)，系统发育树构建 (RAxML, MrBayes, BEAST)。</li>
+<li><strong>比较基因组学：</strong> 基因组共线性分析 (MCScanX, SynMap)，基因家族分析 (OrthoFinder, CAFE)。</li>
+</ul>
+</li>
+<li><strong>转录组学：</strong>
+<ul>
+<li><strong>表达定量：</strong> RNA-Seq 数据定量 (Salmon, kallisto, featureCounts, HTSeq)。</li>
+<li><strong>差异表达分析：</strong> DESeq2, edgeR, limma-voom。</li>
+<li><strong>功能富集分析：</strong> GO富集 (clusterProfiler, DAVID, g:Profiler)，KEGG通路富集 (同上)，GSEA。</li>
+<li><strong>可变剪接分析：</strong> rMATS, SUPPA2, LeafCutter。</li>
+<li><strong>单细胞RNA-Seq分析：</strong> 细胞聚类/分型 (Seurat, Scanpy)，轨迹推断 (Monocle, PAGA)，细胞通讯分析 (CellChat, CellPhoneDB)。</li>
+</ul>
+</li>
+<li><strong>表观基因组学：</strong>
+<ul>
+<li><strong>DNA甲基化分析：</strong> Bismark (比对)，MethylKit, DSS (差异甲基化区域分析)。</li>
+<li><strong>染色质可及性分析：</strong> ATAC-Seq 峰识别 (MACS2)，差异可及性分析 (DESeq2, diffBind)。</li>
+<li><strong>ChIP-Seq分析：</strong> 峰识别 (MACS2)，motif 富集分析 (HOMER, MEME-ChIP)，差异结合分析。</li>
+<li><strong>多组学整合：</strong> 整合不同表观数据或与转录组数据关联。</li>
+</ul>
+</li>
+<li><strong>蛋白质组学：</strong>
+<ul>
+<li><strong>质谱数据分析：</strong> 搜库鉴定 (MaxQuant, Proteome Discoverer)，定量分析 (LFQ, TMT/iTRAQ)，差异表达蛋白分析 (limma)。</li>
+<li><strong>蛋白互作网络分析：</strong> STRING, Cytoscape (可视化与分析)。</li>
+</ul>
+</li>
+</ol>
+<h4 id="结构生物学与计算化学">结构生物学与计算化学</h4>
+<ol>
+<li><strong>蛋白质结构预测：</strong>
+<ul>
+<li><strong>同源建模：</strong> SWISS-MODEL, MODELLER。</li>
+<li><strong>从头预测：</strong> AlphaFold2, RoseTTAFold。</li>
+<li><strong>结构比对：</strong> TM-align, DALI。</li>
+</ul>
+</li>
+<li><strong>分子对接：</strong>
+<ul>
+<li>小分子-蛋白对接：AutoDock Vina, Glide, GOLD。</li>
+<li>蛋白-蛋白对接：ClusPro, ZDOCK, HADDOCK。</li>
+<li>虚拟筛选：针对靶标蛋白筛选大型化合物库。</li>
+</ul>
+</li>
+<li><strong>分子动力学模拟：</strong>
+<ul>
+<li>模拟蛋白质、核酸、膜系统等的动态行为：GROMACS, AMBER, NAMD。</li>
+<li>分析模拟轨迹：RMSD, RMSF, 结合自由能计算 (MM/PBSA, MM/GBSA)。</li>
+</ul>
+</li>
+<li><strong>药物设计与发现：</strong>
+<ul>
+<li><strong>药效团建模：</strong> Phase, LigandScout。</li>
+<li><strong>定量构效关系：</strong> 2D-QSAR, 3D-QSAR (CoMFA, CoMSIA)。</li>
+<li><strong>ADMET预测：</strong> 预测化合物的吸收、分布、代谢、排泄和毒性性质 (ADMETlab, pkCSM)。</li>
+<li><strong>药物重定位：</strong> 利用现有数据库和计算方法寻找已有药物的新用途。</li>
+</ul>
+</li>
+</ol>
+<h4 id="系统生物学与网络分析">系统生物学与网络分析</h4>
+<ol>
+<li><strong>生物网络构建：</strong>
+<ul>
+<li>基因共表达网络 (WGCNA)。</li>
+<li>蛋白互作网络 (基于数据库如STRING或实验数据)。</li>
+<li>基因调控网络 (基于ChIP-Seq, TF motif, 表达数据)。</li>
+<li>代谢网络 (Recon等模型)。</li>
+</ul>
+</li>
+<li><strong>网络分析：</strong>
+<ul>
+<li>拓扑特性分析：度中心性、介数中心性、紧密度中心性。</li>
+<li>模块/社区发现：识别功能单元。</li>
+<li>关键节点识别：Hub基因、瓶颈基因。</li>
+<li>网络可视化：Cytoscape, Gephi。</li>
+</ul>
+</li>
+<li><strong>数学建模：</strong>
+<ul>
+<li>构建描述生物系统动态行为的数学模型 (常微分方程、偏微分方程、随机模型)。</li>
+<li>参数拟合与优化。</li>
+<li>模型模拟与预测。</li>
+<li>通路/网络建模软件：COPASI, CellDesigner。</li>
+</ul>
+</li>
+</ol>
+<h4 id="医学信息学与临床数据分析">医学信息学与临床数据分析</h4>
+<ol>
+<li><strong>电子健康记录分析：</strong>
+<ul>
+<li>数据挖掘：发现疾病模式、风险因素、药物不良反应。</li>
+<li>表型算法开发：利用EHR数据定义研究队列。</li>
+</ul>
+</li>
+<li><strong>医学影像分析：</strong>
+<ul>
+<li><strong>图像处理：</strong> 分割、配准、特征提取。</li>
+<li><strong>计算机辅助诊断：</strong> 利用机器学习 (尤其是深度学习) 进行病灶检测、分类、预后预测。</li>
+<li>工具：ITK-SNAP, 3D Slicer, PyTorch/TensorFlow (深度学习框架)。</li>
+</ul>
+</li>
+<li><strong>多组学数据整合与精准医疗：</strong>
+<ul>
+<li>整合基因组、转录组、临床数据寻找生物标志物 (诊断、预后、预测)。</li>
+<li>构建疾病风险预测模型。</li>
+<li>指导个性化治疗方案选择。</li>
+</ul>
+</li>
+<li><strong>公共数据库挖掘：</strong>
+<ul>
+<li><strong>基因组/转录组：</strong> NCBI (SRA, GEO, dbGaP), ENA, TCGA, GTEx, ICGC。</li>
+<li><strong>蛋白/互作：</strong> UniProt, PDB, IntAct, BioGRID。</li>
+<li><strong>通路/功能：</strong> KEGG, Reactome, GO, MSigDB。</li>
+<li><strong>药物/疾病：</strong> DrugBank, PubChem, ClinVar, OMIM, DisGeNET。</li>
+<li><strong>文献：</strong> PubMed, PubMed Central。</li>
+</ul>
+</li>
+</ol>
+<h4 id="核心计算与统计技术">核心计算与统计技术</h4>
+<ol>
+<li><strong>编程语言：</strong>
+<ul>
+<li><strong>主要语言：</strong> Python (Biopython, pandas, scikit-learn, NumPy, SciPy)， R (Bioconductor, tidyverse, ggplot2)。</li>
+<li><strong>其他：</strong> Perl (传统文本处理)， Bash/Shell (流程控制)， SQL (数据库查询)， C/C++ (高性能计算)。</li>
+</ul>
+</li>
+<li><strong>统计分析：</strong>
+<ul>
+<li>假设检验 (t检验, 卡方检验, 方差分析)。</li>
+<li>相关性与回归分析 (线性、逻辑回归)。</li>
+<li>生存分析 (Kaplan-Meier, Cox比例风险模型)。</li>
+<li>多元统计分析 (PCA, 聚类分析 - K-means, hierarchical)。</li>
+</ul>
+</li>
+<li><strong>机器学习与人工智能：</strong>
+<ul>
+<li><strong>监督学习：</strong> 分类 (SVM, 随机森林, XGBoost, 神经网络/深度学习)，回归。</li>
+<li><strong>无监督学习：</strong> 聚类 (K-means, 层次聚类)，降维 (PCA, t-SNE, UMAP)。</li>
+<li><strong>深度学习：</strong> 卷积神经网络 (图像)，循环神经网络/Transformer (序列)，图神经网络 (网络)。</li>
+<li>模型评估与选择：交叉验证，ROC/AUC，混淆矩阵。</li>
+</ul>
+</li>
+<li><strong>数据可视化：</strong>
+<ul>
+<li>科学绘图：ggplot2 ®, matplotlib/seaborn (Python)。</li>
+<li>复杂网络可视化：Cytoscape, Gephi。</li>
+<li>交互式可视化：Plotly, D3.js, Shiny ®, Dash (Python)。</li>
+<li>基因组浏览器：IGV, UCSC Genome Browser。</li>
+</ul>
+</li>
+<li><strong>工作流管理与高性能计算：</strong>
+<ul>
+<li><strong>工作流管理：</strong> Snakemake, Nextflow, Galaxy。</li>
+<li><strong>版本控制：</strong> Git/GitHub/GitLab。</li>
+<li><strong>云计算：</strong> AWS, GCP, Azure。</li>
+<li><strong>高性能计算：</strong> SLURM作业调度，并行计算。</li>
+</ul>
+</li>
+</ol>
+<h3 id="常用软件">常用软件</h3>
+<h3 id="程序设计（旧时遗存）">程序设计（旧时遗存）</h3>
 <ul>
 <li>C++ 基本语法</li>
 <li>Python 基本语法</li>
@@ -464,6 +920,25 @@
 <p>算法与数据结构大纲参照 Luogu-Problem-List</p>
 </blockquote>
 <h2 id="项目栈">项目栈</h2>
+<h3 id="长期项目">长期项目</h3>
+<h4 id="合作项目">合作项目</h4>
+<ul>
+<li><s>大创1：非天然α-核苷的合成研究</s></li>
+<li>大创2：新型lncRNA LINC02968调控头颈鳞癌淋巴结转移的作用与初步机制研究</li>
+<li>跨校合作项目：小建中汤</li>
+</ul>
+<h4 id="独立项目">独立项目</h4>
+<ul>
+<li>Draft 1：Global Aging 数据库组 - 老龄化多病种（代谢性）多重用药；糖尿病（包括酮症酸中毒） + 高脂血症 + 高血压【+ 肝癌 / 肺癌】+ 不良反应与药物相互作用</li>
+<li>Draft 2：生物信息学分析 - 癌症 / 代谢 / 免疫 方向</li>
+</ul>
+<h3 id="短期项目">短期项目</h3>
+<h4 id="实习">实习</h4>
+<ul>
+<li>Internship 1：深圳湾实验室神经疾病研究所</li>
+</ul>
+<h4 id="研究">研究</h4>
+<h4 id="短期课堂">短期课堂</h4>
 
                 
             </div>
@@ -1167,7 +1642,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;Total Words:&nbsp;<span
-                        class="white-color">197.3k</span>
+                        class="white-color">200.4k</span>
             
             
             
